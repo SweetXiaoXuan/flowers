@@ -9,7 +9,7 @@ spring:
   datasource:
     password: root
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/blog?useSSL=false&useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/flowers?useSSL=false&useUnicode=true&characterEncoding=utf-8
     username: root
   devtools:
     restart:
@@ -17,8 +17,11 @@ spring:
 
 
 mybatis:
-  mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.liuyanzhao.cloud.api.model
+#  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.flowers.api.model
+
+mybatis.configuration.map-underscore-to-camel-case: true
+
 
 
 eureka:

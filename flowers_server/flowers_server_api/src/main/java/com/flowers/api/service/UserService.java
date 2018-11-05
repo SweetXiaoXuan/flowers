@@ -41,20 +41,6 @@ public interface UserService {
     @DeleteMapping("/user/{id}")
     void deleteUserById(@PathVariable("id") Integer id);
 
-    /**
-     * 更新用户
-     * @param user
-     */
-    @PutMapping("/user")
-    void updateUser(@RequestBody User user);
-
-    /**
-     * 添加新用户
-     * @param user
-     */
-    @PostMapping("/user")
-    User insertUser(@RequestBody User user);
-
     @PostMapping("/login")
     User getUserByUsernameAndPassword(@RequestBody User user);
 }

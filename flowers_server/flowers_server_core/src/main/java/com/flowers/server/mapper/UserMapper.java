@@ -1,8 +1,7 @@
 package com.flowers.server.mapper;
 
 import com.flowers.api.model.User;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -13,17 +12,15 @@ import java.util.List;
  */
 
 @Mapper
-@Component("userMapper")
+//@Component("userMapper")
 public interface UserMapper {
-
+    @Delete(" delete from user where id = #{id}")
     int deleteById(Integer id);
 
-    int insert(User record);
-
+    @Select("select * from user where id = #{id}")
     User findById(Integer id);
 
-    int update(User record);
-
+    @Select("select * from user")
     List<User> findAll();
 
     @Select("select * from user where username = #{username} and password = #{password}")

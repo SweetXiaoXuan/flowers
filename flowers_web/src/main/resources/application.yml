@@ -14,3 +14,6 @@ server:
     client:
       serviceUrl:
         defaultZone: http://localhost:8761/eureka/
+
+
+#spring.resources.static-locations: classpath:/pages/

@@ -1,7 +1,7 @@
 package com.flowers.server.service;
 
-import com.blog.api.model.User;
-import com.blog.api.service.UserService;
+import com.flowers.api.model.User;
+import com.flowers.api.service.UserService;
 import com.flowers.server.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -43,19 +43,6 @@ public class UserServiceImpl implements UserService {
         userMapper.deleteById(id);
     }
 
-    @Override
-    @PutMapping("/user")
-    public void updateUser(@RequestBody User user) {
-        userMapper.update(user);
-    }
-
-    @Override
-    @PostMapping("/user")
-    public User insertUser(@RequestBody User user) {
-        Integer userId = userMapper.insert(user);
-        user.setId(userId);
-        return user;
-    }
 
     @Override
     public User getUserByUsernameAndPassword(@RequestBody User user) {

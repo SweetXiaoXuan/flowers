@@ -15,8 +15,8 @@
 
     <packaging>pom</packaging>
 
-    <name>blog-server</name>
-    <description>BlogServer project for Spring Boot</description>
+    <name>flowers_server</name>
+    <description>flowers_server project for Spring Boot</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

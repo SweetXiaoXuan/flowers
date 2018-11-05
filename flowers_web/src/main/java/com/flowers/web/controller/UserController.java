@@ -52,39 +52,39 @@ public class UserController {
         return ResponseEntity.ok().body(resultJson);
     }
 
-    @PostMapping("/user")
-    public ResponseEntity<ResultJson> insertUser(@RequestBody User user) {
-        User result = null;
-        ResultJson resultJson = new ResultJson();
-        try {
-            result = userService.insertUser(user);
-        } catch (Exception e) {
-            resultJson.setCode(ResultJson.ERROR);
-            resultJson.setMsg("异常");
-            return ResponseEntity.ok().body(resultJson);
-        }
-        resultJson.setBody(result);
-        return ResponseEntity.ok().body(resultJson);
-    }
-
-    @PutMapping("/user")
-    public ResponseEntity<ResultJson> updateUser(@RequestBody User user) {
-        ResultJson resultJson = new ResultJson();
-        try {
-            if(user != null && user.getId() != null) {
-                userService.updateUser(user);
-            } else {
-                resultJson.setCode(ResultJson.ERROR);
-                resultJson.setMsg("失败");
-                return ResponseEntity.ok().body(resultJson);
-            }
-        } catch (Exception e) {
-            resultJson.setCode(ResultJson.ERROR);
-            resultJson.setMsg("异常");
-            return ResponseEntity.ok().body(resultJson);
-        }
-        return ResponseEntity.ok().body(resultJson);
-    }
+//    @PostMapping("/user")
+//    public ResponseEntity<ResultJson> insertUser(@RequestBody User user) {
+//        User result = null;
+//        ResultJson resultJson = new ResultJson();
+//        try {
+//            result = userService.insertUser(user);
+//        } catch (Exception e) {
+//            resultJson.setCode(ResultJson.ERROR);
+//            resultJson.setMsg("异常");
+//            return ResponseEntity.ok().body(resultJson);
+//        }
+//        resultJson.setBody(result);
+//        return ResponseEntity.ok().body(resultJson);
+//    }
+//
+//    @PutMapping("/user")
+//    public ResponseEntity<ResultJson> updateUser(@RequestBody User user) {
+//        ResultJson resultJson = new ResultJson();
+//        try {
+//            if(user != null && user.getId() != null) {
+//                userService.updateUser(user);
+//            } else {
+//                resultJson.setCode(ResultJson.ERROR);
+//                resultJson.setMsg("失败");
+//                return ResponseEntity.ok().body(resultJson);
+//            }
+//        } catch (Exception e) {
+//            resultJson.setCode(ResultJson.ERROR);
+//            resultJson.setMsg("异常");
+//            return ResponseEntity.ok().body(resultJson);
+//        }
+//        return ResponseEntity.ok().body(resultJson);
+//    }
 
     @DeleteMapping("/user/{id}")
     public ResponseEntity<ResultJson> deleteUser(@PathVariable("id") Integer id) {
