@@ -19,13 +19,16 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired(required = false)
     private UserService userService;
 
     @RequestMapping(value = "/login", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
-    public ResponseEntity<ResultJson> login(@Param("username") String username, @Param("password") String password) {
+    public ResponseEntity<ResultJson> login(
+            @Param("username") String username,
+            @Param("password") String password) {
         ResultJson resultJson = new ResultJson();
         User user = new User();
         user.setPassword(password);
