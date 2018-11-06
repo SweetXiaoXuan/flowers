@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    name: cloud-producer
+    name: flowers-server
   datasource:
     password: root
     driver-class-name: com.mysql.jdbc.Driver
