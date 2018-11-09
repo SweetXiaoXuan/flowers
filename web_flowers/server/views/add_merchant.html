@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <link rel="stylesheet" href="../assets/css/view.css"/>
+    <title></title>
+</head>
+<body class="layui-view-body">
+<div class="layui-content">
+    <div class="layui-row">
+        <div class="layui-card">
+            <div class="layui-card-header">添加商户</div>
+            <iframe name="formSubmit" style="display:none;" ></iframe>
+            <form class="layui-form layui-card-body" action="" target="formSubmit">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">商户名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required  lay-verify="required" placeholder="请输入商户名" autocomplete="off" class="layui-input merchantName">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="title" required  lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input password">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">重复密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="title" required  lay-verify="required" placeholder="请再次输入密码" autocomplete="off" class="layui-input repeatPassword">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">商户地址</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required  lay-verify="required" placeholder="请输入商户地址" autocomplete="off" class="layui-input address">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">老板姓名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required  lay-verify="required" placeholder="请输入老板姓名" autocomplete="off" class="layui-input bossName">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">身份证号</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required  lay-verify="required" placeholder="请输入身份证号" autocomplete="off" class="layui-input idnumber">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">联系电话</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required  lay-verify="required" placeholder="请输入联系电话" autocomplete="off" class="layui-input telephone">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">银行卡号</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required  lay-verify="required" placeholder="请输入银行卡号" autocomplete="off" class="layui-input bankNumber">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">佣金比例</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required  lay-verify="required" placeholder="请输入佣金比例，例：0.01就是1%" autocomplete="off" class="layui-input commissionRate">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">营业执照</label>
+                    <div class="layui-input-block businessLicenseImg">
+                        <button type="button" class="layui-btn" id="businessLicense">
+                            <i class="layui-icon">&#xe67c;</i>上传图片
+                        </button>
+                        <!--<input type="text" name="title" required  lay-verify="required" placeholder="请输入营业执照" autocomplete="off" class="layui-input businessLicense">-->
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">营业执照批号</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required  lay-verify="required" placeholder="请输入营业执照批号" autocomplete="off" class="layui-input businessLicenseNumber">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">权限</label>
+                    <div class="layui-input-block">
+                        <select name="level" lay-verify="required" class="level">
+                            <option value=""></option>
+                            <option value="0">管理员</option>
+                            <option value="1">普通商户</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">是否锁定</label>
+                    <div class="layui-input-block">
+                        <select name="level" lay-verify="required" class=delete">
+                            <option value=""></option>
+                            <option value="0">解锁</option>
+                            <option value="1">锁定</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">备注</label>
+                    <div class="layui-input-block">
+                        <textarea name="desc" placeholder="请输入内容" class="layui-textarea subtopic"></textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn layui-btn-blue"  lay-filter="formDemo" onclick="btnWithdraw()">提交申请</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="../assets/jquery-1.7.1.min.js"></script>
+<script src="../js/add_merchant.js"></script>
+<script src="../assets/layui/layui.all.js"></script>
+<script>
+    var form = layui.form
+        ,layer = layui.layer;
+
+    layui.use('upload', function(){
+        var upload = layui.upload;
+    
+        //执行实例
+        var uploadInst = upload.render({
+            elem: '#businessLicense' //绑定元素
+            ,url: 'http://localhost:8119/merchant/upload/'
+            // ,url: 'http://47.98.40.106:8119/merchant/upload/'
+            ,done: function(res){
+                $('#businessLicense').css('display', 'none');
+                // $('.businessLicenseImg').html(res.body.path);
+                $('.businessLicenseImg').html("<img src='" + res.body.path + "' width='200' height='200'/>");
+                //上传完毕回调
+                console.info(res)
+            }
+            ,error: function(){
+                //请求异常回调
+                layer.msg('上传失败，请重新上传');
+            }
+        });
+    });
+</script>
+</body>
+</html>
