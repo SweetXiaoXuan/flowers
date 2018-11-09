@@ -22,7 +22,12 @@ mybatis:
 
 mybatis.configuration.map-underscore-to-camel-case: true
 
-
+logging:
+  level:
+    com:
+      flowers:
+        server:
+          mapper: debug
 
 eureka:
   client:

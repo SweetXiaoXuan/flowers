@@ -17,7 +17,7 @@ import java.util.List;
  * @date 2018/10/12
  * @since V1.0
  */
-@FeignClient(name = "cloud-producer")
+@FeignClient(name = "flowers-server")
 public interface UserService {
     /**
      * 根据用户ID获得用户信息
