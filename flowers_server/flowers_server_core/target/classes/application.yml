@@ -34,3 +34,8 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 
+
+
+
+mybatis-plus:
+  type-aliases-package: com.flower.api.model.daoBean

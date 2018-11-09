@@ -5,6 +5,8 @@ import com.flowers.api.model.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @FeignClient(name = "flowers-server")
 @RequestMapping("flower")
 public interface FlowerService {
@@ -16,4 +18,8 @@ public interface FlowerService {
     @GetMapping("/flowersInfo")
     @ResponseBody
     FlowerInfo getInfoById(@RequestParam("fid") String fid);
+
+    @GetMapping("/flowers")
+    @ResponseBody
+    List<FlowerInfo> flowers(@RequestParam("flowerName") String flowerName);
 }
