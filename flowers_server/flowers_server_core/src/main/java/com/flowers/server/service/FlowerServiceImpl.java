@@ -18,7 +18,7 @@ public class FlowerServiceImpl implements FlowerService {
     private FlowerMapper flowerMapper;
 
     @Override
-    @GetMapping("/flowersInfo")
+    @GetMapping("/flower/flowersInfo")
     @ResponseBody
     public FlowerInfo getInfoById(@RequestParam("fid") String fid) {
         return flowerMapper.getInfoById(Long.parseLong(fid));
@@ -26,7 +26,7 @@ public class FlowerServiceImpl implements FlowerService {
 
 
     @Override
-    @GetMapping("/flowers")
+    @GetMapping("/flower/flowers")
     @ResponseBody
     public List<FlowerInfo> flowers(@RequestParam("flowerName") String flowerName) {
         return flowerMapper.flowers(flowerName);

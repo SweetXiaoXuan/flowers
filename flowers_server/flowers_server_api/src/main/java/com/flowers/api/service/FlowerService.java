@@ -8,18 +8,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @FeignClient(name = "flowers-server")
-@RequestMapping("flower")
 public interface FlowerService {
     /**
      * 根据用户ID获得用户信息
      * @param fid
      * @return
      */
-    @GetMapping("/flowersInfo")
+    @GetMapping("/flower/flowersInfo")
     @ResponseBody
     FlowerInfo getInfoById(@RequestParam("fid") String fid);
 
-    @GetMapping("/flowers")
+    @GetMapping("/flower/flowers")
     @ResponseBody
     List<FlowerInfo> flowers(@RequestParam("flowerName") String flowerName);
 }
