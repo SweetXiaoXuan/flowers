@@ -15,4 +15,5 @@ public class FlowerInfoProvider {
                 ? SqlUtil.conditionalQuery(null, "flower_info", "select")
                 : SqlUtil.conditionalQueryLike(param, "flower_info", "select");
     }
+
 }

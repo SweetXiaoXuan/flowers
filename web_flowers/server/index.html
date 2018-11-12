@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="assets/layui/css/layui.css">
     <link rel="stylesheet" href="assets/css/admin.css">
     <link rel="icon" href="/favicon.ico">
-    <title>商户管理后台</title>
+    <title>鲜花信息管理后台</title>
 </head>
 <script type="application/javascript" src="assets/jquery-1.7.1.min.js"></script>
 <script type="application/javascript">
      $(document).ready(function() {
         $("#webName").html(localStorage.getItem("username"));
-        $('#qccode').attr('href', localStorage.getItem("qccode"));
      });
 </script>
 <body class="layui-layout-body">
@@ -30,7 +29,6 @@
                 <li class="layui-nav-item">
                     <a href="javascript:;" id="webName">null</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="" id="qccode">生成二维码</a></dd>
                         <dd><a href="login.html">退出</a></dd>
                     </dl>
                 </li>
@@ -54,32 +52,39 @@
                             <dd><a href="views/console.html">控制台</a></dd>
                         </dl>
                     </li>
-                    <!--<li class="layui-nav-item">-->
-                        <!--<a href="javascript:;">-->
-                            <!--<i class="layui-icon">&#xe857;</i>-->
-                            <!--<em>组件</em>-->
-                        <!--</a>-->
-                        <!--<dl class="layui-nav-child">-->
-                            <!--<dd><a href="views/form.html">表单</a></dd>-->
-                            <!--<dd>-->
-                                <!--<a href="javascript:;">页面</a>-->
-                                <!--<dl class="layui-nav-child">-->
-                                    <!--<dd>-->
-                                        <!--<a href="login.html">登录页</a>-->
-                                    <!--</dd>-->
-                                <!--</dl>-->
-                            <!--</dd>-->
-                        <!--</dl>-->
-                    <!--</li>-->
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <i class="layui-icon">&#xe857;</i>
+                            <em>组件</em>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="views/form.html">表单</a></dd>
+                            <dd>
+                                <a href="javascript:;">页面</a>
+                                <dl class="layui-nav-child">
+                                    <dd>
+                                        <a href="login.html">登录页</a>
+                                    </dd>
+                                </dl>
+                            </dd>
+                        </dl>
+                    </li>
                     <li class="layui-nav-item">
                         <a href="javascript:;">
                             <i class="layui-icon">&#xe612;</i>
                             <em>用户</em>
                         </a>
                         <dl class="layui-nav-child user_list">
-                            <dd><a href="views/user_order.html">用户订单列表</a></dd>
                             <dd><a href="views/users.html">用户列表</a></dd>
-
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <i class="layui-icon">&#xe62e;</i>
+                            <em>鲜花</em>
+                        </a>
+                        <dl class="layui-nav-child user_list">
+                            <dd><a href="views/user_order.html">鲜花列表</a></dd>
                         </dl>
                     </li>
                 </ul>
@@ -95,16 +100,16 @@
         </div>
 
         <div class="layui-footer">
-            <p>© 凡有科技：<a href="http://www.mycodes.net/" target="_blank">91租机商户后台管理系统</a></p>
+            <p>© ：<a href="http://www.mycodes.net/" target="_blank">鲜花信息管理系统</a></p>
         </div>
 
         <div class="mobile-mask"></div>
     </div>
-    <script >
-        if (localStorage.getItem("level") == '0') {
-            $('.user_list').append("<dd><a href='views/merchants.html'>商户列表</a></dd>");
-        }
-    </script>
+    <!--<script >-->
+        <!--if (localStorage.getItem("level") == '0') {-->
+            <!--$('.user_list').append("<dd><a href='views/merchants.html'>商户列表</a></dd>");-->
+        <!--}-->
+    <!--</script>-->
     <script src="assets/layui/layui.js"></script>
     <script src="index.js" data-main="home"></script>
 </body>

@@ -21,9 +21,15 @@ zuul:
   #关闭重试机制
   retryable: true
   routes:
-    web:
-      path: /web/**
-      serviceId: flowers-web
+    flower:
+      path: /flower/**
+      serviceId: flowers-web-flower
+    user:
+      path: /user/**
+      serviceId: flowers-web-user
+    nginx:
+      path: /nginx/**
+      url: http://localhost:8081
 #    price:
 #      path: /price/**
 #      serviceId: servcie-price

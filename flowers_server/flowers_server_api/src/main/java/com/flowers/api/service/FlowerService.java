@@ -1,11 +1,11 @@
 package com.flowers.api.service;
 
 import com.flowers.api.model.FlowerInfo;
-import com.flowers.api.model.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @FeignClient(name = "flowers-server")
 public interface FlowerService {
@@ -14,11 +14,15 @@ public interface FlowerService {
      * @param fid
      * @return
      */
-    @GetMapping("/flower/flowersInfo")
+    @GetMapping("/flowersInfo")
     @ResponseBody
     FlowerInfo getInfoById(@RequestParam("fid") String fid);
 
-    @GetMapping("/flower/flowers")
+    @GetMapping("/console")
+    @ResponseBody
+    Map<String, Object> console();
+
+    @GetMapping("/flowers")
     @ResponseBody
     List<FlowerInfo> flowers(@RequestParam("flowerName") String flowerName);
 }

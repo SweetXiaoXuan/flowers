@@ -2,12 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc11b6ce-13ef-484b-b987-b95bffc34c88" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_api/src/main/java/com/flowers/api/service/FlowerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/mapper/FlowerMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/service/FlowerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flowers_web/src/main/java/com/flowers/web/controller/FlowerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_server/flowers_server_api/src/main/java/com/flowers/api/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_api/src/main/java/com/flowers/api/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_eureka_server.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_eureka_server2.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_server_core.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_web_flower.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/FlowersWebFlowerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_web_user.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_web_user/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_web_user/src/main/java/com/flowers/web/user/common/bean/ResultJson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_web_user/src/main/java/com/flowers/web/user/common/utils/Constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_web_user/src/main/java/com/flowers/web/user/common/utils/HttpRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_web_user/src/main/java/com/flowers/web/user/common/utils/MeaasgeUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_web_user/src/main/java/com/flowers/web/user/common/utils/ResultMsgConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_web_user/src/main/java/com/flowers/web/user/common/utils/StringUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_web_user/src/main/java/com/flowers/web/user/common/utils/SystemException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_web_user/src/main/java/com/flowers/web/user/common/utils/TransferUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_web_user/src/main/java/com/flowers/web/user/common/utils/ValidateMode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_web_user/src/main/java/com/flowers/web/user/common/utils/XXMediaType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_web_user/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flowers_zuul.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../start.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_server/flowers_server_api/src/main/java/com/flowers/api/service/FlowerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_api/src/main/java/com/flowers/api/service/FlowerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/mapper/FlowerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/mapper/FlowerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/provider/FlowerInfoProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/provider/FlowerInfoProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/service/FlowerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/service/FlowerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_flower/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_web/src/main/java/com/flowers/web/FlowersWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_user/src/main/java/com/flowers/FlowersWebUserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_web/src/main/java/com/flowers/web/common/bean/ResultJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/common/bean/ResultJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_web/src/main/java/com/flowers/web/common/utils/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/common/utils/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_web/src/main/java/com/flowers/web/common/utils/HttpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/common/utils/HttpRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_web/src/main/java/com/flowers/web/common/utils/MeaasgeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/common/utils/MeaasgeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_web/src/main/java/com/flowers/web/common/utils/ResultMsgConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/common/utils/ResultMsgConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_web/src/main/java/com/flowers/web/common/utils/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/common/utils/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_web/src/main/java/com/flowers/web/common/utils/SystemException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/common/utils/SystemException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_web/src/main/java/com/flowers/web/common/utils/TransferUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/common/utils/TransferUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_web/src/main/java/com/flowers/web/common/utils/ValidateMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/common/utils/ValidateMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_web/src/main/java/com/flowers/web/common/utils/XXMediaType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/common/utils/XXMediaType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_web/src/main/java/com/flowers/web/controller/FlowerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/controller/FlowerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_web/src/main/java/com/flowers/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_user/src/main/java/com/flowers/web/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_flower/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_web/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_flower/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_zuul/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_zuul/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_zuul/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_zuul/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/js/console.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/js/console.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/views/console.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/views/console.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/views/user_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/views/user_order.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,27 +65,98 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="1" />
+          <entry key="css" value="1" />
+          <entry key="html" value="6" />
+          <entry key="js" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="1" />
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="6" />
+          <entry key="JavaScript" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="154" />
+          <entry key="js" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="154" />
+          <entry key="JavaScript" value="19" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/views/console.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="491">
+              <caret line="66" column="55" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
+              <folding>
+                <marker date="1541991901000" expanded="true" signature="2924:11163" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/js/console.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="74" column="34" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/views/user_order.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+              <folding>
+                <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#9;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/server/index.html" />
+        <option value="$PROJECT_DIR$/server/views/user_order.html" />
+        <option value="$PROJECT_DIR$/server/views/console.html" />
+        <option value="$PROJECT_DIR$/server/js/console.js" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -75,6 +188,18 @@
               <item name="web_flowers" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="web_flowers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_flowers" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web_flowers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_flowers" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -83,6 +208,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -104,6 +230,11 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="web_flowers_server" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63343/web_flowers/server/index.html">
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -115,29 +246,30 @@
       <option name="presentableId" value="Default" />
       <updated>1541411312405</updated>
       <workItem from="1541411315028" duration="2591000" />
+      <workItem from="1541987720852" duration="10126000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2591000" />
+    <option name="totallyTimeSpent" value="12717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="834" extended-state="0" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24242425" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.94490355" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39914164" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="1.0" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -154,6 +286,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/assets/layui/css/layui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="2346" selection-start-line="1" selection-start-column="2346" selection-end-line="1" selection-end-column="2346" />
+          <folding>
+            <element signature="e#61532#61671#2" expanded="true" />
+            <element signature="e#63125#63264#2" expanded="true" />
+            <element signature="e#63812#63951#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="74" column="34" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/views/merchants.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/views/user_order.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#9;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/views/console.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="66" column="55" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
+          <folding>
+            <marker date="1541991901000" expanded="true" signature="2924:11163" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/js/console.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
         </state>
       </provider>
     </entry>

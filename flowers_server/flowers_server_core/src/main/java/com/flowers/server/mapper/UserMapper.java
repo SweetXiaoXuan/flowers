@@ -23,6 +23,9 @@ public interface UserMapper {
     @Select("select * from user")
     List<User> findAll();
 
+    @Select("select count(id) from user")
+    int countAll();
+
     @Select("select * from user where username = #{username} and password = #{password}")
     User getUserByUsernameAndPassword(User user);
 

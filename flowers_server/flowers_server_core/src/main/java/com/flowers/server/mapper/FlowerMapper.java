@@ -26,4 +26,10 @@ public interface FlowerMapper  {
             @Result(column = "create_time", property = "createTime")
     })
     List<FlowerInfo> flowers(String flowerName);
+
+    @Select("select count(id) from flower_info where TO_DAYS( NOW( ) ) - TO_DAYS(FROM_UNIXTIME(create_time) ) <= 1")
+    int countToday();
+
+    @Select("select count(id) from flower_info")
+    int countAll();
 }
