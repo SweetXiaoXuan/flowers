@@ -1,9 +1,6 @@
 #!/bin/sh
 ## java env
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
-export JRE_HOME=$JAVA_HOME/jre
-
-API_NAME=api
+API_NAME=flowers_eureka_server
 JAR_NAME=$API_NAME\.jar
 #PID  代表是PID文件
 PID=$API_NAME\.pid
