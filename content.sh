@@ -1,9 +1,7 @@
 #!/bin/bash
 
-
 SCRIPT=$0
 PORT=$1
-APP_NAME=flowers_eureka_server
 OPERATOR=$2
 
 usage() {
@@ -15,8 +13,25 @@ if [ $# != 2 ]; then
     usage
 fi
 
+if [ $PORT -eq "8761" ]
+then
+    APP_NAME="flowers_eureka_server"
+elif [ $PORT -eq "17900" ]
+then
+    APP_NAME="flowers_zuul"
+elif [ $PORT -eq "8090" ]
+then
+    APP_NAME="flowers_server/flowers_server_core"
+elif [ $PORT -eq "8080" ]
+then
+    APP_NAME="flowers_web_flower"
+elif [ $PORT -eq "8181" ]
+then
+    APP_NAME="flowers_web_user"
+fi
+
 is_exist(){
-  pid=`ps -ef|grep $APP_NAME|grep -v grep|awk '{print $2}' `
+  pid=`ps -ef|grep $PORT|grep -v grep|awk '{print $2}' `
   echo "pid ----${pid}"
   if [ -z "${pid}" ];
   then
@@ -43,6 +58,7 @@ start() {
     then
        echo "${APP_NAME} is already running. port=${PORT}."
     else
+       cd "/Applications/workspace/intellijidea_workspace/other/flowers/"${APP_NAME}
        mvn spring-boot:run
     fi
 }
@@ -51,12 +67,11 @@ stop(){
     getpid
     if [ $? -eq "1" ]
     then
-       echo "${pid}"
        kill -9 $pid
     else
-       echo "flowers_eureka_server is not running"
+       echo "${APP_NAME} is not running"
     fi
-  echo `lsof -i:${PORT}`
+#  echo `lsof -i:${PORT}`
 }
 
 status(){
