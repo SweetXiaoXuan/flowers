@@ -2,14 +2,134 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9aadbe01-52a2-4981-a32a-855c9a2fb801" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../flowers_zuul/src/main/java/com/flowers/zuul/filter/PassHttpFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_eureka_server.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_eureka_server.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_eureka_server/src/main/java/com/flowers/eureka/server/FlowersEurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_eureka_server/src/main/java/com/flowers/FlowersEurekaServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_eureka_server/src/test/java/com/flowers/eureka/server/FlowersEurekaServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_eureka_server/src/test/java/com/flowers/FlowersEurekaServerApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_zuul/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_zuul/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_zuul/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_zuul/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web_flowers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../web_flowers/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web_flowers/server/js/console.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web_flowers/server/js/console.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_js/app_dashboard_v1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vue2-element-touzi-admin.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/css/xiaomi.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/css/xiaomi.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T10TJjB5hT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T16eEjBKhT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T16nVjBCKT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T184E_BQWT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T18yZQBCET1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T18zWQB4WT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T19AbjBCDT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1BsbjBvLT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1IhLjBC_T1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1JKxvBXhv1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1JnWjBCCT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1KDAjBCAT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1KzbQBvbT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1RICjB7DT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1YoZQByYT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1hLhjB_AT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1hiDvBvVv1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1jrxjB_VT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1mahQBmKT1RXrhCrK (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1mahQBmKT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1meZjBCAT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1oTJjBKKT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1odEjB5bT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1oixjB5bT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1riKjB7VT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1tsEgB7DT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1vWdTBKDv1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1yvd_BQDT1RXrhCrK (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1yvd_BQDT1RXrhCrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/air.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/bag.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/baohu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/bluetoothheadset.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/chazuo!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/chongdian.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/compare.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/cunchu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/dianchi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/dianshipeijian.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/dianyuan.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/dianyuanfujian.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/erji.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/fangchensai.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/fuzhuang.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/headphone.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/heyue.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/hezimini!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/hezis!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/hezis.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/hongmi2!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/hongmi2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/hongmi2a!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/hongmi2a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/hougai.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/huosai.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/ihealth!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/ihealth.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/lvxingxiang.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mi-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mi4!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mi4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/minote!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/minote.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/minotepro!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mipad.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mipad16!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mipad64!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mitu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mitv40!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mitv48!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mitv49!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mitv55!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/miwifi!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/miwifi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/miwifilite!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/miwifilite.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/miwifimini!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/miwifimini.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/note!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/note2!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/note2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/powerscript.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/raoxian.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/scale!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/scale.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/shouhuan.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/shubiaodian.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/smart!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/smart.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/telcom.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/tiemo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/tizhi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/tv3-55.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/tv40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/tv48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/tv49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/wan.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/water.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/wifi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/wifiExtension!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/wifiExtension.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/xiancai.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/xiaomi_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/xiaoyi!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/xiaoyi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/yicamera!160x110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/yicamera.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/yidongdianyuan.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/yinxiang.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/zhinengtaozhuang.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/zhongxin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/zhoubian.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/zipaigan.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/js/jquery-2.1.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/js/jquery.animate-colors-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xiaomishop/js/xiaomi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpl/app_dashboard_v1.html" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/app_dashboard_v1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../content.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../content.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/FlowersCoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/FlowersCoreApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue2-element-touzi-admin" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,62 +146,83 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="1" />
-          <entry key="js" value="3" />
+          <entry key="html" value="4" />
+          <entry key="js" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="3" />
+          <entry key="HTML" value="4" />
+          <entry key="JavaScript" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="129" />
+          <entry key="js" value="27" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="129" />
+          <entry key="JavaScript" value="27" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+            <state relative-caret-position="81">
+              <caret line="44" column="19" lean-forward="true" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tpl/app_dashboard_v1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="16" column="35" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/app.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/config.js">
+        <entry file="file://$PROJECT_DIR$/data_js/app_dashboard_v1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-194" />
+            <state relative-caret-position="207">
+              <caret line="9" column="38" lean-forward="true" selection-end-line="21" selection-end-column="3" />
+            </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/config.lazyload.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2885" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.min.html">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>New items</find>
+      <find>Dashboard</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/data_js/app_dashboard_v1.js" />
+        <option value="$PROJECT_DIR$/tpl/app_dashboard_v1.html" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -118,6 +259,11 @@
               <item name="Be_Angular" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Be_Angular" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Be_Angular" type="462c0819:PsiDirectoryNode" />
+              <item name="tpl" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -129,6 +275,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -142,6 +289,11 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="angular" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63343/Be_Angular/index.html">
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -153,34 +305,53 @@
       <option name="presentableId" value="Default" />
       <updated>1542016673970</updated>
       <workItem from="1542016675224" duration="126000" />
+      <workItem from="1542273319688" duration="1682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126000" />
+    <option name="totallyTimeSpent" value="1808000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="834" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39914164" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39914164" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -189,27 +360,45 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.min.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-194" />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/index.min.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/js/config.lazyload.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2885" />
+        <state relative-caret-position="23">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="44" column="19" lean-forward="true" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_js/app_dashboard_v1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="38" lean-forward="true" selection-end-line="21" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tpl/app_dashboard_v1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="35" />
+        </state>
       </provider>
     </entry>
   </component>

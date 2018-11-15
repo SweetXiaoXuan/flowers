@@ -21,7 +21,7 @@ then
     APP_NAME="flowers_zuul"
 elif [ $PORT -eq "8090" ]
 then
-    APP_NAME="flowers_server/flowers_server_core"
+    APP_NAME="flowers_server"
 elif [ $PORT -eq "8080" ]
 then
     APP_NAME="flowers_web_flower"

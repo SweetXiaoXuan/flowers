@@ -2,14 +2,37 @@
     app.settings.asideFolded = false; 
     app.settings.asideDock = false;
   ">
+  <script type="application/javascript">
+      $(document).ready(function(){
+          $.ajax({
+              url: "http://localhost:17900/flower/console",
+              type: 'get',
+              dataType: 'json',
+              timeout: 1000,
+              success: function (data, status) {
+                  console.info(JSON.stringify(data));
+                  if (data.code === '0') {
+                      $(".allUpload").html(data.body.countFlowerAll);
+                      $(".allUsers").html(data.body.countUserAll);
+                      $(".newCreate").html(data.body.countFlowerToday);
+                  } else if(data.status === '10000') {
+                      parent.location.href ="../../login.html";
+                  }
+              },
+              fail: function (err, status) {
+                  parent.location.href ="../../login.html";
+              }
+          })
+      });
+  </script>
   <!-- main -->
   <div class="col">
     <!-- main header -->
     <div class="bg-light lter b-b wrapper-md">
       <div class="row">
         <div class="col-sm-6 col-xs-12">
-          <h1 class="m-n font-thin h3 text-black">Dashboard</h1>
-          <small class="text-muted">Welcome to angulr application</small>
+          <h1 class="m-n font-thin h3 text-black">控制台</h1>
+          <small class="text-muted">欢迎来到鲜花信息管理系统</small>
         </div>
         <div class="col-sm-6 text-right hidden-xs">
           <div class="inline m-r text-left">
@@ -39,8 +62,8 @@
           <div class="row row-sm text-center">
             <div class="col-xs-6">
               <div class="panel padder-v item">
-                <div class="h1 text-info font-thin h1">521</div>
-                <span class="text-muted text-xs">New items</span>
+                <div class="h1 text-info font-thin h1 newCreate">0</div>
+                <span class="text-muted text-xs">新发布</span>
                 <div class="top text-right w-full">
                   <i class="fa fa-caret-down text-warning m-r-sm"></i>
                 </div>
@@ -48,8 +71,8 @@
             </div>
             <div class="col-xs-6">
               <a href class="block panel padder-v bg-primary item">
-                <span class="text-white font-thin h1 block">930</span>
-                <span class="text-muted text-xs">Uploads</span>
+                <span class="text-white font-thin h1 block allUpload">0</span>
+                <span class="text-muted text-xs">总共上传</span>
                 <span class="bottom text-right w-full">
                   <i class="fa fa-cloud-upload text-muted m-r-sm"></i>
                 </span>
@@ -66,8 +89,8 @@
             </div>
             <div class="col-xs-6">
               <div class="panel padder-v item">
-                <div class="font-thin h1">129</div>
-                <span class="text-muted text-xs">Feeds</span>
+                <div class="font-thin h1 allUsers">0</div>
+                <span class="text-muted text-xs">总用户</span>
                 <div class="bottom text-left">
                   <i class="fa fa-caret-up text-warning m-l-sm"></i>
                 </div>
