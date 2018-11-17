@@ -18,6 +18,7 @@
     "HEADER" : "Navigation",
     "DASHBOARD" : "Dashboard",
     "CALENDAR" : "Calendar",
+    "FLOWERS" : "flowers",
     "EMAIL" : "Email",
     "WIDGETS" : "Widgets",
     "components" : {

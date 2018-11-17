@@ -18,6 +18,7 @@
     "HEADER" : "Navigazione",
     "DASHBOARD" : "Cruscotto",
     "CALENDAR" : "Calendario",
+    "FLOWERS" : "flowers",
     "EMAIL" : "Email",
     "WIDGETS" : "Widgets",
     "components" : {

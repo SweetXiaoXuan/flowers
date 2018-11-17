@@ -3,39 +3,222 @@
     <button type="button" class="btn btn-default btn-addon pull-right m-t-n-xs" ui-toggle-class="show" target="#aside">
       <i class="fa fa-bars"></i> List
     </button>
-    <h1 class="m-n font-thin h3">Fullcalendar</h1>
+    <h1 class="m-n font-thin h3">鲜花信息</h1>
   </div>
   <div class="hbox hbox-auto-xs hbox-auto-sm">
     <div class="col wrapper-md">
       <div class="clearfix m-b">
         <button type="button" tooltip="Double click on calendar day to create event" class="btn btn-sm btn-primary btn-addon" ng-click="addEvent()">
-          <i class="fa fa-plus"></i>Add
+          <i class="fa fa-plus"></i>添加
         </button>
         <div class="pull-right">
-          <button type="button" class="btn btn-sm btn-default" ng-click="today()">today</button>
+          <button type="button" class="btn btn-sm btn-default" ng-click="today()">当前</button>
           <div class="btn-group m-l-xs">
-            <button class="btn btn-sm btn-default" ng-click="changeView('agendaDay')">Day</button>
-            <button class="btn btn-sm btn-default" ng-click="changeView('agendaWeek')">Week</button>
-            <button class="btn btn-sm btn-default" ng-click="changeView('month')">Month</button>
+            <button class="btn btn-sm btn-default" ng-click="changeView('agendaDay')">一天</button>
+            <button class="btn btn-sm btn-default" ng-click="changeView('agendaWeek')">一周</button>
+            <button class="btn btn-sm btn-default" ng-click="changeView('month')">一月</button>
           </div>
         </div>
       </div>
-      <div class="pos-rlt">
-        <div class="fc-overlay">
-          <div class="panel bg-white b-a pos-rlt">
-            <span class="arrow"></span>
-            <div class="h4 font-thin m-b-sm">{{event.title}}</div>
-            <div class="line b-b b-light"></div>
-            <div><i class="icon-calendar text-muted m-r-xs"></i> {{event.start | date:'medium'}}</div>
-            <div class="ng-hide" ng-show='event.end'><i class="icon-clock text-muted m-r-xs"></i> {{event.end | date:'medium'}}</div>
-            <div class="ng-hide" ng-show='event.location'><i class="icon-pointer text-muted m-r-xs"></i> {{event.location}}</div>
-            <div class="m-t-sm">{{event.info}}</div>
-            <div class="m-t-sm">{{event.url}}</div>
+      <!--<iframe src="tpl/table_footable.html" width="1000px" height="500px"></iframe>-->
+      <!--<iframe src="../index.html" style="display: none"></iframe>-->
+      <div class="wrapper-md">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            鲜花信息列表
+          </div>
+          <div class="panel-body b-b b-light">
+            检索: <input id="filter" type="text" class="form-control input-sm w-sm inline m-r"/>
+          </div>
+          <div>
+            <script src="https://cdn.bootcss.com/angular.js/1.6.3/angular.min.js"></script>
+            <script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
+            <!--<script>-->
+                <!--var app = angular.module('myApp', []);-->
+                <!--app.controller('customersCtrl', function($scope, $http) {-->
+                    <!--$http.get("http://localhost:17900/flower/flowers?flowerName")-->
+                        <!--.then(function (result) {-->
+                            <!--if (result.data.code === "0") {-->
+                                <!--$scope.names = result.data.body;-->
+                            <!--} else {-->
+                                <!--alert(JSON.stringify(result));-->
+                            <!--}-->
+                        <!--});-->
+                <!--});-->
+            <!--</script>-->
+            <!--<div ng-app="" ng-init="names=[-->
+                <!--{name:'Jani',country:'Norway'},-->
+                <!--{name:'Hege',country:'Sweden'},-->
+                <!--{name:'Kai',country:'Denmark'}]">-->
+
+              <!--<p>循环对象:</p>-->
+              <!--<ul>-->
+                <!--<li ng-repeat="x in names">-->
+                  <!--{{ x.name + ', ' + x.country }}</li>-->
+              <!--</ul>-->
+
+            <!--</div>-->
+            <div ng-app="myApp" ng-controller="customersCtrl">
+            <table class="table m-b-none" ui-jq="footable" data-filter="#filter" data-page-size="5">
+              <thead>
+                <tr>
+                  <!--<th>id</th>-->
+                  <th data-toggle="true">图片</th>
+                  <th>花名</th>
+                  <th data-hide="phone,tablet">花语</th>
+                  <th data-hide="phone,tablet" data-name="Date Of Birth">时间</th>
+                  <th data-hide="phone">状态</th>
+                </tr>
+              </thead>
+              <tbody>
+              <script src="https://cdn.staticfile.org/angular.js/1.6.3/angular.min.js"></script>
+              <style>
+                table, td  {
+                  border: 1px solid grey;
+                  border-collapse: collapse;
+                  padding: 5px;
+                }
+              </style>
+
+                  <!--<tr ng-repeat="x in names">-->
+                  <!--<td ng-if="$even"> {{ x.flowerLanguage }}</td>-->
+                  <!--<td ng-if="$even"> {{ x.flowerName }}</td>-->
+                  <!--<td ng-if="$even"> {{ x.createTime }}</td>-->
+                  <!--<td ng-if="$even">  {{ x.delete }}</td>-->
+                  <!--</tr>-->
+
+                  <tr ng-repeat="x in names">
+                    <!--<td ng-if="$even">{{ x.id }}</td>-->
+                    <td ng-if="$even">{{ x.flowerImg }}</td>
+                    <td ng-if="$even">{{ x.flowerName }}</td>
+                    <td ng-if="$even">{{ x.flowerLanguage }}</td>
+                    <td ng-if="$even">{{ x.createTime }}</td>
+                    <td ng-if="$even">{{ x.delete }}</td>
+                  </tr>
+
+
+
+              <script>
+                  var app = angular.module('myApp', []);
+                  app.controller('customersCtrl', function($scope, $http) {
+                      $http.get("http://localhost:17900/flower/flowers?flowerName")
+                          .then(function (result) {
+                              $scope.names = result.data.body;
+                          });
+                  });
+              </script>
+
+              <!--<tr ng-repeat="x in names">-->
+                <!--&lt;!&ndash;<td>{{ x.id }}</td>&ndash;&gt;-->
+                <!--<td>{{ x.createTime }}</td>-->
+                <!--<td>{{ x.remarks }}</td>-->
+                <!--<td>{{ x.flowerName }}</td>-->
+                <!--<td>{{ x.delete }}</td>-->
+                <!--<td>{{ x.flowerLanguage }}</td>-->
+              <!--</tr>-->
+                <!--<tr >-->
+                  <!--<td>Isidra</td>-->
+                  <!--<td><a href>Boudreaux</a></td>-->
+                  <!--<td>Traffic Court Referee</td>-->
+                  <!--<td data-value="78025368997">22 Jun 1972</td>-->
+                  <!--<td data-value="1"><span class="label bg-success" title="Active">活性</span></td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                  <!--<td>Shona</td>-->
+                  <!--<td>Woldt</td>-->
+                  <!--<td><a href>Airline Transport Pilot</a></td>-->
+                  <!--<td data-value="370961043292">3 Oct 1981</td>-->
+                  <!--<td data-value="2"><span class="label bg-light" title="Disabled">残</span></td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                  <!--<td>Granville</td>-->
+                  <!--<td>Leonardo</td>-->
+                  <!--<td>Business Services Sales Representative</td>-->
+                  <!--<td data-value="-22133780420">19 Apr 1969</td>-->
+                  <!--<td data-value="3"><span class="label bg-warning" title="Suspended">暂停</span>-->
+                  <!--</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                  <!--<td>Easer</td>-->
+                  <!--<td>Dragoo</td>-->
+                  <!--<td>Drywall Stripper</td>-->
+                  <!--<td data-value="250833505574">13 Dec 1977</td>-->
+                  <!--<td data-value="1"><span class="label bg-success" title="Active">活性</span></td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                  <!--<td>Maple</td>-->
+                  <!--<td>Halladay</td>-->
+                  <!--<td>Aviation Tactical Readiness Officer</td>-->
+                  <!--<td data-value="694116650726">30 Dec 1991</td>-->
+                  <!--<td data-value="3"><span class="label bg-warning" title="Suspended">暂停</span>-->
+                  <!--</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                  <!--<td>Maxine</td>-->
+                  <!--<td><a href>Woldt</a></td>-->
+                  <!--<td><a href>Business Services Sales Representative</a></td>-->
+                  <!--<td data-value="561440464855">17 Oct 1987</td>-->
+                  <!--<td data-value="2"><span class="label bg-light" title="Disabled">残</span></td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                  <!--<td>Lorraine</td>-->
+                  <!--<td>Mcgaughy</td>-->
+                  <!--<td>Hemodialysis Technician</td>-->
+                  <!--<td data-value="437400551390">11 Nov 1983</td>-->
+                  <!--<td data-value="2"><span class="label bg-light" title="Disabled">残</span></td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                  <!--<td>Lizzee</td>-->
+                  <!--<td><a href>Goodlow</a></td>-->
+                  <!--<td>Technical Services Librarian</td>-->
+                  <!--<td data-value="-257733999319">1 Nov 1961</td>-->
+                  <!--<td data-value="3"><span class="label bg-warning" title="Suspended">暂停</span>-->
+                  <!--</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                  <!--<td>Judi</td>-->
+                  <!--<td>Badgett</td>-->
+                  <!--<td>Electrical Lineworker</td>-->
+                  <!--<td data-value="362134712000">23 Jun 1981</td>-->
+                  <!--<td data-value="1"><span class="label bg-success" title="Active">活性</span></td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                  <!--<td>Lauri</td>-->
+                  <!--<td>Hyland</td>-->
+                  <!--<td>Blackjack Supervisor</td>-->
+                  <!--<td data-value="500874333932">15 Nov 1985</td>-->
+                  <!--<td data-value="3"><span class="label bg-warning" title="Suspended">暂停</span>-->
+                  <!--</td>-->
+                <!--</tr>-->
+              </tbody>
+              <tfoot class="hide-if-no-paging">
+              <tr>
+                <td colspan="5" class="text-center">
+                  <ul class="pagination"></ul>
+                </td>
+              </tr>
+              </tfoot>
+            </table>
+            </div>
           </div>
         </div>
-        <div class="calendar" ng-model="eventSources" config="uiConfig.calendar" ui-calendar="uiConfig.calendar"></div>
       </div>
-    </div>
+      <!--<div class="pos-rlt">-->
+        <!--<div class="fc-overlay">-->
+          <!--<div class="panel bg-white b-a pos-rlt">-->
+            <!--<span class="arrow"></span>-->
+            <!--<div class="h4 font-thin m-b-sm">{{event.title}}</div>-->
+            <!--<div class="line b-b b-light"></div>-->
+            <!--<div><i class="icon-calendar text-muted m-r-xs"></i> {{event.start | date:'medium'}}</div>-->
+            <!--<div class="ng-hide" ng-show='event.end'><i class="icon-clock text-muted m-r-xs"></i> {{event.end | date:'medium'}}</div>-->
+            <!--<div class="ng-hide" ng-show='event.location'><i class="icon-pointer text-muted m-r-xs"></i> {{event.location}}</div>-->
+            <!--<div class="m-t-sm">{{event.info}}</div>-->
+            <!--<div class="m-t-sm">{{event.url}}</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="calendar" ng-model="eventSources" config="uiConfig.calendar" ui-calendar="uiConfig.calendar"></div>-->
+      <!--</div>-->
+    <!--</div>-->
     <div class="col w-md w-auto-xs bg-light dk bg-auto b-l hide" id="aside">
       <div class="wrapper">
         <div ng-repeat="e in events" class="bg-white-only r r-2x m-b-xs wrapper-sm {{e.className[0]}}">          

@@ -343,7 +343,7 @@ angular.module('app')
               // fullCalendar
               .state('app.calendar', {
                   url: '/calendar',
-                  templateUrl: 'tpl/app_calendar.html',
+                  templateUrl: 'tpl/app_calendar1.html',
                   // use resolve to load other dependences
                   resolve: {
                       deps: ['$ocLazyLoad', 'uiLoad',

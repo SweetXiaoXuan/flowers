@@ -104,6 +104,7 @@ app.controller('FullcalendarCtrl', ['$scope', function($scope) {
     };
 
     /* Change View */
+    // 日历显示
     $scope.changeView = function(view, calendar) {
       $('.calendar').fullCalendar('changeView', view);
     };

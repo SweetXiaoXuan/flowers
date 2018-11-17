@@ -1,0 +1,66 @@
+<script src="../Be_Angular/js/data/app_calendar.js"></script>
+<div ng-controller="FullcalendarCtrl">
+    <div class="wrapper-md bg-light b-b">
+        <button type="button" class="btn btn-default btn-addon pull-right m-t-n-xs" ui-toggle-class="show" target="#aside">
+            <i class="fa fa-bars"></i> List
+        </button>
+        <h1 class="m-n font-thin h3">鲜花信息</h1>
+    </div>
+    <div class="hbox hbox-auto-xs hbox-auto-sm">
+        <div class="col wrapper-md">
+            <div class="clearfix m-b">
+                <button type="button" tooltip="Double click on calendar day to create event" class="btn btn-sm btn-primary btn-addon" ng-click="addEvent()">
+                    <i class="fa fa-plus"></i>添加
+                </button>
+                <div class="pull-right">
+                    <button type="button" class="btn btn-sm btn-default" ng-click="today()">当前</button>
+                    <div class="btn-group m-l-xs">
+                        <button class="btn btn-sm btn-default" ng-click="changeView('agendaDay')">一天</button>
+                        <button class="btn btn-sm btn-default" ng-click="changeView('agendaWeek')">一周</button>
+                        <button class="btn btn-sm btn-default" ng-click="changeView('month')">一月</button>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper-md">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        鲜花信息列表
+                    </div>
+                    <div class="panel-body b-b b-light">
+                        检索: <input id="filter" type="text" class="form-control input-sm w-sm inline m-r"/>
+                    </div>
+                    <div>
+                        <table class="table m-b-none" ui-jq="footable" data-filter="#filter" data-page-size="5">
+                            <thead>
+                            <tr>
+                                <th>id</th>
+                                <th data-toggle="true">图片</th>
+                                <th>花名</th>
+                                <th data-hide="phone,tablet">花语</th>
+                                <th data-hide="phone,tablet" data-name="Date Of Birth">时间</th>
+                                <th data-hide="phone">状态</th>
+                            </tr>
+                            </thead>
+                            <tbody class="flowerInfo"></tbody>
+                            <tfoot class="hide-if-no-paging">
+                            <tr>
+                                <td colspan="6" class="text-center">
+                                    <ul class="pagination"></ul>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col w-md w-auto-xs bg-light dk bg-auto b-l hide" id="aside">
+                <div class="wrapper">
+                    <div ng-repeat="e in events" class="bg-white-only r r-2x m-b-xs wrapper-sm {{e.className[0]}}">
+                        <input ng-model="e.title" class="form-control m-t-n-xs no-border no-padder no-bg">
+                        <a class="pull-right text-xs text-muted" ng-click="remove($index)"><i class="fa fa-trash-o"></i></a>
+                        <div class="text-xs text-muted">{{e.start | date:"MMM dd"}} - {{e.end | date:"MMM dd"}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

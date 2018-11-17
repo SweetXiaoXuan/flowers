@@ -18,6 +18,7 @@
     "HEADER" : "Navigation",
     "DASHBOARD" : "Armaturenbrett",
     "CALENDAR" : "Kalender",
+    "FLOWERS" : "flowers",
     "EMAIL" : "E-Mail",
     "WIDGETS" : "Widgets",
     "components" : {

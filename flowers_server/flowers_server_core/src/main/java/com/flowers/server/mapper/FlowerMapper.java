@@ -15,6 +15,7 @@ public interface FlowerMapper  {
     @Results({
             @Result(column = "flower_name", property = "flowerName"),
             @Result(column = "flower_language", property = "flowerLanguage"),
+            @Result(column = "flower_img", property = "flowerImg"),
             @Result(column = "create_time", property = "createTime")
     })
     FlowerInfo getInfoById( Long fid);
@@ -22,12 +23,13 @@ public interface FlowerMapper  {
     @SelectProvider(type = FlowerInfoProvider.class, method = "flowers")
     @Results({
             @Result(column = "flower_name", property = "flowerName"),
+            @Result(column = "flower_img", property = "flowerImg"),
             @Result(column = "flower_language", property = "flowerLanguage"),
             @Result(column = "create_time", property = "createTime")
     })
     List<FlowerInfo> flowers(String flowerName);
 
-    @Select("select count(id) from flower_info where TO_DAYS( NOW( ) ) - TO_DAYS(FROM_UNIXTIME(create_time) ) <= 1")
+    @Select("select count(id) from flower_info where TO_DAYS(create_time) = TO_DAYS(NOW())")
     int countToday();
 
     @Select("select count(id) from flower_info")

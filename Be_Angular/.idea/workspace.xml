@@ -2,134 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9aadbe01-52a2-4981-a32a-855c9a2fb801" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data_js/app_dashboard_v1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vue2-element-touzi-admin.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/css/xiaomi.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/css/xiaomi.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T10TJjB5hT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T16eEjBKhT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T16nVjBCKT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T184E_BQWT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T18yZQBCET1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T18zWQB4WT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T19AbjBCDT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1BsbjBvLT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1IhLjBC_T1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1JKxvBXhv1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1JnWjBCCT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1KDAjBCAT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1KzbQBvbT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1RICjB7DT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1YoZQByYT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1hLhjB_AT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1hiDvBvVv1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1jrxjB_VT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1mahQBmKT1RXrhCrK (1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1mahQBmKT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1meZjBCAT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1oTJjBKKT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1odEjB5bT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1oixjB5bT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1riKjB7VT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1tsEgB7DT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1vWdTBKDv1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1yvd_BQDT1RXrhCrK (1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/T1yvd_BQDT1RXrhCrK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/air.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/bag.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/baohu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/bluetoothheadset.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/chazuo!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/chongdian.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/compare.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/cunchu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/dianchi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/dianshipeijian.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/dianyuan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/dianyuanfujian.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/erji.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/fangchensai.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/fuzhuang.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/headphone.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/heyue.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/hezimini!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/hezis!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/hezis.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/hongmi2!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/hongmi2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/hongmi2a!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/hongmi2a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/hougai.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/huosai.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/ihealth!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/ihealth.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/lvxingxiang.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mi-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mi4!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mi4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/minote!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/minote.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/minotepro!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mipad.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mipad16!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mipad64!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mitu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mitv40!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mitv48!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mitv49!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/mitv55!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/miwifi!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/miwifi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/miwifilite!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/miwifilite.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/miwifimini!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/miwifimini.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/note!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/note2!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/note2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/powerscript.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/raoxian.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/scale!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/scale.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/shouhuan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/shubiaodian.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/smart!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/smart.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/telcom.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/tiemo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/tizhi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/tv3-55.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/tv40.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/tv48.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/tv49.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/wan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/water.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/wifi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/wifiExtension!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/wifiExtension.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/xiancai.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/xiaomi_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/xiaoyi!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/xiaoyi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/yicamera!160x110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/yicamera.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/yidongdianyuan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/yinxiang.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/zhinengtaozhuang.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/zhongxin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/zhoubian.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/img/zipaigan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/js/jquery-2.1.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/js/jquery.animate-colors-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../xiaomishop/js/xiaomi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/data/app_calendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/jquery-1.7.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/angular_js_data.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/angular_table.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/for_obj.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_table2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tpl/app_calendar1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-stripped.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-stripped.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/app/calendar/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app/calendar/calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/config.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/config.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/l10n/de_DE.js" beforeDir="false" afterPath="$PROJECT_DIR$/l10n/de_DE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/l10n/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/l10n/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/l10n/it_IT.js" beforeDir="false" afterPath="$PROJECT_DIR$/l10n/it_IT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpl/app_calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/app_calendar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tpl/app_dashboard_v1.html" beforeDir="false" afterPath="$PROJECT_DIR$/tpl/app_dashboard_v1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../content.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../content.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/FlowersCoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/FlowersCoreApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vue2-element-touzi-admin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/mapper/FlowerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/mapper/FlowerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/service/FlowerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/service/FlowerServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -144,34 +34,46 @@
     <session id="-863594107">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="4" />
-          <entry key="js" value="5" />
+          <entry key="135" value="1" />
+          <entry key="1561" value="1" />
+          <entry key="3321" value="1" />
+          <entry key="340" value="1" />
+          <entry key="3485" value="1" />
+          <entry key="css" value="1" />
+          <entry key="html" value="41" />
+          <entry key="js" value="25" />
+          <entry key="rnc" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="4" />
-          <entry key="JavaScript" value="5" />
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="41" />
+          <entry key="JavaScript" value="30" />
+          <entry key="RNG Compact" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="129" />
-          <entry key="js" value="27" />
+          <entry key="1561" value="8" />
+          <entry key="3485" value="1" />
+          <entry key="JavaScript Console" value="34" />
+          <entry key="html" value="1515" />
+          <entry key="js" value="314" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="129" />
-          <entry key="JavaScript" value="27" />
+          <entry key="HTML" value="1515" />
+          <entry key="JavaScript" value="357" />
         </counts>
       </usages-collector>
     </session>
@@ -179,28 +81,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+        <entry file="file://$PROJECT_DIR$/tpl/app_calendar1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="44" column="19" lean-forward="true" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+            <state relative-caret-position="288">
+              <caret line="33" column="35" lean-forward="true" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tpl/app_dashboard_v1.html">
+        <entry file="file://$PROJECT_DIR$/js/data/app_calendar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="16" column="35" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_js/app_dashboard_v1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="38" lean-forward="true" selection-end-line="21" selection-end-column="3" />
+            <state relative-caret-position="165">
+              <caret line="11" column="96" lean-forward="true" selection-start-line="11" selection-start-column="96" selection-end-line="11" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -210,7 +103,19 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>New items</find>
+      <find>aside.nav.CALENDAR</find>
       <find>Dashboard</find>
+      <find>CALENDAR</find>
+      <find>Footable - make HTML tables on smaller devices look awesome</find>
+      <find>table_footable.html</find>
+      <find>config.router.js</find>
+      <find>customersCtrl</find>
+      <find>app_calendar.html</find>
+      <find>tbody</find>
+      <find>angular</find>
+      <find>calendar.js</find>
+      <find>app_calendar1.html</find>
+      <find>FullcalendarCtrl</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -221,6 +126,20 @@
       <list>
         <option value="$PROJECT_DIR$/data_js/app_dashboard_v1.js" />
         <option value="$PROJECT_DIR$/tpl/app_dashboard_v1.html" />
+        <option value="$PROJECT_DIR$/l10n/de_DE.js" />
+        <option value="$PROJECT_DIR$/angular-stripped.html" />
+        <option value="$PROJECT_DIR$/js/app/calendar/calendar.js" />
+        <option value="$PROJECT_DIR$/test/for_obj.html" />
+        <option value="$PROJECT_DIR$/tpl/app_calendar.html" />
+        <option value="$PROJECT_DIR$/js/config.router.js" />
+        <option value="$PROJECT_DIR$/test/angular_table.html" />
+        <option value="$PROJECT_DIR$/test/xxxxx.html" />
+        <option value="$PROJECT_DIR$/test/angular_js_data.html" />
+        <option value="$PROJECT_DIR$/test/xxx.html" />
+        <option value="$PROJECT_DIR$/test/table.html" />
+        <option value="$PROJECT_DIR$/test/table.js" />
+        <option value="$PROJECT_DIR$/js/data/app_calendar.js" />
+        <option value="$PROJECT_DIR$/tpl/app_calendar1.html" />
       </list>
     </option>
   </component>
@@ -235,10 +154,40 @@
       <path value="$PROJECT_DIR$/bak/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="834" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1913" />
+    <option name="y" value="-40" />
+    <option name="width" value="1902" />
+    <option name="height" value="1049" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>Probable bugsCSS</id>
+          </State>
+          <State>
+            <id>RELAX NG</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+          <State>
+            <id>XSLT</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Angular</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -246,7 +195,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -262,20 +210,33 @@
             <path>
               <item name="Be_Angular" type="b2602c69:ProjectViewProjectNode" />
               <item name="Be_Angular" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Be_Angular" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Be_Angular" type="462c0819:PsiDirectoryNode" />
               <item name="tpl" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="BundleConfig&#9;null&#9;null&#10;CALENDAR&#9;FILE&#9;file:///Applications/workspace/intellijidea_workspace/other/flowers/Be_Angular/tpl/app_calendar.html&#10;aside&#9;FILE&#9;file:///Applications/workspace/intellijidea_workspace/other/flowers/Be_Angular/tpl/blocks/aside.html&#10;nav&#9;FILE&#9;file:///Applications/workspace/intellijidea_workspace/other/flowers/Be_Angular/tpl/blocks/nav.html" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/js" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -289,13 +250,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.angular">
+    <configuration name="Unnamed" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63343/Be_Angular/test/angular_js_data.html">
+      <method v="2" />
+    </configuration>
     <configuration name="angular" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63343/Be_Angular/index.html">
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.angular" />
+      <item itemvalue="JavaScript Debug.Unnamed" />
+    </list>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>$USER_HOME$/.subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -305,30 +273,31 @@
       <option name="presentableId" value="Default" />
       <updated>1542016673970</updated>
       <workItem from="1542016675224" duration="126000" />
-      <workItem from="1542273319688" duration="1682000" />
+      <workItem from="1542273319688" duration="2393000" />
+      <workItem from="1542330889716" duration="25905000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1808000" />
+    <option name="totallyTimeSpent" value="28424000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="834" extended-state="0" />
+    <frame x="-1920" y="-46" width="1920" height="1057" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16798314" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39914164" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49964765" weight="0.48590022" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.4002169" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003524" side_tool="true" weight="0.39914164" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -359,6 +328,15 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>result</expression-string>
+        <language-id>HTML</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -373,31 +351,188 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/data_js/app_dashboard_v1.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tpl/blocks/nav.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="44" column="19" lean-forward="true" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+        <state relative-caret-position="-110">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="5035" column="1" selection-start-line="5035" selection-start-column="1" selection-end-line="5035" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/common.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/jquery/fullcalendar/fullcalendar.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="5" column="3705" selection-start-line="5" selection-start-column="3705" selection-end-line="5" selection-end-column="3705" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tpl/blocks/aside.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1183" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        <state relative-caret-position="156">
+          <caret line="8" column="49" lean-forward="true" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_js/app_dashboard_v1.js">
+    <entry file="file://$PROJECT_DIR$/tpl/table_footable.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="38" lean-forward="true" selection-end-line="21" selection-end-column="3" />
+        <state relative-caret-position="23">
+          <caret line="1" column="44" lean-forward="true" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tpl/app_calendar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-80">
+          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/angular/angular.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="22" column="51" lean-forward="true" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app/calendar/calendar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery-1.7.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="90" lean-forward="true" selection-start-line="5" selection-start-column="90" selection-end-line="5" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-stripped.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5565">
+          <caret line="371" column="19" lean-forward="true" selection-start-line="371" selection-start-column="19" selection-end-line="371" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tpl/app_dashboard_v1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="35" />
+        <state relative-caret-position="120">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="https://cdn.staticfile.org/angular.js/1.6.3/angular.js">
+      <provider selected="true" editor-type-id="httpFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/config.router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="345" column="36" selection-start-line="345" selection-start-column="36" selection-end-line="345" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/table.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/table.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_table1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/for_obj.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_table2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="67" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/angular_table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/angular_js_data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="41" column="29" lean-forward="true" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tpl/app_calendar1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="33" column="35" lean-forward="true" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n/de_DE.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n/en.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n/it_IT.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/app_calendar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="96" lean-forward="true" selection-start-line="11" selection-start-column="96" selection-end-line="11" selection-end-column="96" />
         </state>
       </provider>
     </entry>

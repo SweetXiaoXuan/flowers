@@ -9,8 +9,7 @@
               type: 'get',
               dataType: 'json',
               timeout: 1000,
-              success: function (data, status) {
-                  console.info(JSON.stringify(data));
+              success: function (data) {
                   if (data.code === '0') {
                       $(".allUpload").html(data.body.countFlowerAll);
                       $(".allUsers").html(data.body.countUserAll);
@@ -18,9 +17,6 @@
                   } else if(data.status === '10000') {
                       parent.location.href ="../../login.html";
                   }
-              },
-              fail: function (err, status) {
-                  parent.location.href ="../../login.html";
               }
           })
       });
