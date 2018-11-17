@@ -9,7 +9,7 @@
     <div class="hbox hbox-auto-xs hbox-auto-sm">
         <div class="col wrapper-md">
             <div class="clearfix m-b">
-                <button type="button" tooltip="Double click on calendar day to create event" class="btn btn-sm btn-primary btn-addon" ng-click="addEvent()">
+                <button type="button" tooltip="Double click on calendar day to create event" class="btn btn-sm btn-primary btn-addon" ng-click="addInfo()">
                     <i class="fa fa-plus"></i>添加
                 </button>
                 <div class="pull-right">
@@ -39,12 +39,13 @@
                                 <th data-hide="phone,tablet">花语</th>
                                 <th data-hide="phone,tablet" data-name="Date Of Birth">时间</th>
                                 <th data-hide="phone">状态</th>
+                                <th data-hide="phone">操作</th>
                             </tr>
                             </thead>
                             <tbody class="flowerInfo"></tbody>
                             <tfoot class="hide-if-no-paging">
                             <tr>
-                                <td colspan="6" class="text-center">
+                                <td colspan="7" class="text-center">
                                     <ul class="pagination"></ul>
                                 </td>
                             </tr>
@@ -64,3 +65,4 @@
             </div>
         </div>
     </div>
+</div>
