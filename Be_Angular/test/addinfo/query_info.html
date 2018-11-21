@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
 </head>
 <body  ng-controller="myCtrl" >
-<script src="../vendor/angular/angular.js"></script>
-<div ng-click="myModel.show()">11111111111</div>
+<script src="../../vendor/angular/angular.js"></script>
+<script src="query_info.js"></script>
+<!--<div ng-click="myModel.show()">11111111111</div>-->
+<link href="../../css/bootstrap.css" rel="stylesheet" type="text/css">
 <div ng-show="myModel.isShow">
     <div id="myModal" class="modal" style="display: block;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header">
@@ -26,22 +27,3 @@
 </div>
 </body>
 </html>
-
-
-<script>
-    angular.module("myApp",[]).controller("myCtrl",['$scope',function($scope){
-
-        $scope.myModel={
-            isShow:false,
-            title: '编辑课程',
-            data:{},
-            show:function () {
-                this.isShow=true;
-            },
-            hide:function () {
-                this.isShow=false;
-            }
-        }
-        $scope.myModel.data=[{'name':'111111'},{"name":'123'}]
-    }])
-</script>

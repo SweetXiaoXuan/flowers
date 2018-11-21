@@ -13,21 +13,24 @@ $(document).ready(function () {
                     deleteStr = '否';
                 }
                 $('.flowerInfo').append(
-                    '<tr >\n' +
+                    '<tr  ng-controller="fInfo">\n' +
                     '                                    <td>' + info[i].id + '</td>\n' +
                     '                                    <td>' + info[i].flowerImg + '</td>\n' +
                     '                                    <td>' + info[i].flowerName + '</td>\n' +
                     '                                    <td>' + info[i].flowerLanguage + '</td>\n' +
                     '                                    <td data-value="78025368997">' + info[i].createTime + '</td>\n' +
                     '                                    <td data-value="1"><span class="label bg-success" title="Active">' + deleteStr + '</span></td>\n' +
-                    '                                    <td><button type="button" class="btn btn-sm btn-primary " ng-click="myModel.show()"><i></i>查看</button></td>' +
-                    '                                </tr>');
+                    '                                    <td><button type="button" class="btn btn-sm btn-primary " ui-sref="getFlowerInfo" ><i></i>查看</button></td>' +
+                    '                                </tr>' +
+                    '');
             }
         }
     })
 });
 
-
+function getinfo() {
+    location.href = 'test/addinfo/add_info.html';
+}
 
 function addInfo() {
 

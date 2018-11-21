@@ -9,6 +9,12 @@ spring:
   devtools:
     restart:
       enabled: true
+    # 配置rabbitMQspring:
+#  rabbitmq:
+#    host: 127.0.0.1
+#    username: guest
+#    password: guest
+#    virtual-host: flowers-web-flower
 
 eureka:
   client:
