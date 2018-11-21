@@ -6,6 +6,7 @@ $(document).ready(function(){
         dataType: 'json',
         timeout: 1000,
         success: function (data) {
+            console.info(data)
             if (data.code === '0') {
                 $(".userAll").html(data.body.countUserAll);
                 $(".flowerAll").html(data.body.countFlowerAll);
@@ -14,7 +15,8 @@ $(document).ready(function(){
                 parent.location.href ="../../login.html";
             }
         },
-        fail: function () {
+        fail: function (error) {
+            console.error(error);
             parent.location.href ="../../login.html";
         }
     })

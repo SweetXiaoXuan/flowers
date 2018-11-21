@@ -5,15 +5,17 @@ import com.flowers.api.service.FlowerService;
 import com.flowers.web.flower.common.bean.ResultJson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-public class FlowerController {
+public class FlowerController  {
     @Autowired(required = false)
     private FlowerService flowerService;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @ResponseBody
     @RequestMapping(value = "/console", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public ResponseEntity<ResultJson> console() {
