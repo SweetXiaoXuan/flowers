@@ -48,8 +48,10 @@ public class FlowerController  {
             @RequestParam("limit") String size
             ) {
 
-        Page<FlowerInfo> info = flowerService.flowers(flowerName, Integer.parseInt(page), Integer.parseInt(size));
-        return ResponseEntity.ok().body(new ResultJson(info.getResult(), me.getValue(ResultMsgConstant.querySuccess), info.getTotal()));
+        PageBean<FlowerInfo> info = flowerService.flowers(flowerName, Integer.parseInt(page), Integer.parseInt(size));
+//        Page<FlowerInfo> info = flowerService.flowers(flowerName, Integer.parseInt(page), Integer.parseInt(size));
+        return ResponseEntity.ok().body(new ResultJson(info.getItems(), me.getValue(ResultMsgConstant.querySuccess), info.getTotalNum()));
+//        return ResponseEntity.ok().body(new ResultJson(info.getResult(), me.getValue(ResultMsgConstant.querySuccess), info.getTotal()));
     }
 
 }

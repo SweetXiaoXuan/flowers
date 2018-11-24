@@ -45,17 +45,17 @@ public class FlowerServiceImpl implements FlowerService {
     @Override
     @GetMapping("/flowers")
     @ResponseBody
-    public Page<FlowerInfo> flowers(
+    public PageBean<FlowerInfo> flowers(
             @RequestParam("flowerName") String flowerName,
             @RequestParam("page") Integer page,
             @RequestParam("size") Integer size
     ) {
-//        PageHelper.startPage(page, size);
-//        List<FlowerInfo> withdrawBeanList = flowerMapper.flowers(flowerName);
-//        int countNums = withdrawBeanList.size();
-//        PageBean<FlowerInfo> pageData = new PageBean<>(page, size, countNums);
-//        pageData.setItems(withdrawBeanList);
-        Page<FlowerInfo> pageData = PageHelper.startPage(page, size).doSelectPage(()-> flowerMapper.flowers(flowerName));
+        PageHelper.startPage(page, size);
+        List<FlowerInfo> withdrawBeanList = flowerMapper.flowers(flowerName);
+        int countNums = withdrawBeanList.size();
+        PageBean<FlowerInfo> pageData = new PageBean<>(page, size, countNums);
+        pageData.setItems(withdrawBeanList);
+//        Page<FlowerInfo> pageData = PageHelper.startPage(page, size).doSelectPage(()-> flowerMapper.flowers(flowerName));
 
         return pageData;
 //        return flowerMapper.flowers(flowerName, page, size);

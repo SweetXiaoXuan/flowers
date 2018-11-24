@@ -35,10 +35,10 @@ public class ResultJson {
         this.body = body;
     }
 
-    public ResultJson(Object body, String msg, Long count) {
+    public ResultJson(Object body, String msg, Object count) {
         this.body = body;
         this.msg = msg;
-        this.count = count;
+        this.count = Long.parseLong(count.toString());
     }
 
     public ResultJson(Object body, String msg) {
@@ -49,6 +49,11 @@ public class ResultJson {
     public ResultJson(Object body, Long count) {
         this.body = body;
         this.count = count;
+    }
+
+    public ResultJson(Object body, Integer count) {
+        this.body = body;
+        this.count = Long.parseLong(count.toString());
     }
 
     public ResultJson(Object body) {
