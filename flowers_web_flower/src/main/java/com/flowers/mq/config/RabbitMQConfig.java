@@ -1,4 +1,4 @@
-package com.flowers.web.flower.mq.config;
+package com.flowers.mq.config;
 
 import org.springframework.amqp.core.AcknowledgeMode;
 import org.springframework.amqp.core.Binding;

@@ -1,4 +1,4 @@
-package com.flowers.web.flower.common.utils;
+package com.flowers.common.utils;
 
 import org.dom4j.Attribute;
 import org.dom4j.Document;
@@ -7,15 +7,11 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class MeaasgeUtil {
     private String defaultPath = "message.xml";
-    private static List<Map<String, String>> list = new ArrayList<>();
+    private static List<Map<String, String>> list = new ArrayList<Map<String, String>>();
     public MeaasgeUtil() {
         try {
             getMessage();
@@ -57,7 +53,7 @@ public class MeaasgeUtil {
             Element stuElem = it.next();
             //输出属性：id
             List<Attribute> attrList = stuElem.attributes();
-            Map<String, String> messages = new HashMap<>();
+            Map<String, String> messages = new HashMap<String, String>();
             for(Attribute attr :attrList){
                 messages.put(attr.getName(), attr.getValue());
             }
@@ -81,6 +77,9 @@ public class MeaasgeUtil {
         }
         if (sysType.contains("LINUX") || sysType.contains("UNIX")) {
             prefix = "/data/workspace/";
+        }
+        if (sysType.contains("MAC OS X")) {
+            prefix = "/Applications/workspace/intellijidea_workspace/other/flowers/";
         }
         return prefix;
     }

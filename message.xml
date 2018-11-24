@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meaasges>
+	<!-- 系统 -->
+    <meaasge name="zero" value="成功"></meaasge>
+    <meaasge name="one" value="失败"></meaasge>
+    <meaasge name="two" value="异常"></meaasge>
+    <meaasge name="sysExption" value="系统异常"></meaasge>
+	
+	<!-- 用户 -->
+    <meaasge name="sendSuccess" value="发送成功"></meaasge>
+    <meaasge name="differentPassword" value="两个密码不同"></meaasge>
+    <meaasge name="canNotEmpty" value="不能为空"></meaasge>
+    <meaasge name="phoneFormatError" value="手机号格式错误"></meaasge>
+    <meaasge name="verificationSuccess" value="验证成功"></meaasge>
+    <meaasge name="logoutSuccess" value="退户登陆成功"></meaasge>
+    <meaasge name="logoutFailed" value="退出登录失败"></meaasge>
+    <meaasge name="notLogin" value="暂未登录"></meaasge>
+    <meaasge name="permissionDenied" value="没有权限"></meaasge>
+    <meaasge name="phoneHasBeenRegistered" value="手机号已经注册"></meaasge>
+    <meaasge name="phoneIsNotRegistered" value="手机号还未注册"></meaasge>
+    <meaasge name="loginSuccess" value="登陆成功"></meaasge>
+    <meaasge name="loginFail" value="登陆失败"></meaasge>
+    <meaasge name="passError" value="密码错误"></meaasge>
+    <meaasge name="querySuccess" value="查询成功"></meaasge>
+    <meaasge name="queryFail" value="查询失败"></meaasge>
+    <meaasge name="bankCardError" value="银行卡号格式错误"></meaasge>
+    <meaasge name="formatError" value="格式错误"></meaasge>
+
+    <meaasge name="commissionRateformatError" value="佣金比例格式错误"></meaasge>
+
+	<!-- 文件 -->
+    <meaasge name="fileFormatError" value="文件格式错误，请重新上传"></meaasge>
+    <meaasge name="fileNotNull" value="文件不能为空"></meaasge>
+    <meaasge name="requestWasRejected" value="the request was rejected because it's not all correct form:multipart/form-data"></meaasge>
+    <meaasge name="uploadSuccess" value="upload success"></meaasge>
+    <meaasge name="success" value="success!"></meaasge>
+</meaasges>

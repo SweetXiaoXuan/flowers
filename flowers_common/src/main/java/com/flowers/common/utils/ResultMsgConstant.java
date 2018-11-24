@@ -1,4 +1,4 @@
-package com.flowers.web.flower.common.utils;
+package com.flowers.common.utils;
 
 /**
  * Created by 24593 on 2018/1/24.
@@ -33,6 +33,7 @@ public class ResultMsgConstant {
     public final static String logoutFailed = "logoutFailed";
     // 暂未登录
     public final static String notLogin = "notLogin";
+    public final static String querySuccess = "querySuccess";
 
     /** 活动 */
     // 首图地址错误

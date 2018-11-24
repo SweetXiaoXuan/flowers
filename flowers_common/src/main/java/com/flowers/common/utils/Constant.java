@@ -1,4 +1,4 @@
-package com.flowers.web.flower.common.utils;
+package com.flowers.common.utils;
 
 /**
  * 静态变量配置

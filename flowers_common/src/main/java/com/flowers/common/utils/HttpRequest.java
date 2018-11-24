@@ -1,4 +1,4 @@
-package com.flowers.web.flower.common.utils;
+package com.flowers.common.utils;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -40,7 +40,7 @@ public class HttpRequest {
      */
     public static String sendPost(String address, Map<String, Object> params) throws IOException {
         HttpClient client = new DefaultHttpClient();
-        List<NameValuePair> nvps = new ArrayList<>();
+        List<NameValuePair> nvps = new ArrayList<NameValuePair>();
         HttpPost post = new HttpPost(ADDRESS_URL + address);
         if (params != null) {
             for (Map.Entry<String, Object> param : params.entrySet()) {

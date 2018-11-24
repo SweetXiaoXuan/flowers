@@ -1,7 +1,7 @@
-package com.flowers.web.flower.common.utils;
+package com.flowers.common.utils;
 
 import com.alibaba.fastjson.JSON;
-import com.flowers.web.flower.common.bean.ResultJson;
+import com.flowers.common.bean.ResultJson;
 import org.slf4j.Logger;
 
 /**

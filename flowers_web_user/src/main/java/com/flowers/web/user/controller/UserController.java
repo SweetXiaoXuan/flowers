@@ -1,12 +1,8 @@
 package com.flowers.web.user.controller;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.flowers.api.model.User;
 import com.flowers.api.service.UserService;
-import com.flowers.web.user.common.bean.ResultJson;
-import com.flowers.web.user.common.bean.ResultJson;
+import com.flowers.common.bean.ResultJson;
 import feign.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/user")
 public class UserController {
 
     @Autowired(required = false)
@@ -35,66 +30,17 @@ public class UserController {
         return ResponseEntity.ok().body(resultJson);
     }
 
-    @GetMapping("/user")
+    @GetMapping("/userList")
     public ResponseEntity<ResultJson> userList() {
-        ResultJson resultJson = new ResultJson();
         List<User> userList = userService.listUsers();
-        resultJson.setBody(userList);
-        return ResponseEntity.ok().body(resultJson);
+        return ResponseEntity.ok().body(new ResultJson(userList, userList.size()));
     }
 
-    @GetMapping("/user/{id}")
+    @GetMapping("/getUser/{id}")
     public ResponseEntity<ResultJson> userList(@PathVariable("id") Integer id) {
         User user = userService.getUserById(id);
         ResultJson resultJson = new ResultJson();
         resultJson.setBody(user);
-        return ResponseEntity.ok().body(resultJson);
-    }
-
-//    @PostMapping("/user")
-//    public ResponseEntity<ResultJson> insertUser(@RequestBody User user) {
-//        User result = null;
-//        ResultJson resultJson = new ResultJson();
-//        try {
-//            result = userService.insertUser(user);
-//        } catch (Exception e) {
-//            resultJson.setCode(ResultJson.ERROR);
-//            resultJson.setMsg("异常");
-//            return ResponseEntity.ok().body(resultJson);
-//        }
-//        resultJson.setBody(result);
-//        return ResponseEntity.ok().body(resultJson);
-//    }
-//
-//    @PutMapping("/user")
-//    public ResponseEntity<ResultJson> updateUser(@RequestBody User user) {
-//        ResultJson resultJson = new ResultJson();
-//        try {
-//            if(user != null && user.getId() != null) {
-//                userService.updateUser(user);
-//            } else {
-//                resultJson.setCode(ResultJson.ERROR);
-//                resultJson.setMsg("失败");
-//                return ResponseEntity.ok().body(resultJson);
-//            }
-//        } catch (Exception e) {
-//            resultJson.setCode(ResultJson.ERROR);
-//            resultJson.setMsg("异常");
-//            return ResponseEntity.ok().body(resultJson);
-//        }
-//        return ResponseEntity.ok().body(resultJson);
-//    }
-
-    @DeleteMapping("/user/{id}")
-    public ResponseEntity<ResultJson> deleteUser(@PathVariable("id") Integer id) {
-        ResultJson resultJson = new ResultJson();
-        try {
-            userService.deleteUserById(id);
-        } catch (Exception e) {
-            resultJson.setCode(ResultJson.ERROR);
-            resultJson.setMsg("异常");
-            return ResponseEntity.ok().body(resultJson);
-        }
         return ResponseEntity.ok().body(resultJson);
     }
 

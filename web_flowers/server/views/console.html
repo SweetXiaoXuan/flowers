@@ -72,179 +72,171 @@
         </div>
     </div>
 </div>
-<!--<script src="../assets/layui/layui.all.js"></script>-->
-<!--<div class="layui-content">-->
-    <!--<div class="layui-row">-->
-        <!--<div class="layui-card">-->
-            <!--<div class="layui-card-body">-->
-                <!--<div class="form-box">-->
-                    <!--<div class="layui-form layui-form-item">-->
-                        <!--<div class="layui-inline">-->
-                            <!--<div class="layui-form-mid">开始时间:</div>-->
-                            <!--<div class="layui-input-inline" style="width: 150px;">-->
-                                <!--<input type="text" autocomplete="off" class="layui-input" id="start" placeholder="yyyy-MM-dd">-->
-                            <!--</div>-->
-                            <!--<div class="layui-form-mid">结束时间:</div>-->
-                            <!--<div class="layui-input-inline" style="width: 150px;">-->
-                                <!--<input type="text" autocomplete="off" class="layui-input" id="end" placeholder="yyyy-MM-dd">-->
-                            <!--</div>-->
-                            <!--<div class="layui-form-mid">提取方式:</div>-->
-                            <!--<div class="layui-input-inline" style="width: 100px;">-->
-                                <!--<select name="extract" id="extract">-->
-                                    <!--<option value=""></option>-->
-                                    <!--<option value="0">支付宝</option>-->
-                                    <!--<option value="1">微信</option>-->
-                                    <!--<option value="2">银联</option>-->
-                                <!--</select>-->
-                            <!--</div>-->
-                            <!--<div class="layui-form-mid">申请状态:</div>-->
-                            <!--<div class="layui-input-inline" style="width: 100px;">-->
-                                <!--<select name="status" id="status">-->
-                                    <!--<option value=""></option>-->
-                                    <!--<option value="0">待审核</option>-->
-                                    <!--<option value="1">已提取</option>-->
-                                    <!--<option value="2">未通过</option>-->
-                                <!--</select>-->
-                            <!--</div>-->
-                            <!--<button class="layui-btn layui-btn-blue query">查询</button>-->
-                            <!--<button class="layui-btn layui-btn-primary" onclick="nameClean()">重置</button>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--<table id="demo" lay-filter="demoEvent"> </table>-->
-                    <!--<script type="text/html" id="barDemo">-->
-                        <!--<button class="layui-btn layui-btn-xs withdrawUpdate" id="withdrawUpdate" lay-event="edit" >编辑</button>-->
-                    <!--</script>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
-<!--<script src="../assets/layui/layui.all.js"></script>-->
-<!--<script>-->
-    <!--function nameClean() {-->
-        <!--$('#start').val('');-->
-        <!--$('#end').val('');-->
-        <!--$('#extract').val('');-->
-        <!--$('#status').val('');-->
-        <!--$('#type').val('');-->
-    <!--}-->
+<script src="../assets/layui/layui.all.js"></script>
+<div class="layui-content">
+    <div class="layui-row">
+        <div class="layui-card">
+            <div class="layui-card-body">
+                <div class="form-box">
+                    <div class="layui-form layui-form-item">
+                        <div class="layui-inline">
+                            <div class="layui-form-mid">开始时间:</div>
+                            <div class="layui-input-inline" style="width: 150px;">
+                                <input type="text" autocomplete="off" class="layui-input" id="start" placeholder="yyyy-MM-dd">
+                            </div>
+                            <div class="layui-form-mid">结束时间:</div>
+                            <div class="layui-input-inline" style="width: 150px;">
+                                <input type="text" autocomplete="off" class="layui-input" id="end" placeholder="yyyy-MM-dd">
+                            </div>
+                            <div class="layui-form-mid">操作:</div>
+                            <div class="layui-input-inline" style="width: 100px;">
+                                <select name="extract" id="extract">
+                                    <option value=""></option>
+                                    <option value="0">新增</option>
+                                    <option value="1">查询</option>
+                                    <option value="2">修改</option>
+                                    <option value="3">删除</option>
+                                </select>
+                            </div>
+                            <button class="layui-btn layui-btn-blue query">查询</button>
+                            <button class="layui-btn layui-btn-primary" onclick="nameClean()">重置</button>
+                        </div>
+                    </div>
+                    <table id="demo" lay-filter="demoEvent"> </table>
+                    <script type="text/html" id="barDemo">
+                        <button class="layui-btn layui-btn-xs withdrawUpdate" id="withdrawUpdate" lay-event="edit" >编辑</button>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/layui/layui.all.js"></script>
+<script>
+    function nameClean() {
+        $('#start').val('');
+        $('#end').val('');
+        $('#extract').val('');
+        $('#status').val('');
+        $('#type').val('');
+    }
 
-    <!--var level = localStorage.getItem("level");-->
+    var level = localStorage.getItem("level");
 
-    <!--laydate.render({-->
-        <!--elem: '#start'-->
-        <!--,showBottom: false-->
-    <!--});-->
-    <!--laydate.render({-->
-        <!--elem: '#end'-->
-        <!--,showBottom: false-->
-    <!--});-->
-    <!--var datagrid;-->
-    <!--layui.use('table', function() {-->
-        <!--var element = layui.element;-->
-        <!--var table = layui.table;-->
-        <!--var form = layui.form;-->
-        <!--datagrid = {-->
-            <!--elem: '#demo'-->
-            <!--, where: {"rsid": localStorage.getItem("rsid")}-->
-            <!--, width: 1100-->
-            <!--, url: 'http://localhost:8119/merchant/withdrawList'-->
-            <!--// , url: 'http://47.98.40.106:8119/merchant/withdrawList'-->
-            <!--, parseData: function (res) {-->
-                <!--return {-->
-                    <!--"code": res.status,-->
-                    <!--"msg": res.msg,-->
-                    <!--"count": res.count,-->
-                    <!--"data": res.body.item-->
-                <!--};-->
-            <!--}-->
-            <!--, dataType: "json"-->
-            <!--, cols: [[-->
-                <!--{field: 'id', title: 'ID', sort: true}-->
-                <!--, {field: 'price', title: '提取金额'}-->
-                <!--, {field: 'extract', title: '提取方式'}-->
-                <!--, {field: 'account', title: '提取账号'}-->
-                <!--, {field: 'arrival', title: '到账方式'}-->
-                <!--, {field: 'insertTime', title: '提取时间'}-->
-                <!--, {field: 'remarks', title: '备注'}-->
-                <!--, {field: 'status', title: '申请状态', unresize: true}-->
-                <!--, {field: 'merchantName', title: '商户名'}-->
-            <!--]]-->
-            <!--, done: function (res) {-->
-                <!--var status = res.code;-->
-                <!--if (status === '10000') {-->
-                    <!--parent.location.href = "../login.html";-->
-                <!--}-->
-                <!--$("[data-field='extract']").children().each(function () {-->
-                    <!--if ($(this).text() == '0') {-->
-                        <!--$(this).text("支付宝")-->
-                    <!--} else if ($(this).text() == '1') {-->
-                        <!--$(this).text("微信")-->
-                    <!--} else if ($(this).text() == '2') {-->
-                        <!--$(this).text("银联")-->
-                    <!--}-->
-                <!--})-->
-                <!--$("[data-field='arrival']").children().each(function () {-->
-                    <!--if ($(this).text() == '0') {-->
-                        <!--$(this).text("快速到账")-->
-                    <!--} else if ($(this).text() == '1') {-->
-                        <!--$(this).text("正常到账")-->
-                    <!--}-->
-                <!--})-->
-                <!--$("[data-field='status']").children().each(function () {-->
-                    <!--if ($(this).text() == '0') {-->
-                        <!--$(this).text("待审核")-->
-                    <!--} else if ($(this).text() == '1') {-->
-                        <!--$(this).text("已提取")-->
-                    <!--} else if ($(this).text() == '2') {-->
-                        <!--$(this).text("未通过")-->
-                    <!--}-->
-                <!--})-->
-            <!--}-->
-            <!--, skin: 'line'-->
-            <!--, even: true-->
-            <!--, loading: true-->
-            <!--, page: true-->
-            <!--, limits: [5, 7, 10]-->
-            <!--, limit: 5-->
-        <!--};-->
-        <!--if (level == '0') {-->
-            <!--datagrid.cols[0].push({field:'', fixed: 'right', title: '操作', toolbar: '#barDemo'});-->
-        <!--}-->
+    laydate.render({
+        elem: '#start'
+        ,showBottom: false
+    });
+    laydate.render({
+        elem: '#end'
+        ,showBottom: false
+    });
+    var datagrid;
+    layui.use('table', function() {
+        var element = layui.element;
+        var table = layui.table;
+        var form = layui.form;
+        datagrid = {
+            elem: '#demo'
+            , where: {"rsid": localStorage.getItem("rsid")}
+            , width: 1100
+            , url: 'http://localhost:8119/merchant/withdrawList'
+            // , url: 'http://47.98.40.106:8119/merchant/withdrawList'
+            , parseData: function (res) {
+                return {
+                    "code": res.status,
+                    "msg": res.msg,
+                    "count": res.count,
+                    "data": res.body.item
+                };
+            }
+            , dataType: "json"
+            , cols: [[
+                {field: 'id', title: 'ID', sort: true}
+                , {field: 'price', title: '提取金额'}
+                , {field: 'extract', title: '提取方式'}
+                , {field: 'account', title: '提取账号'}
+                , {field: 'arrival', title: '到账方式'}
+                , {field: 'insertTime', title: '提取时间'}
+                , {field: 'remarks', title: '备注'}
+                , {field: 'status', title: '申请状态', unresize: true}
+                , {field: 'merchantName', title: '商户名'}
+            ]]
+            , done: function (res) {
+                var status = res.code;
+                if (status === '10000') {
+                    parent.location.href = "../login.html";
+                }
+                $("[data-field='extract']").children().each(function () {
+                    if ($(this).text() == '0') {
+                        $(this).text("支付宝")
+                    } else if ($(this).text() == '1') {
+                        $(this).text("微信")
+                    } else if ($(this).text() == '2') {
+                        $(this).text("银联")
+                    }
+                })
+                $("[data-field='arrival']").children().each(function () {
+                    if ($(this).text() == '0') {
+                        $(this).text("快速到账")
+                    } else if ($(this).text() == '1') {
+                        $(this).text("正常到账")
+                    }
+                })
+                $("[data-field='status']").children().each(function () {
+                    if ($(this).text() == '0') {
+                        $(this).text("待审核")
+                    } else if ($(this).text() == '1') {
+                        $(this).text("已提取")
+                    } else if ($(this).text() == '2') {
+                        $(this).text("未通过")
+                    }
+                })
+            }
+            , skin: 'line'
+            , even: true
+            , loading: true
+            , page: true
+            , limits: [5, 7, 10]
+            , limit: 5
+        };
+        if (level == '0') {
+            datagrid.cols[0].push({field:'', fixed: 'right', title: '操作', toolbar: '#barDemo'});
+        }
 
-        <!--datagrid = table.render(datagrid);-->
+        datagrid = table.render(datagrid);
 
-        <!--table.on('tool(demoEvent)', function(obj){-->
-            <!--var data = obj.data;-->
-            <!--sessionStorage.allmessage = JSON.stringify(data);-->
-            <!--var layEvent = obj.event;-->
-            <!--if(layEvent === 'edit'){-->
-                <!--var index = layer.open({-->
-                    <!--type: 2,-->
-                    <!--title: '修改提现申请状态',-->
-                    <!--closeBtn: 1,-->
-                    <!--area: ['300px', '260px'],-->
-                    <!--shadeClose: true,-->
-                    <!--// btn: ['确认'],-->
-                    <!--skin: 'demo layui-layer-rim',-->
-                    <!--content: "update_withdraw.html",-->
-                <!--});-->
-            <!--}-->
-        <!--});-->
-    <!--});-->
+        table.on('tool(demoEvent)', function(obj){
+            var data = obj.data;
+            sessionStorage.allmessage = JSON.stringify(data);
+            var layEvent = obj.event;
+            if(layEvent === 'edit'){
+                var index = layer.open({
+                    type: 2,
+                    title: '修改提现申请状态',
+                    closeBtn: 1,
+                    area: ['300px', '260px'],
+                    shadeClose: true,
+                    // btn: ['确认'],
+                    skin: 'demo layui-layer-rim',
+                    content: "update_withdraw.html",
+                });
+            }
+        });
+    });
 
-    <!--$(".query").on("click",function() {-->
-        <!--datagrid.reload({-->
-            <!--where:{-->
-                <!--rsid: localStorage.getItem("rsid"),-->
-                <!--start: $("#start").val(),-->
-                <!--end: $("#end").val(),-->
-                <!--extract: $("#extract").val(),-->
-                <!--status: $("#status").val(),-->
-                <!--type: $("#type").val()-->
-            <!--}-->
-        <!--});-->
-    <!--});-->
-<!--</script>-->
+    $(".query").on("click",function() {
+        datagrid.reload({
+            where:{
+                rsid: localStorage.getItem("rsid"),
+                start: $("#start").val(),
+                end: $("#end").val(),
+                extract: $("#extract").val(),
+                status: $("#status").val(),
+                type: $("#type").val()
+            }
+        });
+    });
+</script>
 </body>
 </html>

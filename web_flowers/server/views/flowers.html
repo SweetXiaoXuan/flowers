@@ -16,7 +16,7 @@
             <div class="pagewrap">
                 <span class="layui-breadcrumb">
                   <a href="">首页</a>
-                  <a href="">用户</a>
+                  <a href="">鲜花</a>
                   <a><cite>鲜花列表</cite></a>
                 </span>
                 <h2 class="title">鲜花列表</h2>
@@ -34,11 +34,26 @@
                                 </div>
                                 <div class="layui-form-mid">季节:</div>
                                 <div class="layui-input-inline" style="width: 100px;">
-                                  <input type="text" autocomplete="off" class="layui-input" id="mobile">
+                                    <select name="status" id="status">
+                                        <option value=""></option>
+                                        <option value="0">春</option>
+                                        <option value="1">夏</option>
+                                        <option value="2">秋</option>
+                                        <option value="3">冬</option>
+                                    </select>
                                 </div>
                                 <div class="layui-form-mid">颜色:</div>
                                 <div class="layui-input-inline" style="width: 100px;">
-                                  <input type="text" autocomplete="off" class="layui-input" id="mobile">
+                                    <select name="status" id="status">
+                                        <option value=""></option>
+                                        <option value="0">红</option>
+                                        <option value="1">橙</option>
+                                        <option value="2">黄</option>
+                                        <option value="3">绿</option>
+                                        <option value="4">蓝</option>
+                                        <option value="5">靛</option>
+                                        <option value="6">紫</option>
+                                    </select>
                                 </div>
                                 <div class="layui-form-mid">开始时间:</div>
                                 <div class="layui-input-inline" style="width: 150px;">
@@ -84,28 +99,25 @@
                 elem: '#demo'
                 ,where:
                     {
-                        rsid: localStorage.getItem("rsid"),
-                        username : $("#username").val()
+                        flowerName : ''
                     }
-                , url: 'http://localhost:8119/merchant/userListForMerchant'
-                // , url: 'http://47.98.40.106:8119/merchant/userListForMerchant'
+                , url: 'http://localhost:17900/flower/flowers'
                 ,parseData: function(res){
                     return {
-                        "code": res.status,
+                        "code": res.code,
                         "msg": res.msg,
                         "count": res.count,
-                        "data": res.body.item
+                        "data": res.body
                     };
                 }
-
                 ,dataType:"json"
                 , cols: [[
-                    {field: 'uid', title: 'ID', width: 80, sort: true}
-                    , {field: 'username', title: '用户名', width: 200}
-                    , {field: 'mobile', title: '手机号', width: 200}
-                    , {field: 'orderPrice', title: '合同金额', minWidth: 200}
-                    , {field: 'actualPrice', title: '已付租金', minWidth: 200}
-                    , {field: 'merchantName', title: '商户名', minWidth: 200}
+                    {field: 'id', title: 'ID', width: 80, sort: true}
+                    , {field: 'flowerName', title: '花名', width: 200}
+                    , {field: 'flowerLanguage', title: '花语', width: 200}
+                    , {field: 'remarks', title: '备注', minWidth: 200}
+                    , {field: 'createTime', title: '添加时间', minWidth: 200}
+                    , {field: 'delete', title: '删除状态', minWidth: 200}
                 ]]
                 ,done: function(res){
                     console.info(res)
@@ -113,6 +125,11 @@
                     if(status === '10000') {
                         parent.location.href ="../../login.html";
                     }
+                    $("[data-field='remarks']").children().each(function () {
+                        if ($(this).text() === null || $(this).text() === '') {
+                            $(this).text("无")
+                        }
+                    })
                 }
                 , skin: 'line' //表格风格
                 ,loading:true

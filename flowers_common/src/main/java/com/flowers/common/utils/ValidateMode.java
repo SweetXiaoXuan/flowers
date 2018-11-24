@@ -1,4 +1,4 @@
-package com.flowers.web.user.common.utils;
+package com.flowers.common.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.util.regex.Matcher;

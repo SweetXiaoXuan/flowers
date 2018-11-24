@@ -1,8 +1,8 @@
-package com.flowers.web.flower.mq.msg;
+package com.flowers.mq.msg;
 
 import java.util.UUID;
 
-import com.flowers.web.flower.mq.config.RabbitMQConfig;
+import com.flowers.mq.config.RabbitMQConfig;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.support.CorrelationData;
 import org.springframework.web.bind.annotation.RequestMapping;
