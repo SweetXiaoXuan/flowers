@@ -6,7 +6,6 @@ $(document).ready(function(){
         dataType: 'json',
         timeout: 1000,
         success: function (data) {
-            console.info(data)
             if (data.code === '0') {
                 $(".userAll").html(data.body.countUserAll);
                 $(".flowerAll").html(data.body.countFlowerAll);

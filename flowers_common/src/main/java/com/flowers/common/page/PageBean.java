@@ -17,6 +17,7 @@ public class PageBean<T> {
     private Integer startIndex;
     // 分页结果
     private List<T> items;
+    private boolean hasNext;
 
     public PageBean() {
         super();
@@ -86,5 +87,13 @@ public class PageBean<T> {
 
     public void setItems(List<T> items) {
         this.items = items;
+    }
+
+    public boolean isHasNext() {
+        return hasNext;
+    }
+
+    public void setHasNext(Integer total, Integer size, Integer page) {
+        this.hasNext = total / size > page ;
     }
 }

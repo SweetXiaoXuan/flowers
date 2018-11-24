@@ -50,14 +50,26 @@ public class FlowerServiceImpl implements FlowerService {
             @RequestParam("page") Integer page,
             @RequestParam("size") Integer size
     ) {
-        PageHelper.startPage(page, size);
-        List<FlowerInfo> withdrawBeanList = flowerMapper.flowers(flowerName);
-        int countNums = withdrawBeanList.size();
-        PageBean<FlowerInfo> pageData = new PageBean<>(page, size, countNums);
-        pageData.setItems(withdrawBeanList);
-//        Page<FlowerInfo> pageData = PageHelper.startPage(page, size).doSelectPage(()-> flowerMapper.flowers(flowerName));
+//        PageHelper.startPage(page, size);
+//        List<FlowerInfo> withdrawBeanList = flowerMapper.flowers(flowerName);
+//        int countNums = withdrawBeanList.size();
+//        PageBean<FlowerInfo> pageData = new PageBean<>(page, size, countNums);
+//        pageData.setItems(withdrawBeanList);
+        List<FlowerInfo> infos = flowerMapper.flowers(flowerName);
+        Page<FlowerInfo> pageData = PageHelper.startPage(page, size).doSelectPage(()-> flowerMapper.flowers(flowerName));
 
-        return pageData;
+        long total = PageHelper.count(()->flowerMapper.flowers(flowerName));
+
+        pageData.setTotal(infos.size());
+
+        PageBean<FlowerInfo> pageBean = new PageBean<>();
+        pageBean.setItems(pageData);
+        pageBean.setTotalNum(infos.size());
+        pageBean.setHasNext(infos.size(), size, page);
+
+
+
+        return pageBean;
 //        return flowerMapper.flowers(flowerName, page, size);
     }
 

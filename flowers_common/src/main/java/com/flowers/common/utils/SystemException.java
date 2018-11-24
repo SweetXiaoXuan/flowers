@@ -11,20 +11,20 @@ import org.slf4j.Logger;
  *
  */
 public enum SystemException {
-    SYSTEM_EXCEPTION("500", "System exception");
+    SYSTEM_EXCEPTION(500, "System exception");
 
-    SystemException(String value, String description) {
+    SystemException(Integer value, String description) {
         this.value = value;
         this.description = description;
     }
-    private String value;
+    private Integer value;
     private String description;
 
-    public String getValue() {
+    public Integer getValue() {
         return value;
     }
 
-    public void setValue(String value) {
+    public void setValue(Integer value) {
         this.value = value;
     }
 
@@ -41,7 +41,7 @@ public enum SystemException {
         logger.error(e.getMessage(), e);
         resultStruct.setBody("");
         resultStruct.setMsg(e.getMessage());
-        resultStruct.setCode(String.valueOf(SYSTEM_EXCEPTION.getValue()));
+        resultStruct.setCode(SYSTEM_EXCEPTION.getValue());
         return JSON.toJSONString(resultStruct.toString());
     }
 

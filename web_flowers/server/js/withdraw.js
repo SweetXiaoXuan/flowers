@@ -14,7 +14,6 @@ function btnWithdraw() {
             "arrival":$(".arrival").val()},
         success: function (data, status) {
             alert("1");
-            console.info(data);
             if (data.status === '1') {
                 alert(data.msg);
             } else if (data.status === '10000') {

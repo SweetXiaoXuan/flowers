@@ -124,9 +124,9 @@
                     , {field:'', fixed: 'right', title: '操作', toolbar: '#barDemo'}
                 ]]
                 ,done: function(res){
-                    console.info(res)
+                    console.info(JSON.stringify(res))
                     var status = res.code;
-                    if(status === '10000') {
+                    if(status === 10000) {
                         parent.location.href ="../../login.html";
                     }
                     $("[data-field='remarks']").children().each(function () {

@@ -3,7 +3,7 @@ package com.flowers.common.bean;
 import com.alibaba.fastjson.JSON;
 
 public class ResultJson {
-    private String code = "0";
+    private Integer code = 0;
     private Object body = null;
     private String msg = "成功";
     private Long count = null;
@@ -11,26 +11,26 @@ public class ResultJson {
     public ResultJson() {
     }
 
-    public ResultJson(String code, Object body, String msg, Long count) {
+    public ResultJson(Integer code, Object body, String msg, Long count) {
         this.code = code;
         this.body = body;
         this.msg = msg;
         this.count = count;
     }
 
-    public ResultJson(String code, Object body, String msg) {
+    public ResultJson(Integer code, Object body, String msg) {
         this.code = code;
         this.body = body;
         this.msg = msg;
     }
 
-    public ResultJson(String code, Object body, Long count) {
+    public ResultJson(Integer code, Object body, Long count) {
         this.code = code;
         this.body = body;
         this.count = count;
     }
 
-    public ResultJson(String code, Object body) {
+    public ResultJson(Integer code, Object body) {
         this.code = code;
         this.body = body;
     }
@@ -82,11 +82,11 @@ public class ResultJson {
         this.msg = msg;
     }
 
-    public String getCode() {
+    public Integer getCode() {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(Integer code) {
         this.code = code;
     }
 
