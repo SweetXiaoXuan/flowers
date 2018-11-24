@@ -1,4 +1,4 @@
-package com.flowers.server.utils;
+package com.flowers.common.utils;
 
 /**
  * MIT License
@@ -54,7 +54,7 @@ public class SqlUtil {
 
     /**
      * Multi-condition query and get total sql stitching
-     * @see com.flowers.server.utils.SqlUtil#sqlMap select, count
+     * @see com.flowers.common.utils.SqlUtil#sqlMap select, count
      * @param param conditional parameter(can be empty)
      * @param clazz class to be queried(not null)
      * @param operating sql type
@@ -79,7 +79,7 @@ public class SqlUtil {
 
     /**
      * Multi-condition query and get total sql stitching
-     * @see com.flowers.server.utils.SqlUtil#sqlMap select, count
+     * @see com.flowers.common.utils.SqlUtil#sqlMap select, count
      * @param param conditional parameter(can be empty)
      * @param clazz class to be queried(not null)
      * @param operating sql type
@@ -117,7 +117,7 @@ public class SqlUtil {
 
     /**
      * Delete sql stitching according to conditions
-     * @see com.flowers.server.utils.SqlUtil#sqlMap delete
+     * @see com.flowers.common.utils.SqlUtil#sqlMap delete
      * @param param conditional parameter(can be empty)
      * @param clazz class to be queried(not null)
      * @param operating sql type
@@ -140,7 +140,7 @@ public class SqlUtil {
 
     /**
      * Condition modification sql stitching
-     * @see com.flowers.server.utils.SqlUtil#sqlMap update
+     * @see com.flowers.common.utils.SqlUtil#sqlMap update
      * @param param conditional parameter(can be empty)
      * @param clazz class to be queried(not null)
      * @param operating sql type
@@ -163,7 +163,7 @@ public class SqlUtil {
 
     /**
      * Splice insert sql statement
-     * @see com.flowers.server.utils.SqlUtil#sqlMap insert
+     * @see com.flowers.common.utils.SqlUtil#sqlMap insert
      * @param key clos name
      * @param value column corresponding value
      * @param clazz class to be queried(not null)

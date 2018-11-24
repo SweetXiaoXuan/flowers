@@ -1,6 +1,8 @@
 package com.flowers.api.service;
 
 import com.flowers.api.model.FlowerInfo;
+import com.flowers.common.page.PageBean;
+import com.github.pagehelper.Page;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,5 +26,9 @@ public interface FlowerService {
 
     @GetMapping("/flowers")
     @ResponseBody
-    List<FlowerInfo> flowers(@RequestParam("flowerName") String flowerName);
+    Page<FlowerInfo> flowers(
+            @RequestParam("flowerName") String flowerName,
+            @RequestParam("page") Integer page,
+            @RequestParam("size") Integer size
+    );
 }

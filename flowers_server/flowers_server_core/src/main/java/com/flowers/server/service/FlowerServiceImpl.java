@@ -2,8 +2,11 @@ package com.flowers.server.service;
 
 import com.flowers.api.model.FlowerInfo;
 import com.flowers.api.service.FlowerService;
+import com.flowers.common.page.PageBean;
 import com.flowers.server.mapper.FlowerMapper;
 import com.flowers.server.mapper.UserMapper;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -42,9 +45,21 @@ public class FlowerServiceImpl implements FlowerService {
     @Override
     @GetMapping("/flowers")
     @ResponseBody
-    public List<FlowerInfo> flowers(
-            @RequestParam("flowerName") String flowerName
+    public Page<FlowerInfo> flowers(
+            @RequestParam("flowerName") String flowerName,
+            @RequestParam("page") Integer page,
+            @RequestParam("size") Integer size
     ) {
-        return flowerMapper.flowers(flowerName);
+//        PageHelper.startPage(page, size);
+//        List<FlowerInfo> withdrawBeanList = flowerMapper.flowers(flowerName);
+//        int countNums = withdrawBeanList.size();
+//        PageBean<FlowerInfo> pageData = new PageBean<>(page, size, countNums);
+//        pageData.setItems(withdrawBeanList);
+        Page<FlowerInfo> pageData = PageHelper.startPage(page, size).doSelectPage(()-> flowerMapper.flowers(flowerName));
+
+        return pageData;
+//        return flowerMapper.flowers(flowerName, page, size);
     }
+
+
 }

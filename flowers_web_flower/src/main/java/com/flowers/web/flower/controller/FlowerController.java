@@ -3,8 +3,10 @@ package com.flowers.web.flower.controller;
 import com.flowers.api.model.FlowerInfo;
 import com.flowers.api.service.FlowerService;
 import com.flowers.common.bean.ResultJson;
+import com.flowers.common.page.PageBean;
 import com.flowers.common.utils.MeaasgeUtil;
 import com.flowers.common.utils.ResultMsgConstant;
+import com.github.pagehelper.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +17,7 @@ import java.util.List;
 public class FlowerController  {
     @Autowired(required = false)
     private FlowerService flowerService;
+    MeaasgeUtil me = new MeaasgeUtil();
 
 //    @PreAuthorize("hasRole('ADMIN')")
     @ResponseBody
@@ -25,7 +28,6 @@ public class FlowerController  {
         resultJson.setMsg("查询成功");
         return ResponseEntity.ok().body(resultJson);
     }
-    MeaasgeUtil me = new MeaasgeUtil();
 
     @ResponseBody
     @RequestMapping(value = "/flowersInfo", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
@@ -41,9 +43,13 @@ public class FlowerController  {
     @ResponseBody
     @RequestMapping(value = "/flowers", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public ResponseEntity<ResultJson> flowers(
-            @RequestParam("flowerName") String flowerName) {
-        List<FlowerInfo> info = flowerService.flowers(flowerName);
-        return ResponseEntity.ok().body(new ResultJson(info, me.getValue(ResultMsgConstant.querySuccess), info.size()));
+            @RequestParam("flowerName") String flowerName,
+            @RequestParam("page") String page,
+            @RequestParam("limit") String size
+            ) {
+
+        Page<FlowerInfo> info = flowerService.flowers(flowerName, Integer.parseInt(page), Integer.parseInt(size));
+        return ResponseEntity.ok().body(new ResultJson(info.getResult(), me.getValue(ResultMsgConstant.querySuccess), info.getTotal()));
     }
 
 }

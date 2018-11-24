@@ -1,7 +1,7 @@
 package com.flowers.server.provider;
 
-import com.flowers.server.utils.SqlUtil;
-import com.flowers.server.utils.StringUtil;
+import com.flowers.common.utils.SqlUtil;
+import com.flowers.common.utils.StringUtil;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -67,7 +67,10 @@
                                 <button type="reset" class="layui-btn layui-btn-primary" onclick="nameClean()">重置</button>
                             </div>
                         </div>
-                        <table id="demo"></table>
+                        <table id="demo" lay-filter="demoEvent"></table>
+                        <script type="text/html" id="barDemo">
+                            <button class="layui-btn layui-btn-xs withdrawUpdate" id="withdrawUpdate" lay-event="edit" >查看</button>
+                        </script>
                     </div>
                 </div>
             </div>
@@ -112,12 +115,13 @@
                 }
                 ,dataType:"json"
                 , cols: [[
-                    {field: 'id', title: 'ID', width: 80, sort: true}
-                    , {field: 'flowerName', title: '花名', width: 200}
-                    , {field: 'flowerLanguage', title: '花语', width: 200}
-                    , {field: 'remarks', title: '备注', minWidth: 200}
-                    , {field: 'createTime', title: '添加时间', minWidth: 200}
-                    , {field: 'delete', title: '删除状态', minWidth: 200}
+                    {field: 'id', title: 'ID', sort: true}
+                    , {field: 'flowerName', title: '花名'}
+                    , {field: 'flowerLanguage', title: '花语'}
+                    , {field: 'remarks', title: '备注'}
+                    , {field: 'createTime', title: '添加时间'}
+                    , {field: 'delete', title: '删除状态'}
+                    , {field:'', fixed: 'right', title: '操作', toolbar: '#barDemo'}
                 ]]
                 ,done: function(res){
                     console.info(res)
@@ -137,6 +141,23 @@
                 , page: true //是否显示分页
                 ,limits: [5, 7, 10]
                 ,limit: 5 //每页默认显示的数量
+            });
+
+            table.on('tool(demoEvent)', function(obj){
+                data = obj.data;
+                sessionStorage.allmessage = JSON.stringify(data);
+                var layEvent = obj.event;
+                if(layEvent === 'edit') {
+                    var index = layer.open({
+                        type: 2,
+                        title: '查询用户信息',
+                        closeBtn: 1,
+                        area: ['550px', '500px'],
+                        shadeClose: true,
+                        skin: 'demo layui-layer-rim',
+                        content: 'user_info.html'
+                    });
+                }
             });
         });
 
