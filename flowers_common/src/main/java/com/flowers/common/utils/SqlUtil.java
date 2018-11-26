@@ -95,11 +95,12 @@ public class SqlUtil {
         StringBuffer sql = new StringBuffer(sqlMap.get(operating));
         if (param == null) return String.format(sql.toString(), "*", clazz);
         Set<K> cols = param.keySet();
-        param.entrySet().forEach(
-                map -> sql.append(sqlMap.get("and")).append(map.getKey()).append(" like  '%").append(map.getValue()).append("%' ")
-        );
         String str = StringUtils.join(cols.toArray(), ",");
-        return String.format(sql.toString(), isNull(cols) ? "*" : str, clazz);
+        StringBuffer sqlStr = new StringBuffer(String.format(sql.toString(), "*", clazz));
+        param.entrySet().forEach(
+                map -> sqlStr.append(sqlMap.get("and")).append(map.getKey()).append(" like  '%").append(map.getValue()).append("%' ")
+        );
+        return sqlStr.toString();
     }
 
     /**

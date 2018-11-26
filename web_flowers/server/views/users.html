@@ -77,9 +77,7 @@
 
     var datagrid;
     layui.use('table', function() {
-        var element = layui.element;
         var table = layui.table;
-        var form = layui.form;
         datagrid = table.render({
             elem: '#demo'
             // ,where:
@@ -95,18 +93,6 @@
                     "data": res.body
                 };
             }
-            /**
-            "id": 1,
-            "username": "aaa",
-            "password": "aaa",
-            "email": null,
-            "phone": null,
-            "delete": null,
-            "status": null,
-            "remarks": null,
-            "createTime": null,
-            "level": null
-             */
             ,dataType:"json"
             , cols: [[
                 {field: 'id', title: 'ID',  sort: true}
@@ -121,7 +107,7 @@
             ]]
             ,done: function(res){
                 var status = res.code;
-                if(status === '10000') {
+                if(status === 10000) {
                     parent.location.href ="../../login.html";
                 }
                 $("[data-field='remarks']").children().each(function () {

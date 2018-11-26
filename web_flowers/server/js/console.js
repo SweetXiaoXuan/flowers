@@ -6,11 +6,11 @@ $(document).ready(function(){
         dataType: 'json',
         timeout: 1000,
         success: function (data) {
-            if (data.code === '0') {
+            if (data.code === 0) {
                 $(".userAll").html(data.body.countUserAll);
                 $(".flowerAll").html(data.body.countFlowerAll);
                 $(".todayFlower").html(data.body.countFlowerToday);
-            } else if(data.status === '10000') {
+            } else if(data.status === 10000) {
                 parent.location.href ="../../login.html";
             }
         },

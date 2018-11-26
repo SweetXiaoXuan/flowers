@@ -10,4 +10,5 @@ public class UserLog {
     private String createTime;
     private String description;
     private Integer delete;
+    private Integer type;
 }

@@ -11,7 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class FlowerController  {
@@ -37,10 +39,18 @@ public class FlowerController  {
     @RequestMapping(value = "/flowers", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public ResponseEntity<ResultJson> flowers(
             @RequestParam("flowerName") String flowerName,
+            @RequestParam("season") String season,
+            @RequestParam("color") String color,
             @RequestParam("page") String page,
             @RequestParam("limit") String size
             ) {
-        PageBean<FlowerInfo> info = flowerService.flowers(flowerName, Integer.parseInt(page), Integer.parseInt(size));
+        Map<String, Object> param = new HashMap<>();
+        param.put("flowerName", flowerName);
+        param.put("page", Integer.parseInt(page));
+        param.put("size", Integer.parseInt(size));
+        param.put("color", color);
+        param.put("season", season);
+        PageBean<FlowerInfo> info = flowerService.flowers(param);
         return ResponseEntity.ok().body(new ResultJson(info.getItems(), me.getValue(ResultMsgConstant.querySuccess), info.getTotalNum()));
     }
 

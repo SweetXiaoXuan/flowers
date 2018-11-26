@@ -27,8 +27,6 @@ public interface FlowerService {
     @GetMapping("/flowers")
     @ResponseBody
     PageBean<FlowerInfo> flowers(
-            @RequestParam("flowerName") String flowerName,
-            @RequestParam("page") Integer page,
-            @RequestParam("size") Integer size
+            @RequestBody Map<String, Object> param
     );
 }

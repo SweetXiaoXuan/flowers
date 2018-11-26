@@ -13,7 +13,6 @@
     <style type="text/css" >
         td[data-field='status'] .layui-table-cell{
             overflow: visible;
-
         }
         .layui-table-body{
             overflow: visible;
@@ -157,7 +156,7 @@
             ]]
             , done: function (res) {
                 var status = res.code;
-                if (status === '10000') {
+                if (status === 10000) {
                     parent.location.href = "../login.html";
                 }
                 $("[data-field='extract']").children().each(function () {

@@ -5,6 +5,7 @@ import com.flowers.api.model.User;
 import com.flowers.api.model.UserLog;
 import com.flowers.api.service.UserService;
 import com.flowers.common.page.PageBean;
+import com.flowers.server.mapper.UserLogMapper;
 import com.flowers.server.mapper.UserMapper;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
@@ -30,6 +31,8 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private UserLogMapper userLogMapper;
 
     @Override
     @GetMapping("/user/{id}")
@@ -40,6 +43,7 @@ public class UserServiceImpl implements UserService {
     @Override
     @GetMapping("/user")
     public List<User> listUsers() {
+        userLogMapper.insertLog("查询用户列表", 2, 1L);
         return userMapper.findAll();
     }
 
@@ -52,6 +56,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUserByUsernameAndPassword(@RequestBody User user) {
+        userLogMapper.insertLog("用户登录", 2, 1L);
         return userMapper.getUserByUsernameAndPassword(user);
     }
 
