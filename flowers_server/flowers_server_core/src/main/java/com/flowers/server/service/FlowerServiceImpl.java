@@ -1,6 +1,7 @@
 package com.flowers.server.service;
 
 import com.flowers.api.model.FlowerInfo;
+import com.flowers.api.model.FlowerSpecific;
 import com.flowers.api.service.FlowerService;
 import com.flowers.common.page.PageBean;
 import com.flowers.server.mapper.FlowerMapper;
@@ -32,6 +33,13 @@ public class FlowerServiceImpl implements FlowerService {
     ) {
         userLogMapper.insertLog("根据 id 查询鲜花信息", 2, 1L);
         return flowerMapper.getInfoById(Long.parseLong(fid));
+    }
+
+    @Override
+    @GetMapping("/flowerSpecific")
+    public List<FlowerSpecific> flowerSpecific( @RequestParam("fid") String fid) {
+        userLogMapper.insertLog("根据 id 查询鲜花其他信息", 2, 1L);
+        return flowerMapper.flowerSpecific(Long.parseLong(fid));
     }
 
     @Override

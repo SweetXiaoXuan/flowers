@@ -36,6 +36,13 @@ public class FlowerController  {
     }
 
     @ResponseBody
+    @RequestMapping(value = "/flowerSpecific", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+    public ResponseEntity<ResultJson> flowerSpecific(
+            @RequestParam("fid") String fid) {
+        return ResponseEntity.ok().body(new ResultJson(flowerService.flowerSpecific(fid), me.getValue(ResultMsgConstant.querySuccess)));
+    }
+
+    @ResponseBody
     @RequestMapping(value = "/flowers", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
     public ResponseEntity<ResultJson> flowers(
             @RequestParam("flowerName") String flowerName,

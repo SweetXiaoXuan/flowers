@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="../assets/css/view.css"/>
     <link rel="icon" href="/favicon.ico">
     <title>管理后台</title>
+    <style type="text/css">
+        .remarks{
+            width: 200px;
+            left: 16px;
+        }
+    </style>
 </head>
 <body class="layui-view-body">
 <div class="layui-content">
@@ -16,107 +22,45 @@
             <div class="layui-card-body">
                 <div class="form-box">
                     <div class="layui-form layui-form-item">
-                        <div class="layui-inline">
+                        <div class="layui-inline flower_info">
                             <div class="layui-form-item">
-                                <label class="layui-form-label label_width ">用户名称</label>
-                                <label class="layui-form-label label_width_value username"></label>
+                                <label class="layui-form-label label_width ">花名</label>
+                                <label class="layui-form-label label_width_value flowerName"></label>
                             </div>
                             <div class="layui-form-item">
-                                <label class="layui-form-label label_width">用户昵称</label>
-                                <label class="layui-form-label label_width_value nickname"></label>
+                                <label class="layui-form-label label_width">花语</label>
+                                <label class="layui-form-label label_width_value flowerLanguage" style="width: 400px"></label>
                             </div>
                             <div class="layui-form-item">
-                                <label class="layui-form-label label_width">用户密码</label>
-                                <label class="layui-form-label label_width_value password"></label>
+                                <label class="layui-form-label label_width">图片</label>
+                                <label class="layui-form-label label_width_value flowerImg"></label>
                             </div>
                             <div class="layui-form-item">
-                                <label class="layui-form-label label_width">性别</label>
-                                <label class="layui-form-label label_width_value gender"></label>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">生日</label>
-                                <label class="layui-form-label label_width_value Birthday"></label>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">手机号</label>
-                                <label class="layui-form-label label_width_value mobile"></label>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">头像</label>
-                                <label class="layui-form-label label_width_value avatar"></label>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">微信openid</label>
-                                <label class="layui-form-label label_width_value weixin_openid"></label>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">身份证姓名</label>
-                                <label class="layui-form-label label_width_value card_name"></label>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">身份证号</label>
-                                <label class="layui-form-label label_width_value id_card_no"></label>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">工作单位</label>
-                                <label class="layui-form-label label_width_value work_address"></label>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">居住地址</label>
-                                <label class="layui-form-label label_width_value home_address"></label>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">身份证ocr</label>
-                                <label class="layui-form-label label_width_value is_auth"></label>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">绑定银行卡</label>
-                                <label class="layui-form-label label_width_value is_bank"></label>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">商户id</label>
-                                <label class="layui-form-label label_width_value merchant_id"></label>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">商户名</label>
-                                <label class="layui-form-label label_width_value merchant_name"></label>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">用户等级</label>
-                                <label class="layui-form-label label_width_value user_level"></label>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">账号状态</label>
-                                <label class="layui-form-label label_width_value status"></label>
+                                <label class="layui-form-label label_width">扩展字段</label>
+                                <label class="layui-form-label label_width_value infoRemarks"></label>
+
+                                <!--<div class="layui-input-block">-->
+                                    <!--<textarea name="feature" placeholder="无" class="layui-textarea infoRemarks" readonly></textarea>-->
+                                <!--</div>-->
                             </div>
                             <div class="layui-form-item">
                                 <label class="layui-form-label label_width">逻辑删除</label>
                                 <label class="layui-form-label label_width_value deleted"></label>
                             </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">最近一次登录时间</label>
-                                <label class="layui-form-label label_width_value lastLoginTime"></label>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">最近一次登陆ip地址</label>
-                                <label class="layui-form-label label_width_value last_login_ip"></label>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">登陆后token</label>
-                                <label class="layui-form-label label_width_value last_token"></label>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">创建时间</label>
-                                <label class="layui-form-label label_width_value addTime"></label>
-                            </div>
-                            <div class="layui-form-item">
-                                <label class="layui-form-label label_width">扩展字段</label>
-                                <!--<label class="layui-form-label  feature">-->
-                                <!--</label>-->
-                                <div class="layui-input-block">
-                                    <textarea name="feature" placeholder="请输入内容" class="layui-textarea feature" style="width: 200px;left: 16px;" readonly></textarea>
-                                </div>
-                            </div>
+
+
+                            <!--<div class="layui-form-item">-->
+                                <!--<label class="layui-form-label label_width">标题</label>-->
+                                <!--<label class="layui-form-label label_width_value title"></label>-->
+                            <!--</div>-->
+                            <!--<div class="layui-form-item">-->
+                                <!--<label class="layui-form-label label_width">内容</label>-->
+                                <!--<label class="layui-form-label label_width_value content"></label>-->
+                            <!--</div>-->
+                            <!--<div class="layui-form-item">-->
+                                <!--<label class="layui-form-label label_width">备注</label>-->
+                                <!--<label class="layui-form-label label_width_value specificRemarks"></label>-->
+                            <!--</div>-->
                         </div>
                     </div>
                 </div>
@@ -139,60 +83,98 @@
     var data;
     $(document).ready(function() {
         data = JSON.parse(sessionStorage.allmessage);
-        $('.username').append(data.username);
-        $('.merchant_name').append(data.merchant_name);
-        $('.last_login_ip').append(data.last_login_ip);
-        $('.lastLoginTime').append(data.lastLoginTime);
-        $('.Birthday').append(data.Birthday);
-        $('.id_card_no').append(data.id_card_no);
-        $('.card_name').append(data.card_name);
-        $('.weixin_openid').append(data.weixin_openid);
-        $('.mobile').append(data.mobile);
-        $('.nickname').append(data.nickname);
-        $('.password').append(data.password);
-        $('.avatar').html(" <img src='" + data.avatar + "' height='100' width='100' />");
-        $('.merchant_id').append(data.merchant_id);
-        $('.last_token').append(data.last_token);
-        $('.addTime').append(data.addTime);
-        $('.feature').append(data.feature);
-        $('.home_address').append(data.home_address);
-        $('.work_address').append(data.work_address)
-        $('.is_auth').append(data.is_auth === 0 ? "未认证" : "已认证");
-        $('.is_bank').append(data.is_bank === 0 ? "未认证" : "已认证");
+        $('.flowerName').append(data.flowerName);
+        $('.flowerImg').append(data.flowerImg);
+        $('.flowerLanguage').append(data.flowerLanguage);
+        $('.infoRemarks').append(isEmpty(data.remarks) ? '无' : data.remarks);
         $('.deleted').append(data.deleted === 0 ? "未删" : "已删");
-        var status = data.status;
-        var user_level = data.user_level;
-        var gender = data.gender;
-        if (status === 0) {
-            status = "可用";
-        } else if(status === 1) {
-            status = "禁用";
-        } else if(status === 2) {
-            status = "注销";
-        }
-        if (gender === 0) {
-            gender = "未知";
-        } else if(gender === 1) {
-            gender = "男";
-        } else if(gender === 2) {
-            gender = "女";
-        }
-        if (user_level === 0) {
-            user_level = "普通用户";
-        } else if(user_level === 1) {
-            user_level = "VIP用户";
-        } else if(user_level === 2) {
-            user_level = "高级VIP用户";
-        }
-        $('.status').append(status);
-        $('.user_level').append(user_level);
-        $('.gender').append(gender);
+        // getSpecificInfo(data.id);
+        $.ajax({
+            url: "http://localhost:17900/flower/flowerSpecific",
+            data: {"fid": data.id},
+            type: 'get',
+            dataType: 'json',
+            timeout: 1000,
+            success: function (data) {
+                if (data.code === 0) {
+                    var body = data.body;
+                    for (var i = 0; i < body.length; i++) {
+                        var info = body[i];
+                        var title = info.title;
+                        var content = info.content;
+                        var remarks = isEmpty(info.remarks) ? '无' : info.remarks;
+                        $('.flower_info').append('<hr size="1" width="780px"/>' +
+                            '<div class="layui-form-item">\n' +
+                        '                                <label class="layui-form-label label_width">标题</label>\n' +
+                        '                                <label class="layui-form-label label_width_value title">' + title + '</label>\n' +
+                        '                            </div>\n' +
+                        '                            <div class="layui-form-item">\n' +
+                        '                                <label class="layui-form-label label_width">内容</label>\n' +
+                        '                                <label class="layui-form-label label_width_value content" style="width: 450px">' + content + '</label>\n' +
+                        '                            </div>\n' +
+                        '                            <div class="layui-form-item">\n' +
+                        '                                <label class="layui-form-label label_width">备注</label>\n' +
+                        '                                <label class="layui-form-label label_width_value specificRemarks">' + remarks + '</label>\n' +
+                        '                            </div>');
+                    }
+
+                } else if(data.status === 10000) {
+                    parent.location.href ="../../login.html";
+                }
+            },
+            fail: function (error) {
+                console.error(error);
+                parent.location.href ="../../login.html";
+            }
+        })
+
+
     });
 
     function isEmpty(obj) {
-        if (obj == null || "".eq(obj) || "undefined".eq(obj) || "null".eq(obj)) return true;
+        if (obj == null || "" === obj || "undefined".eq(obj) || "null".eq(obj)) return true;
         return false;
     }
+
+    // function getSpecificInfo(id) {
+    //     $.ajax({
+    //         url: "http://localhost:17900/flower/flowerSpecific",
+    //         data: {"fid": id},
+    //         type: 'get',
+    //         dataType: 'json',
+    //         timeout: 1000,
+    //         success: function (data) {
+    //             if (data.code === 0) {
+    //                 var body = data.body;
+    //
+    //                 // $('.title').append(body.title);
+    //                 // $('.content').append(body.content);
+    //                 // $('.specificRemarks').append(isEmpty(body.remarks) ? '无' : body.remarks);
+    //                 for (var i = 0; i < body.length; i++) {
+    //                     $('.flower_info').append('<div class="layui-form-item">\n' +
+    //                         '                                <label class="layui-form-label label_width">标题</label>\n' +
+    //                         '                                <label class="layui-form-label label_width_value title">' + body[i].title + '</label>\n' +
+    //                         '                            </div>\n' +
+    //                         '                            <div class="layui-form-item">\n' +
+    //                         '                                <label class="layui-form-label label_width">内容</label>\n' +
+    //                         '                                <label class="layui-form-label label_width_value content">' + body[i].content + '</label>\n' +
+    //                         '                            </div>\n' +
+    //                         '                            <div class="layui-form-item">\n' +
+    //                         '                                <label class="layui-form-label label_width">备注</label>\n' +
+    //                         '                                <label class="layui-form-label label_width_value specificRemarks">' + isEmpty(body[i].remarks) ? '无' : body[i].remarks + '</label>\n' +
+    //                         '                            </div>');
+    //                 }
+    //
+    //             } else if(data.status === 10000) {
+    //                 parent.location.href ="../../login.html";
+    //             }
+    //         },
+    //         fail: function (error) {
+    //             console.error(error);
+    //             parent.location.href ="../../login.html";
+    //         }
+    //     })
+    // }
 </script>
 </body>
 </html>

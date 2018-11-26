@@ -1,6 +1,7 @@
 package com.flowers.api.service;
 
 import com.flowers.api.model.FlowerInfo;
+import com.flowers.api.model.FlowerSpecific;
 import com.flowers.common.page.PageBean;
 import com.github.pagehelper.Page;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -19,6 +20,10 @@ public interface FlowerService {
     @GetMapping("/flowersInfo")
     @ResponseBody
     FlowerInfo getInfoById(@RequestParam("fid") String fid);
+
+    @GetMapping("/flowerSpecific")
+    @ResponseBody
+    List<FlowerSpecific> flowerSpecific(@RequestParam("fid") String fid);
 
     @GetMapping("/console")
     @ResponseBody

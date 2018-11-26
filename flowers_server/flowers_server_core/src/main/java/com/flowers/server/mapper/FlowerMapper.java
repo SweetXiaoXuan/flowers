@@ -2,6 +2,7 @@ package com.flowers.server.mapper;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.flowers.api.model.FlowerInfo;
+import com.flowers.api.model.FlowerSpecific;
 import com.flowers.api.model.User;
 import com.flowers.server.provider.FlowerInfoProvider;
 import org.apache.ibatis.annotations.*;
@@ -34,4 +35,10 @@ public interface FlowerMapper  {
 
     @Select("select count(id) from flower_info")
     int countAll();
+
+    @Select("select * from flower_specific where fid = #{fid}")
+    @Results({
+            @Result(column = "create_time", property = "createTime")
+    })
+    List<FlowerSpecific> flowerSpecific(@Param("fid") Long fid);
 }
