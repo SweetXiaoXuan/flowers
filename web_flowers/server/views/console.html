@@ -133,34 +133,27 @@
     });
     var datagrid;
     layui.use('table', function() {
-        var element = layui.element;
         var table = layui.table;
-        var form = layui.form;
         datagrid = {
             elem: '#demo'
-            , where: {"rsid": localStorage.getItem("rsid")}
-            , width: 1100
-            , url: 'http://localhost:8119/merchant/withdrawList'
-            // , url: 'http://47.98.40.106:8119/merchant/withdrawList'
+            // , where: {"rsid": localStorage.getItem("rsid")}
+            , url: 'http://localhost:17900/user/logs'
             , parseData: function (res) {
                 return {
-                    "code": res.status,
+                    "code": res.code,
                     "msg": res.msg,
                     "count": res.count,
-                    "data": res.body.item
+                    "data": res.body
                 };
             }
+            , method:'post'
             , dataType: "json"
             , cols: [[
                 {field: 'id', title: 'ID', sort: true}
-                , {field: 'price', title: '提取金额'}
-                , {field: 'extract', title: '提取方式'}
-                , {field: 'account', title: '提取账号'}
-                , {field: 'arrival', title: '到账方式'}
-                , {field: 'insertTime', title: '提取时间'}
-                , {field: 'remarks', title: '备注'}
-                , {field: 'status', title: '申请状态', unresize: true}
-                , {field: 'merchantName', title: '商户名'}
+                , {field: 'uid', title: '用户 id'}
+                , {field: 'description', title: '说明'}
+                , {field: 'createTime', title: '创建时间'}
+                , {field: 'delete', title: '删除状态'}
             ]]
             , done: function (res) {
                 var status = res.code;

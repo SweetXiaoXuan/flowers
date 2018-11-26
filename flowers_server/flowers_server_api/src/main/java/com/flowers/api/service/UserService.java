@@ -1,6 +1,8 @@
 package com.flowers.api.service;
 
 import com.flowers.api.model.User;
+import com.flowers.api.model.UserLog;
+import com.flowers.common.page.PageBean;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * user
@@ -43,5 +46,8 @@ public interface UserService {
 
     @PostMapping("/login")
     User getUserByUsernameAndPassword(@RequestBody User user);
+
+    @PostMapping("/logs")
+    PageBean<UserLog> logs(Map<String, Object> param);
 }
 

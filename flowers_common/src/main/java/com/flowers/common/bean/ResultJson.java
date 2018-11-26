@@ -9,6 +9,9 @@ public class ResultJson {
     private Long count = null;
 
     public ResultJson() {
+        this.code = getCode();
+        this.body = getBody();
+        this.msg = getMsg();
     }
 
     public ResultJson(Integer code, Object body, String msg, Long count) {

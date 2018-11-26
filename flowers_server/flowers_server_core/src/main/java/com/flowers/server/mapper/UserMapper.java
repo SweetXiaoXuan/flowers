@@ -1,10 +1,12 @@
 package com.flowers.server.mapper;
 
 import com.flowers.api.model.User;
+import com.flowers.api.model.UserLog;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author liumengwei
@@ -28,5 +30,11 @@ public interface UserMapper {
 
     @Select("select * from user where username = #{username} and password = #{password}")
     User getUserByUsernameAndPassword(User user);
+
+    @Select("select * from user_log")
+    @Results({
+            @Result(column = "create_time", property = "createTime")
+    })
+    List<UserLog> logs(Map<String, Object> param);
 
 }
