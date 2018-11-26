@@ -47,10 +47,24 @@ public class UserController {
         return ResponseEntity.ok().body(new ResultJson(logs.getItems(), me.getValue(ResultMsgConstant.querySuccess), logs.getTotalNum()));
     }
 
-    @GetMapping("/userList")
-    public ResponseEntity<ResultJson> userList() {
-        List<User> userList = userService.listUsers();
-        return ResponseEntity.ok().body(new ResultJson(userList, userList.size()));
+    @RequestMapping(value = "/userList", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
+    public ResponseEntity<ResultJson> userList(
+            @RequestParam("username") String username,
+            @RequestParam("level") String level,
+            @RequestParam("status") String status,
+            @RequestParam("page") String page,
+            @RequestParam("limit") String size,
+            @RequestParam("phone") String phone
+    ) {
+        Map<String, Object> param = new HashMap<>();
+        param.put("username", username);
+        param.put("level", level);
+        param.put("size", size);
+        param.put("page", page);
+        param.put("status", status);
+        param.put("phone", phone);
+        PageBean<User> userList = userService.listUsers(param);
+        return ResponseEntity.ok().body(new ResultJson(userList.getItems(), userList.getTotalNum()));
     }
 
     @GetMapping("/getUser/{id}")

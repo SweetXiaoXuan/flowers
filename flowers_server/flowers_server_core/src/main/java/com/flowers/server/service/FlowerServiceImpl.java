@@ -47,7 +47,7 @@ public class FlowerServiceImpl implements FlowerService {
     }
 
     @Override
-    @GetMapping("/flowers")
+    @PostMapping("/flowers")
     @ResponseBody
     public PageBean<FlowerInfo> flowers(
             @RequestBody Map<String, Object> param

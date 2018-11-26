@@ -33,24 +33,23 @@
                             </div>
                             <div class="layui-form-mid">手机号:</div>
                             <div class="layui-input-inline" style="width: 120px;">
-                                <input type="text" autocomplete="off" class="layui-input" id="mobile">
+                                <input type="text" autocomplete="off" class="layui-input" id="phone">
                             </div>
                             <div class="layui-form-mid">用户等级:</div>
                             <div class="layui-input-inline" style="width: 100px;">
-                                <select name="user_level" id="user_level">
+                                <select name="level" id="level">
                                     <option value=""></option>
-                                    <option value="0">普通用户</option>
-                                    <option value="1">VIP用户</option>
-                                    <option value="2">高级VIP用户</option>
+                                    <option value="0">超级管理员</option>
+                                    <option value="1">普通用户</option>
                                 </select>
                             </div>
                             <div class="layui-form-mid">账号状态:</div>
                             <div class="layui-input-inline" style="width: 100px;">
                                 <select name="status" id="status">
                                     <option value=""></option>
-                                    <option value="0">可用</option>
-                                    <option value="1">禁用</option>
-                                    <option value="2">注销</option>
+                                    <option value="0">正常</option>
+                                    <option value="1">锁定</option>
+                                    <option value="2">异常</option>
                                 </select>
                             </div>
                             <button class="layui-btn layui-btn-blue query">查询</button>
@@ -80,10 +79,13 @@
         var table = layui.table;
         datagrid = table.render({
             elem: '#demo'
-            // ,where:
-            //     {
-            //         is_bank : $("#is_bank").val()
-            //     }
+            ,where:
+                {
+                    username : '',
+                    phone : '',
+                    status : '',
+                    level : ''
+                }
             , url: 'http://localhost:17900/user/userList'
             ,parseData: function(res){
                 return {
@@ -115,7 +117,24 @@
                         $(this).text("无")
                     }
                 })
+                $("[data-field='level']").children().each(function () {
+                    if ($(this).text() === '0') {
+                        $(this).text("超级管理员")
+                    } else if ($(this).text() === '1') {
+                        $(this).text("普通用户")
+                    }
+                })
+                $("[data-field='status']").children().each(function () {
+                    if ($(this).text() === '0') {
+                        $(this).text("正常")
+                    } else if ($(this).text() === '1') {
+                        $(this).text("锁定")
+                    } else if ($(this).text() === '2') {
+                        $(this).text("异常")
+                    }
+                })
             }
+            , method: 'post'
             , skin: 'line' //表格风格
             ,loading:true
             ,even: true
@@ -150,14 +169,11 @@
             {
                 where:
                     {
-                        rsid: localStorage.getItem("rsid"),
+                        // rsid: localStorage.getItem("rsid"),
                         username: $("#username").val(),
-                        mobile : $("#mobile").val(),
-                        gender : $("#gender").val(),
-                        user_level : $("#user_level").val(),
-                        status : $("#status").val(),
-                        is_auth : $("#is_auth").val(),
-                        is_bank : $("#is_bank").val()
+                        phone : $("#phone").val(),
+                        level : $("#level").val(),
+                        status : $("#status").val()
                     }
             });
     });

@@ -36,7 +36,7 @@ public class FlowerController  {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/flowers", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "/flowers", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
     public ResponseEntity<ResultJson> flowers(
             @RequestParam("flowerName") String flowerName,
             @RequestParam("season") String season,

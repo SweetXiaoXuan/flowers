@@ -34,8 +34,8 @@ public interface UserService {
      * 获得所有的用户
      * @return
      */
-    @GetMapping("/user")
-    List<User> listUsers();
+    @PostMapping("/user")
+    PageBean<User> listUsers(@RequestBody Map<String , Object> param);
 
     /**
      * 根据用户ID删除用户

@@ -24,7 +24,7 @@ public interface FlowerService {
     @ResponseBody
     Map<String, Object> console();
 
-    @GetMapping("/flowers")
+    @PostMapping("/flowers")
     @ResponseBody
     PageBean<FlowerInfo> flowers(
             @RequestBody Map<String, Object> param

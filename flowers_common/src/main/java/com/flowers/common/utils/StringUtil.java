@@ -50,7 +50,7 @@ public class StringUtil {
     }
 
     public static boolean isEmpty(String arg) {
-        return (arg == null) || (arg.trim().equals("") || "null".equals(arg));
+        return (arg == null) || (arg.trim().equals("") || "null".equals(arg)) || "".equals(arg);
     }
 
     public static boolean isEmail(String searchPhrase) {

@@ -24,8 +24,11 @@ public interface UserMapper {
     @Select("select * from user where id = #{id}")
     User findById(Integer id);
 
-    @Select("select * from user")
-    List<User> findAll();
+    @SelectProvider(type = UserLogProvider.class, method = "findAll")
+    @Results({
+            @Result(column = "create_time", property = "createTime")
+    })
+    List<User> findAll(Map<String, Object> param);
 
     @Select("select count(id) from user")
     int countAll();
