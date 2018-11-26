@@ -74,7 +74,7 @@ public class SqlUtil {
                 map -> sql.append(sqlMap.get("and")).append(map.getKey()).append(" = ").append(map.getValue())
         );
         String str = StringUtils.join(cols.toArray(), ",");
-        return String.format(sql.toString(), isNull(cols) ? "*" : str, clazz);
+        return String.format(sql.toString(), "*", clazz);
     }
 
     /**

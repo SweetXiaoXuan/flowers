@@ -36,11 +36,13 @@ public class UserController {
 
     @RequestMapping(value = "/logs", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
     public ResponseEntity<ResultJson> logs(
+            @RequestParam("type") String type,
             @RequestParam("page") String page,
             @RequestParam("limit") String size) {
         Map<String, Object> param = new HashMap<>();
         param.put("page", page);
         param.put("size", size);
+        param.put("type", type);
         PageBean<UserLog> logs = userService.logs(param);
         return ResponseEntity.ok().body(new ResultJson(logs.getItems(), me.getValue(ResultMsgConstant.querySuccess), logs.getTotalNum()));
     }

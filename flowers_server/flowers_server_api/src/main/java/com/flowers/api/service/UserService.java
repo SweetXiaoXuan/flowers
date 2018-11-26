@@ -48,6 +48,6 @@ public interface UserService {
     User getUserByUsernameAndPassword(@RequestBody User user);
 
     @PostMapping("/logs")
-    PageBean<UserLog> logs(Map<String, Object> param);
+    PageBean<UserLog> logs(@RequestBody Map<String, Object> param);
 }
 

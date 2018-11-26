@@ -89,12 +89,12 @@
                             </div>
                             <div class="layui-form-mid">操作:</div>
                             <div class="layui-input-inline" style="width: 100px;">
-                                <select name="extract" id="extract">
+                                <select name="type" id="type">
                                     <option value=""></option>
-                                    <option value="0">新增</option>
-                                    <option value="1">查询</option>
-                                    <option value="2">修改</option>
-                                    <option value="3">删除</option>
+                                    <option value="1">新增</option>
+                                    <option value="2">查询</option>
+                                    <option value="3">修改</option>
+                                    <option value="4">删除</option>
                                 </select>
                             </div>
                             <button class="layui-btn layui-btn-blue query">查询</button>
@@ -115,8 +115,6 @@
     function nameClean() {
         $('#start').val('');
         $('#end').val('');
-        $('#extract').val('');
-        $('#status').val('');
         $('#type').val('');
     }
 
@@ -135,7 +133,10 @@
         var table = layui.table;
         datagrid = {
             elem: '#demo'
-            // , where: {"rsid": localStorage.getItem("rsid")}
+            , where: {
+                // "rsid": localStorage.getItem("rsid")
+                "type": ''
+            }
             , url: 'http://localhost:17900/user/logs'
             , parseData: function (res) {
                 return {
@@ -152,6 +153,7 @@
                 , {field: 'uid', title: '用户 id'}
                 , {field: 'description', title: '说明'}
                 , {field: 'createTime', title: '创建时间'}
+                , {field: 'type', title: ' 操作'}
                 , {field: 'delete', title: '删除状态'}
             ]]
             , done: function (res) {
@@ -159,29 +161,22 @@
                 if (status === 10000) {
                     parent.location.href = "../login.html";
                 }
-                $("[data-field='extract']").children().each(function () {
-                    if ($(this).text() == '0') {
-                        $(this).text("支付宝")
-                    } else if ($(this).text() == '1') {
-                        $(this).text("微信")
-                    } else if ($(this).text() == '2') {
-                        $(this).text("银联")
+                $("[data-field='delete']").children().each(function () {
+                    if ($(this).text() === '0') {
+                        $(this).text("未删")
+                    } else if ($(this).text() === '1') {
+                        $(this).text("已删")
                     }
                 })
-                $("[data-field='arrival']").children().each(function () {
-                    if ($(this).text() == '0') {
-                        $(this).text("快速到账")
-                    } else if ($(this).text() == '1') {
-                        $(this).text("正常到账")
-                    }
-                })
-                $("[data-field='status']").children().each(function () {
-                    if ($(this).text() == '0') {
-                        $(this).text("待审核")
-                    } else if ($(this).text() == '1') {
-                        $(this).text("已提取")
-                    } else if ($(this).text() == '2') {
-                        $(this).text("未通过")
+                $("[data-field='type']").children().each(function () {
+                    if ($(this).text() === '1') {
+                        $(this).text("新增")
+                    } else if ($(this).text() === '2') {
+                        $(this).text("查询")
+                    } else if ($(this).text() === '3') {
+                        $(this).text("修改")
+                    } else if ($(this).text() === '4') {
+                        $(this).text("删除")
                     }
                 })
             }
@@ -220,11 +215,9 @@
     $(".query").on("click",function() {
         datagrid.reload({
             where:{
-                rsid: localStorage.getItem("rsid"),
-                start: $("#start").val(),
-                end: $("#end").val(),
-                extract: $("#extract").val(),
-                status: $("#status").val(),
+                // rsid: localStorage.getItem("rsid"),
+                // start: $("#start").val(),
+                // end: $("#end").val(),
                 type: $("#type").val()
             }
         });

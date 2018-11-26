@@ -63,12 +63,12 @@ public class UserServiceImpl implements UserService {
     @Override
     @PostMapping("/logs")
     public PageBean<UserLog> logs(@RequestBody Map<String, Object> param) {
-        List<UserLog> infos = userMapper.logs(param);
         Integer page = Integer.parseInt(param.get("page").toString());
         Integer size = Integer.parseInt(param.get("size").toString());
         Page<UserLog> pageData = PageHelper.startPage(page, size).doSelectPage(()-> userMapper.logs(param));
         PageBean<UserLog> pageBean = new PageBean<>();
         pageBean.setItems(pageData);
+        List<UserLog> infos = userMapper.logs(param);
         pageBean.setTotalNum(infos.size());
         pageBean.setHasNext(infos.size(), size, page);
         return pageBean;
