@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class FlowerInfo {
-    private Long id;
+    private String id;
     private String createTime;
     private String flowerImg;
     private String remarks;

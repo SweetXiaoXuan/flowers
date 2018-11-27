@@ -1,5 +1,7 @@
 package com.flowers.web.flower.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.flowers.api.model.FlowerInfo;
 import com.flowers.api.model.FlowerSpecific;
 import com.flowers.api.service.FlowerService;
@@ -62,21 +64,15 @@ public class FlowerController  {
         return ResponseEntity.ok().body(new ResultJson(info.getItems(), me.getValue(ResultMsgConstant.querySuccess), info.getTotalNum()));
     }
 
-
     @ResponseBody
-    @RequestMapping(value = "/flower", method = RequestMethod.PUT, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "/flower", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
     public ResponseEntity<ResultJson> flower(
-            @RequestBody FlowerInfo info) {
-        flowerService.flower(info);
+            @RequestParam("remarks") String remarks,
+            @RequestParam("flowerName") String flowerName,
+            @RequestParam("flowerLanguage") String flowerLanguage,
+            @RequestParam("flowerImg") String flowerImg,
+            @RequestParam("specific") String specific) {
+        flowerService.flower(remarks, flowerName, flowerLanguage, flowerImg, specific);
         return ResponseEntity.ok().body(new ResultJson());
     }
-
-    @ResponseBody
-    @RequestMapping(value = "/specific", method = RequestMethod.PUT, produces = "application/json; charset=utf-8")
-    public ResponseEntity<ResultJson> specific(
-            @RequestBody FlowerSpecific specific) {
-        flowerService.specific(specific);
-        return ResponseEntity.ok().body(new ResultJson());
-    }
-
 }

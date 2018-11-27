@@ -19,7 +19,7 @@ public interface FlowerMapper extends BaseMapper<FlowerInfo> {
             @Result(column = "flower_img", property = "flowerImg"),
             @Result(column = "create_time", property = "createTime")
     })
-    FlowerInfo getInfoById( Long fid);
+    FlowerInfo getInfoById( String fid);
 
     @SelectProvider(type = FlowerInfoProvider.class, method = "flowers")
     @Results({
@@ -40,5 +40,12 @@ public interface FlowerMapper extends BaseMapper<FlowerInfo> {
     @Results({
             @Result(column = "create_time", property = "createTime")
     })
-    List<FlowerSpecific> flowerSpecific(@Param("fid") Long fid);
+    List<FlowerSpecific> flowerSpecific(@Param("fid") String fid);
+
+    @Select("select id from flower_info where flower_name = #{flowerName} and flower_language = #{flowerLanguage} and flower_img = #{flowerImg} and remarks = #{remarks}")
+    Long getFid(@Param("remarks") String remarks, @Param("flowerName") String flowerName, @Param("flowerLanguage") String flowerLanguage, @Param("flowerImg") String flowerImg);
+
+
+    @Insert("insert into flower_info(remarks, flower_name, flower_language, flower_img) values(#{remarks}, #{flowerName}, #{flowerLanguage}, #{flowerImg})")
+    int saveFlower(@Param("remarks") String remarks, @Param("flowerName") String flowerName, @Param("flowerLanguage") String flowerLanguage, @Param("flowerImg") String flowerImg);
 }

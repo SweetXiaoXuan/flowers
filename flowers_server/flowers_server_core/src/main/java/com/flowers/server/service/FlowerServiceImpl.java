@@ -1,5 +1,7 @@
 package com.flowers.server.service;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.flowers.api.model.FlowerInfo;
 import com.flowers.api.model.FlowerSpecific;
 import com.flowers.api.service.FlowerService;
@@ -35,14 +37,14 @@ public class FlowerServiceImpl implements FlowerService {
             @RequestParam("fid") String fid
     ) {
         userLogMapper.insertLog("根据 id 查询鲜花信息", 2, 1L);
-        return flowerMapper.getInfoById(Long.parseLong(fid));
+        return flowerMapper.getInfoById(fid);
     }
 
     @Override
     @GetMapping("/flowerSpecific")
     public List<FlowerSpecific> flowerSpecific( @RequestParam("fid") String fid) {
         userLogMapper.insertLog("根据 id 查询鲜花其他信息", 2, 1L);
-        return flowerMapper.flowerSpecific(Long.parseLong(fid));
+        return flowerMapper.flowerSpecific((fid));
     }
 
     @Override
@@ -78,18 +80,20 @@ public class FlowerServiceImpl implements FlowerService {
     }
 
     @Override
-    @PutMapping("/flower")
+    @PostMapping("/flower")
     @ResponseBody
-    public void flower(FlowerInfo info) {
-        flowerMapper.insert(info);
-    }
+    public void flower(
+            @RequestParam("remarks") String remarks,
+            @RequestParam("flowerName") String flowerName,
+            @RequestParam("flowerLanguage") String flowerLanguage,
+            @RequestParam("flowerImg") String flowerImg,
+            @RequestParam("specific") String specific) {
+        flowerMapper.saveFlower(remarks, flowerName, flowerLanguage, flowerImg);
 
-    @Override
-    @PutMapping("/specific")
-    @ResponseBody
-    public void specific(FlowerSpecific specific) {
-        flowerSpecificMapper.insert(specific);
-    }
+        Long fid = flowerMapper.getFid(remarks, flowerName, flowerLanguage, flowerImg);
 
+
+        flowerSpecificMapper.inserts(specific, fid);
+    }
 
 }

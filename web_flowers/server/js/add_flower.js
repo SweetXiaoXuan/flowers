@@ -1,6 +1,6 @@
 var id = 0;
 var strid = '';
-
+var datas = new Array();
 function addHtml() {
     id = (parseInt(id) + 1);
     strid += id + ',';
@@ -35,6 +35,12 @@ function addHtml() {
 }
 
 function saveSpecificInfo() {
+    var data = {
+        'title' : $(".specificTitle").val(),
+        'content' : $(".specificContent").val(),
+        'remarks' : $(".specificRemarks").val()
+    };
+    datas.push(data);
     $('.specificInfo').append(
         '<div>' +
         '<hr size="1" width="100%"/>' +
@@ -60,19 +66,19 @@ function saveFlowerInfo() {
     $('.flower_info').html(
         '<div class="layui-form-item">\n' +
         '     <label class="layui-form-label label_width">花名</label>\n' +
-        '     <label class="info layui-form-label label_width_value ">' + $(".flowerName").val() + '</label>\n' +
+        '     <label class="info layui-form-label label_width_value flowerInfoName">' + $(".flowerName").val() + '</label>\n' +
         ' </div>\n' +
         ' <div class="layui-form-item">\n' +
         '     <label class="layui-form-label label_width">花语</label>\n' +
-        '     <label class="info layui-form-label label_width_value ">' + $(".flowerLanguage").val() + '</label>\n' +
+        '     <label class="info layui-form-label label_width_value flowerInfoLanguage">' + $(".flowerLanguage").val() + '</label>\n' +
         ' </div>\n' +
         ' <div class="layui-form-item">\n' +
         '     <label class="layui-form-label label_width">图片</label>\n' +
-        '     <label class="info layui-form-label label_width_value ">' + flowerImg() + '</label>\n' +
+        '     <label class="info layui-form-label label_width_value flowerInfoImg">' + flowerImg() + '</label>\n' +
         ' </div>\n' +
         ' <div class="layui-form-item">\n' +
         '     <label class="layui-form-label label_width">备注</label>\n' +
-        '     <label class="info layui-form-label label_width_value ">' + $(".flowerRemarks").val() + '</label>\n' +
+        '     <label class="info layui-form-label label_width_value flowerInfoRemarks">' + $(".flowerRemarks").val() + '</label>\n' +
         ' </div>\n');
 }
 
@@ -85,4 +91,36 @@ function flowerImg() {
     var flowerImg = $(".flowerImg").val();
     if (isEmpty(flowerImg)) return '无';
     else return flowerImg;
+}
+
+function ajaxSave() {
+    var data = {
+        "remarks": $(".flowerInfoRemarks").html(),
+        "flowerName": $(".flowerInfoName").html(),
+        "flowerLanguage": $(".flowerInfoLanguage").html(),
+        "flowerImg": $(".flowerInfoImg").html(),
+        "specific": JSON.stringify(datas)
+    };
+    console.info(JSON.stringify(data))
+    $.ajax({
+        url: "http://localhost:17900/flower/flower",
+        type: 'post',
+        dataType: 'json',
+        async: false,
+        timeout: 1000,
+        data: data,
+        success: function (data) {
+            if (data.status === '1') {
+                layui.layer.msg(data.msg);
+            } else if (data.status === '10000') {
+                layui.layer.msg(data.msg);
+                parent.location.href = "../../login.html";
+            } else {
+                window.history.go(-1);
+            }
+        },
+        fail: function (err) {
+            alert(err);
+        }
+    });
 }

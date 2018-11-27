@@ -35,13 +35,13 @@ public interface FlowerService {
             @RequestBody Map<String, Object> param
     );
 
-    @PutMapping("/flower")
+    @PostMapping("/flower")
     @ResponseBody
     void flower(
-            @RequestBody FlowerInfo info);
+            @RequestParam("remarks") String remarks,
+            @RequestParam("flowerName") String flowerName,
+            @RequestParam("flowerLanguage") String flowerLanguage,
+            @RequestParam("flowerImg") String flowerImg,
+            @RequestParam("specific") String specific);
 
-    @PutMapping("/specific")
-    @ResponseBody
-    void specific(
-            @RequestBody FlowerSpecific specific);
 }
