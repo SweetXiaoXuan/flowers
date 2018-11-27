@@ -59,10 +59,15 @@
                 <!--</div>-->
                 <div class="layui-form-item">
                     <div class="layui-input-block">
-                        <button class="layui-btn layui-btn-blue"  lay-filter="formDemo" onclick="btnWithdraw()">提交</button>
+                        <button class="layui-btn layui-btn-blue"  lay-filter="formDemo" onclick="btnWithdraw()">保存</button>
                         <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        <button class="layui-btn layui-btn-blue" onclick="addhtml()">添加信息</button>
                     </div>
                 </div>
+
+
+                <iframe src="../test/add_specific.html" class="add_specific" style="width: 750px; height: 250px; border: 0px; margin-left: 200px; display: none"></iframe>
+
             </form>
         </div>
     </div>
@@ -71,6 +76,14 @@
 <script src="../js/add_merchant.js"></script>
 <script src="../assets/layui/layui.all.js"></script>
 <script>
+    function addhtml() {
+        var display = $('.add_specific').css('display');
+        if(display === 'none') {
+            $('.add_specific').css('display', 'block');
+        } else {
+            $('.add_specific').css('display', 'none');
+        }
+    }
     var layer = layui.layer;
     layui.use('upload', function(){
         var upload = layui.upload;

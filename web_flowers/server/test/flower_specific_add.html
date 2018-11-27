@@ -1,0 +1,50 @@
+
+<link rel="stylesheet" href="../assets/layui/css/layui.css">
+<link rel="stylesheet" href="../assets/css/view.css"/>
+<div class="specific">
+    <div class="layui-form-item">
+        <label class="layui-form-label">标题</label>
+        <div class="layui-input-block">
+            <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input title">
+        </div>
+    </div>
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">内容</label>
+        <div class="layui-input-block">
+            <textarea name="desc" placeholder="请输入内容" class="layui-textarea content"></textarea>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">备注</label>
+        <div class="layui-input-block">
+            <input type="text" name="title" required  lay-verify="required" placeholder="请输入备注" autocomplete="off" class="layui-input specificRemarks">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn layui-btn-blue" onclick="saveInfo()">保存</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</div>
+<script src="../assets/jquery-1.7.1.min.js"></script>
+
+<script>
+
+    function saveInfo() {
+        $('.specific').html(
+            '<hr size="1" width="100%"/>' +
+            '<div class="layui-form-item">\n' +
+            '     <label class="layui-form-label label_width">标题</label>\n' +
+            '     <label class="layui-form-label label_width_value title">' + $(".title").val() + '</label>\n' +
+            ' </div>\n' +
+            ' <div class="layui-form-item">\n' +
+            '     <label class="layui-form-label label_width">内容</label>\n' +
+            '     <label class="layui-form-label label_width_value content">' + $(".content").val() + '</label>\n' +
+            ' </div>\n' +
+            ' <div class="layui-form-item">\n' +
+            '     <label class="layui-form-label label_width">备注</label>\n' +
+            '     <label class="layui-form-label label_width_value specificRemarks">' + $(".specificRemarks").val() + '</label>\n' +
+            ' </div>');
+    }
+</script>

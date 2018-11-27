@@ -5,6 +5,7 @@ import com.flowers.api.model.FlowerSpecific;
 import com.flowers.api.service.FlowerService;
 import com.flowers.common.page.PageBean;
 import com.flowers.server.mapper.FlowerMapper;
+import com.flowers.server.mapper.FlowerSpecificMapper;
 import com.flowers.server.mapper.UserLogMapper;
 import com.flowers.server.mapper.UserMapper;
 import com.github.pagehelper.Page;
@@ -24,6 +25,8 @@ public class FlowerServiceImpl implements FlowerService {
     private UserMapper userMapper;
     @Autowired
     private UserLogMapper userLogMapper;
+    @Autowired
+    private FlowerSpecificMapper flowerSpecificMapper;
 
     @Override
     @GetMapping("/flowersInfo")
@@ -72,6 +75,20 @@ public class FlowerServiceImpl implements FlowerService {
         pageBean.setHasNext(infos.size(), size, page);
         userLogMapper.insertLog("查询鲜花列表", 2, 1L);
         return pageBean;
+    }
+
+    @Override
+    @PutMapping("/flower")
+    @ResponseBody
+    public void flower(FlowerInfo info) {
+        flowerMapper.insert(info);
+    }
+
+    @Override
+    @PutMapping("/specific")
+    @ResponseBody
+    public void specific(FlowerSpecific specific) {
+        flowerSpecificMapper.insert(specific);
     }
 
 

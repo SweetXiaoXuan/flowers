@@ -19,6 +19,7 @@
     <meaasge name="phoneHasBeenRegistered" value="手机号已经注册"></meaasge>
     <meaasge name="phoneIsNotRegistered" value="手机号还未注册"></meaasge>
     <meaasge name="loginSuccess" value="登陆成功"></meaasge>
+    <meaasge name="saveSuccess" value="保存成功"></meaasge>
     <meaasge name="loginFail" value="登陆失败"></meaasge>
     <meaasge name="passError" value="密码错误"></meaasge>
     <meaasge name="querySuccess" value="查询成功"></meaasge>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <link rel="stylesheet" href="../assets/css/view.css"/>
+    <style type="text/css">
+        .flowerSpecificContent{
+            width: 450px;
+        }
+        .info{
+            text-align: left;
+        }
+    </style>
+</head>
+<body class="layui-view-body">
+<div class="layui-content">
+    <div class="layui-row">
+        <div class="layui-card">
+            <div class="layui-card-header">添加</div>
+            <iframe name="formSubmit" style="display:none;" ></iframe>
+            <form class="layui-form layui-card-body" action="" target="formSubmit">
+                <div class="flower_info">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">花名</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入花名" autocomplete="off" class="layui-input  flowerName">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">花语</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入花语" autocomplete="off" class="layui-input flowerLanguage">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">图片</label>
+                        <div class="layui-input-block businessLicenseImg">
+                            <button type="button" class="layui-btn" id="flowerImg">
+                                <i class="layui-icon">&#xe67c;</i>上传图片
+                            </button>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">备注</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入备注" autocomplete="off" class="layui-input flowerRemarks">
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="layui-form-item">-->
+                <!--<label class="layui-form-label">标题</label>-->
+                <!--<div class="layui-input-block">-->
+                <!--<input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input title">-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="layui-form-item layui-form-text">-->
+                <!--<label class="layui-form-label">内容</label>-->
+                <!--<div class="layui-input-block">-->
+                <!--<textarea name="desc" placeholder="请输入内容" class="layui-textarea content"></textarea>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="layui-form-item">-->
+                <!--<label class="layui-form-label">备注</label>-->
+                <!--<div class="layui-input-block">-->
+                <!--<input type="text" name="title" required  lay-verify="required" placeholder="请输入备注" autocomplete="off" class="layui-input specificRemarks">-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="flower_specific">
+                    <div class="specificInfo"></div>
+                    <div class="specific"></div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block btns">
+                        <button class="layui-btn layui-btn-blue saveFlowerInfo" onclick="saveFlowerInfo()">保存</button>
+                        <button type="reset" class="layui-btn layui-btn-primary reset">重置</button>
+                        <button class="layui-btn layui-btn-blue"  lay-filter="formDemo" onclick="btnWithdraw()">提交</button>
+                        <button class="layui-btn layui-btn-blue" onclick="addHtml()">添加信息</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="../assets/jquery-1.7.1.min.js"></script>
+<script src="../js/add_merchant.js"></script>
+<script src="../assets/layui/layui.all.js"></script>
+<script src="../test/add_flower.js"></script>
+<script>
+
+    var layer = layui.layer;
+    layui.use('upload', function(){
+        var upload = layui.upload;
+        var uploadInst = upload.render({
+            elem: '#businessLicense'
+            ,url: 'http://localhost:8119/merchant/upload/'
+            ,done: function(res){
+                $('#businessLicense').css('display', 'none');
+                $('.businessLicenseImg').html("<img src='" + res.body.path + "' width='200' height='200'/>");
+            }
+            ,error: function(){
+                layer.msg('上传失败，请重新上传');
+            }
+        });
+    });
+</script>
+</body>
+</html>

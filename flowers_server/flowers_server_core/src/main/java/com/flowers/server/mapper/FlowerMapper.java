@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 @Mapper
-public interface FlowerMapper  {
+public interface FlowerMapper extends BaseMapper<FlowerInfo> {
     @Select("select * from flower_info where id = #{fid}")
     @Results({
             @Result(column = "flower_name", property = "flowerName"),

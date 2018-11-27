@@ -34,4 +34,14 @@ public interface FlowerService {
     PageBean<FlowerInfo> flowers(
             @RequestBody Map<String, Object> param
     );
+
+    @PutMapping("/flower")
+    @ResponseBody
+    void flower(
+            @RequestBody FlowerInfo info);
+
+    @PutMapping("/specific")
+    @ResponseBody
+    void specific(
+            @RequestBody FlowerSpecific specific);
 }

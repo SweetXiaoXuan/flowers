@@ -1,6 +1,7 @@
 package com.flowers.web.flower.controller;
 
 import com.flowers.api.model.FlowerInfo;
+import com.flowers.api.model.FlowerSpecific;
 import com.flowers.api.service.FlowerService;
 import com.flowers.common.bean.ResultJson;
 import com.flowers.common.page.PageBean;
@@ -59,6 +60,23 @@ public class FlowerController  {
         param.put("season", season);
         PageBean<FlowerInfo> info = flowerService.flowers(param);
         return ResponseEntity.ok().body(new ResultJson(info.getItems(), me.getValue(ResultMsgConstant.querySuccess), info.getTotalNum()));
+    }
+
+
+    @ResponseBody
+    @RequestMapping(value = "/flower", method = RequestMethod.PUT, produces = "application/json; charset=utf-8")
+    public ResponseEntity<ResultJson> flower(
+            @RequestBody FlowerInfo info) {
+        flowerService.flower(info);
+        return ResponseEntity.ok().body(new ResultJson());
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/specific", method = RequestMethod.PUT, produces = "application/json; charset=utf-8")
+    public ResponseEntity<ResultJson> specific(
+            @RequestBody FlowerSpecific specific) {
+        flowerService.specific(specific);
+        return ResponseEntity.ok().body(new ResultJson());
     }
 
 }
