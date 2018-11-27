@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc11b6ce-13ef-484b-b987-b95bffc34c88" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/provider/FlowerSpecificProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_server/flowers_server_api/src/main/java/com/flowers/api/service/FlowerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_api/src/main/java/com/flowers/api/service/FlowerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/mapper/FlowerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/mapper/FlowerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/mapper/FlowerSpecificMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/mapper/FlowerSpecificMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/service/FlowerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/service/FlowerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/controller/FlowerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/controller/FlowerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/article.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/category.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/wxCode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/links.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/readers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/tags.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/upgrade-browser.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/js/add_flower.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/js/add_flower.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/js/add_merchant.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/views/add_flower.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/views/add_flower.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,59 +36,51 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
-          <entry key="html" value="50" />
+          <entry key="html" value="53" />
+          <entry key="jpg" value="1" />
           <entry key="js" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="50" />
+          <entry key="HTML" value="53" />
+          <entry key="Image" value="1" />
           <entry key="JavaScript" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="JavaScript Console" value="10" />
-          <entry key="html" value="3129" />
+          <entry key="JavaScript Console" value="11" />
+          <entry key="html" value="3179" />
           <entry key="js" value="812" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="3133" />
-          <entry key="JavaScript" value="818" />
+          <entry key="HTML" value="3183" />
+          <entry key="JavaScript" value="819" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/views/add_flower.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+            <state relative-caret-position="398">
+              <caret line="239" column="20" lean-forward="true" selection-start-line="239" selection-start-column="20" selection-end-line="239" selection-end-column="20" />
               <folding>
-                <element signature="n#style#0;n#iframe#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/js/add_flower.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="119" column="9" lean-forward="true" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
-              <folding>
-                <element signature="n#!!block;n#addHtml#0" />
-                <element signature="n#!!block;n#saveFlowerInfo#0" />
-                <element signature="n#!!block;n#isEmpty#0" />
-                <element signature="n#!!block;n#flowerImg#0" />
-              </folding>
-            </state>
-          </provider>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/images/weixin.jpg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -111,6 +103,8 @@
       <find>merchant</find>
       <find>flowerName</find>
       <find>test/add_flower.html</find>
+      <find>admin</find>
+      <find>admin@</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -136,6 +130,7 @@
         <option value="$PROJECT_DIR$/server/js/add_merchant.js" />
         <option value="$PROJECT_DIR$/server/views/add_flower.html" />
         <option value="$PROJECT_DIR$/server/js/add_flower.js" />
+        <option value="$PROJECT_DIR$/web/index.html" />
       </list>
     </option>
   </component>
@@ -168,19 +163,13 @@
             <path>
               <item name="web_flowers" type="b2602c69:ProjectViewProjectNode" />
               <item name="web_flowers" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="web_flowers" type="b2602c69:ProjectViewProjectNode" />
               <item name="web_flowers" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web_flowers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_flowers" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -197,11 +186,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/images" />
+      <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/server/test/flower" />
       <recent name="$PROJECT_DIR$/server/js" />
       <recent name="$PROJECT_DIR$/server/views" />
-      <recent name="$PROJECT_DIR$/server/test/1" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -216,10 +205,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.web_flowers_web">
     <configuration name="web_flowers_server" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63343/web_flowers/server/index.html">
       <method v="2" />
     </configuration>
+    <configuration name="web_flowers_web" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63343/web_flowers/web/index.html">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.web_flowers_server" />
+      <item itemvalue="JavaScript Debug.web_flowers_web" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -235,27 +231,36 @@
       <workItem from="1541987720852" duration="17428000" />
       <workItem from="1542766933594" duration="10187000" />
       <workItem from="1543046228639" duration="1636000" />
-      <workItem from="1543194395941" duration="37056000" />
+      <workItem from="1543194395941" duration="39111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68898000" />
+    <option name="totallyTimeSpent" value="70953000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1440" height="834" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19802678" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19802678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32904148" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3891273" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3891273" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32904148" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.6695279" />
@@ -409,27 +414,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/js/add_merchant.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/views/flowers.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="75" column="41" lean-forward="true" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
+        <state relative-caret-position="218">
+          <caret line="112" column="22" selection-start-line="112" selection-start-column="22" selection-end-line="112" selection-end-column="22" />
           <folding>
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/js/add_merchant.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/views/add_flower.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -443,6 +438,29 @@
             <element signature="n#!!block;n#saveFlowerInfo#0" />
             <element signature="n#!!block;n#isEmpty#0" />
             <element signature="n#!!block;n#flowerImg#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/views/add_flower.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/images/weixin.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="239" column="20" lean-forward="true" selection-start-line="239" selection-start-column="20" selection-end-line="239" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
