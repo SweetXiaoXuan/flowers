@@ -1,5 +1,6 @@
 package com.flowers.server.service;
 
+import com.flowers.api.model.Menu;
 import com.flowers.api.service.MenuService;
 import com.flowers.server.mapper.MenuMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ public class MenuServiceImpl implements MenuService {
 
     @Override
     @GetMapping("/menuNames")
-    public List<String> menuNames() {
+    public List<Menu> menuNames() {
         return menuMapper.menuNames();
     }
 }

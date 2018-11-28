@@ -8,6 +8,7 @@ public class Menu {
     private String createTime;
     private String name;
     private String content;
-    private String status;
+    private String url;
+    private Integer status;
     private Integer delete;
 }
