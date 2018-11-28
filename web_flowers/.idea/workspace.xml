@@ -268,7 +268,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.web_flowers_web">
+  <component name="RunManager" selected="JavaScript Debug.web_flowers_server">
     <configuration name="web_flowers_server" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63343/web_flowers/server/index.html">
       <method v="2" />
     </configuration>
