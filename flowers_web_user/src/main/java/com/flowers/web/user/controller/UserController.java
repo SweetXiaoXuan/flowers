@@ -70,9 +70,7 @@ public class UserController {
     @GetMapping("/getUser/{id}")
     public ResponseEntity<ResultJson> userList(@PathVariable("id") Integer id) {
         User user = userService.getUserById(id);
-        ResultJson resultJson = new ResultJson();
-        resultJson.setBody(user);
-        return ResponseEntity.ok().body(resultJson);
+        return ResponseEntity.ok().body(new ResultJson(user));
     }
 
 
