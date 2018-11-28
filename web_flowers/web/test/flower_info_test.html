@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../server/assets/layui/css/layui.css">
+    <link rel="stylesheet" href="../../server/assets/css/view.css"/>
+    <link rel="icon" href="../images/icon/favicon.ico">
+    <title>管理后台</title>
+</head>
+<body class="layui-view-body">
+<div class="layui-content">
+    <div class="layui-row">
+        <div class="layui-card">
+            <div class="layui-card-body">
+                <div class="form-box">
+                    <div class="layui-form layui-form-item">
+                        <div class="layui-inline flower_info">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label label_width ">花名</label>
+                                <label class="layui-form-label label_width_value flowerName"></label>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label label_width">花语</label>
+                                <label class="layui-form-label label_width_value flowerLanguage" style="width: 400px"></label>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label label_width">图片</label>
+                                <label class="layui-form-label label_width_value flowerImg"></label>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label label_width">扩展字段</label>
+                                <label class="layui-form-label label_width_value infoRemarks"></label>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label label_width">逻辑删除</label>
+                                <label class="layui-form-label label_width_value deleted"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../server/assets/layui/layui.all.js"></script>
+<script src="../../server/assets/jquery-1.7.1.min.js"></script>
+<STYLE type="text/css">
+    .label_width {
+        width:150px;
+    }
+    .label_width_value{
+        width:170px;
+        text-align: left;
+    }
+</STYLE>
+<script type="text/javascript">
+    var fid = decodeURI(window.location.href.split("?")[1]).split("=")[1];
+    $(document).ready(function() {
+        $.ajax({
+            url: "http://localhost:17900/flower/flowersInfo?fid=" + fid,
+            type: 'get',
+            dataType: 'json',
+            success: function (data) {
+                if (data.code === 0) {
+                    var body = data.body;
+                    console.info(JSON.stringify(body))
+                    $('.flowerName').append(body.flowerName);
+                    $('.flowerImg').append(body.flowerImg);
+                    $('.flowerLanguage').append(body.flowerLanguage);
+                    $('.infoRemarks').append(isEmpty(body.remarks) ? '无' : body.remarks);
+                    $('.deleted').append(body.delete === 0 ? "未删" : "已删");
+                    $.ajax({
+                        url: "http://localhost:17900/flower/flowerSpecific",
+                        data: {"fid": fid},
+                        type: 'get',
+                        dataType: 'json',
+                        timeout: 1000,
+                        success: function (data) {
+                            if (data.code === 0) {
+                                var body = data.body;
+                                for (var i = 0; i < body.length; i++) {
+                                    var info = body[i];
+                                    var title = info.title;
+                                    var content = info.content;
+                                    var remarks = isEmpty(info.remarks) ? '无' : info.remarks;
+                                    $('.flower_info').append('<hr size="1" width="1360px"/>' +
+                                        '<div class="layui-form-item">\n' +
+                                        '     <label class="layui-form-label label_width">标题</label>\n' +
+                                        '     <label class="layui-form-label label_width_value title">' + title + '</label>\n' +
+                                        ' </div>\n' +
+                                        ' <div class="layui-form-item">\n' +
+                                        '     <label class="layui-form-label label_width">内容</label>\n' +
+                                        '     <label class="layui-form-label label_width_value content" style="width: 450px">' + content + '</label>\n' +
+                                        ' </div>\n' +
+                                        ' <div class="layui-form-item">\n' +
+                                        '     <label class="layui-form-label label_width">备注</label>\n' +
+                                        '     <label class="layui-form-label label_width_value specificRemarks">' + remarks + '</label>\n' +
+                                        ' </div>');
+                                }
+                            } else if(data.status === 10000) {
+                                parent.location.href ="../../login.html";
+                            }
+                        },
+                        fail: function (error) {
+                            console.error(error);
+                            parent.location.href ="../../login.html";
+                        }
+                    })
+                }
+            },
+            fail: function (error) {
+                console.error(error);
+            }
+        });
+
+
+    });
+
+    function isEmpty(obj) {
+        if (obj == null || "" === obj || "undefined".eq(obj) || "null".eq(obj)) return true;
+        return false;
+    }
+</script>
+</body>
+</html>
