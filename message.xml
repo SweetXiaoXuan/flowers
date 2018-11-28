@@ -24,6 +24,7 @@
     <meaasge name="passError" value="密码错误"></meaasge>
     <meaasge name="querySuccess" value="查询成功"></meaasge>
     <meaasge name="queryFail" value="查询失败"></meaasge>
+    <meaasge name="success" value=" 成功"></meaasge>
     <meaasge name="bankCardError" value="银行卡号格式错误"></meaasge>
     <meaasge name="formatError" value="格式错误"></meaasge>
 

@@ -1,10 +1,14 @@
 package com.flowers.common.bean;
 
 import com.alibaba.fastjson.JSON;
+import com.flowers.common.utils.MeaasgeUtil;
+import com.flowers.common.utils.ResultMsgConstant;
 
 public class ResultJson {
+    private MeaasgeUtil me = new MeaasgeUtil();
+
     private Integer code = 0;
-    private Object body = null;
+    private Object body = me.getValue(ResultMsgConstant.querySuccess);
     private String msg = "成功";
     private Long count = null;
 

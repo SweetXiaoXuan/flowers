@@ -34,6 +34,7 @@ public class ResultMsgConstant {
     // 暂未登录
     public final static String notLogin = "notLogin";
     public final static String querySuccess = "querySuccess";
+    public final static String success = "success";
     public final static String saveSuccess = "saveSuccess";
 
     /** 活动 */
