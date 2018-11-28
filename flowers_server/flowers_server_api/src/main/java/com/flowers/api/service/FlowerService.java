@@ -44,4 +44,9 @@ public interface FlowerService {
             @RequestParam("flowerImg") String flowerImg,
             @RequestParam("specific") String specific);
 
+
+    @GetMapping("/recommendFlower")
+    @ResponseBody
+    FlowerInfo recommendFlower();
+
 }

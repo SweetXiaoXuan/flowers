@@ -10,5 +10,6 @@ public class FlowerInfo {
     private String remarks;
     private String flowerName;
     private Integer delete;
+    private Integer recommend;
     private String flowerLanguage;
 }

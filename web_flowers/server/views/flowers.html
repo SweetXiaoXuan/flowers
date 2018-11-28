@@ -107,6 +107,7 @@
                 {field: 'id', title: 'ID', sort: true}
                 , {field: 'flowerName', title: '花名'}
                 , {field: 'flowerLanguage', title: '花语'}
+                , {field: 'recommend', title: '是否推荐'}
                 , {field: 'remarks', title: '备注'}
                 , {field: 'createTime', title: '添加时间'}
                 , {field: 'delete', title: '删除状态'}
@@ -127,6 +128,13 @@
                         $(this).text("未删")
                     } else if ($(this).text() === '1') {
                         $(this).text("已删")
+                    }
+                })
+                $("[data-field='recommend']").children().each(function () {
+                    if ($(this).text() === '0') {
+                        $(this).text("否")
+                    } else if ($(this).text() === '1') {
+                        $(this).text("是")
                     }
                 })
             }

@@ -96,4 +96,10 @@ public class FlowerServiceImpl implements FlowerService {
         flowerSpecificMapper.inserts(specific, fid);
     }
 
+    @GetMapping("/recommendFlower")
+    @Override
+    public FlowerInfo recommendFlower() {
+        return flowerMapper.recommendFlower();
+    }
+
 }
