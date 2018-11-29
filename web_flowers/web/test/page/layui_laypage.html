@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layPage快速使用</title>
+    <link rel="stylesheet" href="../../css/layui.css" media="all">
+</head>
+<body>
+
+<div id="test1"></div>
+
+<script src="../../js/layui.js"></script>
+<script>
+    layui.use('laypage', function(){
+        var laypage = layui.laypage;
+
+        laypage.render({
+            elem: 'test1'
+            ,count: 50
+        });
+    });
+</script>
+</body>
+</html>

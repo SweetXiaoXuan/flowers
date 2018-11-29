@@ -1,0 +1,96 @@
+<html>
+<head>
+    <title>aaa</title>
+</head>
+<body>
+    <div class="er_list"></div>
+<button class="btn_Page">aaa</button>
+</body>
+</html>
+
+
+
+<script>
+    page_num =page_num+1 ; //页码自动增加，保证下次调用时为新的一页。
+    $.ajax({
+        type: "post",
+        url: "http://localhost:17900/flower/flowers",
+        data: '2',
+        dataType: "json",
+        success: function (data) {
+//                    查询到的数据总数
+            rentDataNum = data.count
+//                  每页加载6个  需要加载的页数
+            rentDataPagge = Math.ceil(rentDataNum/6);
+            $(".loaddiv").hide();
+//                  返回信息的长度 大于0  则调用函数 把加载的数据通过html的形式 追加到视图中
+            if (data.houses.length > 0) {
+                insertDiv(data.houses,rentDataPagge,pagenumber);
+            }
+        },
+        beforeSend: function () {
+            $(".loaddiv").show();
+        },
+        error: function (data) {
+            $(".loaddiv").hide();
+        }
+    });
+    //初始化加载第一页数据
+    getData(1);
+
+    //生成数据html,append到div中
+    function insertDiv(data,page_num,pagenumber) {
+        var $mainDiv = $(".er_list");
+        var result = '';
+        if (pagenumber<=page_num){
+            for (var i = 0; i < data.length; i++) {
+                var houe_title      =   data[i].community_name != undefined ? data[i].community_name:data[i].business_area_name;
+
+                result +='<li>';
+                result +='<a href="#">'
+                result +='<div class="img_left"><img src='+"http://image.5i5j.com/picture/slpic/l"+data[i].img_url+'></div>'
+                result +='<div class="img_con">'
+                result +='<h5>'+houe_title+'</h5>'
+                result +='<p class="ting">'+data[i].bedroom+' 室'+ data[i].livingroom+' 厅1卫<span>&middot;</span>'+data[i].buildarea+' ㎡<span>&middot;</span>东南</p>'
+                result +='<p class="info">'+data[i].district_name+'</p>'
+                result +='<p class="tag">'
+                result +='<em class="yell_01">不限购</em><em class="yell_02">近地铁</em><em class="yell_03">满两年</em><em class="yell_04">满两年</em>'
+                result +='</p>'
+                result +='<div class="jia"><p>'+data[i].price+' </p><span>123 /㎡</span></div>'
+                result +='</div>'
+                result +='</a>'
+                result +='</li>';
+            }
+            $mainDiv.append(result);
+            // 如果加载完数据则 删除等待加载时的图片
+            if (pagenumber==page_num){
+                $("div").remove('#loadings')
+            }
+        }
+    }
+
+    //==============核心代码=============
+    var winH = $(window).height(); //页面可视区域高度
+
+    var scrollHandler = function () {
+        var pageH = $(document.body).height();
+        var scrollT = $(window).scrollTop(); //滚动条top
+        var aa = (pageH - winH - scrollT) / winH;
+        if (aa < 0.02) {//0.02是个参数
+            // 避免加载万书记 不停调用函数 进行的加载
+            if (page_num<=rentDataPagge+1){
+                // 滑动到地部 调用函数 加载数据
+                getData(page_num);
+            }
+        }
+    }
+    //定义鼠标滚动事件
+    $(window).scroll(scrollHandler);
+    //==============核心代码=============
+
+    //继续加载按钮事件
+    $("#btn_Page").click(function () {
+        getData(page_num);
+        $(window).scroll(scrollHandler);
+    });
+</script>

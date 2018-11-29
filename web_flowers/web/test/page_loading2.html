@@ -1,0 +1,111 @@
+<html>
+<head>
+    <title>aaa</title>
+    <script src="../js/jquery.tmpl.js"></script>
+</head>
+<body>
+<div id="chkSubject"></div>
+<div id="chkContent"></div>
+<div id="hfdselectedId"></div>
+<div class="load-more"></div>
+<div class="list-item"></div>
+<input type="radio" value="11">
+</body>
+</html>
+<script>
+    var Data = {
+        PageCount: 1,
+        PageSize: 30,
+        IsCompleted: false,
+        init: function(rows) { //初始化，载入第一页数据
+            $(".list-item").detach();
+            Data.IsCompleted = false;
+            Data.load(1, rows);
+        },
+        setPage: function() { //数据载入成功，设置下一页索引
+            var $page = $("#PageIndex");
+            var index = parseInt($page.val()) + 1;
+            $page.val(index);
+        },
+        scroll: function(page, rows) { //滚动到底部加载数据
+            if (Data.IsCompleted) {
+                return false;
+            }
+            var top = $(window).scrollTop();
+            var win = $(window).height();
+            var doc = $(document).height();
+            if ((top + win) >= doc) {
+                Data.load(page, rows);
+            }
+        },
+        load: function(page, rows) { //载入数据方法
+            $("#PageIndex").val(page);
+            var chkSubject = $("#chkSubject").prop("checked");
+            var chkContent = $("#chkContent").prop("checked");
+            var logical = $('input:radio[name="rbtnLogical"]:checked').val();
+            var selectedTypeId = $("#hfdselectedId").val();
+
+            var $msg = $('.load-btn');
+            $msg.removeClass('load-more').text('正在载入数据...');
+            $.ajax({
+                url: "?pageindex=" + page +
+                    "&pagesize=" + rows +
+                    "&keywords=" + encodeURI($("#txtKeyWords").val()) +
+                    "&chkSubject=" + chkSubject +
+                    "&chkContent=" + chkContent +
+                    "&logical=" + logical +
+                    "&typeid=" + selectedTypeId +
+                    "&t=" + (new Date().getTime()),
+                type: "POST",
+                success: function(json) {
+                    Data.PageCount = json.PageCount;
+                    var data = json.List;
+                    if (data != null && data.length > 0) {
+                        Data.append(data);
+                        if (Data.PageCount == page) {
+                            Data.IsCompleted = true;
+                            $msg.removeClass('load-more').text('已加载全部数据！');
+                            return true;
+                        }
+                        Data.setPage();
+                        $msg.addClass('load-more').text('查看更多');
+                        return true;
+                    }
+                    $msg.removeClass('load-more').text('已加载全部数据！');
+                    return false;
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown)  {
+                    $msg.removeClass('load-more').text('数据加载失败！点击重试。');
+                    alert(errorThrown + ":" + textStatus);
+                }
+            });
+            return false;
+        },
+        append: function(json) { //构造html，并填充
+            var $container = $('.table');
+            $.each(json, function(i) {
+                var html = $("#list-item-template").tmpl(json[i]);
+                html.appendTo($container);
+            });
+        }
+    };
+
+    var $page = $("#PageIndex"); //页索引
+
+    //初始化
+    Data.init(Data.PageSize);
+
+    //滚动加载
+    $(window).scroll(function () {
+        Data.scroll($page.val(), Data.PageSize);
+    });
+
+    //手动加载
+    $(".load-more").bind("click", function () {
+        Data.load($page.val(), Data.PageSize);
+    });
+    //查询
+    $("#btnSearch").bind("click", function () {
+        Data.init(Data.PageSize);
+    });
+</script>

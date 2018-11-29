@@ -1,7 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc11b6ce-13ef-484b-b987-b95bffc34c88" name="Default Changelist" comment="" />
+    <list default="true" id="cc11b6ce-13ef-484b-b987-b95bffc34c88" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/css/layui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/css/layui.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/css/modules/code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/jquery插件库.url" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/js/lay/modules/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/js/lay/modules/laypage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/js/layui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/js/nicePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/www.jq22.com.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/page_load/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/page_load/pc_gd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/layui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/data_js/nicePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/flowers/樱花1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/flowers/水仙花.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/flowers/满天星.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/flowers/牡丹.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/flowers/白玫瑰1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/flowers/粉色百合花.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/flowers/紫藤.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/flowers/蓝色勿忘我.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/flowers/蓝色紫罗兰.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/flowers/蓝色雏菊花.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/flowers/蝴蝶兰.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/jquery.tmpl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/lay/modules/laypage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/layui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/css/layui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/css/layui.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/css/modules/code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/jquery插件库.url" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/js/lay/modules/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/js/lay/modules/laypage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/js/layui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/js/nicePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/www.jq22.com.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/index_test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/page/layui_laypage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/page/layui_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/page/page_test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/page_loading.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test/page_loading2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/js/add_flower.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/js/add_flower.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/views/add_flower.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/views/add_flower.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test/flower_info_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test/info/flower_info_test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test/info/info.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -24,35 +79,35 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="3" />
+          <entry key="css" value="4" />
           <entry key="data_js" value="1" />
           <entry key="gif" value="9" />
-          <entry key="html" value="82" />
+          <entry key="html" value="120" />
           <entry key="jpg" value="4" />
-          <entry key="js" value="28" />
+          <entry key="js" value="44" />
           <entry key="png" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="3" />
-          <entry key="HTML" value="82" />
+          <entry key="CSS" value="4" />
+          <entry key="HTML" value="120" />
           <entry key="Image" value="15" />
-          <entry key="JavaScript" value="28" />
+          <entry key="JavaScript" value="44" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="JavaScript Console" value="12" />
-          <entry key="html" value="4248" />
-          <entry key="js" value="862" />
+          <entry key="JavaScript Console" value="14" />
+          <entry key="html" value="5765" />
+          <entry key="js" value="867" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="4252" />
-          <entry key="JavaScript" value="870" />
+          <entry key="HTML" value="5769" />
+          <entry key="JavaScript" value="877" />
         </counts>
       </usages-collector>
     </session>
@@ -62,16 +117,33 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="91" column="33" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
+            <state relative-caret-position="300">
+              <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
               <folding>
+                <element signature="n#head#0;n#html#0;n#!!top" />
+                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#form#0;n#div#2;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#script#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#nav#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#aside#0;n#section#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/test/Nicepage-master/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="30" selection-end-column="60" />
+              <folding>
+                <element signature="e#953#964#0" />
               </folding>
             </state>
           </provider>
@@ -81,16 +153,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>formDemo</find>
-      <find>flower_info</find>
-      <find>specificRemarks</find>
-      <find>class=&quot;specific</find>
-      <find>btnWithdraw</find>
-      <find>merchant</find>
-      <find>flowerName</find>
-      <find>test/add_flower.html</find>
-      <find>admin</find>
-      <find>admin@</find>
       <find>在这个</find>
       <find>异清轩</find>
       <find>&lt;li class=&quot;list-group-item&quot;&gt;&lt;span&gt;IP：&lt;/span&gt;172.16.10.129&lt;/li&gt;</find>
@@ -106,12 +168,25 @@
       <find>.pagination</find>
       <find>active</find>
       <find>images/loading.gif</find>
-      <find>layui</find>
       <find>remarks</find>
       <find>flowerinfo</find>
       <find>content</find>
       <find>jQuery</find>
+      <find>layui</find>
+      <find>jquery</find>
+      <find>layui.j</find>
+      <find>ajax</find>
+      <find>laypage.js</find>
+      <find>json</find>
+      <find>excerpt</find>
+      <find>article</find>
+      <find>循环</find>
+      <find>ias</find>
+      <find>container</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/web/test/Nicepage-master</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -133,8 +208,6 @@
         <option value="$PROJECT_DIR$/server/test/add_flower.html" />
         <option value="$PROJECT_DIR$/server/test/add_flower.js" />
         <option value="$PROJECT_DIR$/server/js/add_merchant.js" />
-        <option value="$PROJECT_DIR$/server/views/add_flower.html" />
-        <option value="$PROJECT_DIR$/server/js/add_flower.js" />
         <option value="$PROJECT_DIR$/web/links.html" />
         <option value="$PROJECT_DIR$/web/readers.html" />
         <option value="$PROJECT_DIR$/web/tags.html" />
@@ -143,10 +216,21 @@
         <option value="$PROJECT_DIR$/web/js/scripts.js" />
         <option value="$PROJECT_DIR$/web/data_js/index.js" />
         <option value="$PROJECT_DIR$/web/info.html" />
-        <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/web/test/flower_info_test.html" />
         <option value="$PROJECT_DIR$/web/test/flower_info.html" />
         <option value="$PROJECT_DIR$/web/flower_info.html" />
+        <option value="$PROJECT_DIR$/server/js/add_flower.js" />
+        <option value="$PROJECT_DIR$/server/views/add_flower.html" />
+        <option value="$PROJECT_DIR$/test/Nicepage-master/index.html" />
+        <option value="$PROJECT_DIR$/web/test/page/page_test.html" />
+        <option value="$PROJECT_DIR$/web/test/Nicepage-master/index.html" />
+        <option value="$PROJECT_DIR$/web/test/page/layui_page.html" />
+        <option value="$PROJECT_DIR$/web/test/page/layui_laypage.html" />
+        <option value="$PROJECT_DIR$/web/test/index_test.html" />
+        <option value="$PROJECT_DIR$/web/test/page_loading.html" />
+        <option value="$PROJECT_DIR$/web/test/page_loading2.html" />
+        <option value="$PROJECT_DIR$/test/page_load/pc_gd.html" />
+        <option value="$PROJECT_DIR$/web/index.html" />
       </list>
     </option>
   </component>
@@ -181,6 +265,19 @@
               <item name="web_flowers" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="web_flowers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_flowers" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web_flowers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_flowers" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="flowers" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -188,21 +285,24 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="console.&#9;FILE&#9;file:///Applications/workspace/intellijidea_workspace/other/flowers/web_flowers/server/js/console.js&#10;loading&#9;FILE&#9;file:///Applications/workspace/intellijidea_workspace/other/flowers/web_flowers/web/images/loading.gif" />
+    <property name="SearchEverywhereHistoryKey" value="laypa&#9;FILE&#9;file:///Applications/workspace/intellijidea_workspace/other/flowers/web_flowers/test/Nicepage-master/js/lay/modules/laypage.js&#10;flowers&#9;FILE&#9;file:///Applications/workspace/intellijidea_workspace/other/flowers/web_flowers/server/views/flowers.html&#10;console.&#9;FILE&#9;file:///Applications/workspace/intellijidea_workspace/other/flowers/web_flowers/server/js/console.js&#10;loading&#9;FILE&#9;file:///Applications/workspace/intellijidea_workspace/other/flowers/web_flowers/web/images/loading.gif" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/images/flowers" />
+      <recent name="$PROJECT_DIR$/test/page_load" />
+      <recent name="$PROJECT_DIR$/web/js" />
+      <recent name="$PROJECT_DIR$/web/data_js" />
       <recent name="$PROJECT_DIR$/web" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/js/lay/modules" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/web/test" />
-      <recent name="$PROJECT_DIR$/web/images" />
-      <recent name="$PROJECT_DIR$/server/test/flower" />
-      <recent name="$PROJECT_DIR$/server/js" />
+      <recent name="$PROJECT_DIR$/web/test/info" />
+      <recent name="$PROJECT_DIR$/test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -243,12 +343,12 @@
       <workItem from="1541987720852" duration="17428000" />
       <workItem from="1542766933594" duration="10187000" />
       <workItem from="1543046228639" duration="1636000" />
-      <workItem from="1543194395941" duration="60412000" />
+      <workItem from="1543194395941" duration="74104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92254000" />
+    <option name="totallyTimeSpent" value="105946000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -261,7 +361,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1440" height="834" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19802678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -269,7 +368,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32904148" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.26323318" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.36337626" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32904148" />
@@ -288,135 +387,16 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>json</expression-string>
+        <language-id>HTML</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/assets/layui/css/layui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="2346" selection-start-line="1" selection-start-column="2346" selection-end-line="1" selection-end-column="2346" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/test/merchant/console2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="296" column="24" selection-start-line="296" selection-start-column="24" selection-end-line="296" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/js/upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/js/insert_flower.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/assets/layui/layui.all.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="1" column="2683" lean-forward="true" selection-start-line="1" selection-start-column="2683" selection-end-line="1" selection-end-column="2683" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/views/console.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1293">
-          <caret line="207" column="29" selection-start-line="207" selection-start-column="29" selection-end-line="207" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/views/users.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="63" column="18" lean-forward="true" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/views/merchant_info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="245" column="4" selection-start-line="245" selection-start-column="4" selection-end-line="248" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/test/flower/add_flower.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="74" column="27" lean-forward="true" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
-          <folding>
-            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/test/flower/add_specific.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/test/flower/bui_table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="26" lean-forward="true" selection-end-line="134" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/test/flower/flower_specific_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="48" column="5" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="48" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/js/add_merchant.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/views/add_flower.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/banner/banner_02.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/banner/banner_01.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/banner/banner_03.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/links.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="82" column="41" lean-forward="true" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/readers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="132" column="50" selection-start-line="132" selection-start-column="50" selection-end-line="132" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/images/weixin.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -443,19 +423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5">
           <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/js/add_flower.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="119" column="9" lean-forward="true" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!block;n#addHtml#0" />
-            <element signature="n#!!block;n#saveFlowerInfo#0" />
-            <element signature="n#!!block;n#isEmpty#0" />
-            <element signature="n#!!block;n#flowerImg#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -516,18 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/views/flowers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="115" column="36" lean-forward="true" selection-start-line="115" selection-start-column="36" selection-end-line="115" selection-end-column="36" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/data_js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -540,16 +495,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/images/loading.gif">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="136" column="5" lean-forward="true" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/data_js/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/server/views/user_info.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -587,7 +532,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/test/flower_info_test.html">
+    <entry file="file://$PROJECT_DIR$/web/test/info/flower_info_test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="605">
           <caret line="126" column="7" selection-start-line="126" selection-start-column="7" selection-end-line="126" selection-end-column="7" />
@@ -597,33 +542,236 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/test/info.html">
+    <entry file="file://$PROJECT_DIR$/server/js/add_flower.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="52" column="31" lean-forward="true" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!block;n#isEmpty#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/views/add_flower.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/data_js/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/layui.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Nicepage-master/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="68" column="40" lean-forward="true" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
+          <folding>
+            <element signature="n#pre#0;n#BODY#0;n#html#0;n#!!top" />
+            <element signature="e#2198#3259#0" />
+            <element signature="e#3386#3872#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/test/Nicepage-master/js/lay/modules/code.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/flower_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="242" selection-start-line="242" selection-end-line="243" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/layui.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/test/info/info.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="88" column="20" lean-forward="true" selection-end-line="362" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/flower_info.html">
+    <entry file="file://$PROJECT_DIR$/web/index_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1116">
-          <caret line="75" column="20" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#label#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#1;n#div#1;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="157">
+          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
+    <entry file="file://$PROJECT_DIR$/web/test/index_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="91" column="33" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
+        <state relative-caret-position="91">
+          <caret line="205" column="10" lean-forward="true" selection-start-line="205" selection-start-column="10" selection-end-line="205" selection-end-column="10" />
           <folding>
             <element signature="n#form#0;n#div#2;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#nav#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/views/flowers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="91" column="29" lean-forward="true" selection-start-line="89" selection-start-column="20" selection-end-line="91" selection-end-column="29" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/test/page/layui_laypage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/test/page/layui_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1507">
+          <caret line="245" column="26" lean-forward="true" selection-start-line="245" selection-start-column="26" selection-end-line="245" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#fieldset#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#fieldset#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#fieldset#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#fieldset#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#fieldset#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#fieldset#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#fieldset#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#fieldset#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#fieldset#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#fieldset#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#fieldset#10;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/test/page/page_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="138" column="8" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#center#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#center#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#center#0;n#BODY#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/test/Nicepage-master/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="30" selection-end-column="60" />
+          <folding>
+            <element signature="e#953#964#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/lay/modules/laypage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Nicepage-master/js/lay/modules/laypage.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/data_js/nicePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="904" selection-start-column="898" selection-end-column="904" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/jquery-2.1.4.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/nprogress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4317">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="132" column="26" lean-forward="true" selection-start-line="132" selection-start-column="26" selection-end-line="132" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/jquery.tmpl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="14" column="54" lean-forward="true" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/test/page_loading2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-37">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/test/page_loading.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="8" selection-end-column="7" />
+          <folding>
+            <element signature="e#28#36#1" expanded="true" />
+            <element signature="e#51#59#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/page_load/pc_gd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="61" column="9" lean-forward="true" selection-start-line="21" selection-end-line="61" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#form#0;n#div#2;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#nav#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#aside#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />

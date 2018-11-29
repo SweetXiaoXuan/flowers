@@ -101,7 +101,6 @@ function ajaxSave() {
         "flowerImg": $(".flowerInfoImg").html(),
         "specific": JSON.stringify(datas)
     };
-    console.info(JSON.stringify(data))
     $.ajax({
         url: "http://localhost:17900/flower/flower",
         type: 'post',
