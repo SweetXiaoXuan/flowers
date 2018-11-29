@@ -102,7 +102,7 @@
                       if (data.code === 0) {
                           var body = data.body;
                           $('.recommendFlowerInfo').html('<article class="excerpt-minic excerpt-minic-index">\n' +
-                              '        <h2><span class="red">【今日推荐】</span><a href=' + body.id + '"flower_info.html?fid=" title="">' + body.flowerName + '</a></h2>\n' +
+                              '        <h2><span class="red">【今日推荐】</span><a href="flower_info.html?fid=' + body.id + '" title="">' + body.flowerName + '</a></h2>\n' +
                               '        <p class="note">' + body.flowerLanguage + '</p>\n' +
                               '      </article>');
                       } else if(data.status === 10000) {
