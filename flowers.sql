@@ -11,11 +11,193 @@
  Target Server Version : 50723
  File Encoding         : 65001
 
- Date: 29/11/2018 15:24:19
+ Date: 29/11/2018 17:02:37
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for flower_color
+-- ----------------------------
+DROP TABLE IF EXISTS `flower_color`;
+CREATE TABLE `flower_color` (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL COMMENT '颜色',
+  `delete` int(1) DEFAULT '0' COMMENT '0否 1是',
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `remarks` varchar(255) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for flower_country
+-- ----------------------------
+DROP TABLE IF EXISTS `flower_country`;
+CREATE TABLE `flower_country` (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL COMMENT '国家',
+  `delete` int(1) DEFAULT '0' COMMENT '0否 1是',
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `remarks` varchar(255) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for flower_festival
+-- ----------------------------
+DROP TABLE IF EXISTS `flower_festival`;
+CREATE TABLE `flower_festival` (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL COMMENT '国家',
+  `delete` int(1) DEFAULT '0' COMMENT '0否 1是',
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `remarks` varchar(255) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for flower_info
+-- ----------------------------
+DROP TABLE IF EXISTS `flower_info`;
+CREATE TABLE `flower_info` (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `remarks` varchar(500) DEFAULT NULL COMMENT '备注',
+  `flower_name` varchar(255) DEFAULT NULL COMMENT '名字',
+  `delete` int(1) DEFAULT '0' COMMENT '是否删除 0否 1是',
+  `flower_language` varchar(500) DEFAULT NULL COMMENT '花语',
+  `flower_img` varchar(500) DEFAULT NULL,
+  `recommend` int(1) DEFAULT '0' COMMENT '推荐 0否 1是',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1067322425079787562 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of flower_info
+-- ----------------------------
+BEGIN;
+INSERT INTO `flower_info` VALUES (1, '2018-11-16 09:34:03', '', '紫滕花', 0, '对你执着，最幸福的时刻', 'images/flowers/紫藤.jpg', 0);
+INSERT INTO `flower_info` VALUES (2, '2018-11-01 09:34:06', '', '紫罗兰', 0, '永恒的美丽，最适合送给天秤的淑女。', 'images/flowers/蓝色紫罗兰.jpg', 0);
+INSERT INTO `flower_info` VALUES (3, '2018-11-08 09:34:10', '', '勿忘我', 0, '永恒的爱，浓情厚谊 ，永不变的心，永远的回忆', 'images/flowers/蓝色勿忘我.jpg', 0);
+INSERT INTO `flower_info` VALUES (4, '2018-11-16 09:34:15', NULL, '水仙花', 0, '只爱自己', 'images/flowers/水仙花.jpg', 0);
+INSERT INTO `flower_info` VALUES (5, '2018-11-16 09:34:17', NULL, '满天星', 0, '思念、清纯、梦境、真心喜欢、喜悦', 'images/flowers/满天星.jpg', 0);
+INSERT INTO `flower_info` VALUES (6, '2018-11-16 09:34:20', NULL, '蝴蝶兰', 0, '我爱你、幸福向你飞来', 'images/flowers/蝴蝶兰.jpg', 0);
+INSERT INTO `flower_info` VALUES (1067322425079787557, '2018-11-27 16:59:21', '', '玫瑰花', 0, '爱情、爱与美、容光焕发  ', 'images/flowers/白玫瑰1.jpg', 1);
+INSERT INTO `flower_info` VALUES (1067322425079787558, '2018-11-29 09:14:30', '', '百合花', 0, '在中国百合具有百年好合美好家庭、伟大的爱之含意，有深深祝福的意义。受到这种花的祝福的人具有清纯天真的性格，集众人宠爱于一身，不过光凭这一点并不能平静度过一生，必须具备自制力，抵抗外界的诱惑，才能保持不被污染的纯真。', 'images/flowers/粉色百合花.jpg', 0);
+INSERT INTO `flower_info` VALUES (1067322425079787559, '2018-11-29 09:19:17', '', '牡丹花', 0, '圆满、浓情、富贵 。', 'images/flowers/牡丹.jpg', 0);
+INSERT INTO `flower_info` VALUES (1067322425079787560, '2018-11-29 09:28:52', '', '雏菊', 0, '永远的快乐（Happy forever）', 'images/flowers/蓝色雏菊花.jpg', 0);
+INSERT INTO `flower_info` VALUES (1067322425079787561, '2018-11-29 09:33:15', NULL, '樱花', 0, '生命、幸福一生一世永不放弃，命运的法则就是循环。　　\n', 'images/flowers/樱花1.jpg', 0);
+COMMIT;
+
+-- ----------------------------
+-- Table structure for flower_season
+-- ----------------------------
+DROP TABLE IF EXISTS `flower_season`;
+CREATE TABLE `flower_season` (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL COMMENT '名字',
+  `delete` int(1) DEFAULT '0' COMMENT '0否 1是',
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `remarks` varchar(255) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for flower_specific
+-- ----------------------------
+DROP TABLE IF EXISTS `flower_specific`;
+CREATE TABLE `flower_specific` (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `fid` bigint(11) DEFAULT NULL COMMENT 'flower_info 表 id',
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `remarks` varchar(500) DEFAULT NULL COMMENT '备注',
+  `delete` int(1) DEFAULT '0' COMMENT '是否删除 0否 1是',
+  `title` varchar(255) DEFAULT NULL COMMENT '标题',
+  `content` longtext COMMENT '内容',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of flower_specific
+-- ----------------------------
+BEGIN;
+INSERT INTO `flower_specific` VALUES (1, 2, '2018-11-26 16:37:02', NULL, 0, '传说', '据希腊神话记述，主管爱与美的女神维纳斯，因情人远行，依依惜别，晶莹的泪珠滴落到泥土上，第二年春天竟然发芽生枝，开出一朵朵美丽芳香的花儿来，这就是紫罗兰。 ');
+INSERT INTO `flower_specific` VALUES (2, 2, '2018-11-26 17:05:49', NULL, 0, '拿破仑与紫罗兰', '拿破仑独钟情于紫罗兰。他的追随者们把它作为拿破仑派的标志，相信它会为这位受挫的君主重新带来成功和幸福。1815年3月20日，当紫罗兰在法国南方开出第一批花朵时，拿破仑成功地逃出厄尔巴岛，回到他的崇拜者中间。他们迎接他时，不住地高呼：\"欢迎您，紫罗兰之父！\"此时，人们手里举着紫罗兰，头上插着紫罗兰，所有的商店、公用建筑乃至家家户户都用紫罗兰装饰起来了，希望这春天的花能给他们带来好运，让拿破仑重新称霸欧洲。 可惜这股高兴劲没有持续多久。6月22日拿破仑被迫宣布放弃皇位，将它传给年幼的\\儿子拿破仑第二。可是这位皇太子并没有继承父亲的雄心和伟业：他没有接受皇位，而是到他外祖父--奥地利皇帝弗兰茨一世的宫庭中过与世无争的悠闲日子去了。 拿破仑失去皇位后，在被押解到圣海伦岛去之前的一个星期，突然念起约瑟芬的旧情，最后一次到马里美宁城堡去为她扫墓，并在墓前种了一丛终年开花的名贵的紫罗兰。 拿破仑死后，人们在他从未离身的金首饰盒里发现了两样东西：两朵枯萎的紫罗兰和一绺浅栗色的头发。后者是他爱子的胎发，而前者是他与约瑟芬的定情之物。 拿破仑第三与紫罗兰 拿破仑的侄子拿破仑第三与紫罗兰也有不解之缘。');
+INSERT INTO `flower_specific` VALUES (3, 2, '2018-11-26 17:34:05', NULL, 0, '描述', '紫罗兰又名草桂花、草紫罗兰，是十字花科紫罗兰属的一、二年生或多年生草本，是欧洲名花之一。株高20--70厘米，全株有灰白色星状柔毛。茎直立，多分枝。叶互生，矩圆形或倒披针形，长3--5厘米。总状花序顶生或腋生，两侧薯片基垂囊状，花梗粗壮，花径2厘米，花瓣4枚，有长爪，瓣铺张为十字形。花有紫红、淡红、淡黄、白色等，微香。花期依品种而不同，有春紫罗兰，四、五月开花；夏紫罗兰，六至八月开花；秋紫罗兰，七至九月开花。 紫罗兰喜欢冬季温暖、夏季凉爽、通风良好的环境。冬季能耐短暂的-5℃低温，夏季忌酷热。需肥沃疏松而湿润的土壤，施肥不宜过多，否则对开花不利。喜阳光，为长日照植物。光照和通风不充分，易罹病虫害。春紫罗兰繁殖在9月初播种，发芽适温为20℃。夏紫罗兰在早春温室育苗。秋紫罗兰在秋末播种。紫罗兰是直根性植物，须根不发达，育苗宜于真叶展开前分苗，并尽量少伤根，多带宿土。不易结实的重瓣品种，还可扦插或分根繁殖。');
+INSERT INTO `flower_specific` VALUES (6, 1067322425079787557, '2018-11-27 16:59:21', '', 0, '英国国花', '于蔷薇、月季、玫瑰这三种花来说，人们总把它搞混，它们虽同科同属，但却并不完全相同，但人们似乎比较偏爱玫瑰这个词，所以把这三种花统称为玫瑰了。在英国及欧美许多国家，都把攻瑰(月季)定为国花，以表示亲爱，又因茎上有刺,表示严肃。基督教中，相传耶稣被出卖后，被钉在十字架上，鲜血滴在泥土中，十字架下便生长出玫瑰花。\n　　红玫瑰象征了爱情，这可能是世界通用的花语。相传爱神为了救她的情人，跑得太匆忙，玫瑰的刺划破了她的手脚，鲜血染红了玫瑰花。红玫瑰因此成了爱情的信物。');
+INSERT INTO `flower_specific` VALUES (7, 1067322425079787557, '2018-11-27 16:59:21', '', 0, '爱情信物', '玫瑰长久以来就象征着美丽和爱情。古希腊和古罗马民族用玫瑰象征他们的爱神阿芙罗狄蒂（维纳斯）。英国著名的Lancaster与York的玫瑰战争（1455-1485），也是各以红、白玫瑰各为象征。最后以亨利七世与伊丽莎白通婚收场，为了纪念，从此之后英格兰以玫瑰为国花，并把皇室徽章改为红白玫瑰。此外，美国、西班牙、卢森堡、保加利亚的国花也是玫瑰。\n    蔷薇、月季、玫瑰这三种花，人们总把它们搞混，它们虽同科同属，但却并不完全相同，但人们似乎比较偏爱玫瑰这个词，所以往往把这三种花统称为“玫瑰”了。在英国及欧美许多国家，都把攻瑰（月季）定为国花，以表示亲爱，又因茎上有刺，表示严肃。基督教中，相传耶稣被出卖后，被钉在十字架上，鲜血滴在泥土中，十字架下便生长出玫瑰花。\n    红玫瑰象征了爱情，这可能是世界通用的花语。相传爱神为了救她的情人，跑得太匆忙，玫瑰的刺划破了她的手脚，鲜血染红了玫瑰花。红玫瑰因此成了爱情的信物。');
+INSERT INTO `flower_specific` VALUES (8, 1067322425079787558, '2018-11-29 09:14:30', '', 0, '传说', '相传，在遥远的古代，智利的百合花只有蓝、白两色。公元16世纪，印第安人阿拉乌加诺部族，与西班牙殖民者进行了不屈不捕的抗争。在民族英雄劳塔罗的领导下，阿拉乌加诺人把尔侵者打得落花流水，狼狈逃窜。正当义军节节胜利之际，却由于叛徒的出卖，仲塔罗和他的3万名爱国将士误中殖民主义者埋伏，经过浴血奋战，全部壮烈牺牲。第二年在天，爱国爱国志士捐躯的地方，漫山遍野绽开了红艳艳的百合花——\"戈比爱\"。人们认为这是烈士们今血浇灌过的蓝色、白色百合变成的。因此，在智利获得国家独立后，人们一致赞成将这种野百合花\"戈比爱\"定为国花。智利的国徽国案上，有一族美丽多姿、质朴可爱的花束，它就是一束红色的野百合花\"戈比爱\"，是独立自由的象征。');
+INSERT INTO `flower_specific` VALUES (9, 1067322425079787559, '2018-11-29 09:19:17', '', 0, '黑牡丹传说', '相传，很久很久以前，有个年青人，爱上一个任性的公主，她接受任何人的爱，却不给任何人爱。年轻人和公主见了面，公主肆意妄为，想要墨池对面那丛花中的牡丹，墨池是没人可以过去的，它的黑色就是为了保护对面那丛美丽的花，那只牡丹。掉入池中的人，会化为墨色，永远消失。年轻人爱的太深了，一步一步踏入墨池。 他的腿变成了墨色，他的腰变成了墨色，终于拿到了那支牡丹，他往回走，他的手变成了墨色，他的颈变成了墨色，直到那支牡丹变成了墨色，那样娇艳的散发着墨色的光，年轻人变成了墨色，那支牡丹却交到了公主手中，公主呆住了，看到的确实年轻人消失的身躯，她泪流满面。 之后，那个公主也消失了，人们不知道她去了哪里，但在那之后，在池边多了一片墨色叶子的林子，林子中间，有一丛美丽的黑色牡丹，那样娇媚，那样妖娆。林中的叶子很重，凋落的时候会像利刃一样将人劈开，没人敢进那片林。有人说，那是公主的爱。。。。所以，它的花语为：死了都要爱！');
+INSERT INTO `flower_specific` VALUES (10, 1067322425079787559, '2018-11-29 09:19:17', '', 0, '白牡丹观赏价值及寓意', '1、白牡丹盆景花摆设于家中，是品位至荣至贵的身份象征。\n2、白牡丹寓意高洁、端庄秀雅、仪态万千、国色天香，是对女人的最高赞美，是女人心中最心仪的礼物。 \n3、 在盆景花中，牡丹花为花中之王，王者风范，系高档次，是送给亲朋好友最理想的选择，表达内心诚挚的祝愿和崇高的敬意。 \n4、 白牡丹摆设在办公室、卧室，当您看到她的美，给人以舒畅的视觉享受，睹物思人、启迪人生，以明智远、激发出内心深处的灵感。 \n5、 摆设在酒店、宾馆经商之地象征生意发达。 \n6、 白牡丹寓意做人的风格：王者风范，以及人对美好事物的追求和向往。\n7、 净化室内空气，美化居室环境。实践证明白牡丹可以消除室内墙壁散发出的有毒气体。');
+INSERT INTO `flower_specific` VALUES (11, 1067322425079787560, '2018-11-29 09:28:52', '', 0, '介绍', '雏菊又名延命菊，是菊科多年生草本植物，原产欧洲。它的叶为匙形丛生呈莲座状，密集矮生，颜色碧翠。从叶间抽出花葶，葶一花，错落排列，外观古朴，花朵娇小玲珑，色彩和谐。早春开花，生气盎然，具有君子的风度和天真烂漫的风采，深得意大利人的喜爱，因而推举为国花。');
+INSERT INTO `flower_specific` VALUES (12, 1067322425079787561, '2018-11-29 09:33:32', NULL, 0, '传说1', '日本的国花樱花(Cherryblossom)就源于一个美丽动人的神话故事。据说，在很久以前，有一个聪明美丽的姑娘、名叫木花开耶姬。木花开耶姬即樱花的意思。有一年年底，她从日本冲绳出发，途经九洲，关西、关东，于第二年五，六月间到达北海道，沿途中，她把一朵朵樱花撒遍日本各地。从此，樱花在日本盛开千载。且年年灿若云霞。日本人民非常喜爱樱花。日本人民之所以将樱花定为国花，除了它的纯洁、雅丽、崇高外，还为了纪念那勤劳、善良的木花开耶姬姑娘、并以此象征勤劳、智慧、勇敢的日本人民。');
+INSERT INTO `flower_specific` VALUES (13, 1067322425079787561, '2018-11-29 09:33:43', NULL, 0, '传说2', '相传，以前樱花只有白色的 英勇的武士选择了在心爱的樱花树下剖腹 因为当一个武士认为自己达到了人生的辉煌 就会选择结束自己生命 所以樱花树下血流成河 从此樱花开出了红色的⋯⋯樱花的花瓣越红，说明树下的亡魂就越多。\n');
+INSERT INTO `flower_specific` VALUES (14, 1067322425079787561, '2018-11-29 09:33:57', NULL, 0, '传说3', '樱花在樱花城中，静静的绽放了数月，每天都看到很多情侣在樱花树下，聊天，谈心，樱花的花瓣渐渐的飘落下来，美及了。所以，樱花就成为了爱情的象征。但是，每个人都希望自己得到爱情，得到幸福，樱花树上的妖精(樱の花)也一样，她看到别人是那么的幸福，自己也想得到，就独自离开了樱花树。 樱花的花瓣仍然在飘落，樱の花在人群中，寻找着自己的另一半，她找了好久好久，当她想放弃而回到樱花树上时，他出现了，他开始为她带来快乐，他开始照顾她，他们一起聊天到深夜。这才得知他是从遥远的国家，因船迷失了方向而来到了这里，樱の花听了，知道，他一定会走的，一定会回到自己的国家。樱の花为了珍惜这段时光，她每天都和他相遇在樱花树下，天天聊天⋯⋯但是，好时光总是短暂的，他要离开了，他来和樱の花道别了。樱の花虽然早有准备，可还是禁不起这个打击，她背对着他，只说了一个字“哦”。他走了，在茫茫的海上，走了。樱の花一个人在樱花树下，哭泣着，樱花的花瓣为了安慰她，而飘落下来，微风吹过，满地的花瓣飘了起来，樱の花的心碎了，她哭了几天几夜，最终决定了，她是该回去的时候了。她看着樱花树，想到：我是樱花的妖精，我最终是樱花树上的一片花瓣，最终是只能看着别人有情人终成眷属的，自己是不会得到幸福的⋯⋯就这样，她消失了，有人说，她回到了树上，有人说，她因为过度的失落，而化为花瓣，随着风一起去寻找他了⋯⋯ 几年后，他回来了，他竟然回来了，他来到当初约定的地方，寻找着她，一直都没有找到，他失落了。原来，他回来是为了告诉她，他已经爱上了她。当他听到村里人在流传的传说时，他知道一切都晚了，他在樱花树下发誓，希望所以有情人能忠诚眷属，不要再有谁像自己一样错过了⋯⋯这次，他再也没离开樱花城了，他还在不断的寻找着她的身影，直到死去⋯⋯⋯⋯ 几百年过去了，樱花仍然在绽放着，许多的情侣为了这个传说而来到这里，见证自己的幸福。不知道是命运的安排，还是⋯⋯樱の花转世投胎成为了世人，她来到樱花树下，总觉得这里似成相识。风突然刮了起来，花瓣瞬间吹过，她的帽子被吹走了，被一名男子接到了，是他，他也来了，这一次，他们一定不会再错过了⋯⋯');
+COMMIT;
+
+-- ----------------------------
+-- Table structure for flower_world
+-- ----------------------------
+DROP TABLE IF EXISTS `flower_world`;
+CREATE TABLE `flower_world` (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL COMMENT '国家',
+  `delete` int(1) DEFAULT '0' COMMENT '0否 1是',
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `remarks` varchar(255) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for menu
+-- ----------------------------
+DROP TABLE IF EXISTS `menu`;
+CREATE TABLE `menu` (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL COMMENT '菜单名',
+  `content` varchar(255) DEFAULT NULL COMMENT '说明',
+  `status` int(1) DEFAULT '0' COMMENT '0正常 1异常',
+  `delete` int(1) DEFAULT '0' COMMENT '0否 1是',
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `url` varchar(255) DEFAULT NULL COMMENT '菜单地址',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of menu
+-- ----------------------------
+BEGIN;
+INSERT INTO `menu` VALUES (1, '季节分类', '按季节查询', 0, 0, '2018-11-28 09:52:58', NULL);
+INSERT INTO `menu` VALUES (2, '颜色分类', '按颜色查询', 0, 0, '2018-11-28 09:53:08', NULL);
+INSERT INTO `menu` VALUES (3, '国花查询', '各国国花', 0, 0, '2018-11-28 09:53:19', NULL);
+INSERT INTO `menu` VALUES (4, '节日之花', '节日之花', 0, 0, '2018-11-28 09:53:55', NULL);
+INSERT INTO `menu` VALUES (5, '世界之花', '世界之花', 0, 0, '2018-11-28 14:40:14', NULL);
+COMMIT;
+
+-- ----------------------------
+-- Table structure for user
+-- ----------------------------
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) DEFAULT NULL COMMENT '用户名',
+  `password` varchar(255) DEFAULT NULL COMMENT '密码',
+  `email` varchar(255) DEFAULT NULL COMMENT '邮箱',
+  `phone` varchar(11) DEFAULT NULL COMMENT '手机号',
+  `level` int(1) DEFAULT NULL COMMENT '等级，0-超级管理员 1-普通用户',
+  `delete` int(1) DEFAULT NULL COMMENT '是否删除，0否 1是',
+  `status` int(1) DEFAULT NULL COMMENT '账号状态，0正常 1锁定 2异常',
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `remarks` varchar(255) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+BEGIN;
+INSERT INTO `user` VALUES (1, 'aaa', 'aaa', NULL, NULL, 0, 0, 0, '2018-11-26 14:39:44', NULL);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for user_log
@@ -29,7 +211,7 @@ CREATE TABLE `user_log` (
   `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
   `type` int(1) DEFAULT NULL COMMENT '1新增 2查询 3修改 4删除',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1062 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1316 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_log
@@ -1087,123 +1269,260 @@ INSERT INTO `user_log` VALUES (1058, 1, '查询鲜花列表', 0, '2018-11-29 15:
 INSERT INTO `user_log` VALUES (1059, 1, '查询鲜花列表', 0, '2018-11-29 15:23:56', 2);
 INSERT INTO `user_log` VALUES (1060, 1, '查询鲜花列表', 0, '2018-11-29 15:23:56', 2);
 INSERT INTO `user_log` VALUES (1061, 1, '查询鲜花列表', 0, '2018-11-29 15:23:57', 2);
-COMMIT;
-
--- ----------------------------
--- Table structure for flower_specific
--- ----------------------------
-DROP TABLE IF EXISTS `flower_specific`;
-CREATE TABLE `flower_specific` (
-  `id` bigint(11) NOT NULL AUTO_INCREMENT,
-  `fid` bigint(11) DEFAULT NULL COMMENT 'flower_info 表 id',
-  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
-  `remarks` varchar(500) DEFAULT NULL COMMENT '备注',
-  `delete` int(1) DEFAULT '0' COMMENT '是否删除 0否 1是',
-  `title` varchar(255) DEFAULT NULL COMMENT '标题',
-  `content` longtext COMMENT '内容',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of flower_specific
--- ----------------------------
-BEGIN;
-INSERT INTO `flower_specific` VALUES (1, 2, '2018-11-26 16:37:02', NULL, 0, '传说', '据希腊神话记述，主管爱与美的女神维纳斯，因情人远行，依依惜别，晶莹的泪珠滴落到泥土上，第二年春天竟然发芽生枝，开出一朵朵美丽芳香的花儿来，这就是紫罗兰。 ');
-INSERT INTO `flower_specific` VALUES (2, 2, '2018-11-26 17:05:49', NULL, 0, '拿破仑与紫罗兰', '拿破仑独钟情于紫罗兰。他的追随者们把它作为拿破仑派的标志，相信它会为这位受挫的君主重新带来成功和幸福。1815年3月20日，当紫罗兰在法国南方开出第一批花朵时，拿破仑成功地逃出厄尔巴岛，回到他的崇拜者中间。他们迎接他时，不住地高呼：\"欢迎您，紫罗兰之父！\"此时，人们手里举着紫罗兰，头上插着紫罗兰，所有的商店、公用建筑乃至家家户户都用紫罗兰装饰起来了，希望这春天的花能给他们带来好运，让拿破仑重新称霸欧洲。 可惜这股高兴劲没有持续多久。6月22日拿破仑被迫宣布放弃皇位，将它传给年幼的\\儿子拿破仑第二。可是这位皇太子并没有继承父亲的雄心和伟业：他没有接受皇位，而是到他外祖父--奥地利皇帝弗兰茨一世的宫庭中过与世无争的悠闲日子去了。 拿破仑失去皇位后，在被押解到圣海伦岛去之前的一个星期，突然念起约瑟芬的旧情，最后一次到马里美宁城堡去为她扫墓，并在墓前种了一丛终年开花的名贵的紫罗兰。 拿破仑死后，人们在他从未离身的金首饰盒里发现了两样东西：两朵枯萎的紫罗兰和一绺浅栗色的头发。后者是他爱子的胎发，而前者是他与约瑟芬的定情之物。 拿破仑第三与紫罗兰 拿破仑的侄子拿破仑第三与紫罗兰也有不解之缘。');
-INSERT INTO `flower_specific` VALUES (3, 2, '2018-11-26 17:34:05', NULL, 0, '描述', '紫罗兰又名草桂花、草紫罗兰，是十字花科紫罗兰属的一、二年生或多年生草本，是欧洲名花之一。株高20--70厘米，全株有灰白色星状柔毛。茎直立，多分枝。叶互生，矩圆形或倒披针形，长3--5厘米。总状花序顶生或腋生，两侧薯片基垂囊状，花梗粗壮，花径2厘米，花瓣4枚，有长爪，瓣铺张为十字形。花有紫红、淡红、淡黄、白色等，微香。花期依品种而不同，有春紫罗兰，四、五月开花；夏紫罗兰，六至八月开花；秋紫罗兰，七至九月开花。 紫罗兰喜欢冬季温暖、夏季凉爽、通风良好的环境。冬季能耐短暂的-5℃低温，夏季忌酷热。需肥沃疏松而湿润的土壤，施肥不宜过多，否则对开花不利。喜阳光，为长日照植物。光照和通风不充分，易罹病虫害。春紫罗兰繁殖在9月初播种，发芽适温为20℃。夏紫罗兰在早春温室育苗。秋紫罗兰在秋末播种。紫罗兰是直根性植物，须根不发达，育苗宜于真叶展开前分苗，并尽量少伤根，多带宿土。不易结实的重瓣品种，还可扦插或分根繁殖。');
-INSERT INTO `flower_specific` VALUES (6, 1067322425079787557, '2018-11-27 16:59:21', '', 0, '英国国花', '于蔷薇、月季、玫瑰这三种花来说，人们总把它搞混，它们虽同科同属，但却并不完全相同，但人们似乎比较偏爱玫瑰这个词，所以把这三种花统称为玫瑰了。在英国及欧美许多国家，都把攻瑰(月季)定为国花，以表示亲爱，又因茎上有刺,表示严肃。基督教中，相传耶稣被出卖后，被钉在十字架上，鲜血滴在泥土中，十字架下便生长出玫瑰花。\n　　红玫瑰象征了爱情，这可能是世界通用的花语。相传爱神为了救她的情人，跑得太匆忙，玫瑰的刺划破了她的手脚，鲜血染红了玫瑰花。红玫瑰因此成了爱情的信物。');
-INSERT INTO `flower_specific` VALUES (7, 1067322425079787557, '2018-11-27 16:59:21', '', 0, '爱情信物', '玫瑰长久以来就象征着美丽和爱情。古希腊和古罗马民族用玫瑰象征他们的爱神阿芙罗狄蒂（维纳斯）。英国著名的Lancaster与York的玫瑰战争（1455-1485），也是各以红、白玫瑰各为象征。最后以亨利七世与伊丽莎白通婚收场，为了纪念，从此之后英格兰以玫瑰为国花，并把皇室徽章改为红白玫瑰。此外，美国、西班牙、卢森堡、保加利亚的国花也是玫瑰。\n    蔷薇、月季、玫瑰这三种花，人们总把它们搞混，它们虽同科同属，但却并不完全相同，但人们似乎比较偏爱玫瑰这个词，所以往往把这三种花统称为“玫瑰”了。在英国及欧美许多国家，都把攻瑰（月季）定为国花，以表示亲爱，又因茎上有刺，表示严肃。基督教中，相传耶稣被出卖后，被钉在十字架上，鲜血滴在泥土中，十字架下便生长出玫瑰花。\n    红玫瑰象征了爱情，这可能是世界通用的花语。相传爱神为了救她的情人，跑得太匆忙，玫瑰的刺划破了她的手脚，鲜血染红了玫瑰花。红玫瑰因此成了爱情的信物。');
-INSERT INTO `flower_specific` VALUES (8, 1067322425079787558, '2018-11-29 09:14:30', '', 0, '传说', '相传，在遥远的古代，智利的百合花只有蓝、白两色。公元16世纪，印第安人阿拉乌加诺部族，与西班牙殖民者进行了不屈不捕的抗争。在民族英雄劳塔罗的领导下，阿拉乌加诺人把尔侵者打得落花流水，狼狈逃窜。正当义军节节胜利之际，却由于叛徒的出卖，仲塔罗和他的3万名爱国将士误中殖民主义者埋伏，经过浴血奋战，全部壮烈牺牲。第二年在天，爱国爱国志士捐躯的地方，漫山遍野绽开了红艳艳的百合花——\"戈比爱\"。人们认为这是烈士们今血浇灌过的蓝色、白色百合变成的。因此，在智利获得国家独立后，人们一致赞成将这种野百合花\"戈比爱\"定为国花。智利的国徽国案上，有一族美丽多姿、质朴可爱的花束，它就是一束红色的野百合花\"戈比爱\"，是独立自由的象征。');
-INSERT INTO `flower_specific` VALUES (9, 1067322425079787559, '2018-11-29 09:19:17', '', 0, '黑牡丹传说', '相传，很久很久以前，有个年青人，爱上一个任性的公主，她接受任何人的爱，却不给任何人爱。年轻人和公主见了面，公主肆意妄为，想要墨池对面那丛花中的牡丹，墨池是没人可以过去的，它的黑色就是为了保护对面那丛美丽的花，那只牡丹。掉入池中的人，会化为墨色，永远消失。年轻人爱的太深了，一步一步踏入墨池。 他的腿变成了墨色，他的腰变成了墨色，终于拿到了那支牡丹，他往回走，他的手变成了墨色，他的颈变成了墨色，直到那支牡丹变成了墨色，那样娇艳的散发着墨色的光，年轻人变成了墨色，那支牡丹却交到了公主手中，公主呆住了，看到的确实年轻人消失的身躯，她泪流满面。 之后，那个公主也消失了，人们不知道她去了哪里，但在那之后，在池边多了一片墨色叶子的林子，林子中间，有一丛美丽的黑色牡丹，那样娇媚，那样妖娆。林中的叶子很重，凋落的时候会像利刃一样将人劈开，没人敢进那片林。有人说，那是公主的爱。。。。所以，它的花语为：死了都要爱！');
-INSERT INTO `flower_specific` VALUES (10, 1067322425079787559, '2018-11-29 09:19:17', '', 0, '白牡丹观赏价值及寓意', '1、白牡丹盆景花摆设于家中，是品位至荣至贵的身份象征。\n2、白牡丹寓意高洁、端庄秀雅、仪态万千、国色天香，是对女人的最高赞美，是女人心中最心仪的礼物。 \n3、 在盆景花中，牡丹花为花中之王，王者风范，系高档次，是送给亲朋好友最理想的选择，表达内心诚挚的祝愿和崇高的敬意。 \n4、 白牡丹摆设在办公室、卧室，当您看到她的美，给人以舒畅的视觉享受，睹物思人、启迪人生，以明智远、激发出内心深处的灵感。 \n5、 摆设在酒店、宾馆经商之地象征生意发达。 \n6、 白牡丹寓意做人的风格：王者风范，以及人对美好事物的追求和向往。\n7、 净化室内空气，美化居室环境。实践证明白牡丹可以消除室内墙壁散发出的有毒气体。');
-INSERT INTO `flower_specific` VALUES (11, 1067322425079787560, '2018-11-29 09:28:52', '', 0, '介绍', '雏菊又名延命菊，是菊科多年生草本植物，原产欧洲。它的叶为匙形丛生呈莲座状，密集矮生，颜色碧翠。从叶间抽出花葶，葶一花，错落排列，外观古朴，花朵娇小玲珑，色彩和谐。早春开花，生气盎然，具有君子的风度和天真烂漫的风采，深得意大利人的喜爱，因而推举为国花。');
-INSERT INTO `flower_specific` VALUES (12, 1067322425079787561, '2018-11-29 09:33:32', NULL, 0, '传说1', '日本的国花樱花(Cherryblossom)就源于一个美丽动人的神话故事。据说，在很久以前，有一个聪明美丽的姑娘、名叫木花开耶姬。木花开耶姬即樱花的意思。有一年年底，她从日本冲绳出发，途经九洲，关西、关东，于第二年五，六月间到达北海道，沿途中，她把一朵朵樱花撒遍日本各地。从此，樱花在日本盛开千载。且年年灿若云霞。日本人民非常喜爱樱花。日本人民之所以将樱花定为国花，除了它的纯洁、雅丽、崇高外，还为了纪念那勤劳、善良的木花开耶姬姑娘、并以此象征勤劳、智慧、勇敢的日本人民。');
-INSERT INTO `flower_specific` VALUES (13, 1067322425079787561, '2018-11-29 09:33:43', NULL, 0, '传说2', '相传，以前樱花只有白色的 英勇的武士选择了在心爱的樱花树下剖腹 因为当一个武士认为自己达到了人生的辉煌 就会选择结束自己生命 所以樱花树下血流成河 从此樱花开出了红色的⋯⋯樱花的花瓣越红，说明树下的亡魂就越多。\n');
-INSERT INTO `flower_specific` VALUES (14, 1067322425079787561, '2018-11-29 09:33:57', NULL, 0, '传说3', '樱花在樱花城中，静静的绽放了数月，每天都看到很多情侣在樱花树下，聊天，谈心，樱花的花瓣渐渐的飘落下来，美及了。所以，樱花就成为了爱情的象征。但是，每个人都希望自己得到爱情，得到幸福，樱花树上的妖精(樱の花)也一样，她看到别人是那么的幸福，自己也想得到，就独自离开了樱花树。 樱花的花瓣仍然在飘落，樱の花在人群中，寻找着自己的另一半，她找了好久好久，当她想放弃而回到樱花树上时，他出现了，他开始为她带来快乐，他开始照顾她，他们一起聊天到深夜。这才得知他是从遥远的国家，因船迷失了方向而来到了这里，樱の花听了，知道，他一定会走的，一定会回到自己的国家。樱の花为了珍惜这段时光，她每天都和他相遇在樱花树下，天天聊天⋯⋯但是，好时光总是短暂的，他要离开了，他来和樱の花道别了。樱の花虽然早有准备，可还是禁不起这个打击，她背对着他，只说了一个字“哦”。他走了，在茫茫的海上，走了。樱の花一个人在樱花树下，哭泣着，樱花的花瓣为了安慰她，而飘落下来，微风吹过，满地的花瓣飘了起来，樱の花的心碎了，她哭了几天几夜，最终决定了，她是该回去的时候了。她看着樱花树，想到：我是樱花的妖精，我最终是樱花树上的一片花瓣，最终是只能看着别人有情人终成眷属的，自己是不会得到幸福的⋯⋯就这样，她消失了，有人说，她回到了树上，有人说，她因为过度的失落，而化为花瓣，随着风一起去寻找他了⋯⋯ 几年后，他回来了，他竟然回来了，他来到当初约定的地方，寻找着她，一直都没有找到，他失落了。原来，他回来是为了告诉她，他已经爱上了她。当他听到村里人在流传的传说时，他知道一切都晚了，他在樱花树下发誓，希望所以有情人能忠诚眷属，不要再有谁像自己一样错过了⋯⋯这次，他再也没离开樱花城了，他还在不断的寻找着她的身影，直到死去⋯⋯⋯⋯ 几百年过去了，樱花仍然在绽放着，许多的情侣为了这个传说而来到这里，见证自己的幸福。不知道是命运的安排，还是⋯⋯樱の花转世投胎成为了世人，她来到樱花树下，总觉得这里似成相识。风突然刮了起来，花瓣瞬间吹过，她的帽子被吹走了，被一名男子接到了，是他，他也来了，这一次，他们一定不会再错过了⋯⋯');
-COMMIT;
-
--- ----------------------------
--- Table structure for flower_info
--- ----------------------------
-DROP TABLE IF EXISTS `flower_info`;
-CREATE TABLE `flower_info` (
-  `id` bigint(11) NOT NULL AUTO_INCREMENT,
-  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
-  `remarks` varchar(500) DEFAULT NULL COMMENT '备注',
-  `flower_name` varchar(255) DEFAULT NULL COMMENT '名字',
-  `delete` int(1) DEFAULT '0' COMMENT '是否删除 0否 1是',
-  `flower_language` varchar(500) DEFAULT NULL COMMENT '花语',
-  `flower_img` varchar(500) DEFAULT NULL,
-  `recommend` int(1) DEFAULT '0' COMMENT '推荐 0否 1是',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1067322425079787562 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of flower_info
--- ----------------------------
-BEGIN;
-INSERT INTO `flower_info` VALUES (1, '2018-11-16 09:34:03', '', '紫滕花', 0, '对你执着，最幸福的时刻', 'images/flowers/紫藤.jpg', 0);
-INSERT INTO `flower_info` VALUES (2, '2018-11-01 09:34:06', '', '紫罗兰', 0, '永恒的美丽，最适合送给天秤的淑女。', 'images/flowers/蓝色紫罗兰.jpg', 0);
-INSERT INTO `flower_info` VALUES (3, '2018-11-08 09:34:10', '', '勿忘我', 0, '永恒的爱，浓情厚谊 ，永不变的心，永远的回忆', 'images/flowers/蓝色勿忘我.jpg', 0);
-INSERT INTO `flower_info` VALUES (4, '2018-11-16 09:34:15', NULL, '水仙花', 0, '只爱自己', 'images/flowers/水仙花.jpg', 0);
-INSERT INTO `flower_info` VALUES (5, '2018-11-16 09:34:17', NULL, '满天星', 0, '思念、清纯、梦境、真心喜欢、喜悦', 'images/flowers/满天星.jpg', 0);
-INSERT INTO `flower_info` VALUES (6, '2018-11-16 09:34:20', NULL, '蝴蝶兰', 0, '我爱你、幸福向你飞来', 'images/flowers/蝴蝶兰.jpg', 0);
-INSERT INTO `flower_info` VALUES (1067322425079787557, '2018-11-27 16:59:21', '', '玫瑰花', 0, '爱情、爱与美、容光焕发  ', 'images/flowers/白玫瑰1.jpg', 1);
-INSERT INTO `flower_info` VALUES (1067322425079787558, '2018-11-29 09:14:30', '', '百合花', 0, '在中国百合具有百年好合美好家庭、伟大的爱之含意，有深深祝福的意义。受到这种花的祝福的人具有清纯天真的性格，集众人宠爱于一身，不过光凭这一点并不能平静度过一生，必须具备自制力，抵抗外界的诱惑，才能保持不被污染的纯真。', 'images/flowers/粉色百合花.jpg', 0);
-INSERT INTO `flower_info` VALUES (1067322425079787559, '2018-11-29 09:19:17', '', '牡丹花', 0, '圆满、浓情、富贵 。', 'images/flowers/牡丹.jpg', 0);
-INSERT INTO `flower_info` VALUES (1067322425079787560, '2018-11-29 09:28:52', '', '雏菊', 0, '永远的快乐（Happy forever）', 'images/flowers/蓝色雏菊花.jpg', 0);
-INSERT INTO `flower_info` VALUES (1067322425079787561, '2018-11-29 09:33:15', NULL, '樱花', 0, '生命、幸福一生一世永不放弃，命运的法则就是循环。　　\n', 'images/flowers/樱花1.jpg', 0);
-COMMIT;
-
--- ----------------------------
--- Table structure for menu
--- ----------------------------
-DROP TABLE IF EXISTS `menu`;
-CREATE TABLE `menu` (
-  `id` bigint(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL COMMENT '菜单名',
-  `content` varchar(255) DEFAULT NULL COMMENT '说明',
-  `status` int(1) DEFAULT '0' COMMENT '0正常 1异常',
-  `delete` int(1) DEFAULT '0' COMMENT '0否 1是',
-  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
-  `url` varchar(255) DEFAULT NULL COMMENT '菜单地址',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of menu
--- ----------------------------
-BEGIN;
-INSERT INTO `menu` VALUES (1, '季节分类', '按季节查询', 0, 0, '2018-11-28 09:52:58', NULL);
-INSERT INTO `menu` VALUES (2, '颜色分类', '按颜色查询', 0, 0, '2018-11-28 09:53:08', NULL);
-INSERT INTO `menu` VALUES (3, '国花查询', '各国国花', 0, 0, '2018-11-28 09:53:19', NULL);
-INSERT INTO `menu` VALUES (4, '节日之花', '节日之花', 0, 0, '2018-11-28 09:53:55', NULL);
-INSERT INTO `menu` VALUES (5, '世界之花', '世界之花', 0, 0, '2018-11-28 14:40:14', NULL);
-COMMIT;
-
--- ----------------------------
--- Table structure for user
--- ----------------------------
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE `user` (
-  `id` bigint(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) DEFAULT NULL COMMENT '用户名',
-  `password` varchar(255) DEFAULT NULL COMMENT '密码',
-  `email` varchar(255) DEFAULT NULL COMMENT '邮箱',
-  `phone` varchar(11) DEFAULT NULL COMMENT '手机号',
-  `level` int(1) DEFAULT NULL COMMENT '等级，0-超级管理员 1-普通用户',
-  `delete` int(1) DEFAULT NULL COMMENT '是否删除，0否 1是',
-  `status` int(1) DEFAULT NULL COMMENT '账号状态，0正常 1锁定 2异常',
-  `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
-  `remarks` varchar(255) DEFAULT NULL COMMENT '备注',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of user
--- ----------------------------
-BEGIN;
-INSERT INTO `user` VALUES (1, 'aaa', 'aaa', NULL, NULL, 0, 0, 0, '2018-11-26 14:39:44', NULL);
+INSERT INTO `user_log` VALUES (1062, 1, '查询总数', 0, '2018-11-29 15:27:43', 2);
+INSERT INTO `user_log` VALUES (1063, 1, '查询鲜花列表', 0, '2018-11-29 15:28:54', 2);
+INSERT INTO `user_log` VALUES (1064, 1, '查询鲜花列表', 0, '2018-11-29 15:29:45', 2);
+INSERT INTO `user_log` VALUES (1065, 1, '查询鲜花列表', 0, '2018-11-29 15:29:46', 2);
+INSERT INTO `user_log` VALUES (1066, 1, '查询鲜花列表', 0, '2018-11-29 15:29:47', 2);
+INSERT INTO `user_log` VALUES (1067, 1, '查询鲜花列表', 0, '2018-11-29 15:29:47', 2);
+INSERT INTO `user_log` VALUES (1068, 1, '查询鲜花列表', 0, '2018-11-29 15:29:48', 2);
+INSERT INTO `user_log` VALUES (1069, 1, '查询鲜花列表', 0, '2018-11-29 15:29:48', 2);
+INSERT INTO `user_log` VALUES (1070, 1, '查询鲜花列表', 0, '2018-11-29 15:29:48', 2);
+INSERT INTO `user_log` VALUES (1071, 1, '查询鲜花列表', 0, '2018-11-29 15:29:48', 2);
+INSERT INTO `user_log` VALUES (1072, 1, '查询鲜花列表', 0, '2018-11-29 15:29:49', 2);
+INSERT INTO `user_log` VALUES (1073, 1, '查询鲜花列表', 0, '2018-11-29 15:29:49', 2);
+INSERT INTO `user_log` VALUES (1074, 1, '查询鲜花列表', 0, '2018-11-29 15:29:55', 2);
+INSERT INTO `user_log` VALUES (1075, 1, '查询鲜花列表', 0, '2018-11-29 15:29:56', 2);
+INSERT INTO `user_log` VALUES (1076, 1, '查询鲜花列表', 0, '2018-11-29 15:30:17', 2);
+INSERT INTO `user_log` VALUES (1077, 1, '查询鲜花列表', 0, '2018-11-29 15:30:18', 2);
+INSERT INTO `user_log` VALUES (1078, 1, '查询鲜花列表', 0, '2018-11-29 15:30:20', 2);
+INSERT INTO `user_log` VALUES (1079, 1, '查询鲜花列表', 0, '2018-11-29 15:30:21', 2);
+INSERT INTO `user_log` VALUES (1080, 1, '查询鲜花列表', 0, '2018-11-29 15:30:23', 2);
+INSERT INTO `user_log` VALUES (1081, 1, '查询鲜花列表', 0, '2018-11-29 15:30:23', 2);
+INSERT INTO `user_log` VALUES (1082, 1, '查询鲜花列表', 0, '2018-11-29 15:30:25', 2);
+INSERT INTO `user_log` VALUES (1083, 1, '查询鲜花列表', 0, '2018-11-29 15:30:25', 2);
+INSERT INTO `user_log` VALUES (1084, 1, '查询鲜花列表', 0, '2018-11-29 15:30:25', 2);
+INSERT INTO `user_log` VALUES (1085, 1, '查询鲜花列表', 0, '2018-11-29 15:30:33', 2);
+INSERT INTO `user_log` VALUES (1086, 1, '查询鲜花列表', 0, '2018-11-29 15:30:34', 2);
+INSERT INTO `user_log` VALUES (1087, 1, '查询鲜花列表', 0, '2018-11-29 15:30:36', 2);
+INSERT INTO `user_log` VALUES (1088, 1, '查询鲜花列表', 0, '2018-11-29 15:30:37', 2);
+INSERT INTO `user_log` VALUES (1089, 1, '查询鲜花列表', 0, '2018-11-29 15:30:37', 2);
+INSERT INTO `user_log` VALUES (1090, 1, '查询鲜花列表', 0, '2018-11-29 15:30:37', 2);
+INSERT INTO `user_log` VALUES (1091, 1, '查询鲜花列表', 0, '2018-11-29 15:30:38', 2);
+INSERT INTO `user_log` VALUES (1092, 1, '查询鲜花列表', 0, '2018-11-29 15:30:38', 2);
+INSERT INTO `user_log` VALUES (1093, 1, '查询鲜花列表', 0, '2018-11-29 15:30:38', 2);
+INSERT INTO `user_log` VALUES (1094, 1, '查询鲜花列表', 0, '2018-11-29 15:30:38', 2);
+INSERT INTO `user_log` VALUES (1095, 1, '查询鲜花列表', 0, '2018-11-29 15:30:39', 2);
+INSERT INTO `user_log` VALUES (1096, 1, '查询鲜花列表', 0, '2018-11-29 15:30:39', 2);
+INSERT INTO `user_log` VALUES (1097, 1, '查询鲜花列表', 0, '2018-11-29 15:30:39', 2);
+INSERT INTO `user_log` VALUES (1098, 1, '查询鲜花列表', 0, '2018-11-29 15:30:39', 2);
+INSERT INTO `user_log` VALUES (1099, 1, '查询鲜花列表', 0, '2018-11-29 15:30:40', 2);
+INSERT INTO `user_log` VALUES (1100, 1, '查询鲜花列表', 0, '2018-11-29 15:30:40', 2);
+INSERT INTO `user_log` VALUES (1101, 1, '查询鲜花列表', 0, '2018-11-29 15:30:41', 2);
+INSERT INTO `user_log` VALUES (1102, 1, '查询鲜花列表', 0, '2018-11-29 15:30:41', 2);
+INSERT INTO `user_log` VALUES (1103, 1, '查询鲜花列表', 0, '2018-11-29 15:30:41', 2);
+INSERT INTO `user_log` VALUES (1104, 1, '查询鲜花列表', 0, '2018-11-29 15:30:41', 2);
+INSERT INTO `user_log` VALUES (1105, 1, '查询鲜花列表', 0, '2018-11-29 15:30:42', 2);
+INSERT INTO `user_log` VALUES (1106, 1, '查询鲜花列表', 0, '2018-11-29 15:30:42', 2);
+INSERT INTO `user_log` VALUES (1107, 1, '查询鲜花列表', 0, '2018-11-29 15:30:42', 2);
+INSERT INTO `user_log` VALUES (1108, 1, '查询鲜花列表', 0, '2018-11-29 15:30:43', 2);
+INSERT INTO `user_log` VALUES (1109, 1, '查询鲜花列表', 0, '2018-11-29 15:30:43', 2);
+INSERT INTO `user_log` VALUES (1110, 1, '查询鲜花列表', 0, '2018-11-29 15:30:43', 2);
+INSERT INTO `user_log` VALUES (1111, 1, '查询鲜花列表', 0, '2018-11-29 15:30:44', 2);
+INSERT INTO `user_log` VALUES (1112, 1, '查询鲜花列表', 0, '2018-11-29 15:30:44', 2);
+INSERT INTO `user_log` VALUES (1113, 1, '查询鲜花列表', 0, '2018-11-29 15:30:44', 2);
+INSERT INTO `user_log` VALUES (1114, 1, '查询鲜花列表', 0, '2018-11-29 15:30:44', 2);
+INSERT INTO `user_log` VALUES (1115, 1, '查询鲜花列表', 0, '2018-11-29 15:30:45', 2);
+INSERT INTO `user_log` VALUES (1116, 1, '查询鲜花列表', 0, '2018-11-29 15:30:45', 2);
+INSERT INTO `user_log` VALUES (1117, 1, '查询鲜花列表', 0, '2018-11-29 15:30:46', 2);
+INSERT INTO `user_log` VALUES (1118, 1, '查询鲜花列表', 0, '2018-11-29 15:30:46', 2);
+INSERT INTO `user_log` VALUES (1119, 1, '查询鲜花列表', 0, '2018-11-29 15:30:46', 2);
+INSERT INTO `user_log` VALUES (1120, 1, '查询鲜花列表', 0, '2018-11-29 15:30:46', 2);
+INSERT INTO `user_log` VALUES (1121, 1, '查询鲜花列表', 0, '2018-11-29 15:30:47', 2);
+INSERT INTO `user_log` VALUES (1122, 1, '查询鲜花列表', 0, '2018-11-29 15:30:47', 2);
+INSERT INTO `user_log` VALUES (1123, 1, '查询鲜花列表', 0, '2018-11-29 15:30:47', 2);
+INSERT INTO `user_log` VALUES (1124, 1, '查询鲜花列表', 0, '2018-11-29 15:30:47', 2);
+INSERT INTO `user_log` VALUES (1125, 1, '查询鲜花列表', 0, '2018-11-29 15:30:48', 2);
+INSERT INTO `user_log` VALUES (1126, 1, '查询鲜花列表', 0, '2018-11-29 15:30:48', 2);
+INSERT INTO `user_log` VALUES (1127, 1, '查询鲜花列表', 0, '2018-11-29 15:30:49', 2);
+INSERT INTO `user_log` VALUES (1128, 1, '查询鲜花列表', 0, '2018-11-29 15:30:49', 2);
+INSERT INTO `user_log` VALUES (1129, 1, '查询鲜花列表', 0, '2018-11-29 15:30:49', 2);
+INSERT INTO `user_log` VALUES (1130, 1, '查询鲜花列表', 0, '2018-11-29 15:30:49', 2);
+INSERT INTO `user_log` VALUES (1131, 1, '查询鲜花列表', 0, '2018-11-29 15:30:50', 2);
+INSERT INTO `user_log` VALUES (1132, 1, '查询鲜花列表', 0, '2018-11-29 15:30:50', 2);
+INSERT INTO `user_log` VALUES (1133, 1, '查询鲜花列表', 0, '2018-11-29 15:30:51', 2);
+INSERT INTO `user_log` VALUES (1134, 1, '查询鲜花列表', 0, '2018-11-29 15:30:51', 2);
+INSERT INTO `user_log` VALUES (1135, 1, '查询鲜花列表', 0, '2018-11-29 15:30:51', 2);
+INSERT INTO `user_log` VALUES (1136, 1, '查询鲜花列表', 0, '2018-11-29 15:30:51', 2);
+INSERT INTO `user_log` VALUES (1137, 1, '查询鲜花列表', 0, '2018-11-29 15:30:52', 2);
+INSERT INTO `user_log` VALUES (1138, 1, '查询鲜花列表', 0, '2018-11-29 15:30:52', 2);
+INSERT INTO `user_log` VALUES (1139, 1, '查询鲜花列表', 0, '2018-11-29 15:30:52', 2);
+INSERT INTO `user_log` VALUES (1140, 1, '查询鲜花列表', 0, '2018-11-29 15:30:53', 2);
+INSERT INTO `user_log` VALUES (1141, 1, '查询鲜花列表', 0, '2018-11-29 15:30:53', 2);
+INSERT INTO `user_log` VALUES (1142, 1, '查询鲜花列表', 0, '2018-11-29 15:30:53', 2);
+INSERT INTO `user_log` VALUES (1143, 1, '查询鲜花列表', 0, '2018-11-29 15:30:54', 2);
+INSERT INTO `user_log` VALUES (1144, 1, '查询鲜花列表', 0, '2018-11-29 15:30:54', 2);
+INSERT INTO `user_log` VALUES (1145, 1, '查询鲜花列表', 0, '2018-11-29 15:30:54', 2);
+INSERT INTO `user_log` VALUES (1146, 1, '查询鲜花列表', 0, '2018-11-29 15:30:54', 2);
+INSERT INTO `user_log` VALUES (1147, 1, '查询鲜花列表', 0, '2018-11-29 15:30:55', 2);
+INSERT INTO `user_log` VALUES (1148, 1, '查询鲜花列表', 0, '2018-11-29 15:30:55', 2);
+INSERT INTO `user_log` VALUES (1149, 1, '查询鲜花列表', 0, '2018-11-29 15:30:56', 2);
+INSERT INTO `user_log` VALUES (1150, 1, '查询鲜花列表', 0, '2018-11-29 15:30:56', 2);
+INSERT INTO `user_log` VALUES (1151, 1, '查询鲜花列表', 0, '2018-11-29 15:30:56', 2);
+INSERT INTO `user_log` VALUES (1152, 1, '查询鲜花列表', 0, '2018-11-29 15:30:56', 2);
+INSERT INTO `user_log` VALUES (1153, 1, '查询鲜花列表', 0, '2018-11-29 15:30:57', 2);
+INSERT INTO `user_log` VALUES (1154, 1, '查询鲜花列表', 0, '2018-11-29 15:30:57', 2);
+INSERT INTO `user_log` VALUES (1155, 1, '查询鲜花列表', 0, '2018-11-29 15:30:57', 2);
+INSERT INTO `user_log` VALUES (1156, 1, '查询鲜花列表', 0, '2018-11-29 15:30:57', 2);
+INSERT INTO `user_log` VALUES (1157, 1, '查询鲜花列表', 0, '2018-11-29 15:30:58', 2);
+INSERT INTO `user_log` VALUES (1158, 1, '查询鲜花列表', 0, '2018-11-29 15:30:58', 2);
+INSERT INTO `user_log` VALUES (1159, 1, '查询鲜花列表', 0, '2018-11-29 15:30:59', 2);
+INSERT INTO `user_log` VALUES (1160, 1, '查询鲜花列表', 0, '2018-11-29 15:30:59', 2);
+INSERT INTO `user_log` VALUES (1161, 1, '查询鲜花列表', 0, '2018-11-29 15:30:59', 2);
+INSERT INTO `user_log` VALUES (1162, 1, '查询鲜花列表', 0, '2018-11-29 15:30:59', 2);
+INSERT INTO `user_log` VALUES (1163, 1, '查询鲜花列表', 0, '2018-11-29 15:31:00', 2);
+INSERT INTO `user_log` VALUES (1164, 1, '查询鲜花列表', 0, '2018-11-29 15:31:00', 2);
+INSERT INTO `user_log` VALUES (1165, 1, '查询鲜花列表', 0, '2018-11-29 15:31:01', 2);
+INSERT INTO `user_log` VALUES (1166, 1, '查询鲜花列表', 0, '2018-11-29 15:31:01', 2);
+INSERT INTO `user_log` VALUES (1167, 1, '查询鲜花列表', 0, '2018-11-29 15:31:01', 2);
+INSERT INTO `user_log` VALUES (1168, 1, '查询鲜花列表', 0, '2018-11-29 15:31:01', 2);
+INSERT INTO `user_log` VALUES (1169, 1, '查询鲜花列表', 0, '2018-11-29 15:31:02', 2);
+INSERT INTO `user_log` VALUES (1170, 1, '查询鲜花列表', 0, '2018-11-29 15:31:02', 2);
+INSERT INTO `user_log` VALUES (1171, 1, '查询鲜花列表', 0, '2018-11-29 15:31:02', 2);
+INSERT INTO `user_log` VALUES (1172, 1, '查询鲜花列表', 0, '2018-11-29 15:31:02', 2);
+INSERT INTO `user_log` VALUES (1173, 1, '查询鲜花列表', 0, '2018-11-29 15:31:03', 2);
+INSERT INTO `user_log` VALUES (1174, 1, '查询鲜花列表', 0, '2018-11-29 15:31:03', 2);
+INSERT INTO `user_log` VALUES (1175, 1, '查询鲜花列表', 0, '2018-11-29 15:31:04', 2);
+INSERT INTO `user_log` VALUES (1176, 1, '查询鲜花列表', 0, '2018-11-29 15:31:04', 2);
+INSERT INTO `user_log` VALUES (1177, 1, '查询鲜花列表', 0, '2018-11-29 15:31:04', 2);
+INSERT INTO `user_log` VALUES (1178, 1, '查询鲜花列表', 0, '2018-11-29 15:31:04', 2);
+INSERT INTO `user_log` VALUES (1179, 1, '查询鲜花列表', 0, '2018-11-29 15:31:05', 2);
+INSERT INTO `user_log` VALUES (1180, 1, '查询鲜花列表', 0, '2018-11-29 15:31:05', 2);
+INSERT INTO `user_log` VALUES (1181, 1, '查询鲜花列表', 0, '2018-11-29 15:31:37', 2);
+INSERT INTO `user_log` VALUES (1182, 1, '查询鲜花列表', 0, '2018-11-29 15:32:01', 2);
+INSERT INTO `user_log` VALUES (1183, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:32:03', 2);
+INSERT INTO `user_log` VALUES (1184, 1, '查询鲜花列表', 0, '2018-11-29 15:32:05', 2);
+INSERT INTO `user_log` VALUES (1185, 1, '查询鲜花列表', 0, '2018-11-29 15:32:23', 2);
+INSERT INTO `user_log` VALUES (1186, 1, '查询鲜花列表', 0, '2018-11-29 15:32:35', 2);
+INSERT INTO `user_log` VALUES (1187, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:32:36', 2);
+INSERT INTO `user_log` VALUES (1188, 1, '查询鲜花列表', 0, '2018-11-29 15:32:38', 2);
+INSERT INTO `user_log` VALUES (1189, 1, '查询鲜花列表', 0, '2018-11-29 15:32:57', 2);
+INSERT INTO `user_log` VALUES (1190, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:33:00', 2);
+INSERT INTO `user_log` VALUES (1191, 1, '查询鲜花列表', 0, '2018-11-29 15:33:01', 2);
+INSERT INTO `user_log` VALUES (1192, 1, '查询鲜花列表', 0, '2018-11-29 15:33:09', 2);
+INSERT INTO `user_log` VALUES (1193, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:33:11', 2);
+INSERT INTO `user_log` VALUES (1194, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:33:23', 2);
+INSERT INTO `user_log` VALUES (1195, 1, '查询鲜花列表', 0, '2018-11-29 15:33:25', 2);
+INSERT INTO `user_log` VALUES (1196, 1, '查询鲜花列表', 0, '2018-11-29 15:33:26', 2);
+INSERT INTO `user_log` VALUES (1197, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:33:27', 2);
+INSERT INTO `user_log` VALUES (1198, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:33:44', 2);
+INSERT INTO `user_log` VALUES (1199, 1, '查询鲜花列表', 0, '2018-11-29 15:33:46', 2);
+INSERT INTO `user_log` VALUES (1200, 1, '查询鲜花列表', 0, '2018-11-29 15:33:47', 2);
+INSERT INTO `user_log` VALUES (1201, 1, '查询鲜花列表', 0, '2018-11-29 15:33:55', 2);
+INSERT INTO `user_log` VALUES (1202, 1, '查询鲜花列表', 0, '2018-11-29 15:34:18', 2);
+INSERT INTO `user_log` VALUES (1203, 1, '查询鲜花列表', 0, '2018-11-29 15:34:29', 2);
+INSERT INTO `user_log` VALUES (1204, 1, '查询鲜花列表', 0, '2018-11-29 15:34:36', 2);
+INSERT INTO `user_log` VALUES (1205, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:34:38', 2);
+INSERT INTO `user_log` VALUES (1206, 1, '查询鲜花列表', 0, '2018-11-29 15:34:40', 2);
+INSERT INTO `user_log` VALUES (1207, 1, '查询鲜花列表', 0, '2018-11-29 15:34:53', 2);
+INSERT INTO `user_log` VALUES (1208, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:34:55', 2);
+INSERT INTO `user_log` VALUES (1209, 1, '查询鲜花列表', 0, '2018-11-29 15:34:55', 2);
+INSERT INTO `user_log` VALUES (1210, 1, '查询鲜花列表', 0, '2018-11-29 15:34:59', 2);
+INSERT INTO `user_log` VALUES (1211, 1, '查询鲜花列表', 0, '2018-11-29 15:35:06', 2);
+INSERT INTO `user_log` VALUES (1212, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:35:07', 2);
+INSERT INTO `user_log` VALUES (1213, 1, '查询鲜花列表', 0, '2018-11-29 15:35:08', 2);
+INSERT INTO `user_log` VALUES (1214, 1, '查询鲜花列表', 0, '2018-11-29 15:35:34', 2);
+INSERT INTO `user_log` VALUES (1215, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:35:36', 2);
+INSERT INTO `user_log` VALUES (1216, 1, '查询鲜花列表', 0, '2018-11-29 15:35:37', 2);
+INSERT INTO `user_log` VALUES (1217, 1, '查询鲜花列表', 0, '2018-11-29 15:35:51', 2);
+INSERT INTO `user_log` VALUES (1218, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:35:52', 2);
+INSERT INTO `user_log` VALUES (1219, 1, '查询鲜花列表', 0, '2018-11-29 15:35:53', 2);
+INSERT INTO `user_log` VALUES (1220, 1, '查询鲜花列表', 0, '2018-11-29 15:36:08', 2);
+INSERT INTO `user_log` VALUES (1221, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:36:10', 2);
+INSERT INTO `user_log` VALUES (1222, 1, '根据 id 查询鲜花其他信息', 0, '2018-11-29 15:36:10', 2);
+INSERT INTO `user_log` VALUES (1223, 1, '查询鲜花列表', 0, '2018-11-29 15:36:13', 2);
+INSERT INTO `user_log` VALUES (1224, 1, '查询鲜花列表', 0, '2018-11-29 15:36:35', 2);
+INSERT INTO `user_log` VALUES (1225, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:36:37', 2);
+INSERT INTO `user_log` VALUES (1226, 1, '根据 id 查询鲜花其他信息', 0, '2018-11-29 15:36:37', 2);
+INSERT INTO `user_log` VALUES (1227, 1, '查询鲜花列表', 0, '2018-11-29 15:36:38', 2);
+INSERT INTO `user_log` VALUES (1228, 1, '查询鲜花列表', 0, '2018-11-29 15:36:42', 2);
+INSERT INTO `user_log` VALUES (1229, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:36:44', 2);
+INSERT INTO `user_log` VALUES (1230, 1, '根据 id 查询鲜花其他信息', 0, '2018-11-29 15:36:44', 2);
+INSERT INTO `user_log` VALUES (1231, 1, '查询鲜花列表', 0, '2018-11-29 15:36:59', 2);
+INSERT INTO `user_log` VALUES (1232, 1, '查询鲜花列表', 0, '2018-11-29 15:37:19', 2);
+INSERT INTO `user_log` VALUES (1233, 1, '查询鲜花列表', 0, '2018-11-29 15:44:04', 2);
+INSERT INTO `user_log` VALUES (1234, 1, '查询鲜花列表', 0, '2018-11-29 15:44:11', 2);
+INSERT INTO `user_log` VALUES (1235, 1, '查询鲜花列表', 0, '2018-11-29 15:44:42', 2);
+INSERT INTO `user_log` VALUES (1236, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:44:43', 2);
+INSERT INTO `user_log` VALUES (1237, 1, '根据 id 查询鲜花其他信息', 0, '2018-11-29 15:44:43', 2);
+INSERT INTO `user_log` VALUES (1238, 1, '查询鲜花列表', 0, '2018-11-29 15:44:45', 2);
+INSERT INTO `user_log` VALUES (1239, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:44:48', 2);
+INSERT INTO `user_log` VALUES (1240, 1, '根据 id 查询鲜花其他信息', 0, '2018-11-29 15:44:48', 2);
+INSERT INTO `user_log` VALUES (1241, 1, '查询鲜花列表', 0, '2018-11-29 15:44:50', 2);
+INSERT INTO `user_log` VALUES (1242, 1, '查询鲜花列表', 0, '2018-11-29 15:44:50', 2);
+INSERT INTO `user_log` VALUES (1243, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:44:54', 2);
+INSERT INTO `user_log` VALUES (1244, 1, '根据 id 查询鲜花其他信息', 0, '2018-11-29 15:44:54', 2);
+INSERT INTO `user_log` VALUES (1245, 1, '查询鲜花列表', 0, '2018-11-29 15:44:56', 2);
+INSERT INTO `user_log` VALUES (1246, 1, '查询鲜花列表', 0, '2018-11-29 15:44:56', 2);
+INSERT INTO `user_log` VALUES (1247, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:44:58', 2);
+INSERT INTO `user_log` VALUES (1248, 1, '根据 id 查询鲜花其他信息', 0, '2018-11-29 15:44:58', 2);
+INSERT INTO `user_log` VALUES (1249, 1, '查询鲜花列表', 0, '2018-11-29 15:45:00', 2);
+INSERT INTO `user_log` VALUES (1250, 1, '查询鲜花列表', 0, '2018-11-29 15:45:00', 2);
+INSERT INTO `user_log` VALUES (1251, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:45:01', 2);
+INSERT INTO `user_log` VALUES (1252, 1, '根据 id 查询鲜花其他信息', 0, '2018-11-29 15:45:01', 2);
+INSERT INTO `user_log` VALUES (1253, 1, '查询鲜花列表', 0, '2018-11-29 15:45:03', 2);
+INSERT INTO `user_log` VALUES (1254, 1, '查询鲜花列表', 0, '2018-11-29 15:45:04', 2);
+INSERT INTO `user_log` VALUES (1255, 1, '查询鲜花列表', 0, '2018-11-29 15:45:05', 2);
+INSERT INTO `user_log` VALUES (1256, 1, '查询鲜花列表', 0, '2018-11-29 15:45:05', 2);
+INSERT INTO `user_log` VALUES (1257, 1, '查询鲜花列表', 0, '2018-11-29 15:45:06', 2);
+INSERT INTO `user_log` VALUES (1258, 1, '查询鲜花列表', 0, '2018-11-29 15:45:06', 2);
+INSERT INTO `user_log` VALUES (1259, 1, '查询鲜花列表', 0, '2018-11-29 15:45:06', 2);
+INSERT INTO `user_log` VALUES (1260, 1, '查询鲜花列表', 0, '2018-11-29 15:45:06', 2);
+INSERT INTO `user_log` VALUES (1261, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:45:06', 2);
+INSERT INTO `user_log` VALUES (1262, 1, '根据 id 查询鲜花其他信息', 0, '2018-11-29 15:45:06', 2);
+INSERT INTO `user_log` VALUES (1263, 1, '查询鲜花列表', 0, '2018-11-29 15:45:14', 2);
+INSERT INTO `user_log` VALUES (1264, 1, '查询鲜花列表', 0, '2018-11-29 15:47:55', 2);
+INSERT INTO `user_log` VALUES (1265, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:47:57', 2);
+INSERT INTO `user_log` VALUES (1266, 1, '查询鲜花列表', 0, '2018-11-29 15:48:00', 2);
+INSERT INTO `user_log` VALUES (1267, 1, '查询鲜花列表', 0, '2018-11-29 15:48:01', 2);
+INSERT INTO `user_log` VALUES (1268, 1, '查询鲜花列表', 0, '2018-11-29 15:48:03', 2);
+INSERT INTO `user_log` VALUES (1269, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:48:04', 2);
+INSERT INTO `user_log` VALUES (1270, 1, '查询鲜花列表', 0, '2018-11-29 15:48:05', 2);
+INSERT INTO `user_log` VALUES (1271, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:48:07', 2);
+INSERT INTO `user_log` VALUES (1272, 1, '查询鲜花列表', 0, '2018-11-29 15:48:09', 2);
+INSERT INTO `user_log` VALUES (1273, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:48:11', 2);
+INSERT INTO `user_log` VALUES (1274, 1, '查询鲜花列表', 0, '2018-11-29 15:48:35', 2);
+INSERT INTO `user_log` VALUES (1275, 1, '查询鲜花列表', 0, '2018-11-29 15:48:36', 2);
+INSERT INTO `user_log` VALUES (1276, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:48:37', 2);
+INSERT INTO `user_log` VALUES (1277, 1, '查询鲜花列表', 0, '2018-11-29 15:48:45', 2);
+INSERT INTO `user_log` VALUES (1278, 1, '查询鲜花列表', 0, '2018-11-29 15:48:47', 2);
+INSERT INTO `user_log` VALUES (1279, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:48:49', 2);
+INSERT INTO `user_log` VALUES (1280, 1, '根据 id 查询鲜花其他信息', 0, '2018-11-29 15:48:49', 2);
+INSERT INTO `user_log` VALUES (1281, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:49:14', 2);
+INSERT INTO `user_log` VALUES (1282, 1, '根据 id 查询鲜花其他信息', 0, '2018-11-29 15:49:14', 2);
+INSERT INTO `user_log` VALUES (1283, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:49:22', 2);
+INSERT INTO `user_log` VALUES (1284, 1, '根据 id 查询鲜花其他信息', 0, '2018-11-29 15:49:22', 2);
+INSERT INTO `user_log` VALUES (1285, 1, '查询鲜花列表', 0, '2018-11-29 15:49:25', 2);
+INSERT INTO `user_log` VALUES (1286, 1, '查询鲜花列表', 0, '2018-11-29 15:49:28', 2);
+INSERT INTO `user_log` VALUES (1287, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:49:29', 2);
+INSERT INTO `user_log` VALUES (1288, 1, '根据 id 查询鲜花其他信息', 0, '2018-11-29 15:49:29', 2);
+INSERT INTO `user_log` VALUES (1289, 1, '查询鲜花列表', 0, '2018-11-29 15:49:30', 2);
+INSERT INTO `user_log` VALUES (1290, 1, '查询鲜花列表', 0, '2018-11-29 15:50:08', 2);
+INSERT INTO `user_log` VALUES (1291, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:50:10', 2);
+INSERT INTO `user_log` VALUES (1292, 1, '根据 id 查询鲜花其他信息', 0, '2018-11-29 15:50:10', 2);
+INSERT INTO `user_log` VALUES (1293, 1, '查询鲜花列表', 0, '2018-11-29 15:50:19', 2);
+INSERT INTO `user_log` VALUES (1294, 1, '查询鲜花列表', 0, '2018-11-29 15:50:26', 2);
+INSERT INTO `user_log` VALUES (1295, 1, '查询鲜花列表', 0, '2018-11-29 15:50:48', 2);
+INSERT INTO `user_log` VALUES (1296, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 15:50:50', 2);
+INSERT INTO `user_log` VALUES (1297, 1, '根据 id 查询鲜花其他信息', 0, '2018-11-29 15:50:50', 2);
+INSERT INTO `user_log` VALUES (1298, 1, '查询鲜花列表', 0, '2018-11-29 15:50:52', 2);
+INSERT INTO `user_log` VALUES (1299, 1, '查询鲜花列表', 0, '2018-11-29 16:17:52', 2);
+INSERT INTO `user_log` VALUES (1300, 1, '查询鲜花列表', 0, '2018-11-29 16:17:53', 2);
+INSERT INTO `user_log` VALUES (1301, 1, '查询鲜花列表', 0, '2018-11-29 16:41:42', 2);
+INSERT INTO `user_log` VALUES (1302, 1, '查询鲜花列表', 0, '2018-11-29 16:41:55', 2);
+INSERT INTO `user_log` VALUES (1303, 1, '查询鲜花列表', 0, '2018-11-29 16:41:57', 2);
+INSERT INTO `user_log` VALUES (1304, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 16:43:29', 2);
+INSERT INTO `user_log` VALUES (1305, 1, '根据 id 查询鲜花其他信息', 0, '2018-11-29 16:43:29', 2);
+INSERT INTO `user_log` VALUES (1306, 1, '查询鲜花列表', 0, '2018-11-29 16:43:30', 2);
+INSERT INTO `user_log` VALUES (1307, 1, '查询鲜花列表', 0, '2018-11-29 16:43:53', 2);
+INSERT INTO `user_log` VALUES (1308, 1, '根据 id 查询鲜花信息', 0, '2018-11-29 16:43:55', 2);
+INSERT INTO `user_log` VALUES (1309, 1, '根据 id 查询鲜花其他信息', 0, '2018-11-29 16:43:55', 2);
+INSERT INTO `user_log` VALUES (1310, 1, '查询鲜花列表', 0, '2018-11-29 16:43:56', 2);
+INSERT INTO `user_log` VALUES (1311, 1, '查询鲜花列表', 0, '2018-11-29 16:45:11', 2);
+INSERT INTO `user_log` VALUES (1312, 1, '查询鲜花列表', 0, '2018-11-29 16:45:13', 2);
+INSERT INTO `user_log` VALUES (1313, 1, '查询鲜花列表', 0, '2018-11-29 16:45:18', 2);
+INSERT INTO `user_log` VALUES (1314, 1, '查询鲜花列表', 0, '2018-11-29 16:46:15', 2);
+INSERT INTO `user_log` VALUES (1315, 1, '查询鲜花列表', 0, '2018-11-29 16:46:28', 2);
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
