@@ -1,11 +1,10 @@
 package com.flowers.server.service;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.flowers.api.model.FlowerInfo;
 import com.flowers.api.model.FlowerSpecific;
 import com.flowers.api.service.FlowerService;
 import com.flowers.common.page.PageBean;
+import com.flowers.common.utils.StringUtil;
 import com.flowers.server.mapper.FlowerMapper;
 import com.flowers.server.mapper.FlowerSpecificMapper;
 import com.flowers.server.mapper.UserLogMapper;
@@ -88,17 +87,20 @@ public class FlowerServiceImpl implements FlowerService {
             @RequestParam("flowerLanguage") String flowerLanguage,
             @RequestParam("flowerImg") String flowerImg,
             @RequestParam("specific") String specific) {
+        userLogMapper.insertLog("添加鲜花基本信息", 1, 1L);
         flowerMapper.saveFlower(remarks, flowerName, flowerLanguage, flowerImg);
-
+        userLogMapper.insertLog("查询鲜花 id", 2, 1L);
         Long fid = flowerMapper.getFid(remarks, flowerName, flowerLanguage, flowerImg);
-
-
-        flowerSpecificMapper.inserts(specific, fid);
+        if (!StringUtil.isEmpty(specific)) {
+            userLogMapper.insertLog("添加鲜花其他信息", 1, 1L);
+            flowerSpecificMapper.inserts(specific, fid);
+        }
     }
 
     @GetMapping("/recommendFlower")
     @Override
     public FlowerInfo recommendFlower() {
+        userLogMapper.insertLog("查询推荐鲜花信息", 2, 1L);
         return flowerMapper.recommendFlower();
     }
 
