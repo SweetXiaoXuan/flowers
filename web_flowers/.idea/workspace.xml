@@ -1,62 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc11b6ce-13ef-484b-b987-b95bffc34c88" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/css/layui.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/css/modules/code.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/jquery插件库.url" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/js/lay/modules/code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/js/lay/modules/laypage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/js/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/js/nicePage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Nicepage-master/www.jq22.com.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/page_load/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/page_load/pc_gd.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/data_js/nicePage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/flowers/樱花1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/flowers/水仙花.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/flowers/满天星.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/flowers/牡丹.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/flowers/白玫瑰1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/flowers/粉色百合花.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/flowers/紫藤.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/flowers/蓝色勿忘我.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/flowers/蓝色紫罗兰.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/flowers/蓝色雏菊花.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/flowers/蝴蝶兰.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/jquery.tmpl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/lay/modules/laypage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/css/layui.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/css/modules/code.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/jquery插件库.url" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/js/lay/modules/code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/js/lay/modules/laypage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/js/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/js/nicePage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test/Nicepage-master/www.jq22.com.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test/index_test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test/page/layui_laypage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test/page/layui_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test/page/page_test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test/page_loading.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test/page_loading2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/js/add_flower.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/js/add_flower.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/views/add_flower.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/views/add_flower.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test/flower_info_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test/info/flower_info_test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test/info/info.html" afterDir="false" />
-    </list>
+    <list default="true" id="cc11b6ce-13ef-484b-b987-b95bffc34c88" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -99,7 +44,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="JavaScript Console" value="14" />
+          <entry key="JavaScript Console" value="16" />
           <entry key="html" value="5765" />
           <entry key="js" value="867" />
         </counts>
@@ -107,7 +52,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="5769" />
-          <entry key="JavaScript" value="877" />
+          <entry key="JavaScript" value="879" />
         </counts>
       </usages-collector>
     </session>
@@ -117,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+            <state relative-caret-position="231">
+              <caret line="159" column="29" lean-forward="true" selection-start-line="159" selection-start-column="29" selection-end-line="159" selection-end-column="29" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" />
                 <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
@@ -317,7 +262,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.web_flowers_server">
+  <component name="RunManager" selected="JavaScript Debug.web_flowers_web">
     <configuration name="web_flowers_server" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63343/web_flowers/server/index.html">
       <method v="2" />
     </configuration>
@@ -343,12 +288,12 @@
       <workItem from="1541987720852" duration="17428000" />
       <workItem from="1542766933594" duration="10187000" />
       <workItem from="1543046228639" duration="1636000" />
-      <workItem from="1543194395941" duration="74104000" />
+      <workItem from="1543194395941" duration="74437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105946000" />
+    <option name="totallyTimeSpent" value="106279000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -362,13 +307,13 @@
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1440" height="834" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19802678" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19802678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32904148" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.36337626" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.36337626" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32904148" />
@@ -760,8 +705,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+        <state relative-caret-position="231">
+          <caret line="159" column="29" lean-forward="true" selection-start-line="159" selection-start-column="29" selection-end-line="159" selection-end-column="29" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" />
             <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
