@@ -146,8 +146,8 @@
               $(window).scroll(function () {
                   var scrollTop = $(document).scrollTop();
                   if (scrollTop + 10 >= $(document).height() - $(window).height()) {
-                      getData(page);
                       page = page + 1;
+                      getData(page);
                   }
               })
           });
