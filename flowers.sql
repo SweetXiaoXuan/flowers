@@ -11,7 +11,7 @@
  Target Server Version : 50723
  File Encoding         : 65001
 
- Date: 29/11/2018 17:02:37
+ Date: 29/11/2018 17:10:15
 */
 
 SET NAMES utf8mb4;
@@ -28,7 +28,20 @@ CREATE TABLE `flower_color` (
   `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
   `remarks` varchar(255) DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of flower_color
+-- ----------------------------
+BEGIN;
+INSERT INTO `flower_color` VALUES (1, '红', 0, '2018-11-29 17:08:28', NULL);
+INSERT INTO `flower_color` VALUES (2, '橙', 0, '2018-11-29 17:08:28', NULL);
+INSERT INTO `flower_color` VALUES (3, '黄', 0, '2018-11-29 17:08:28', NULL);
+INSERT INTO `flower_color` VALUES (4, '绿', 0, '2018-11-29 17:08:28', NULL);
+INSERT INTO `flower_color` VALUES (5, '蓝', 0, '2018-11-29 17:08:28', NULL);
+INSERT INTO `flower_color` VALUES (6, '靛', 0, '2018-11-29 17:08:28', NULL);
+INSERT INTO `flower_color` VALUES (7, '紫', 0, '2018-11-29 17:08:28', NULL);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for flower_country
@@ -41,7 +54,18 @@ CREATE TABLE `flower_country` (
   `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
   `remarks` varchar(255) DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of flower_country
+-- ----------------------------
+BEGIN;
+INSERT INTO `flower_country` VALUES (1, '中国', 0, '2018-11-29 17:09:07', NULL);
+INSERT INTO `flower_country` VALUES (2, '英国', 0, '2018-11-29 17:09:07', NULL);
+INSERT INTO `flower_country` VALUES (3, '美国', 0, '2018-11-29 17:09:07', NULL);
+INSERT INTO `flower_country` VALUES (4, '法国', 0, '2018-11-29 17:09:07', NULL);
+INSERT INTO `flower_country` VALUES (5, '日本', 0, '2018-11-29 17:09:07', NULL);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for flower_festival
@@ -54,7 +78,18 @@ CREATE TABLE `flower_festival` (
   `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
   `remarks` varchar(255) DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of flower_festival
+-- ----------------------------
+BEGIN;
+INSERT INTO `flower_festival` VALUES (1, '春节', 0, '2018-11-29 17:09:43', NULL);
+INSERT INTO `flower_festival` VALUES (2, '端午节', 0, '2018-11-29 17:09:43', NULL);
+INSERT INTO `flower_festival` VALUES (3, '清明节', 0, '2018-11-29 17:09:43', NULL);
+INSERT INTO `flower_festival` VALUES (4, '国庆节', 0, '2018-11-29 17:09:43', NULL);
+INSERT INTO `flower_festival` VALUES (5, '中秋节', 0, '2018-11-29 17:09:43', NULL);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for flower_info
@@ -100,7 +135,17 @@ CREATE TABLE `flower_season` (
   `create_time` datetime DEFAULT CURRENT_TIMESTAMP,
   `remarks` varchar(255) DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of flower_season
+-- ----------------------------
+BEGIN;
+INSERT INTO `flower_season` VALUES (1, '春', 0, '2018-11-29 17:06:52', NULL);
+INSERT INTO `flower_season` VALUES (2, '夏', 0, '2018-11-29 17:07:57', NULL);
+INSERT INTO `flower_season` VALUES (3, '秋', 0, '2018-11-29 17:07:57', NULL);
+INSERT INTO `flower_season` VALUES (4, '冬', 0, '2018-11-29 17:07:57', NULL);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for flower_specific
