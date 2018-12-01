@@ -28,7 +28,7 @@ public interface FlowerMapper extends BaseMapper<FlowerInfo> {
             @Result(column = "flower_language", property = "flowerLanguage"),
             @Result(column = "create_time", property = "createTime")
     })
-    List<FlowerInfo> flowers(String flowerName);
+    List<FlowerInfo> flowers(String flowerName, String type);
 
     @Select("select count(id) from flower_info where TO_DAYS(create_time) = TO_DAYS(NOW())")
     int countToday();

@@ -64,11 +64,12 @@ public class FlowerServiceImpl implements FlowerService {
     public PageBean<FlowerInfo> flowers(
             @RequestBody Map<String, Object> param
     ) {
+        String type = param.get("type").toString();
         String flowerName = param.get("flowerName").toString();
         Integer page = Integer.parseInt(param.get("page").toString());
         Integer size = Integer.parseInt(param.get("size").toString());
-        List<FlowerInfo> infos = flowerMapper.flowers(flowerName);
-        Page<FlowerInfo> pageData = PageHelper.startPage(page, size).doSelectPage(()-> flowerMapper.flowers(flowerName));
+        List<FlowerInfo> infos = flowerMapper.flowers(flowerName, type);
+        Page<FlowerInfo> pageData = PageHelper.startPage(page, size).doSelectPage(()-> flowerMapper.flowers(flowerName, type));
         pageData.setTotal(infos.size());
         PageBean<FlowerInfo> pageBean = new PageBean<>();
         pageBean.setItems(pageData);

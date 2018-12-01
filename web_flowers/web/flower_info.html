@@ -51,11 +51,11 @@
             <div class="collapse navbar-collapse" id="header-navbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden-index active"><a data-cont="鲜花大全网首页" href="index.html">鲜花大全网首页</a></li>
-                    <li><a href="category.html">季节分类</a></li>
-                    <li><a href="category.html">颜色分类</a></li>
-                    <li><a href="category.html">国花查询</a></li>
-                    <li><a href="category.html">节日之花</a></li>
-                    <li><a href="category.html">世界之花</a></li>
+                    <li><a href="flowers.html">季节分类</a></li>
+                    <li><a href="flowers.html">颜色分类</a></li>
+                    <li><a href="flowers.html">国花查询</a></li>
+                    <li><a href="flowers.html">节日之花</a></li>
+                    <li><a href="flowers.html">世界之花</a></li>
                 </ul>
                 <form class="navbar-form visible-xs" action="/Search" method="post">
                     <div class="input-group">
@@ -143,7 +143,7 @@
                                 <a href="" target="_blank">欢迎访问鲜花大全网</a></li>
                             <li>
                                 <time datetime="2016-01-04">01-04</time>
-                                <a target="_blank" href="">在这里可以看到前端技术，后端程序，网站内容管理系统等文章，还有我的程序人生！</a></li>
+                                <a target="_blank" href="">在这里可以看到鲜花的描述，传说，典故等文章，还有我的程序人生！</a></li>
                             <li>
                                 <time datetime="2016-01-04">01-04</time>
                                 <a target="_blank" href="">在这个小工具中最多可以调用五条</a></li>
@@ -271,8 +271,8 @@
             '                                 <label class="layui-form-label label_width">花语</label>\n' +
             '                                 <label class="layui-form-label label_width_value flowerLanguage" style="width: 400px"></label>\n' +
             '                             </div>\n' +
-            '                             <div class="layui-form-item">\n' +
-            '                                 <label class="layui-form-label label_width">图片</label>\n' +
+            '                             <div class="layui-form-item flowerImgDiv">\n' +
+            '                                 <label class="layui-form-label label_width ">图片</label>\n' +
             '                                 <label class="layui-form-label label_width_value flowerImg"></label>\n' +
             '                             </div>\n' +
             '                             <div class="layui-form-item">\n' +
@@ -306,7 +306,14 @@
                     console.info(JSON.stringify(body))
                     $('.flowerName').append(body.flowerName);
                     $('.flowerInfoName').html(body.flowerName);
-                    $('.flowerImg').append(body.flowerImg);
+                    var flowerImg = body.flowerImg;
+                    if (isEmpty(flowerImg)) {
+                        $('.flowerImg').append('无');
+                    } else {
+                        $('.flowerImgDiv').html('<label class="layui-form-label label_width ">图片</label>' +
+                            '<img src="' + flowerImg + '" height="200px" width="200px"/>');
+                    }
+                    // $('.flowerImg').append(body.flowerImg);
                     $('.flowerLanguage').append(body.flowerLanguage);
                     $('.infoRemarks').append(isEmpty(body.remarks) ? '无' : body.remarks);
                     $('.deleted').append(body.delete === 0 ? "未删" : "已删");
@@ -358,7 +365,7 @@
     });
 
     function isEmpty(obj) {
-        if (obj == null || "" === obj || "undefined".eq(obj) || "null".eq(obj)) return true;
+        if (obj == null || "" === obj || "undefined" === (obj) || "null" === (obj)) return true;
         return false;
     }
 </script>

@@ -47,6 +47,7 @@ public class FlowerController  {
             @RequestParam("season") String season,
             @RequestParam("color") String color,
             @RequestParam("page") String page,
+            @RequestParam("type") String type,
             @RequestParam("limit") String size
             ) {
         Map<String, Object> param = new HashMap<>();
@@ -54,6 +55,7 @@ public class FlowerController  {
         param.put("page", Integer.parseInt(page));
         param.put("size", Integer.parseInt(size));
         param.put("color", color);
+        param.put("type", type);
         param.put("season", season);
         PageBean<FlowerInfo> info = flowerService.flowers(param);
         return ResponseEntity.ok().body(new ResultJson(info.getItems(), me.getValue(ResultMsgConstant.querySuccess), info.getTotalNum()));

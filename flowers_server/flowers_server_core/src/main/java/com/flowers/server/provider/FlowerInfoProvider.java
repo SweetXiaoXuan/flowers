@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class FlowerInfoProvider {
 
-    public String flowers(String flowerName) {
+    public String flowers(String flowerName, String type) {
         Map<String, Object> param = new HashMap<>();
         param.put("flower_name", flowerName);
         return StringUtil.isEmpty(flowerName)
