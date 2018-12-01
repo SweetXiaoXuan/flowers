@@ -127,7 +127,7 @@
       <script>
         var page = 1;
           $(function () {
-              var type = 1;
+              var type = 0;
               getData(page, type);
               $(window).scroll(function () {
                   var scrollTop = $(document).scrollTop();
@@ -161,7 +161,7 @@
                               '          <h2><a href="flower_info.html?fid=' + body[i].id + '" title="">' + body[i].flowerName + '</a></h2>\n' +
                               '        </header>\n' +
                               '        <p class="meta">\n' +
-                              '          <time class="time"><i class="glyphicon glyphicon-time"></i> 2016-1-4 10:29:39</time>\n' +
+                              '          <time class="time"><i class="glyphicon glyphicon-time"></i> ' + body[i].createTime + '</time>\n' +
                               '          <span class="views"><i class="glyphicon glyphicon-eye-open"></i> 共120人围观</span> <a class="comment" href="flower_info.html?fid=' + body[i].id + '#comment"><i class="glyphicon glyphicon-comment"></i> 0个不明物体</a></p>\n' +
                               '        <p class="note">' + body[i].flowerLanguage + '</p>\n' +
                               '      </article>');

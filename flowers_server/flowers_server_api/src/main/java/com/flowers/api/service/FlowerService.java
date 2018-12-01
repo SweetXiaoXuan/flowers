@@ -3,7 +3,6 @@ package com.flowers.api.service;
 import com.flowers.api.model.FlowerInfo;
 import com.flowers.api.model.FlowerSpecific;
 import com.flowers.common.page.PageBean;
-import com.github.pagehelper.Page;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 

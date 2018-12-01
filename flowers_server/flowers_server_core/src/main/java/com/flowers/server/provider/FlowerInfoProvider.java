@@ -1,19 +1,22 @@
 package com.flowers.server.provider;
 
-import com.flowers.common.utils.SqlUtil;
+import com.flowers.common.TypeMap;
 import com.flowers.common.utils.StringUtil;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class FlowerInfoProvider {
 
     public String flowers(String flowerName, String type) {
-        Map<String, Object> param = new HashMap<>();
-        param.put("flower_name", flowerName);
-        return StringUtil.isEmpty(flowerName)
-                ? SqlUtil.conditionalQuery(null, "flower_info", "select")
-                : SqlUtil.conditionalQueryLike(param, "flower_info", "select");
+        StringBuilder sql = new StringBuilder("select * from flower_info where 1 = 1 ");
+        if (!StringUtil.isEmpty(flowerName)) {
+            sql.append(" and flower_name = " + flowerName);
+        }
+        if (!StringUtil.isEmpty(type)) {
+            if (!"0".equals(type)) {
+                TypeMap map = new TypeMap();
+                sql.append(" and " + map.map.get(type) + " is not null");
+            }
+        }
+        return sql.toString();
     }
 
 }
