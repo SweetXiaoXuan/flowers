@@ -86,12 +86,8 @@
                 <div class="title">
                     <h3>相关推荐</h3>
                 </div>
-                <ul>
-                    <li><a href="article.html">php如何判断一个日期的格式是否正确</a></li>
-                    <li><a href="article.html">php如何判断一个日期的格式是否正确</a></li>
-                    <li><a href="article.html">php如何判断一个日期的格式是否正确</a></li>
-                    <li><a href="article.html">php如何判断一个日期的格式是否正确</a></li>
-                    <li><a href="article.html">php如何判断一个日期的格式是否正确</a></li>
+                <ul class="detailsList_ul">
+
                 </ul>
             </div>
             <div class="title" id="comment">
@@ -179,12 +175,8 @@
         </div>
         <div class="widget widget_hot">
             <h3>热门文章</h3>
-            <ul>
-                <li><a href=""><span class="thumbnail"><img class="thumb" data-original="images/excerpt.jpg" src="images/excerpt.jpg" alt=""></span><span class="text">php如何判断一个日期的格式是否正确</span><span class="muted"><i class="glyphicon glyphicon-time"></i> 2016-1-4 </span><span class="muted"><i class="glyphicon glyphicon-eye-open"></i> 120</span></a></li>
-                <li><a href=""><span class="thumbnail"><img class="thumb" data-original="images/excerpt.jpg" src="images/excerpt.jpg" alt=""></span><span class="text">php如何判断一个日期的格式是否正确</span><span class="muted"><i class="glyphicon glyphicon-time"></i> 2016-1-4 </span><span class="muted"><i class="glyphicon glyphicon-eye-open"></i> 120</span></a></li>
-                <li><a href=""><span class="thumbnail"><img class="thumb" data-original="images/excerpt.jpg" src="images/excerpt.jpg" alt=""></span><span class="text">php如何判断一个日期的格式是否正确</span><span class="muted"><i class="glyphicon glyphicon-time"></i> 2016-1-4 </span><span class="muted"><i class="glyphicon glyphicon-eye-open"></i> 120</span></a></li>
-                <li><a href=""><span class="thumbnail"><img class="thumb" data-original="images/excerpt.jpg" src="images/excerpt.jpg" alt=""></span><span class="text">php如何判断一个日期的格式是否正确</span><span class="muted"><i class="glyphicon glyphicon-time"></i> 2016-1-4 </span><span class="muted"><i class="glyphicon glyphicon-eye-open"></i> 120</span></a></li>
-                <li><a href=""><span class="thumbnail"><img class="thumb" data-original="images/excerpt.jpg" src="images/excerpt.jpg" alt=""></span><span class="text">php如何判断一个日期的格式是否正确</span><span class="muted"><i class="glyphicon glyphicon-time"></i> 2016-1-4 </span><span class="muted"><i class="glyphicon glyphicon-eye-open"></i> 120</span></a></li>
+            <ul class="popuList_ul">
+
             </ul>
         </div>
     </aside>
@@ -237,8 +229,6 @@
 </script>
 </body>
 </html>
-
-
 
 <script src="../server/assets/layui/layui.all.js"></script>
 <link rel="stylesheet" href="../server/assets/layui/css/layui.css">
@@ -367,4 +357,61 @@
         if (obj == null || "" === obj || "undefined" === (obj) || "null" === (obj)) return true;
         return false;
     }
+</script>
+
+<script type="text/javascript">
+    var page = 1;
+    $(document).ready(function () {
+        $.ajax({
+            url: "http://localhost:17900/flower/detailsList",
+            type: 'get',
+            dataType: 'json',
+            success: function (data) {
+                if (data.code === 0) {
+                    var body = data.body;
+                    for (var i = 0; i < body.length; i++) {
+                        var info = body[i];
+                        $('.detailsList_ul').append('<li><a href="flower_info.html?fid=' + info.id + '">' + info.flowerName + '--' + info.flowerLanguage + '</a></li>');
+                    }
+                }
+            },
+            fail: function (error) {
+                console.error(error);
+            }
+        });
+
+    })
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            url: "http://localhost:17900/flower/popuList",
+            type: 'get',
+            dataType: 'json',
+            data: {
+                page: page,
+                limit: 5
+            },
+            success: function (data) {
+                if (data.code === 0) {
+                    var body = data.body.items;
+                    for (var i = 0; i < body.length; i++) {
+                        var info = body[i];
+                        $('.popuList_ul').append(
+                            '<li>\n' +
+                            '                    <a href="flower_info.html?fid=' + info.id + '">\n' +
+                            '                        <span class="thumbnail"><img class="thumb" data-original="' + info.flowerImg + '" src="' + info.flowerImg + '" alt=""></span>\n' +
+                            '                        <span class="text">' + info.flowerName + '</span>\n' +
+                            '                        <span class="muted"><i class="glyphicon glyphicon-time"></i> ' + info.createTime + ' </span>\n' +
+                            '                        <span class="muted"><i class="glyphicon glyphicon-eye-open"></i> 120</span>\n' +
+                            '                    </a>\n' +
+                            '                </li>');
+                    }
+                }
+            },
+            fail: function (error) {
+                console.error(error);
+            }
+        });
+    });
 </script>

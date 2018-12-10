@@ -78,4 +78,32 @@ public class FlowerController  {
     public ResponseEntity<ResultJson> recommendFlower() {
         return ResponseEntity.ok().body(new ResultJson(flowerService.recommendFlower()));
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/popular", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
+    public ResponseEntity<ResultJson> popular(
+            @RequestParam("fid") String fid,
+            @RequestParam("whether") String whether,
+            @RequestParam("type") String type
+            ) {
+        flowerService.popular(fid, whether, type);
+        return ResponseEntity.ok().body(new ResultJson());
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/popuList", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+    public ResponseEntity<ResultJson> popuList(
+            @RequestParam("page") Integer page,
+            @RequestParam("limit") Integer size
+            ) {
+        return ResponseEntity.ok().body(new ResultJson(flowerService.popuList(page, size)));
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/detailsList", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+    public ResponseEntity<ResultJson> detailsList() {
+        return ResponseEntity.ok().body(new ResultJson(flowerService.detailsList()));
+    }
+
+
 }

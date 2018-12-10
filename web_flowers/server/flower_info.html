@@ -23,6 +23,11 @@
                 <div class="form-box">
                     <div class="layui-form layui-form-item">
                         <div class="layui-inline flower_info">
+                            <div style="margin-left: 100px; margin-bottom: 10px">
+                                <button class="layui-btn layui-btn-primary recommend" onclick="popular(1)">首页推荐</button>
+                                <button class="layui-btn layui-btn-primary details" onclick="popular(2)">详情推荐</button>
+                                <button class="layui-btn layui-btn-primary popu" onclick="popular(3)" >热门列表</button>
+                            </div>
                             <div class="layui-form-item">
                                 <label class="layui-form-label label_width ">花名</label>
                                 <label class="layui-form-label label_width_value flowerName"></label>
@@ -62,32 +67,43 @@
     }
 </STYLE>
 <script>
-    var data;
+    var datamsg;
+    var id;
     $(document).ready(function() {
-        data = JSON.parse(sessionStorage.allmessage);
-        $('.flowerName').append(data.flowerName);
-        // $('.flowerImg').append(data.flowerImg);
-        var flowerImg = data.flowerImg;
+        datamsg = JSON.parse(sessionStorage.allmessage);
+        id = datamsg.id;
+        if (datamsg.details === 1) {
+            $(".details").attr("style", "background-color:rgba(95,90,93,0.46); ").attr("disabled", "disabled");
+        }
+        if (datamsg.popu === 1) {
+            $(".popu").attr("style", "background-color:rgba(95,90,93,0.46); ").attr("disabled", "disabled");
+        }
+        $('.flowerName').append(datamsg.flowerName);
+        var flowerImg = datamsg.flowerImg;
         if (isEmpty(flowerImg)) {
             $('.flowerImg').append('无');
         } else {
             $('.flowerImgDiv').html('<label class="layui-form-label label_width ">图片</label>' +
                 '<img src="' + flowerImg + '" height="200px" width="200px"/>');
         }
-        $('.flowerLanguage').append(data.flowerLanguage);
-        $('.infoRemarks').append(isEmpty(data.remarks) ? '无' : data.remarks);
-        $('.deleted').append(data.deleted === 0 ? "未删" : "已删");
+        $('.flowerLanguage').append(datamsg.flowerLanguage);
+        $('.infoRemarks').append(isEmpty(datamsg.remarks) ? '无' : datamsg.remarks);
+        $('.deleted').append(datamsg.deleted === 0 ? "未删" : "已删");
         $.ajax({
             url: "http://localhost:17900/flower/flowerSpecific",
-            data: {"fid": data.id},
+            data: {"fid": id},
             type: 'get',
             dataType: 'json',
             timeout: 1000,
             success: function (data) {
                 if (data.code === 0) {
                     var body = data.body;
-                    for (var i = 0; i < body.length; i++) {
-                        var info = body[i];
+                    if (body.recommend === 1) {
+                        $(".recommend").attr("style", "background-color:rgba(95,90,93,0.46); ").attr("disabled", "disabled");
+                    }
+                    var specifics = body.flowerSpecifics;
+                    for (var i = 0; i < specifics.length; i++) {
+                        var info = specifics[i];
                         var title = info.title;
                         var content = info.content;
                         var remarks = isEmpty(info.remarks) ? '无' : info.remarks;
@@ -119,6 +135,38 @@
     function isEmpty(obj) {
         if (obj == null || "" === obj || "undefined" === (obj) || "null"===(obj)) return true;
         return false;
+    }
+
+    function popular(type) {
+        $.ajax({
+            url: "http://localhost:17900/flower/popular",
+            data: {
+                "fid": id,
+                "type": type,
+                "whether": 1
+            },
+            type: 'post',
+            dataType: 'json',
+            success: function (data) {
+                if (data.code === 0) {
+                    if (1 === type) {
+                        $(".recommend").attr("style", "background-color:rgba(95,90,93,0.46); ").attr("disabled", "disabled");
+                    }
+                    if (2 === type) {
+                        $(".details").attr("style", "background-color:rgba(95,90,93,0.46); ").attr("disabled", "disabled");
+                    }
+                    if (3 === type) {
+                        $(".popu").attr("style", "background-color:rgba(95,90,93,0.46); ").attr("disabled", "disabled");
+                    }
+                } else if(data.status === 10000) {
+                    parent.location.href ="../../login.html";
+                }
+            },
+            fail: function (error) {
+                console.error(error);
+                parent.location.href ="../../login.html";
+            }
+        })
     }
 </script>
 </body>

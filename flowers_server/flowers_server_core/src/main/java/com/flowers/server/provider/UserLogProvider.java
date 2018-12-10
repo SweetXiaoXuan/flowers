@@ -1,6 +1,5 @@
 package com.flowers.server.provider;
 
-import com.alibaba.fastjson.JSON;
 import com.flowers.common.utils.SqlUtil;
 import com.flowers.common.utils.StringUtil;
 
@@ -12,8 +11,8 @@ public class UserLogProvider {
         param.remove("page");
         param.remove("size");
         return StringUtil.isEmpty(String.valueOf(param.get("type")))
-                ? SqlUtil.conditionalQuery(null, "user_log", "select")
-                : SqlUtil.conditionalQueryLike(param, "user_log", "select");
+                ? SqlUtil.conditionalQueryOrder(null, "user_log", "select")
+                : SqlUtil.conditionalQueryLikeOrder(param, "user_log", "select");
     }
 
     public String findAll(Map<String, Object> param) {

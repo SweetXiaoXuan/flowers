@@ -42,6 +42,9 @@ public interface FlowerMapper extends BaseMapper<FlowerInfo> {
     })
     List<FlowerSpecific> flowerSpecific(@Param("fid") String fid);
 
+    @Select("select count(id) from flower_info where recommend = 1")
+    int getRecommend();
+
     @Select("select id from flower_info where flower_name = #{flowerName} and flower_language = #{flowerLanguage} and flower_img = #{flowerImg} and remarks = #{remarks}")
     Long getFid(@Param("remarks") String remarks, @Param("flowerName") String flowerName, @Param("flowerLanguage") String flowerLanguage, @Param("flowerImg") String flowerImg);
 
@@ -57,4 +60,31 @@ public interface FlowerMapper extends BaseMapper<FlowerInfo> {
             @Result(column = "create_time", property = "createTime")
     })
     FlowerInfo recommendFlower();
+
+    @Update("update flower_info set popu = #{type} where id = #{fid}")
+    void popu(@Param("fid") String fid, @Param("type") String whether);
+
+    @Update("update flower_info set recommend = #{type} where id = #{fid}")
+    void recommend(@Param("fid") String fid, @Param("type") String whether);
+
+    @Update("update flower_info set details = #{type} where id = #{fid}")
+    void details(@Param("fid") String fid, @Param("type") String whether);
+
+    @Select("select * from flower_info where popu = 1 and `delete` = 0")
+    @Results({
+            @Result(column = "flower_name", property = "flowerName"),
+            @Result(column = "flower_img", property = "flowerImg"),
+            @Result(column = "flower_language", property = "flowerLanguage"),
+            @Result(column = "create_time", property = "createTime")
+    })
+    List<FlowerInfo> popuList();
+
+    @Select("select * from flower_info where details = 1 and `delete` = 0 limit 0, 5")
+    @Results({
+            @Result(column = "flower_name", property = "flowerName"),
+            @Result(column = "flower_img", property = "flowerImg"),
+            @Result(column = "flower_language", property = "flowerLanguage"),
+            @Result(column = "create_time", property = "createTime")
+    })
+    List<FlowerInfo> detailsList();
 }

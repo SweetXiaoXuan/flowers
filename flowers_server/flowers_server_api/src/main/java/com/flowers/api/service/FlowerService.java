@@ -2,8 +2,10 @@ package com.flowers.api.service;
 
 import com.flowers.api.model.FlowerInfo;
 import com.flowers.api.model.FlowerSpecific;
+import com.flowers.common.bean.ResultJson;
 import com.flowers.common.page.PageBean;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,7 +24,7 @@ public interface FlowerService {
 
     @GetMapping("/flowerSpecific")
     @ResponseBody
-    List<FlowerSpecific> flowerSpecific(@RequestParam("fid") String fid);
+    Map<String, Object> flowerSpecific(@RequestParam("fid") String fid);
 
     @GetMapping("/console")
     @ResponseBody
@@ -48,4 +50,23 @@ public interface FlowerService {
     @ResponseBody
     FlowerInfo recommendFlower();
 
+    @PostMapping("/popular")
+    @ResponseBody
+    void popular(
+            @RequestParam("fid") String fid,
+            @RequestParam("whether") String whether,
+            @RequestParam("type") String type);
+
+
+    @ResponseBody
+    @GetMapping("/popuList")
+    PageBean<FlowerInfo> popuList(
+            @RequestParam("page") Integer page,
+            @RequestParam("size") Integer size
+    );
+
+    @ResponseBody
+    @GetMapping("/detailsList")
+    List<FlowerInfo> detailsList(
+    );
 }

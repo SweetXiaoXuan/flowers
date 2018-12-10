@@ -76,6 +76,54 @@ public class SqlUtil {
         String str = StringUtils.join(cols.toArray(), ",");
         return String.format(sql.toString(), "*", clazz);
     }
+    /**
+     * Multi-condition query and get total sql stitching-order by id
+     * @see com.flowers.common.utils.SqlUtil#sqlMap select, count
+     * @param param conditional parameter(can be empty)
+     * @param clazz class to be queried(not null)
+     * @param operating sql type
+     * @param <K> the type of keys maintained by this map
+     * @param <V> the type of mapped values
+     * @return java.lang.String
+     * @see Map
+     * @see Class
+     * @see NullPointerException
+     */
+    public static <K, V> String conditionalQueryOrder(Map<K, V> param, String clazz, String operating) {
+        if (clazz == null) throw new NullPointerException();
+        StringBuffer sql = new StringBuffer(sqlMap.get(operating));
+        if (param == null) return String.format(sql.append(" order by id desc ").toString(), "*", clazz);
+        param.entrySet().forEach(
+                map -> sql.append(sqlMap.get("and")).append(map.getKey()).append(" = ").append(map.getValue())
+        );
+        sql.append(" order by id desc");
+        return String.format(sql.toString(), "*", clazz);
+    }
+
+    /**
+     * Multi-condition query and get total sql stitching-order by id
+     * @see com.flowers.common.utils.SqlUtil#sqlMap select, count
+     * @param param conditional parameter(can be empty)
+     * @param clazz class to be queried(not null)
+     * @param operating sql type
+     * @param <K> the type of keys maintained by this map
+     * @param <V> the type of mapped values
+     * @return java.lang.String
+     * @see Map
+     * @see Class
+     * @see NullPointerException
+     */
+    public static <K, V> String conditionalQueryLikeOrder(Map<K, V> param, String clazz, String operating) {
+        if (clazz == null) throw new NullPointerException();
+        StringBuffer sql = new StringBuffer(sqlMap.get(operating));
+        if (param == null) return String.format(sql.append(" order by id desc ").toString(), "*", clazz);
+        StringBuffer sqlStr = new StringBuffer(String.format(sql.toString(), "*", clazz));
+        param.entrySet().forEach(
+                map -> sqlStr.append(sqlMap.get("and")).append(map.getKey()).append(" like  '%").append(map.getValue()).append("%' ")
+        );
+        sqlStr.append(" order by id desc");
+        return sqlStr.toString();
+    }
 
     /**
      * Multi-condition query and get total sql stitching

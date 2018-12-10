@@ -11,5 +11,12 @@ public class FlowerInfo {
     private String flowerName;
     private Integer delete;
     private Integer recommend;
+    private Integer popu;
+    private Integer details;
+    private Integer color;
+    private Integer season;
+    private Integer world;
+    private Integer country;
+    private Integer festival;
     private String flowerLanguage;
 }
