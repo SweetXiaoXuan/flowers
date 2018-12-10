@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="../assets/layui/css/layui.css">
-    <link rel="stylesheet" href="../assets/css/view.css"/>
+    <link rel="stylesheet" href="assets/layui/css/layui.css">
+    <link rel="stylesheet" href="assets/css/view.css"/>
     <link rel="icon" href="/favicon.ico">
     <title>管理后台</title>
     <style type="text/css">
@@ -23,44 +23,26 @@
                 <div class="form-box">
                     <div class="layui-form layui-form-item">
                         <div class="layui-inline flower_info">
- <div class="layui-form-item">
-     <label class="layui-form-label label_width ">花名</label>
-     <label class="layui-form-label label_width_value flowerName"></label>
- </div>
- <div class="layui-form-item">
-     <label class="layui-form-label label_width">花语</label>
-     <label class="layui-form-label label_width_value flowerLanguage" style="width: 400px"></label>
- </div>
- <div class="layui-form-item">
-     <label class="layui-form-label label_width">图片</label>
-     <label class="layui-form-label label_width_value flowerImg"></label>
- </div>
- <div class="layui-form-item">
-     <label class="layui-form-label label_width">扩展字段</label>
-     <label class="layui-form-label label_width_value infoRemarks"></label>
-
-     <!--<div class="layui-input-block">-->
-         <!--<textarea name="feature" placeholder="无" class="layui-textarea infoRemarks" readonly></textarea>-->
-     <!--</div>-->
- </div>
- <div class="layui-form-item">
-     <label class="layui-form-label label_width">逻辑删除</label>
-     <label class="layui-form-label label_width_value deleted"></label>
- </div>
-
-
- <!--<div class="layui-form-item">-->
-     <!--<label class="layui-form-label label_width">标题</label>-->
-     <!--<label class="layui-form-label label_width_value title"></label>-->
- <!--</div>-->
- <!--<div class="layui-form-item">-->
-     <!--<label class="layui-form-label label_width">内容</label>-->
-     <!--<label class="layui-form-label label_width_value content"></label>-->
- <!--</div>-->
- <!--<div class="layui-form-item">-->
-     <!--<label class="layui-form-label label_width">备注</label>-->
-     <!--<label class="layui-form-label label_width_value specificRemarks"></label>-->
- <!--</div>-->
+                             <div class="layui-form-item">
+                                 <label class="layui-form-label label_width ">用户名</label>
+                                 <label class="layui-form-label label_width_value flowerName"></label>
+                             </div>
+                             <div class="layui-form-item">
+                                 <label class="layui-form-label label_width">花语</label>
+                                 <label class="layui-form-label label_width_value flowerLanguage" style="width: 400px"></label>
+                             </div>
+                             <div class="layui-form-item flowerImgDiv">
+                                 <label class="layui-form-label label_width">图片</label>
+                                 <label class="layui-form-label label_width_value flowerImg"></label>
+                             </div>
+                             <div class="layui-form-item">
+                                 <label class="layui-form-label label_width">扩展字段</label>
+                                 <label class="layui-form-label label_width_value infoRemarks"></label>
+                             </div>
+                             <div class="layui-form-item">
+                                 <label class="layui-form-label label_width">逻辑删除</label>
+                                 <label class="layui-form-label label_width_value deleted"></label>
+                             </div>
                         </div>
                     </div>
                 </div>
@@ -68,8 +50,8 @@
         </div>
     </div>
 </div>
-<script src="../assets/layui/layui.all.js"></script>
-<script src="../assets/jquery-1.7.1.min.js"></script>
+<script src="assets/layui/layui.all.js"></script>
+<script src="assets/jquery-1.7.1.min.js"></script>
 <STYLE type="text/css">
     .label_width {
         width:150px;
@@ -84,7 +66,14 @@
     $(document).ready(function() {
         data = JSON.parse(sessionStorage.allmessage);
         $('.flowerName').append(data.flowerName);
-        $('.flowerImg').append(data.flowerImg);
+        // $('.flowerImg').append(data.flowerImg);
+        var flowerImg = data.flowerImg;
+        if (isEmpty(flowerImg)) {
+            $('.flowerImg').append('无');
+        } else {
+            $('.flowerImgDiv').html('<label class="layui-form-label label_width ">图片</label>' +
+                '<img src="' + flowerImg + '" height="200px" width="200px"/>');
+        }
         $('.flowerLanguage').append(data.flowerLanguage);
         $('.infoRemarks').append(isEmpty(data.remarks) ? '无' : data.remarks);
         $('.deleted').append(data.deleted === 0 ? "未删" : "已删");
@@ -128,7 +117,7 @@
     });
 
     function isEmpty(obj) {
-        if (obj == null || "" === obj || "undefined".eq(obj) || "null".eq(obj)) return true;
+        if (obj == null || "" === obj || "undefined" === (obj) || "null"===(obj)) return true;
         return false;
     }
 </script>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../assets/layui/css/layui.css">
-    <link rel="stylesheet" href="../assets/css/view.css"/>
+    <link rel="stylesheet" href="assets/layui/css/layui.css">
+    <link rel="stylesheet" href="assets/css/view.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/login.css">
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="../assets/laydate/laydate.js"></script>
-    <script src="../js/console.js"></script>
+    <script src="assets/laydate/laydate.js"></script>
+    <script src="js/console.js"></script>
     <style type="text/css" >
         td[data-field='status'] .layui-table-cell{
             overflow: visible;
@@ -71,7 +71,7 @@
         </div>
     </div>
 </div>
-<script src="../assets/layui/layui.all.js"></script>
+<script src="assets/layui/layui.all.js"></script>
 <div class="layui-content">
     <div class="layui-row">
         <div class="layui-card">
@@ -102,7 +102,7 @@
         </div>
     </div>
 </div>
-<script src="../assets/layui/layui.all.js"></script>
+<script src="assets/layui/layui.all.js"></script>
 <script>
     function nameClean() {
         $('#type').val('');
@@ -149,7 +149,7 @@
             , done: function (res) {
                 var status = res.code;
                 if (status === 10000) {
-                    parent.location.href = "../login.html";
+                    parent.location.href = "login.html";
                 }
                 $("[data-field='delete']").children().each(function () {
                     if ($(this).text() === '0') {

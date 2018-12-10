@@ -303,7 +303,6 @@
             success: function (data) {
                 if (data.code === 0) {
                     var body = data.body;
-                    console.info(JSON.stringify(body))
                     $('.flowerName').append(body.flowerName);
                     $('.flowerInfoName').html(body.flowerName);
                     var flowerImg = body.flowerImg;
