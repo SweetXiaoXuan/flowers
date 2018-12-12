@@ -23,21 +23,21 @@ public class FlowerController  {
     @ResponseBody
     @RequestMapping(value = "/console", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public ResponseEntity<ResultJson> console() {
-        return ResponseEntity.ok().body(new ResultJson(flowerService.console(), me.getValue(ResultMsgConstant.querySuccess)));
+        return ResponseEntity.ok().body(new ResultJson(flowerService.console()));
     }
 
     @ResponseBody
     @RequestMapping(value = "/flowersInfo", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public ResponseEntity<ResultJson> flowersInfo(
             @RequestParam("fid") String fid) {
-        return ResponseEntity.ok().body(new ResultJson(flowerService.getInfoById(fid), me.getValue(ResultMsgConstant.querySuccess)));
+        return ResponseEntity.ok().body(new ResultJson(flowerService.getInfoById(fid)));
     }
 
     @ResponseBody
     @RequestMapping(value = "/flowerSpecific", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public ResponseEntity<ResultJson> flowerSpecific(
             @RequestParam("fid") String fid) {
-        return ResponseEntity.ok().body(new ResultJson(flowerService.flowerSpecific(fid), me.getValue(ResultMsgConstant.querySuccess)));
+        return ResponseEntity.ok().body(new ResultJson(flowerService.flowerSpecific(fid)));
     }
 
     @ResponseBody
@@ -58,7 +58,7 @@ public class FlowerController  {
         param.put("type", type);
         param.put("season", season);
         PageBean<FlowerInfo> info = flowerService.flowers(param);
-        return ResponseEntity.ok().body(new ResultJson(info.getItems(), me.getValue(ResultMsgConstant.querySuccess), info.getTotalNum()));
+        return ResponseEntity.ok().body(new ResultJson(info.getItems(), info.getTotalNum()));
     }
 
     @ResponseBody

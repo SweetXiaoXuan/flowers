@@ -1,19 +1,22 @@
 package com.flowers.server.provider;
 
-import com.flowers.common.TypeMap;
 import com.flowers.common.utils.StringUtil;
 
 public class FlowerInfoProvider {
 
     public String flowers(String flowerName, String type) {
-        StringBuilder sql = new StringBuilder("select * from flower_info where 1 = 1 ");
+        StringBuilder sql = new StringBuilder(
+                "select * \n" +
+                        "from flower_info i \n" +
+                        "left join flower_association a on a.fid = i.id \n" +
+                        "LEFT JOIN flower_category c on a.cid = c.id\n" +
+                        "where 1 = 1  ");
         if (!StringUtil.isEmpty(flowerName)) {
             sql.append(" and flower_name = " + flowerName);
         }
         if (!StringUtil.isEmpty(type)) {
             if (!"0".equals(type)) {
-                TypeMap map = new TypeMap();
-                sql.append(" and " + map.map.get(type) + " is not null");
+                sql.append(" and c.type = " + type);
             }
         }
         return sql.toString();

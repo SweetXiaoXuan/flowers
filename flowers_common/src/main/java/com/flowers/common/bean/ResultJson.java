@@ -8,7 +8,7 @@ public class ResultJson {
     private MeaasgeUtil me = new MeaasgeUtil();
 
     private Integer code = 0;
-    private Object body = me.getValue(ResultMsgConstant.querySuccess);
+    private Object body = null;
     private String msg = "成功";
     private Long count = null;
 
@@ -64,6 +64,7 @@ public class ResultJson {
     }
 
     public ResultJson(Object body) {
+        this.msg = me.getValue(ResultMsgConstant.querySuccess);
         this.body = body;
     }
 
