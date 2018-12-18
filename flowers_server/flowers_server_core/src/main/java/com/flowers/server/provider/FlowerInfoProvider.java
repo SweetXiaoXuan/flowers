@@ -11,13 +11,13 @@ public class FlowerInfoProvider {
                         "left join flower_association a on a.fid = i.id \n" +
                         "LEFT JOIN flower_category c on a.cid = c.id\n" +
                         "where 1 = 1  ");
+        if (!StringUtil.isEmpty(type) && !"0".equals(type)) {
+            sql.append(" and c.type = " + type);
+        } else {
+            sql = new StringBuilder("select * from flower_info i where 1 = 1 ");
+        }
         if (!StringUtil.isEmpty(flowerName)) {
             sql.append(" and flower_name = " + flowerName);
-        }
-        if (!StringUtil.isEmpty(type)) {
-            if (!"0".equals(type)) {
-                sql.append(" and c.type = " + type);
-            }
         }
         return sql.toString();
     }

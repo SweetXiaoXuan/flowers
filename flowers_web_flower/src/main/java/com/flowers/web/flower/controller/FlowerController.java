@@ -58,7 +58,7 @@ public class FlowerController  {
         param.put("type", type);
         param.put("season", season);
         PageBean<FlowerInfo> info = flowerService.flowers(param);
-        return ResponseEntity.ok().body(new ResultJson(info.getItems(), info.getTotalNum()));
+        return ResponseEntity.ok().body(new ResultJson(info));
     }
 
     @ResponseBody
