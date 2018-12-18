@@ -73,9 +73,9 @@
         <div class="content">
             <header class="article-header">
                 <h1 class="article-title"><a href="article.html" class="flowerInfoName"></a></h1>
-                <div class="article-meta"> <span class="item article-meta-time">
-          <time class="time" data-toggle="tooltip" data-placement="bottom" title="时间：2016-1-4 10:29:39"><i class="glyphicon glyphicon-time"></i> 2016-1-4 10:29:39</time>
-          </span> <span class="item article-meta-source" data-toggle="tooltip" data-placement="bottom" title="来源：第一PHP社区"><i class="glyphicon glyphicon-globe"></i> 第一PHP社区</span> <span class="item article-meta-category" data-toggle="tooltip" data-placement="bottom" title="栏目：后端程序"><i class="glyphicon glyphicon-list"></i> <a href="program" title="">后端程序</a></span> <span class="item article-meta-views" data-toggle="tooltip" data-placement="bottom" title="查看：120"><i class="glyphicon glyphicon-eye-open"></i> 共120人围观</span> <span class="item article-meta-comment" data-toggle="tooltip" data-placement="bottom" title="评论：0"><i class="glyphicon glyphicon-comment"></i> 0个不明物体</span> </div>
+                <div class="article-meta flower_info_other">
+
+                </div>
             </header>
             <article class="article-content">
                 <div class="flowerInfo"></div>
@@ -306,6 +306,26 @@
                     $('.flowerLanguage').append(body.flowerLanguage);
                     $('.infoRemarks').append(isEmpty(body.remarks) ? '无' : body.remarks);
                     $('.deleted').append(body.delete === 0 ? "未删" : "已删");
+                    $('.flower_info_other').append(
+                        '<span class="item article-meta-time">\n' +
+                        '                        <time class="time" data-toggle="tooltip" data-placement="bottom" title="时间：2016-1-4 10:29:39">\n' +
+                        '                            <i class="glyphicon glyphicon-time"></i> ' + body.createTime + '\n' +
+                        '                        </time>\n' +
+                        '                    </span>\n' +
+                        '                    <span class="item article-meta-source" data-toggle="tooltip" data-placement="bottom" title="来源：第一PHP社区">\n' +
+                        '                        <i class="glyphicon glyphicon-globe"></i> 第一PHP社区\n' +
+                        '                    </span>\n' +
+                        '                    <span class="item article-meta-category" data-toggle="tooltip" data-placement="bottom" title="栏目：后端程序">\n' +
+                        '                        <i class="glyphicon glyphicon-list"></i> <a href="program" title="">后端程序</a>\n' +
+                        '                    </span>\n' +
+                        '                    <span class="item article-meta-views" data-toggle="tooltip" data-placement="bottom" title="查看：120">\n' +
+                        '                        <i class="glyphicon glyphicon-eye-open"></i> 共' + body.read + '人围观\n' +
+                        '                    </span>\n' +
+                        '                    <span class="item article-meta-comment" data-toggle="tooltip" data-placement="bottom" title="评论：0">\n' +
+                        '                        <i class="glyphicon glyphicon-comment"></i> ' + body.comment + '个不明物体\n' +
+                        '                    </span>');
+
+
                     $.ajax({
                         url: "http://localhost:17900/flower/flowerSpecific",
                         data: {"fid": fid},
@@ -316,7 +336,7 @@
                             if (data.code === 0) {
                                 var body = data.body;
                                 for (var i = 0; i < body.length; i++) {
-                                    var info = body[i];
+                                    var info = body.flowerSpecifics[i];
                                     var title = info.title;
                                     var content = info.content;
                                     var remarks = isEmpty(info.remarks) ? '无' : info.remarks;

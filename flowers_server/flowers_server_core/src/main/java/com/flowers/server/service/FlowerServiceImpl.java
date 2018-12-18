@@ -30,15 +30,20 @@ public class FlowerServiceImpl implements FlowerService {
     private FlowerSpecificMapper flowerSpecificMapper;
     @Autowired
     private FlowerReadMapper flowerReadMapper;
+    @Autowired
+    private FlowerCommentMapper flowerCommentMapper;
 
     @Override
     @GetMapping("/flowersInfo")
     @ResponseBody
-    public FlowerInfo getInfoById(
+    public Map<String, Object> getInfoById(
             @RequestParam("fid") String fid
     ) {
         userLogMapper.insertLog("根据 id 查询鲜花信息", 2, 1L);
-        return flowerMapper.getInfoById(fid);
+        Map<String, Object> map = TransferUtils.transBeanToMap(flowerMapper.getInfoById(fid));
+        map.put("read", flowerReadMapper.count(fid));
+        map.put("comment", flowerCommentMapper.count(fid));
+        return map;
     }
 
     @Override
@@ -84,6 +89,9 @@ public class FlowerServiceImpl implements FlowerService {
         Integer size = Integer.parseInt(param.get("size").toString());
         List<FlowerInfo> infos = flowerMapper.flowers(flowerName, type);
         Page<FlowerInfo> pageData = PageHelper.startPage(page, size).doSelectPage(()-> flowerMapper.flowers(flowerName, type));
+
+
+
         pageData.setTotal(infos.size());
         PageBean<FlowerInfo> pageBean = new PageBean<>();
         pageBean.setItems(pageData);

@@ -12,7 +12,7 @@ import java.util.Map;
 public interface FlowerService {
     @GetMapping("/flowersInfo")
     @ResponseBody
-    FlowerInfo getInfoById(@RequestParam("fid") String fid);
+    Map<String, Object> getInfoById(@RequestParam("fid") String fid);
 
     @GetMapping("/flowerSpecific")
     @ResponseBody

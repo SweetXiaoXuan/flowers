@@ -1,5 +1,6 @@
 package com.flowers.hanlder;
 
+import com.alibaba.fastjson.JSON;
 import com.flowers.api.service.FlowerService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -54,6 +55,8 @@ public class ReadHandler {
             logger.info(PRE_TAG + "(doBefore) IP : " + request.getRemoteAddr());
             logger.info(PRE_TAG + "(doBefore) CLASS_METHOD : " + joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
             logger.info(PRE_TAG + "(doBefore) ARGS : " + Arrays.toString(joinPoint.getArgs()));
+            logger.info(PRE_TAG + "(doBefore) BODY : " + JSON.toJSONString(request.getParameterMap()));
+
         } else {
             logger.info(PRE_TAG + "(doAfterReturning) RESPONSE : " + ret);
             logger.info(PRE_TAG + "(doAfterReturning) SPEND TIME : " + (System.currentTimeMillis() - startTime));
