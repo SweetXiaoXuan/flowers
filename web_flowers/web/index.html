@@ -159,7 +159,7 @@
                   dataType: 'json',
                   timeout: 1000,
                   success: function (data) {
-                      var body =  data.body;
+                      var body =  data.body.items;
                       for(var i = 0; i < body.length; i++) {
                           $(".flowersList").append(
                               '<article class="excerpt excerpt-1"><a class="focus" href="flower_info.html?fid=' + body[i].id + '" title=""><img class="thumb" data-original="' + body[i].flowerImg + '" src="' + body[i].flowerImg + '" alt=""></a>\n' +

@@ -109,8 +109,8 @@
                 return {
                     "code": res.code,
                     "msg": res.msg,
-                    "count": res.count,
-                    "data": res.body
+                    "count": res.body.totalNum,
+                    "data": res.body.items
                 };
             }
             , dataType: "json"

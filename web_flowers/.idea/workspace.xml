@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc11b6ce-13ef-484b-b987-b95bffc34c88" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_api/src/main/java/com/flowers/api/model/FlowerAssociation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_api/src/main/java/com/flowers/api/model/FlowerCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_common/src/main/java/com/flowers/common/bean/ResultJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_common/src/main/java/com/flowers/common/bean/ResultJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_server/flowers_server_api/src/main/java/com/flowers/api/model/FlowerInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_api/src/main/java/com/flowers/api/model/FlowerInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/provider/FlowerInfoProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/provider/FlowerInfoProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/service/FlowerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_server/flowers_server_core/src/main/java/com/flowers/server/service/FlowerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/controller/FlowerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/controller/FlowerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/flowers.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/flowers.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/flowers.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/flowers.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
     </list>
@@ -26,13 +20,14 @@
     <session id="-647952104">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="4" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="3" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -40,7 +35,7 @@
           <entry key="css" value="5" />
           <entry key="data_js" value="1" />
           <entry key="gif" value="9" />
-          <entry key="html" value="157" />
+          <entry key="html" value="158" />
           <entry key="jpg" value="5" />
           <entry key="js" value="46" />
           <entry key="png" value="2" />
@@ -49,7 +44,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="5" />
-          <entry key="HTML" value="157" />
+          <entry key="HTML" value="158" />
           <entry key="Image" value="16" />
           <entry key="JavaScript" value="46" />
           <entry key="PLAIN_TEXT" value="1" />
@@ -58,13 +53,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="JavaScript Console" value="19" />
-          <entry key="html" value="7720" />
+          <entry key="html" value="7792" />
           <entry key="js" value="867" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="7724" />
+          <entry key="HTML" value="7796" />
           <entry key="JavaScript" value="882" />
         </counts>
       </usages-collector>
@@ -75,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
-              <caret line="120" column="21" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
+            <state relative-caret-position="2415">
+              <caret line="161" column="34" selection-start-line="161" selection-start-column="34" selection-end-line="161" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -84,8 +79,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/flowers.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="108" column="44" lean-forward="true" selection-start-line="108" selection-start-column="44" selection-end-line="108" selection-end-column="44" />
+            <state relative-caret-position="296">
+              <caret line="93" column="37" lean-forward="true" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -94,7 +89,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>images/loading.gif</find>
       <find>remarks</find>
       <find>flowerinfo</find>
       <find>content</find>
@@ -124,6 +118,7 @@
       <find>home.js</find>
       <find>data</find>
       <find>detailsList_Li</find>
+      <find>http://localhost:17900/flower/flowers</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/web/test/Nicepage-master</dir>
@@ -172,10 +167,10 @@
         <option value="$PROJECT_DIR$/server/views/flowers.html" />
         <option value="$PROJECT_DIR$/server/views/user_info.html" />
         <option value="$PROJECT_DIR$/server/user_info.html" />
-        <option value="$PROJECT_DIR$/server/flowers.html" />
         <option value="$PROJECT_DIR$/server/users.html" />
         <option value="$PROJECT_DIR$/server/flower_info.html" />
         <option value="$PROJECT_DIR$/web/flower_info.html" />
+        <option value="$PROJECT_DIR$/server/flowers.html" />
         <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/web/flowers.html" />
       </list>
@@ -198,7 +193,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -209,12 +203,18 @@
             <path>
               <item name="web_flowers" type="b2602c69:ProjectViewProjectNode" />
               <item name="web_flowers" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web_flowers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_flowers" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -251,10 +251,10 @@
     </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.web_flowers_web">
-    <configuration name="web_flowers_server" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63344/web_flowers/server/index.html">
+    <configuration name="web_flowers_server" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63343/web_flowers/server/index.html">
       <method v="2" />
     </configuration>
-    <configuration name="web_flowers_web" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63344/web_flowers/web/index.html">
+    <configuration name="web_flowers_web" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63343/web_flowers/web/index.html">
       <method v="2" />
     </configuration>
     <list>
@@ -281,12 +281,13 @@
       <workItem from="1543975291656" duration="29000" />
       <workItem from="1544081391169" duration="625000" />
       <workItem from="1544413799452" duration="17031000" />
-      <workItem from="1544583735794" duration="241000" />
+      <workItem from="1544583735794" duration="3978000" />
+      <workItem from="1545111631913" duration="742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134836000" />
+    <option name="totallyTimeSpent" value="139315000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -307,7 +308,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32904148" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.36337626" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.36337626" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32904148" />
@@ -591,13 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/flowers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="170" column="24" selection-start-line="170" selection-start-column="24" selection-end-line="170" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/images/excerpt.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -615,17 +609,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/flowers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="105" column="17" lean-forward="true" selection-start-line="105" selection-start-column="17" selection-end-line="105" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="120" column="21" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
+        <state relative-caret-position="2415">
+          <caret line="161" column="34" selection-start-line="161" selection-start-column="34" selection-end-line="161" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/flowers.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="108" column="44" lean-forward="true" selection-start-line="108" selection-start-column="44" selection-end-line="108" selection-end-column="44" />
+        <state relative-caret-position="296">
+          <caret line="93" column="37" lean-forward="true" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
         </state>
       </provider>
     </entry>

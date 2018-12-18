@@ -103,7 +103,7 @@
                         dataType: 'json',
                         timeout: 1000,
                         success: function (data) {
-                            var body =  data.body;
+                            var body =  data.body.items;
                             for(var i = 0; i < body.length; i++) {
                                 var flwoerData = body[i];
                                 var catHtml;
