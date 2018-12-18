@@ -105,5 +105,4 @@ public class FlowerController  {
         return ResponseEntity.ok().body(new ResultJson(flowerService.detailsList()));
     }
 
-
 }

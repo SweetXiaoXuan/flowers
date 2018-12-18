@@ -1,15 +1,13 @@
 package com.flowers.server.service;
 
 import com.flowers.api.model.FlowerInfo;
+import com.flowers.api.model.FlowerRead;
 import com.flowers.api.model.FlowerSpecific;
 import com.flowers.api.service.FlowerService;
 import com.flowers.common.page.PageBean;
 import com.flowers.common.utils.StringUtil;
 import com.flowers.common.utils.TransferUtils;
-import com.flowers.server.mapper.FlowerMapper;
-import com.flowers.server.mapper.FlowerSpecificMapper;
-import com.flowers.server.mapper.UserLogMapper;
-import com.flowers.server.mapper.UserMapper;
+import com.flowers.server.mapper.*;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +28,8 @@ public class FlowerServiceImpl implements FlowerService {
     private UserLogMapper userLogMapper;
     @Autowired
     private FlowerSpecificMapper flowerSpecificMapper;
+    @Autowired
+    private FlowerReadMapper flowerReadMapper;
 
     @Override
     @GetMapping("/flowersInfo")
@@ -160,6 +160,16 @@ public class FlowerServiceImpl implements FlowerService {
     public List<FlowerInfo> detailsList() {
         userLogMapper.insertLog("查询详情推荐鲜花列表", 2, 1L);
         return flowerMapper.detailsList();
+    }
+
+    @Override
+    @RequestMapping("/readInfo")
+    public void readInfo(String fid) {
+        FlowerRead read = new FlowerRead();
+        read.setFid(fid);
+        read.setUid(1L);
+        flowerReadMapper.insert(read);
+        userLogMapper.insertLog("新增阅读信息，fid：" + fid, 1, 1L);
     }
 
 }

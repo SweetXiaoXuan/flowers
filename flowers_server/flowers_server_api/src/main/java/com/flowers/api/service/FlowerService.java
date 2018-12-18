@@ -1,11 +1,8 @@
 package com.flowers.api.service;
 
 import com.flowers.api.model.FlowerInfo;
-import com.flowers.api.model.FlowerSpecific;
-import com.flowers.common.bean.ResultJson;
 import com.flowers.common.page.PageBean;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,11 +10,6 @@ import java.util.Map;
 
 @FeignClient(name = "flowers-server")
 public interface FlowerService {
-    /**
-     * 根据用户ID获得用户信息
-     * @param fid
-     * @return
-     */
     @GetMapping("/flowersInfo")
     @ResponseBody
     FlowerInfo getInfoById(@RequestParam("fid") String fid);
@@ -45,7 +37,6 @@ public interface FlowerService {
             @RequestParam("flowerImg") String flowerImg,
             @RequestParam("specific") String specific);
 
-
     @GetMapping("/recommendFlower")
     @ResponseBody
     FlowerInfo recommendFlower();
@@ -57,7 +48,6 @@ public interface FlowerService {
             @RequestParam("whether") String whether,
             @RequestParam("type") String type);
 
-
     @ResponseBody
     @GetMapping("/popuList")
     PageBean<FlowerInfo> popuList(
@@ -67,6 +57,9 @@ public interface FlowerService {
 
     @ResponseBody
     @GetMapping("/detailsList")
-    List<FlowerInfo> detailsList(
-    );
+    List<FlowerInfo> detailsList();
+
+    @RequestMapping("/readInfo")
+    void readInfo(@RequestParam("fid") String fid);
+
 }

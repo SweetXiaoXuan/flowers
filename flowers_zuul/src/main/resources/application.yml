@@ -15,8 +15,8 @@ zuul:
     #zuul配置
     max-per-route-connections: 50
     max-total-connections: 200
-    connect-timeout-millis: 600000
-    socket-timeout-millis: 600000
+    connect-timeout-millis: 6000000
+    socket-timeout-millis: 6000000
 
   #关闭重试机制
   retryable: true
