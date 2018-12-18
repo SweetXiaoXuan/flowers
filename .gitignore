@@ -32,3 +32,5 @@ hs_err_pid*
 web_flowers/.idea
 
 Be_Angular/.idea
+
+/*/target
