@@ -6,6 +6,7 @@ import com.flowers.common.page.PageBean;
 import com.flowers.common.utils.MeaasgeUtil;
 import com.flowers.api.fbean.FlowerInfoBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -123,5 +124,4 @@ public class FlowerController  {
         flowerService.comment(fid, content);
         return ResponseEntity.ok().body(new ResultJson());
     }
-
 }

@@ -11,4 +11,5 @@ public class FlowerCommentBean {
     private Long fid;
     private String content;
     private String username;
+    private String headpic;
 }

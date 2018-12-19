@@ -19,5 +19,6 @@ public class User {
     private Integer status;
     private String remarks;
     private String createTime;
+    private String headpic;
     private Integer level;
 }

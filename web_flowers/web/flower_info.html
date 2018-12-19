@@ -79,7 +79,9 @@
             </header>
             <article class="article-content">
                 <div class="flowerInfo"></div>
-                <p class="article-copyright hidden-xs">未经允许不得转载：<a href="">鲜花大全网</a> » <a href="article.html">php如何判断一个日期的格式是否正确</a></p>
+                <p class="article-copyright hidden-xs flower_recommend_info">
+
+                </p>
             </article>
             <div class="article-tags">标签：<a href="" rel="tag">PHP</a></div>
             <div class="relates">
@@ -109,15 +111,8 @@
                 </form>
             </div>
             <div id="postcomments">
-                <ol class="commentlist">
-                    <li class="comment-content"><span class="comment-f">#1</span>
-                        <div class="comment-avatar"><img class="avatar" src="images/icon/icon.png" alt="" /></div>
-                        <div class="comment-main comment_list">
-                        </div>
-                    </li>
+                <ol class="commentlist comment_list">
                 </ol>
-
-                <div class="quotes"><span class="disabled">首页</span><span class="disabled">上一页</span><a class="current">1</a><a href="">2</a><span class="disabled">下一页</span><span class="disabled">尾页</span></div>
             </div>
         </div>
     </div>
@@ -227,30 +222,75 @@
 </script>
 </body>
 </html>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: "http://localhost:17900/flower/recommendFlower",
+            type: 'get',
+            dataType: 'json',
+            timeout: 1000,
+            success: function (data) {
+                if (data.code === 0) {
+                    var body = data.body;
+                    $('.flower_recommend_info').append(
+                        '未经允许不得转载：\n' +
+                        '                    <a href="index.html">鲜花大全网</a> »\n' +
+                        '                    <a href="flower_info.html?fid=' + body.id + '">' + body.flowerName + '</a>');
+                } else if(data.status === 10000) {
+                    alert(data.msg);
+                }
+            },
+            fail: function (error) {
+                console.error(error);
+            }
+        })
+    });
+</script>
 <script type="text/javascript">
     var fid = decodeURI(window.location.href.split("?")[1]).split("=")[1];
-    $(document).ready(function () {
 
+
+    var page = 1;
+    $(function () {
+        var type = 0;
+        getData(page);
+        $(window).scroll(function () {
+            var scrollTop = $(document).scrollTop();
+            if (scrollTop + 10 >= $(document).height() - $(window).height()) {
+                page = page + 1;
+                getData(page);
+            }
+        })
+    });
+
+    function getData(page) {
         $.ajax({
             url: "http://localhost:17900/flower/commentList",
             type: 'get',
             dataType: 'json',
             data: {
                 fid: fid,
-                page: 1,
-                limit: 5
+                page: page,
+                limit: 10
             },
             success: function (data) {
                 if (data.code === 0) {
                     var body = data.body.items;
                     for (var i = 0; i < body.length; i++) {
                         var info = body[i];
-                        $('.comment_list').append('<p>\n' +
+                        var headpic = info.headpic === null ? "images/icon/icon.png" : info.headpic;
+                        $('.comment_list').append('<li class="comment-content ">' +
+                            '<span class="comment-f">#1</span>' +
+                            '<div class="comment-avatar"><img class="avatar" src="' + headpic + '" alt="" /></div>' +
+                            '<div class="comment-main">' +
+                            '<p>\n' +
                             '                        <span class="address">' + info.username + '</span>\n' +
                             '                            <span class="time">(' + info.createTime + ')</span>\n' +
                             '                            <br />\n' +
                             '                            ' + info.content + '\n' +
-                            '                    </p>');
+                            '                    </p>' +
+                            ' </div>' +
+                            '</li>');
                     }
                 }
             },
@@ -258,7 +298,45 @@
                 console.error(error);
             }
         });
-    });
+    }
+
+
+
+    // $(document).ready(function () {
+    //
+    //     $.ajax({
+    //         url: "http://localhost:17900/flower/commentList",
+    //         type: 'get',
+    //         dataType: 'json',
+    //         data: {
+    //             fid: fid,
+    //             page: 1,
+    //             limit: 10
+    //         },
+    //         success: function (data) {
+    //             if (data.code === 0) {
+    //                 var body = data.body.items;
+    //                 for (var i = 0; i < body.length; i++) {
+    //                     var info = body[i];
+    //                     var headpic = info.headpic === null ? "images/icon/icon.png" : info.headpic;
+    //                     $('.comment_list').append('<span class="comment-f">#1</span>' +
+    //                         '<div class="comment-avatar"><img class="avatar" src="' + headpic + '" alt="" /></div>' +
+    //                         '<div class="comment-main">' +
+    //                         '<p>\n' +
+    //                         '                        <span class="address">' + info.username + '</span>\n' +
+    //                         '                            <span class="time">(' + info.createTime + ')</span>\n' +
+    //                         '                            <br />\n' +
+    //                         '                            ' + info.content + '\n' +
+    //                         '                    </p>' +
+    //                         ' </div>');
+    //                 }
+    //             }
+    //         },
+    //         fail: function (error) {
+    //             console.error(error);
+    //         }
+    //     });
+    // });
 
     function addComment() {
         $.ajax({
@@ -272,6 +350,7 @@
             success: function (data) {
                 if (data.code === 0) {
                     alert('评论成功');
+                    location.reload();
                 }
             }
         });
