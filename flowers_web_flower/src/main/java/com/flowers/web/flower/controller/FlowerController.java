@@ -1,11 +1,10 @@
 package com.flowers.web.flower.controller;
 
-import com.flowers.api.model.FlowerInfo;
 import com.flowers.api.service.FlowerService;
 import com.flowers.common.bean.ResultJson;
 import com.flowers.common.page.PageBean;
 import com.flowers.common.utils.MeaasgeUtil;
-import com.flowers.common.utils.ResultMsgConstant;
+import com.flowers.api.fbean.FlowerInfoBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -57,7 +56,7 @@ public class FlowerController  {
         param.put("color", color);
         param.put("type", type);
         param.put("season", season);
-        PageBean<FlowerInfo> info = flowerService.flowers(param);
+        PageBean<FlowerInfoBean> info = flowerService.flowers(param);
         return ResponseEntity.ok().body(new ResultJson(info));
     }
 

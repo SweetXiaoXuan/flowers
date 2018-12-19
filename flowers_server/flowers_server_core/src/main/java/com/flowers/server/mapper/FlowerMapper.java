@@ -3,12 +3,11 @@ package com.flowers.server.mapper;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.flowers.api.model.FlowerInfo;
 import com.flowers.api.model.FlowerSpecific;
-import com.flowers.api.model.User;
+import com.flowers.api.fbean.FlowerInfoBean;
 import com.flowers.server.provider.FlowerInfoProvider;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
-import java.util.Map;
 
 @Mapper
 public interface FlowerMapper extends BaseMapper<FlowerInfo> {
@@ -28,7 +27,7 @@ public interface FlowerMapper extends BaseMapper<FlowerInfo> {
             @Result(column = "flower_language", property = "flowerLanguage"),
             @Result(column = "create_time", property = "createTime")
     })
-    List<FlowerInfo> flowers(String flowerName, String type);
+    List<FlowerInfoBean> flowers(String flowerName, String type);
 
     @Select("select count(id) from flower_info where TO_DAYS(create_time) = TO_DAYS(NOW())")
     int countToday();
@@ -70,14 +69,14 @@ public interface FlowerMapper extends BaseMapper<FlowerInfo> {
     @Update("update flower_info set details = #{type} where id = #{fid}")
     void details(@Param("fid") String fid, @Param("type") String whether);
 
-    @Select("select * from flower_info where popu = 1 and `delete` = 0")
+    @SelectProvider(type = FlowerInfoProvider.class, method = "popuList")
     @Results({
             @Result(column = "flower_name", property = "flowerName"),
             @Result(column = "flower_img", property = "flowerImg"),
             @Result(column = "flower_language", property = "flowerLanguage"),
             @Result(column = "create_time", property = "createTime")
     })
-    List<FlowerInfo> popuList();
+    List<FlowerInfoBean> popuList();
 
     @Select("select * from flower_info where details = 1 and `delete` = 0 limit 0, 5")
     @Results({

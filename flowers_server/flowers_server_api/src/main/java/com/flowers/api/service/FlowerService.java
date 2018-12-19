@@ -2,6 +2,7 @@ package com.flowers.api.service;
 
 import com.flowers.api.model.FlowerInfo;
 import com.flowers.common.page.PageBean;
+import com.flowers.api.fbean.FlowerInfoBean;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,7 +25,7 @@ public interface FlowerService {
 
     @PostMapping("/flowers")
     @ResponseBody
-    PageBean<FlowerInfo> flowers(
+    PageBean<FlowerInfoBean> flowers(
             @RequestBody Map<String, Object> param
     );
 
@@ -50,7 +51,7 @@ public interface FlowerService {
 
     @ResponseBody
     @GetMapping("/popuList")
-    PageBean<FlowerInfo> popuList(
+    PageBean<FlowerInfoBean> popuList(
             @RequestParam("page") Integer page,
             @RequestParam("size") Integer size
     );

@@ -7,6 +7,7 @@ import com.flowers.api.service.FlowerService;
 import com.flowers.common.page.PageBean;
 import com.flowers.common.utils.StringUtil;
 import com.flowers.common.utils.TransferUtils;
+import com.flowers.api.fbean.FlowerInfoBean;
 import com.flowers.server.mapper.*;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
@@ -80,20 +81,17 @@ public class FlowerServiceImpl implements FlowerService {
     @Override
     @PostMapping("/flowers")
     @ResponseBody
-    public PageBean<FlowerInfo> flowers(
+    public PageBean<FlowerInfoBean> flowers(
             @RequestBody Map<String, Object> param
     ) {
         String type = param.get("type").toString();
         String flowerName = param.get("flowerName").toString();
         Integer page = Integer.parseInt(param.get("page").toString());
         Integer size = Integer.parseInt(param.get("size").toString());
-        List<FlowerInfo> infos = flowerMapper.flowers(flowerName, type);
-        Page<FlowerInfo> pageData = PageHelper.startPage(page, size).doSelectPage(()-> flowerMapper.flowers(flowerName, type));
-
-
-
+        List<FlowerInfoBean> infos = flowerMapper.flowers(flowerName, type);
+        Page<FlowerInfoBean> pageData = PageHelper.startPage(page, size).doSelectPage(()-> flowerMapper.flowers(flowerName, type));
         pageData.setTotal(infos.size());
-        PageBean<FlowerInfo> pageBean = new PageBean<>();
+        PageBean<FlowerInfoBean> pageBean = new PageBean<>();
         pageBean.setItems(pageData);
         pageBean.setTotalNum(infos.size());
         pageBean.setHasNext(infos.size(), size, page);
@@ -151,11 +149,11 @@ public class FlowerServiceImpl implements FlowerService {
 
     @Override
     @GetMapping("/popuList")
-    public PageBean<FlowerInfo> popuList(Integer page, Integer size) {
-        List<FlowerInfo> infos = flowerMapper.popuList();
-        Page<FlowerInfo> pageData = PageHelper.startPage(page, size).doSelectPage(()-> flowerMapper.popuList());
+    public PageBean<FlowerInfoBean> popuList(Integer page, Integer size) {
+        List<FlowerInfoBean> infos = flowerMapper.popuList();
+        Page<FlowerInfoBean> pageData = PageHelper.startPage(page, size).doSelectPage(()-> flowerMapper.popuList());
         pageData.setTotal(infos.size());
-        PageBean<FlowerInfo> pageBean = new PageBean<>();
+        PageBean<FlowerInfoBean> pageBean = new PageBean<>();
         pageBean.setItems(pageData);
         pageBean.setTotalNum(infos.size());
         pageBean.setHasNext(infos.size(), size, page);

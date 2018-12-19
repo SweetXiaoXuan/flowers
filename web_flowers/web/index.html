@@ -161,15 +161,16 @@
                   success: function (data) {
                       var body =  data.body.items;
                       for(var i = 0; i < body.length; i++) {
+                          var flwoerData = body[i];
                           $(".flowersList").append(
-                              '<article class="excerpt excerpt-1"><a class="focus" href="flower_info.html?fid=' + body[i].id + '" title=""><img class="thumb" data-original="' + body[i].flowerImg + '" src="' + body[i].flowerImg + '" alt=""></a>\n' +
+                              '<article class="excerpt excerpt-1"><a class="focus" href="flower_info.html?fid=' + flwoerData.id + '" title=""><img class="thumb" data-original="' + flwoerData.flowerImg + '" src="' + flwoerData.flowerImg + '" alt=""></a>\n' +
                               '        <header><a class="cat" href="program">后端程序<i></i></a>\n' +
-                              '          <h2><a href="flower_info.html?fid=' + body[i].id + '" title="">' + body[i].flowerName + '</a></h2>\n' +
+                              '          <h2><a href="flower_info.html?fid=' + flwoerData.id + '" title="">' + flwoerData.flowerName + '</a></h2>\n' +
                               '        </header>\n' +
                               '        <p class="meta">\n' +
-                              '          <time class="time"><i class="glyphicon glyphicon-time"></i> ' + body[i].createTime + '</time>\n' +
-                              '          <span class="views"><i class="glyphicon glyphicon-eye-open"></i> 共120人围观</span> <a class="comment" href="flower_info.html?fid=' + body[i].id + '#comment"><i class="glyphicon glyphicon-comment"></i> 0个不明物体</a></p>\n' +
-                              '        <p class="note">' + body[i].flowerLanguage + '</p>\n' +
+                              '          <time class="time"><i class="glyphicon glyphicon-time"></i> ' + flwoerData.createTime + '</time>\n' +
+                              '          <span class="views"><i class="glyphicon glyphicon-eye-open"></i> 共' + flwoerData.rnum + '人围观</span> <a class="comment" href="flower_info.html?fid=' + flwoerData.id + '#comment"><i class="glyphicon glyphicon-comment"></i> '+ flwoerData.cnum +'个不明物体</a></p>\n' +
+                              '        <p class="note">' + flwoerData.flowerLanguage + '</p>\n' +
                               '      </article>');
                       }
                   }
@@ -343,7 +344,7 @@
                             '                        <span class="thumbnail"><img class="thumb" data-original="' + info.flowerImg + '" src="' + info.flowerImg + '" alt=""></span>\n' +
                             '                        <span class="text">' + info.flowerName + '</span>\n' +
                             '                        <span class="muted"><i class="glyphicon glyphicon-time"></i> ' + info.createTime + ' </span>\n' +
-                            '                        <span class="muted"><i class="glyphicon glyphicon-eye-open"></i> 120</span>\n' +
+                            '                        <span class="muted"><i class="glyphicon glyphicon-eye-open"></i> ' + info.rnum + '</span>\n' +
                             '                    </a>\n' +
                             '                </li>');
                     }
