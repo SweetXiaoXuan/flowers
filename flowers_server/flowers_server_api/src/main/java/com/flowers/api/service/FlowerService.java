@@ -1,5 +1,7 @@
 package com.flowers.api.service;
 
+import com.flowers.api.fbean.FlowerCommentBean;
+import com.flowers.api.model.FlowerComment;
 import com.flowers.api.model.FlowerInfo;
 import com.flowers.common.page.PageBean;
 import com.flowers.api.fbean.FlowerInfoBean;
@@ -62,5 +64,20 @@ public interface FlowerService {
 
     @RequestMapping("/readInfo")
     void readInfo(@RequestParam("fid") String fid);
+
+    @GetMapping("/commentList")
+    @ResponseBody
+    PageBean<FlowerCommentBean> commentList(
+            @RequestParam("page") Integer page,
+            @RequestParam("size") Integer size,
+            @RequestParam("fid") String fid
+    );
+
+    @PostMapping("/comment")
+    @ResponseBody
+    void comment(
+            @RequestParam("fid") String fid,
+            @RequestParam("content") String content
+    );
 
 }

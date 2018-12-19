@@ -98,11 +98,11 @@
                     <div class="comment">
                         <div class="comment-title"><img class="avatar" src="images/icon/icon.png" alt="" /></div>
                         <div class="comment-box">
-                            <textarea placeholder="您的评论可以一针见血" name="comment" id="comment-textarea" cols="100%" rows="3" tabindex="1" ></textarea>
+                            <textarea placeholder="您的评论可以一针见血" name="comment" id="comment-textarea" class="comment_content" cols="100%" rows="3" tabindex="1" ></textarea>
                             <div class="comment-ctrl"> <span class="emotion"><img src="images/face/5.png" width="20" height="20" alt="" />表情</span>
                                 <div class="comment-prompt"> <i class="fa fa-spin fa-circle-o-notch"></i> <span class="comment-prompt-text"></span> </div>
                                 <input type="hidden" value="1" class="articleid" />
-                                <button type="submit" name="comment-submit" id="comment-submit" tabindex="5" articleid="1">评论</button>
+                                <button type="button" name="comment-submit" id="comment-submit" tabindex="5" articleid="1" onclick="addComment()">评论</button>
                             </div>
                         </div>
                     </div>
@@ -112,9 +112,7 @@
                 <ol class="commentlist">
                     <li class="comment-content"><span class="comment-f">#1</span>
                         <div class="comment-avatar"><img class="avatar" src="images/icon/icon.png" alt="" /></div>
-                        <div class="comment-main">
-                            <p>来自<span class="address">河南郑州</span>的用户<span class="time">(2016-01-06)</span><br />
-                                这是匿名评论的内容这是匿名评论的内容，这是匿名评论的内容这是匿名评论的内容这是匿名评论的内容这是匿名评论的内容这是匿名评论的内容这是匿名评论的内容。</p>
+                        <div class="comment-main comment_list">
                         </div>
                     </li>
                 </ol>
@@ -229,6 +227,56 @@
 </script>
 </body>
 </html>
+<script type="text/javascript">
+    var fid = decodeURI(window.location.href.split("?")[1]).split("=")[1];
+    $(document).ready(function () {
+
+        $.ajax({
+            url: "http://localhost:17900/flower/commentList",
+            type: 'get',
+            dataType: 'json',
+            data: {
+                fid: fid,
+                page: 1,
+                limit: 5
+            },
+            success: function (data) {
+                if (data.code === 0) {
+                    var body = data.body.items;
+                    for (var i = 0; i < body.length; i++) {
+                        var info = body[i];
+                        $('.comment_list').append('<p>\n' +
+                            '                        <span class="address">' + info.username + '</span>\n' +
+                            '                            <span class="time">(' + info.createTime + ')</span>\n' +
+                            '                            <br />\n' +
+                            '                            ' + info.content + '\n' +
+                            '                    </p>');
+                    }
+                }
+            },
+            fail: function (error) {
+                console.error(error);
+            }
+        });
+    });
+
+    function addComment() {
+        $.ajax({
+            url: "http://localhost:17900/flower/comment",
+            type: 'post',
+            dataType: 'json',
+            data: {
+                fid: fid,
+                content: $('.comment_content').val()
+            },
+            success: function (data) {
+                if (data.code === 0) {
+                    alert('评论成功');
+                }
+            }
+        });
+    }
+</script>
 
 <script src="../server/assets/layui/layui.all.js"></script>
 <link rel="stylesheet" href="../server/assets/layui/css/layui.css">

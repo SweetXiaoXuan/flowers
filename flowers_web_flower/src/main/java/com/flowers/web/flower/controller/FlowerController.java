@@ -104,4 +104,24 @@ public class FlowerController  {
         return ResponseEntity.ok().body(new ResultJson(flowerService.detailsList()));
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/commentList", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+    public ResponseEntity<ResultJson> commentList(
+            @RequestParam("page") String page,
+            @RequestParam("fid") String fid,
+            @RequestParam("limit") String size
+            ) {
+        return ResponseEntity.ok().body(new ResultJson(flowerService.commentList(Integer.parseInt(page) ,Integer.parseInt(size), fid)));
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/comment", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
+    public ResponseEntity<ResultJson> comment(
+            @RequestParam("fid") String fid,
+            @RequestParam("content") String content
+    ) {
+        flowerService.comment(fid, content);
+        return ResponseEntity.ok().body(new ResultJson());
+    }
+
 }

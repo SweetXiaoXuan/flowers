@@ -1,5 +1,7 @@
 package com.flowers.server.service;
 
+import com.flowers.api.fbean.FlowerCommentBean;
+import com.flowers.api.model.FlowerComment;
 import com.flowers.api.model.FlowerInfo;
 import com.flowers.api.model.FlowerRead;
 import com.flowers.api.model.FlowerSpecific;
@@ -176,6 +178,31 @@ public class FlowerServiceImpl implements FlowerService {
         read.setUid(1L);
         flowerReadMapper.insert(read);
         userLogMapper.insertLog("新增阅读信息，fid：" + fid, 1, 1L);
+    }
+
+    @Override
+    @GetMapping("/commentList")
+    public PageBean<FlowerCommentBean> commentList(Integer page, Integer size, String fid) {
+        List<FlowerCommentBean> infos = flowerCommentMapper.comments(fid);
+        Page<FlowerCommentBean> pageData = PageHelper.startPage(page, size).doSelectPage(()-> flowerCommentMapper.comments(fid));
+        pageData.setTotal(infos.size());
+        PageBean<FlowerCommentBean> pageBean = new PageBean<>();
+        pageBean.setItems(pageData);
+        pageBean.setTotalNum(infos.size());
+        pageBean.setHasNext(infos.size(), size, page);
+        userLogMapper.insertLog("查询鲜花评论列表，id：" + fid, 2, 1L);
+        return pageBean;
+    }
+
+    @Override
+    @PostMapping("/comment")
+    public void comment(String fid, String content) {
+        FlowerComment comment = new FlowerComment();
+        comment.setContent(content);
+        comment.setFid(Long.parseLong(fid));
+        comment.setUid(1L);
+        flowerCommentMapper.insert(comment);
+        userLogMapper.insertLog("添加鲜花评论，id：" + fid, 1, 1L);
     }
 
 }
