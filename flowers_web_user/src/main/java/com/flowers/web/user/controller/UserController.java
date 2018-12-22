@@ -9,6 +9,7 @@ import com.flowers.common.utils.MeaasgeUtil;
 import com.flowers.common.utils.ResultMsgConstant;
 import com.flowers.common.utils.TransferUtils;
 import com.flowers.web.user.session.SessionService;
+import com.netflix.ribbon.proxy.annotation.Content;
 import feign.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -36,7 +37,7 @@ public class UserController {
         User user = new User();
         user.setPassword(password);
         user.setUsername(username);
-        User u = userService.getUserByUsernameAndPassword(user);
+        User u = userService.getUserByUsernameAndPassword(user, getUid(request));
         boolean login = u == null;
         String rsid = null;
         if (!login) {
@@ -73,7 +74,8 @@ public class UserController {
             @RequestParam("status") String status,
             @RequestParam("page") String page,
             @RequestParam("limit") String size,
-            @RequestParam("phone") String phone
+            @RequestParam("phone") String phone,
+            @Content HttpServletRequest request
     ) {
         Map<String, Object> param = new HashMap<>();
         param.put("username", username);
@@ -82,7 +84,7 @@ public class UserController {
         param.put("page", page);
         param.put("status", status);
         param.put("phone", phone);
-        PageBean<User> userList = userService.listUsers(param);
+        PageBean<User> userList = userService.listUsers(param, getUid(request));
         return ResponseEntity.ok().body(new ResultJson(userList.getItems(), userList.getTotalNum()));
     }
 
@@ -92,6 +94,8 @@ public class UserController {
         return ResponseEntity.ok().body(new ResultJson(user));
     }
 
-
+    private Long getUid(HttpServletRequest request) {
+        return Long.parseLong(String.valueOf(request.getAttribute("uid")));
+    }
 
 }

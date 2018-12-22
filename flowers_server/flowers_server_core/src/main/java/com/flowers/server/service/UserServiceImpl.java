@@ -10,13 +10,7 @@ import com.flowers.server.mapper.UserMapper;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
@@ -42,8 +36,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @PostMapping("/user")
-    public PageBean<User> listUsers(@RequestBody Map<String, Object> param) {
-        userLogMapper.insertLog("查询用户列表", 2, 1L);
+    public PageBean<User> listUsers(
+            @RequestBody Map<String, Object> param,
+            @RequestParam("uid") Long uid) {
+        userLogMapper.insertLog("查询用户列表", 2, uid);
         Integer page = Integer.parseInt(param.get("page").toString());
         Integer size = Integer.parseInt(param.get("size").toString());
         Page<User> pageData = PageHelper.startPage(page, size).doSelectPage(()-> userMapper.findAll(param));
@@ -63,14 +59,18 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public User getUserByUsernameAndPassword(@RequestBody User user) {
-        userLogMapper.insertLog("用户登录", 2, 1L);
+    public User getUserByUsernameAndPassword(
+            @RequestBody User user,
+            @RequestParam("uid") Long uid) {
+        userLogMapper.insertLog("用户登录", 2, uid);
         return userMapper.getUserByUsernameAndPassword(user);
     }
 
     @Override
     @PostMapping("/logs")
-    public PageBean<UserLog> logs(@RequestBody Map<String, Object> param) {
+    public PageBean<UserLog> logs(
+            @RequestBody Map<String, Object> param
+    ) {
         Integer page = Integer.parseInt(param.get("page").toString());
         Integer size = Integer.parseInt(param.get("size").toString());
         Page<UserLog> pageData = PageHelper.startPage(page, size).doSelectPage(()-> userMapper.logs(param));

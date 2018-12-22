@@ -40,9 +40,10 @@ public class FlowerServiceImpl implements FlowerService {
     @GetMapping("/flowersInfo")
     @ResponseBody
     public Map<String, Object> getInfoById(
-            @RequestParam("fid") String fid
+            @RequestParam("fid") String fid,
+            @RequestParam("uid") Long uid
     ) {
-        userLogMapper.insertLog("根据 id 查询鲜花信息", 2, 1L);
+        userLogMapper.insertLog("根据 id 查询鲜花信息", 2, uid);
         Map<String, Object> map = TransferUtils.transBeanToMap(flowerMapper.getInfoById(fid));
         map.put("read", flowerReadMapper.count(fid));
         map.put("comment", flowerCommentMapper.count(fid));
@@ -51,8 +52,11 @@ public class FlowerServiceImpl implements FlowerService {
 
     @Override
     @GetMapping("/flowerSpecific")
-    public Map<String, Object> flowerSpecific( @RequestParam("fid") String fid) {
-        userLogMapper.insertLog("根据 id 查询鲜花其他信息", 2, 1L);
+    public Map<String, Object> flowerSpecific(
+            @RequestParam("fid") String fid,
+            @RequestParam("uid") Long uid
+    ) {
+        userLogMapper.insertLog("根据 id 查询鲜花其他信息", 2, uid);
         List<FlowerSpecific> flowerSpecifics = flowerMapper.flowerSpecific((fid));
 
         Map<String, Object> map = new HashMap<>();
@@ -71,12 +75,12 @@ public class FlowerServiceImpl implements FlowerService {
     @Override
     @GetMapping("/console")
     @ResponseBody
-    public Map<String, Object> console() {
+    public Map<String, Object> console(Long uid) {
         Map<String, Object> map = new HashMap<>();
         map.put("countFlowerToday", flowerMapper.countToday());
         map.put("countFlowerAll", flowerMapper.countAll());
         map.put("countUserAll", userMapper.countAll());
-        userLogMapper.insertLog("查询总数", 2, 1L);
+        userLogMapper.insertLog("查询总数", 2, uid);
         return map;
     }
 
@@ -84,7 +88,8 @@ public class FlowerServiceImpl implements FlowerService {
     @PostMapping("/flowers")
     @ResponseBody
     public PageBean<FlowerInfoBean> flowers(
-            @RequestBody Map<String, Object> param
+            @RequestBody Map<String, Object> param,
+            @RequestParam("uid") Long uid
     ) {
         String type = param.get("type").toString();
         String flowerName = param.get("flowerName").toString();
@@ -97,7 +102,7 @@ public class FlowerServiceImpl implements FlowerService {
         pageBean.setItems(pageData);
         pageBean.setTotalNum(infos.size());
         pageBean.setHasNext(infos.size(), size, page);
-        userLogMapper.insertLog("查询鲜花列表", 2, 1L);
+        userLogMapper.insertLog("查询鲜花列表", 2, uid);
         return pageBean;
     }
 
@@ -109,21 +114,22 @@ public class FlowerServiceImpl implements FlowerService {
             @RequestParam("flowerName") String flowerName,
             @RequestParam("flowerLanguage") String flowerLanguage,
             @RequestParam("flowerImg") String flowerImg,
-            @RequestParam("specific") String specific) {
-        userLogMapper.insertLog("添加鲜花基本信息", 1, 1L);
+            @RequestParam("specific") String specific,
+            @RequestParam("uid") Long uid) {
+        userLogMapper.insertLog("添加鲜花基本信息", 1, uid);
         flowerMapper.saveFlower(remarks, flowerName, flowerLanguage, flowerImg);
-        userLogMapper.insertLog("查询鲜花 id", 2, 1L);
+        userLogMapper.insertLog("查询鲜花 id", 2, uid);
         Long fid = flowerMapper.getFid(remarks, flowerName, flowerLanguage, flowerImg);
         if (!StringUtil.isEmpty(specific)) {
-            userLogMapper.insertLog("添加鲜花其他信息", 1, 1L);
+            userLogMapper.insertLog("添加鲜花其他信息", 1, uid);
             flowerSpecificMapper.inserts(specific, fid);
         }
     }
 
     @GetMapping("/recommendFlower")
     @Override
-    public FlowerInfo recommendFlower() {
-        userLogMapper.insertLog("查询首页推荐鲜花信息", 2, 1L);
+    public FlowerInfo recommendFlower(Long uid) {
+        userLogMapper.insertLog("查询首页推荐鲜花信息", 2, uid);
         return flowerMapper.recommendFlower();
     }
 
@@ -132,7 +138,8 @@ public class FlowerServiceImpl implements FlowerService {
     public void popular(
             @RequestParam("fid") String fid,
             @RequestParam("whether") String whether,
-            @RequestParam("type") String type) {
+            @RequestParam("type") String type,
+            @RequestParam("uid") Long uid) {
         String name = null;
         if ("3".equals(type)) {
             name = "热门列表";
@@ -146,12 +153,12 @@ public class FlowerServiceImpl implements FlowerService {
             name = "详情推荐列表";
             flowerMapper.details(fid, whether);
         }
-        userLogMapper.insertLog("推荐鲜花到" + name , 3, 1L);
+        userLogMapper.insertLog("推荐鲜花到" + name , 3, uid);
     }
 
     @Override
     @GetMapping("/popuList")
-    public PageBean<FlowerInfoBean> popuList(Integer page, Integer size) {
+    public PageBean<FlowerInfoBean> popuList(Integer page, Integer size, Long uid) {
         List<FlowerInfoBean> infos = flowerMapper.popuList();
         Page<FlowerInfoBean> pageData = PageHelper.startPage(page, size).doSelectPage(()-> flowerMapper.popuList());
         pageData.setTotal(infos.size());
@@ -159,30 +166,30 @@ public class FlowerServiceImpl implements FlowerService {
         pageBean.setItems(pageData);
         pageBean.setTotalNum(infos.size());
         pageBean.setHasNext(infos.size(), size, page);
-        userLogMapper.insertLog("查询热门鲜花列表", 2, 1L);
+        userLogMapper.insertLog("查询热门鲜花列表", 2, uid);
         return pageBean;
     }
 
     @Override
     @GetMapping("/detailsList")
-    public List<FlowerInfo> detailsList() {
-        userLogMapper.insertLog("查询详情推荐鲜花列表", 2, 1L);
+    public List<FlowerInfo> detailsList(Long uid) {
+        userLogMapper.insertLog("查询详情推荐鲜花列表", 2, uid);
         return flowerMapper.detailsList();
     }
 
     @Override
     @RequestMapping("/readInfo")
-    public void readInfo(String fid) {
+    public void readInfo(String fid, Long uid) {
         FlowerRead read = new FlowerRead();
         read.setFid(fid);
         read.setUid(1L);
         flowerReadMapper.insert(read);
-        userLogMapper.insertLog("新增阅读信息，fid：" + fid, 1, 1L);
+        userLogMapper.insertLog("新增阅读信息，fid：" + fid, 1, uid);
     }
 
     @Override
     @GetMapping("/commentList")
-    public PageBean<FlowerCommentBean> commentList(Integer page, Integer size, String fid) {
+    public PageBean<FlowerCommentBean> commentList(Integer page, Integer size, String fid, Long uid) {
         List<FlowerCommentBean> infos = flowerCommentMapper.comments(fid);
         Page<FlowerCommentBean> pageData = PageHelper.startPage(page, size).doSelectPage(()-> flowerCommentMapper.comments(fid));
         pageData.setTotal(infos.size());
@@ -190,19 +197,19 @@ public class FlowerServiceImpl implements FlowerService {
         pageBean.setItems(pageData);
         pageBean.setTotalNum(infos.size());
         pageBean.setHasNext(infos.size(), size, page);
-        userLogMapper.insertLog("查询鲜花评论列表，id：" + fid, 2, 1L);
+        userLogMapper.insertLog("查询鲜花评论列表，id：" + fid, 2, uid);
         return pageBean;
     }
 
     @Override
     @PostMapping("/comment")
-    public void comment(String fid, String content, String uid) {
+    public void comment(String fid, String content, Long uid) {
         FlowerComment comment = new FlowerComment();
         comment.setContent(content);
         comment.setFid(Long.parseLong(fid));
-        comment.setUid(Long.parseLong(uid));
+        comment.setUid(uid);
         flowerCommentMapper.insert(comment);
-        userLogMapper.insertLog("添加鲜花评论，id：" + fid, 1, 1L);
+        userLogMapper.insertLog("添加鲜花评论，id：" + fid, 1, uid);
     }
 
 }

@@ -15,20 +15,27 @@ import java.util.Map;
 public interface FlowerService {
     @GetMapping("/flowersInfo")
     @ResponseBody
-    Map<String, Object> getInfoById(@RequestParam("fid") String fid);
+    Map<String, Object> getInfoById(
+            @RequestParam("fid") String fid,
+            @RequestParam("uid") Long uid);
 
     @GetMapping("/flowerSpecific")
     @ResponseBody
-    Map<String, Object> flowerSpecific(@RequestParam("fid") String fid);
+    Map<String, Object> flowerSpecific(
+            @RequestParam("fid") String fid,
+            @RequestParam("uid") Long uid);
 
     @GetMapping("/console")
     @ResponseBody
-    Map<String, Object> console();
+    Map<String, Object> console(
+            @RequestParam("uid") Long uid
+    );
 
     @PostMapping("/flowers")
     @ResponseBody
     PageBean<FlowerInfoBean> flowers(
-            @RequestBody Map<String, Object> param
+            @RequestBody Map<String, Object> param,
+            @RequestParam("uid") Long uid
     );
 
     @PostMapping("/flower")
@@ -38,39 +45,50 @@ public interface FlowerService {
             @RequestParam("flowerName") String flowerName,
             @RequestParam("flowerLanguage") String flowerLanguage,
             @RequestParam("flowerImg") String flowerImg,
-            @RequestParam("specific") String specific);
+            @RequestParam("specific") String specific,
+            @RequestParam("uid") Long uid);
 
     @GetMapping("/recommendFlower")
     @ResponseBody
-    FlowerInfo recommendFlower();
+    FlowerInfo recommendFlower(
+            @RequestParam("uid") Long uid
+    );
 
     @PostMapping("/popular")
     @ResponseBody
     void popular(
             @RequestParam("fid") String fid,
             @RequestParam("whether") String whether,
-            @RequestParam("type") String type);
+            @RequestParam("type") String type,
+            @RequestParam("uid") Long uid);
 
     @ResponseBody
     @GetMapping("/popuList")
     PageBean<FlowerInfoBean> popuList(
             @RequestParam("page") Integer page,
-            @RequestParam("size") Integer size
+            @RequestParam("size") Integer size,
+            @RequestParam("uid") Long uid
     );
 
     @ResponseBody
     @GetMapping("/detailsList")
-    List<FlowerInfo> detailsList();
+    List<FlowerInfo> detailsList(
+            @RequestParam("uid") Long uid
+    );
 
     @RequestMapping("/readInfo")
-    void readInfo(@RequestParam("fid") String fid);
+    void readInfo(
+            @RequestParam("fid") String fid,
+            @RequestParam("uid") Long uid
+    );
 
     @GetMapping("/commentList")
     @ResponseBody
     PageBean<FlowerCommentBean> commentList(
             @RequestParam("page") Integer page,
             @RequestParam("size") Integer size,
-            @RequestParam("fid") String fid
+            @RequestParam("fid") String fid,
+            @RequestParam("uid") Long uid
     );
 
     @PostMapping("/comment")
@@ -78,7 +96,7 @@ public interface FlowerService {
     void comment(
             @RequestParam("fid") String fid,
             @RequestParam("content") String content,
-            @RequestParam("uid") String uid
+            @RequestParam("uid") Long uid
     );
 
 }

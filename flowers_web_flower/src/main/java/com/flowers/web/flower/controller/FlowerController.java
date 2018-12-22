@@ -27,22 +27,26 @@ public class FlowerController  {
 //    @PreAuthorize("hasRole('ADMIN')")
     @ResponseBody
     @RequestMapping(value = "/console", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
-    public ResponseEntity<ResultJson> console() {
-        return ResponseEntity.ok().body(new ResultJson(flowerService.console()));
+    public ResponseEntity<ResultJson> console(
+            @Content HttpServletRequest request
+    ) {
+        return ResponseEntity.ok().body(new ResultJson(flowerService.console(getUid(request))));
     }
 
     @ResponseBody
     @RequestMapping(value = "/flowersInfo", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public ResponseEntity<ResultJson> flowersInfo(
-            @RequestParam("fid") String fid) {
-        return ResponseEntity.ok().body(new ResultJson(flowerService.getInfoById(fid)));
+            @RequestParam("fid") String fid,
+            @Content HttpServletRequest request) {
+        return ResponseEntity.ok().body(new ResultJson(flowerService.getInfoById(fid, getUid(request))));
     }
 
     @ResponseBody
     @RequestMapping(value = "/flowerSpecific", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public ResponseEntity<ResultJson> flowerSpecific(
-            @RequestParam("fid") String fid) {
-        return ResponseEntity.ok().body(new ResultJson(flowerService.flowerSpecific(fid)));
+            @RequestParam("fid") String fid,
+            @Content HttpServletRequest request) {
+        return ResponseEntity.ok().body(new ResultJson(flowerService.flowerSpecific(fid, getUid(request))));
     }
 
     @ResponseBody
@@ -53,7 +57,8 @@ public class FlowerController  {
             @RequestParam("color") String color,
             @RequestParam("page") String page,
             @RequestParam("type") String type,
-            @RequestParam("limit") String size
+            @RequestParam("limit") String size,
+            @Content HttpServletRequest request
             ) {
         Map<String, Object> param = new HashMap<>();
         param.put("flowerName", flowerName);
@@ -62,7 +67,7 @@ public class FlowerController  {
         param.put("color", color);
         param.put("type", type);
         param.put("season", season);
-        PageBean<FlowerInfoBean> info = flowerService.flowers(param);
+        PageBean<FlowerInfoBean> info = flowerService.flowers(param, getUid(request));
         return ResponseEntity.ok().body(new ResultJson(info));
     }
 
@@ -73,15 +78,18 @@ public class FlowerController  {
             @RequestParam("flowerName") String flowerName,
             @RequestParam("flowerLanguage") String flowerLanguage,
             @RequestParam("flowerImg") String flowerImg,
-            @RequestParam("specific") String specific) {
-        flowerService.flower(remarks, flowerName, flowerLanguage, flowerImg, specific);
+            @RequestParam("specific") String specific,
+            @Content HttpServletRequest request) {
+        flowerService.flower(remarks, flowerName, flowerLanguage, flowerImg, specific, getUid(request));
         return ResponseEntity.ok().body(new ResultJson());
     }
 
     @ResponseBody
     @RequestMapping(value = "/recommendFlower", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
-    public ResponseEntity<ResultJson> recommendFlower() {
-        return ResponseEntity.ok().body(new ResultJson(flowerService.recommendFlower()));
+    public ResponseEntity<ResultJson> recommendFlower(
+            @Content HttpServletRequest request
+    ) {
+        return ResponseEntity.ok().body(new ResultJson(flowerService.recommendFlower(getUid(request))));
     }
 
     @ResponseBody
@@ -89,9 +97,10 @@ public class FlowerController  {
     public ResponseEntity<ResultJson> popular(
             @RequestParam("fid") String fid,
             @RequestParam("whether") String whether,
-            @RequestParam("type") String type
+            @RequestParam("type") String type,
+            @Content HttpServletRequest request
             ) {
-        flowerService.popular(fid, whether, type);
+        flowerService.popular(fid, whether, type, getUid(request));
         return ResponseEntity.ok().body(new ResultJson());
     }
 
@@ -99,15 +108,17 @@ public class FlowerController  {
     @RequestMapping(value = "/popuList", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public ResponseEntity<ResultJson> popuList(
             @RequestParam("page") Integer page,
-            @RequestParam("limit") Integer size
+            @RequestParam("limit") Integer size,
+            @Content HttpServletRequest request
             ) {
-        return ResponseEntity.ok().body(new ResultJson(flowerService.popuList(page, size)));
+        return ResponseEntity.ok().body(new ResultJson(flowerService.popuList(page, size, getUid(request))));
     }
 
     @ResponseBody
     @RequestMapping(value = "/detailsList", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
-    public ResponseEntity<ResultJson> detailsList() {
-        return ResponseEntity.ok().body(new ResultJson(flowerService.detailsList()));
+    public ResponseEntity<ResultJson> detailsList(
+            @Content HttpServletRequest request) {
+        return ResponseEntity.ok().body(new ResultJson(flowerService.detailsList(getUid(request))));
     }
 
     @ResponseBody
@@ -115,9 +126,10 @@ public class FlowerController  {
     public ResponseEntity<ResultJson> commentList(
             @RequestParam("page") String page,
             @RequestParam("fid") String fid,
-            @RequestParam("limit") String size
+            @RequestParam("limit") String size,
+            @Content HttpServletRequest request
             ) {
-        return ResponseEntity.ok().body(new ResultJson(flowerService.commentList(Integer.parseInt(page) ,Integer.parseInt(size), fid)));
+        return ResponseEntity.ok().body(new ResultJson(flowerService.commentList(Integer.parseInt(page) ,Integer.parseInt(size), fid, getUid(request))));
     }
 
     @ResponseBody
@@ -127,7 +139,11 @@ public class FlowerController  {
             @RequestParam("content") String content,
             @Content HttpServletRequest request
     ) {
-        flowerService.comment(fid, content, String.valueOf(request.getAttribute("uid")));
+        flowerService.comment(fid, content, getUid(request));
         return ResponseEntity.ok().body(new ResultJson());
+    }
+
+    private Long getUid(HttpServletRequest request) {
+        return Long.parseLong(String.valueOf(request.getAttribute("uid")));
     }
 }

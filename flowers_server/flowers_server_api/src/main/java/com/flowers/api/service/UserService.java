@@ -4,12 +4,7 @@ import com.flowers.api.model.User;
 import com.flowers.api.model.UserLog;
 import com.flowers.common.page.PageBean;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
@@ -35,7 +30,10 @@ public interface UserService {
      * @return
      */
     @PostMapping("/user")
-    PageBean<User> listUsers(@RequestBody Map<String , Object> param);
+    PageBean<User> listUsers(
+            @RequestBody Map<String , Object> param,
+            @RequestParam("uid") Long uid
+    );
 
     /**
      * 根据用户ID删除用户
@@ -45,7 +43,9 @@ public interface UserService {
     void deleteUserById(@PathVariable("id") Integer id);
 
     @PostMapping("/login")
-    User getUserByUsernameAndPassword(@RequestBody User user);
+    User getUserByUsernameAndPassword(
+            @RequestBody User user,
+            @RequestParam("uid") Long uid);
 
     @PostMapping("/logs")
     PageBean<UserLog> logs(@RequestBody Map<String, Object> param);
