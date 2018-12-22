@@ -5,16 +5,21 @@ import com.flowers.common.bean.ResultJson;
 import com.flowers.common.page.PageBean;
 import com.flowers.common.utils.MeaasgeUtil;
 import com.flowers.api.fbean.FlowerInfoBean;
+import com.netflix.ribbon.proxy.annotation.Content;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
 public class FlowerController  {
+    private Logger logger = LogManager.getLogger(FlowerController.class);
     @Autowired(required = false)
     private FlowerService flowerService;
     private MeaasgeUtil me = new MeaasgeUtil();
@@ -119,9 +124,10 @@ public class FlowerController  {
     @RequestMapping(value = "/comment", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
     public ResponseEntity<ResultJson> comment(
             @RequestParam("fid") String fid,
-            @RequestParam("content") String content
+            @RequestParam("content") String content,
+            @Content HttpServletRequest request
     ) {
-        flowerService.comment(fid, content);
+        flowerService.comment(fid, content, String.valueOf(request.getAttribute("uid")));
         return ResponseEntity.ok().body(new ResultJson());
     }
 }

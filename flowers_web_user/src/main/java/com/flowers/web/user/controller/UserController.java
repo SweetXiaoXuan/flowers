@@ -7,13 +7,16 @@ import com.flowers.common.bean.ResultJson;
 import com.flowers.common.page.PageBean;
 import com.flowers.common.utils.MeaasgeUtil;
 import com.flowers.common.utils.ResultMsgConstant;
+import com.flowers.common.utils.TransferUtils;
+import com.flowers.web.user.session.SessionService;
 import feign.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -22,23 +25,39 @@ public class UserController {
     @Autowired(required = false)
     private UserService userService;
     private MeaasgeUtil me = new MeaasgeUtil();
+    @Autowired
+    private SessionService sessionService;
 
     @RequestMapping(value = "/login", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
     public ResponseEntity<ResultJson> login(
             @Param("username") String username,
-            @Param("password") String password) {
+            @Param("password") String password,
+            HttpServletRequest request) {
         User user = new User();
         user.setPassword(password);
         user.setUsername(username);
         User u = userService.getUserByUsernameAndPassword(user);
-        return ResponseEntity.ok().body(new ResultJson(u, u == null ? "用户名或密码错误" : "登陆成功"));
+        boolean login = u == null;
+        String rsid = null;
+        if (!login) {
+            HttpSession session = request.getSession(true);
+            rsid = session.getId();
+            ResultJson rj = sessionService.save(session, request);
+            if (rj.getCode() != 0) {
+                return ResponseEntity.ok().body(new ResultJson(u, "登陆异常"));
+            }
+        }
+        Map<String, Object> map = TransferUtils.transBeanToMap(u);
+        map.put("rsid", rsid);
+        return ResponseEntity.ok().body(new ResultJson(map, "登陆成功"));
     }
 
     @RequestMapping(value = "/logs", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
     public ResponseEntity<ResultJson> logs(
             @RequestParam("type") String type,
             @RequestParam("page") String page,
-            @RequestParam("limit") String size) {
+            @RequestParam("limit") String size,
+            HttpServletRequest request) {
         Map<String, Object> param = new HashMap<>();
         param.put("page", page);
         param.put("size", size);

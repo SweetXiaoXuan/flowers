@@ -27,6 +27,7 @@
     <meaasge name="success" value=" 成功"></meaasge>
     <meaasge name="bankCardError" value="银行卡号格式错误"></meaasge>
     <meaasge name="formatError" value="格式错误"></meaasge>
+    <meaasge name="apiNotEntered" value="api未录入,默认禁止访问%s，请联系管理员"></meaasge>
 
     <meaasge name="commissionRateformatError" value="佣金比例格式错误"></meaasge>
 

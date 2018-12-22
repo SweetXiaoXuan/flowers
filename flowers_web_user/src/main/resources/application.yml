@@ -1,6 +1,8 @@
 server:
   port: 8181
-
+  servlet:
+    session:
+      timeout: 100m
   #debug: true
 
 spring:
@@ -14,6 +16,15 @@ spring:
   devtools:
     restart:
       enabled: true
+  session:
+    store-type: redis
+#    redis:
+#      flush-mode: on_save
+#      namespace: spring: session
+  redis:
+    host: localhost
+    password: redis
+    port: 6379
 
 eureka:
   client:
@@ -22,3 +33,6 @@ eureka:
 
 
 #spring.resources.static-locations: classpath:/pages/
+
+
+

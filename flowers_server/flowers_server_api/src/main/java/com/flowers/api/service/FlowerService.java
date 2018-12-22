@@ -77,7 +77,8 @@ public interface FlowerService {
     @ResponseBody
     void comment(
             @RequestParam("fid") String fid,
-            @RequestParam("content") String content
+            @RequestParam("content") String content,
+            @RequestParam("uid") String uid
     );
 
 }

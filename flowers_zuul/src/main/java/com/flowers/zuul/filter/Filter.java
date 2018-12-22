@@ -13,7 +13,9 @@ import java.io.IOException;
 
 @Component
 @Slf4j
-public class Filter extends ZuulFilter {
+public class Filter
+        extends ZuulFilter
+{
 
 
     /**

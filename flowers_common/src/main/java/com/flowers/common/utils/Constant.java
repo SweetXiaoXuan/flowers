@@ -12,6 +12,8 @@ public class Constant {
      * url地址
      */
 
+    public final static String ADDRESS = "http://localhost:17900";
+
     public final static String ADD_COURSE = "/course/addCourse";
 
     public final static String ADD_PAY_ORDER = "/payOrder/addPayOrder";
@@ -31,4 +33,9 @@ public class Constant {
     public final static String FIND_COURSE = "/course/findCourse";
 
     public final static String FIND_USER = "/user/findUser";
+
+    public final static String API = "http://localhost:8282/url";
+
+
+
 }

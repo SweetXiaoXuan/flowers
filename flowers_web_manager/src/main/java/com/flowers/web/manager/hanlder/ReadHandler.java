@@ -1,4 +1,4 @@
-package com.flowers.hanlder;
+package com.flowers.web.manager.hanlder;
 
 import com.alibaba.fastjson.JSON;
 import com.flowers.api.service.FlowerService;
@@ -23,13 +23,10 @@ import java.util.Arrays;
 @Component
 public class ReadHandler {
     private Logger logger = LogManager.getLogger(ReadHandler.class);
-
     private Long startTime = null;
-    @Autowired(required = false)
-    private FlowerService flowerService;
 
-    private static final String PRE_TAG = "「FlowerInfo」 ----------------- ";
-    @Pointcut("execution(public * com.flowers.web.flower.controller.FlowerController.flowersInfo(..))")
+    private static final String PRE_TAG = "「flowers_web_manager」 ----------------- ";
+    @Pointcut("execution(public * com.flowers.web.manager.controller.*.*(..))")
     public void webLog(){}
 
     @Before("webLog()")
@@ -37,8 +34,6 @@ public class ReadHandler {
         startTime = System.currentTimeMillis();
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
-        String fid = request.getParameter("fid");
-        flowerService.readInfo(fid);
         log(request, joinPoint, true, null);
     }
 

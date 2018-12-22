@@ -196,11 +196,11 @@ public class FlowerServiceImpl implements FlowerService {
 
     @Override
     @PostMapping("/comment")
-    public void comment(String fid, String content) {
+    public void comment(String fid, String content, String uid) {
         FlowerComment comment = new FlowerComment();
         comment.setContent(content);
         comment.setFid(Long.parseLong(fid));
-        comment.setUid(1L);
+        comment.setUid(Long.parseLong(uid));
         flowerCommentMapper.insert(comment);
         userLogMapper.insertLog("添加鲜花评论，id：" + fid, 1, 1L);
     }

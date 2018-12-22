@@ -1,5 +1,7 @@
 package com.flowers.common.utils;
 
+import com.alibaba.fastjson.JSONObject;
+import com.flowers.common.bean.ResultJson;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
@@ -10,10 +12,14 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
 
+import java.awt.print.Book;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -81,5 +87,22 @@ public class HttpRequest {
         HttpResponse response = client.execute(get);
         content = EntityUtils.toString(response.getEntity(), "UTF-8");
         return content;
+    }
+
+    public static ResultJson tempLateGet(String address, Map<String, Object> params) {
+        RestTemplate restTemplate = new RestTemplate();
+        StringBuffer str = new StringBuffer();
+        for (Map.Entry<String, Object> param : params.entrySet()) {
+            str.append(param.getKey()).append("=").append(param.getValue()).append("&");
+        }
+        String param = str.substring(0, str.length() - 1);
+        ResponseEntity<ResultJson> responseEntity = restTemplate.getForEntity(address + "?" + param, ResultJson.class);
+        return responseEntity.getBody();
+    }
+
+    public static ResultJson tempLatePost(String address, Map<String, Object> params) {
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<ResultJson> responseEntity = restTemplate.postForEntity(address, params, ResultJson.class);
+        return responseEntity.getBody();
     }
 }
