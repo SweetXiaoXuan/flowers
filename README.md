@@ -2,7 +2,9 @@
 鲜花信息网站
 本项目采用微服务架构
 技术使用 springcloud + springboot2.0.3 + eureka + zuul + mybatis + mybatisplus + lombok + pagehelper + fastjson
+
 demo 案例有： rabbitmq、springsecurity
+
 ## flowers_common
 公共类
 
