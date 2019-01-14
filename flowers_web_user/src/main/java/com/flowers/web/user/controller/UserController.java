@@ -37,7 +37,7 @@ public class UserController {
         User user = new User();
         user.setPassword(password);
         user.setUsername(username);
-        User u = userService.getUserByUsernameAndPassword(user, getUid(request));
+        User u = userService.getUserByUsernameAndPassword(user);
         boolean login = u == null;
         String rsid = null;
         if (!login) {

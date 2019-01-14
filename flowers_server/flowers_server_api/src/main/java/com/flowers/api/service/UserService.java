@@ -44,8 +44,7 @@ public interface UserService {
 
     @PostMapping("/login")
     User getUserByUsernameAndPassword(
-            @RequestBody User user,
-            @RequestParam("uid") Long uid);
+            @RequestBody User user);
 
     @PostMapping("/logs")
     PageBean<UserLog> logs(@RequestBody Map<String, Object> param);

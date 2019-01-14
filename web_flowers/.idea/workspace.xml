@@ -2,31 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc11b6ce-13ef-484b-b987-b95bffc34c88" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../备份/flowers_web_user/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../备份/flowers_web_user/src/main/java/com/flowers/FlowersWebUserApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../备份/flowers_web_user/src/main/java/com/flowers/web/user/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../备份/flowers_web_user/src/main/java/com/flowers/web/user/session/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../备份/flowers_web_user/src/main/java/com/flowers/web/user/session/Initializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../备份/flowers_web_user/src/main/java/com/flowers/web/user/session/SessionConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../备份/flowers_web_user/src/main/java/com/flowers/web/user/session/SessionControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../备份/flowers_web_user/src/main/java/com/flowers/web/user/session/SessionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../备份/flowers_web_user/src/main/java/com/flowers/web/user/session/SessionServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../备份/flowers_web_user/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../备份/flowers_zuul/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../备份/flowers_zuul/src/main/java/com/flowers/zuul/FlowersZuulApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../备份/flowers_zuul/src/main/java/com/flowers/zuul/config/HttpSessionConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../备份/flowers_zuul/src/main/java/com/flowers/zuul/filter/Filter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../备份/flowers_zuul/src/main/java/com/flowers/zuul/filter/PassHttpFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../备份/flowers_zuul/src/main/java/com/flowers/zuul/session/RSIDHttpSessionStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../备份/flowers_zuul/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../备份/flowers_zuul/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/filter/PassHttpFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/filter/PassHttpFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/hanlder/ReadHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_flower/src/main/java/com/flowers/web/flower/hanlder/ReadHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_web_manager/src/main/java/com/flowers/web/manager/filter/PassHttpFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_manager/src/main/java/com/flowers/web/manager/filter/PassHttpFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_web_user/src/main/java/com/flowers/web/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_user/src/main/java/com/flowers/web/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_web_user/src/main/java/com/flowers/web/user/filter/PassHttpFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_web_user/src/main/java/com/flowers/web/user/filter/PassHttpFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flowers_zuul/src/main/java/com/flowers/zuul/filter/PassHttpFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flowers_zuul/src/main/java/com/flowers/zuul/filter/PassHttpFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../file/disanfanglogin.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../file/lansedaqizhucedenglu.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/css/util.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/less/animated.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/less/larger.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/less/list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/iconic/css/material-design-iconic-font.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/iconic/css/material-design-iconic-font.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/images/bg-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login/vendor/jquery/jquery-3.2.1.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/flower_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/flower_info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test/info/flower_info_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test/info/flower_info_test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test/info/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/test/info/info.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -57,31 +90,31 @@
           <entry key="css" value="5" />
           <entry key="data_js" value="1" />
           <entry key="gif" value="9" />
-          <entry key="html" value="186" />
+          <entry key="html" value="193" />
           <entry key="jpg" value="5" />
-          <entry key="js" value="48" />
+          <entry key="js" value="53" />
           <entry key="png" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="5" />
-          <entry key="HTML" value="186" />
+          <entry key="HTML" value="193" />
           <entry key="Image" value="16" />
-          <entry key="JavaScript" value="48" />
+          <entry key="JavaScript" value="53" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="JavaScript Console" value="23" />
-          <entry key="html" value="8832" />
+          <entry key="html" value="9265" />
           <entry key="js" value="867" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="8836" />
+          <entry key="HTML" value="9269" />
           <entry key="JavaScript" value="886" />
         </counts>
       </usages-collector>
@@ -90,10 +123,42 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/index.html">
+        <entry file="file://$PROJECT_DIR$/web/flower_info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="148" column="63" lean-forward="true" selection-start-line="148" selection-start-column="24" selection-end-line="148" selection-end-column="63" />
+            <state relative-caret-position="562">
+              <caret line="258" column="78" lean-forward="true" selection-start-line="258" selection-start-column="78" selection-end-line="258" selection-end-column="78" />
+              <folding>
+                <element signature="n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#3;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#aside#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#script#4;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#script#0;n#!!top" />
+                <element signature="n#STYLE#0;n#!!top" />
+                <element signature="n#script#3;n#!!top" />
+                <element signature="n#style#0;n#label#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#1;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="45" column="4" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/login/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -102,11 +167,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>article</find>
-      <find>循环</find>
-      <find>ias</find>
-      <find>container</find>
-      <find>在这里可以看到前端技术</find>
       <find>在这里可以看到前端技术，后端程序，网站内容管理系统等文章，还有我的程序人生！</find>
       <find>\&lt;li\&gt;\&lt;a href\=\&quot;category\.html\&quot;\&gt;季节分类\&lt;\/a\&gt;\&lt;\/li\&gt;\n          \&lt;li\&gt;\&lt;a href\=\&quot;category\.html\&quot;\&gt;颜色分类\&lt;\/a\&gt;\&lt;\/li\&gt;\n          \&lt;li\&gt;\&lt;a href\=\&quot;category\.html\&quot;\&gt;国花查询\&lt;\/a\&gt;\&lt;\/li\&gt;\n          \&lt;li\&gt;\&lt;a href\=\&quot;category\.html\&quot;\&gt;节日之花\&lt;\/a\&gt;\&lt;\/li\&gt;\n          \&lt;li\&gt;\&lt;a href\=\&quot;category\.html\&quot;\&gt;世界之花\&lt;\/a\&gt;\&lt;\/li\&gt;</find>
       <find>季节分类</find>
@@ -132,9 +192,15 @@
       <find>&quot;post&quot;</find>
       <find>todo</find>
       <find>http://localhost:17900/flower/recommendFlower</find>
+      <find>login</find>
+      <find>10000</find>
+      <find>renderer</find>
+      <find>username</find>
+      <find>豫</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/web/test/Nicepage-master</dir>
+      <dir>$PROJECT_DIR$/web/</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -183,9 +249,14 @@
         <option value="$PROJECT_DIR$/server/users.html" />
         <option value="$PROJECT_DIR$/server/flower_info.html" />
         <option value="$PROJECT_DIR$/server/flowers.html" />
+        <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/web/flowers.html" />
         <option value="$PROJECT_DIR$/web/flower_info.html" />
-        <option value="$PROJECT_DIR$/web/index.html" />
+        <option value="$PROJECT_DIR$/web/login/index.html" />
+        <option value="$PROJECT_DIR$/web/login/reg.html" />
+        <option value="$PROJECT_DIR$/web/getpass.html" />
+        <option value="$PROJECT_DIR$/web/reg.html" />
+        <option value="$PROJECT_DIR$/web/login.html" />
       </list>
     </option>
   </component>
@@ -214,6 +285,17 @@
               <item name="web_flowers" type="b2602c69:ProjectViewProjectNode" />
               <item name="web_flowers" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="web_flowers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_flowers" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web_flowers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_flowers" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -221,24 +303,24 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="laypa&#9;FILE&#9;file:///Applications/workspace/intellijidea_workspace/other/flowers/web_flowers/test/Nicepage-master/js/lay/modules/laypage.js&#10;flowers&#9;FILE&#9;file:///Applications/workspace/intellijidea_workspace/other/flowers/web_flowers/server/views/flowers.html&#10;console.&#9;FILE&#9;file:///Applications/workspace/intellijidea_workspace/other/flowers/web_flowers/server/js/console.js&#10;loading&#9;FILE&#9;file:///Applications/workspace/intellijidea_workspace/other/flowers/web_flowers/web/images/loading.gif" />
+    <property name="SearchEverywhereHistoryKey" value="userlogin&#9;null&#9;null&#10;laypa&#9;FILE&#9;file:///Applications/workspace/intellijidea_workspace/other/flowers/web_flowers/test/Nicepage-master/js/lay/modules/laypage.js&#10;flowers&#9;FILE&#9;file:///Applications/workspace/intellijidea_workspace/other/flowers/web_flowers/server/views/flowers.html&#10;console.&#9;FILE&#9;file:///Applications/workspace/intellijidea_workspace/other/flowers/web_flowers/server/js/console.js&#10;loading&#9;FILE&#9;file:///Applications/workspace/intellijidea_workspace/other/flowers/web_flowers/web/images/loading.gif" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/server" />
-      <recent name="$PROJECT_DIR$/server/js" />
-      <recent name="$PROJECT_DIR$/web/js/lay/modules" />
-      <recent name="$PROJECT_DIR$/web" />
-      <recent name="$PROJECT_DIR$/web/test" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/login" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/web/images/flowers" />
       <recent name="$PROJECT_DIR$/test/page_load" />
       <recent name="$PROJECT_DIR$/web/js" />
-      <recent name="$PROJECT_DIR$/web/data_js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/server" />
+      <recent name="$PROJECT_DIR$/server/js" />
+      <recent name="$PROJECT_DIR$/web/js/lay/modules" />
+      <recent name="$PROJECT_DIR$/web/test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -291,12 +373,12 @@
       <workItem from="1545185995642" duration="13260000" />
       <workItem from="1545461046729" duration="2784000" />
       <workItem from="1547091058506" duration="229000" />
-      <workItem from="1547446559119" duration="1254000" />
+      <workItem from="1547446559119" duration="8248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160548000" />
+    <option name="totallyTimeSpent" value="167542000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -311,13 +393,13 @@
     <frame x="0" y="23" width="1440" height="834" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19802678" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19802678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32904148" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3190272" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3190272" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32904148" />
@@ -346,27 +428,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/assets/css/modules/layer/default/loading-0.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/occupying.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/views/merchants.html" />
-    <entry file="file://$PROJECT_DIR$/server/test/merchant/console.html" />
-    <entry file="file://$PROJECT_DIR$/web/data_js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/js/console.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="6" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="20" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/loading.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/test/info/flower_info_test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="605">
@@ -464,13 +525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/nprogress.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4317">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/jquery.tmpl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -562,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/flowers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="213" column="26" selection-start-line="213" selection-start-column="26" selection-end-line="213" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/article.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
@@ -587,26 +634,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
           <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/flower_info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="271" column="25" lean-forward="true" selection-start-line="271" selection-start-column="25" selection-end-line="271" selection-end-column="25" />
           <folding>
-            <element signature="n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#aside#0;n#section#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#0;n#!!top" />
-            <element signature="n#STYLE#0;n#!!top" />
-            <element signature="n#script#3;n#!!top" />
-            <element signature="n#style#0;n#label#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#1;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -626,20 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="224" column="41" lean-forward="true" selection-start-line="224" selection-start-column="41" selection-end-line="224" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/console.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -652,8 +666,109 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="148" column="63" lean-forward="true" selection-start-line="148" selection-start-column="24" selection-end-line="148" selection-end-column="63" />
+        <state relative-caret-position="166">
+          <caret line="168" column="37" selection-start-line="168" selection-start-column="37" selection-end-line="168" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/flowers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="113" column="42" lean-forward="true" selection-start-line="113" selection-start-column="42" selection-end-line="113" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/getpass.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/reg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="74" column="39" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="66" column="10" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="66" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/nprogress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/jsized.snow.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="45" column="4" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="224" column="41" lean-forward="true" selection-start-line="224" selection-start-column="41" selection-end-line="224" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/snow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/flower_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="258" column="78" lean-forward="true" selection-start-line="258" selection-start-column="78" selection-end-line="258" selection-end-column="78" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#aside#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#4;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#!!top" />
+            <element signature="n#STYLE#0;n#!!top" />
+            <element signature="n#script#3;n#!!top" />
+            <element signature="n#style#0;n#label#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#1;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

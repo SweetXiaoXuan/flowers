@@ -60,9 +60,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUserByUsernameAndPassword(
-            @RequestBody User user,
-            @RequestParam("uid") Long uid) {
-        userLogMapper.insertLog("用户登录", 2, uid);
+            @RequestBody User user) {
+        userLogMapper.insertLog("用户登录", 2, 1L);
         return userMapper.getUserByUsernameAndPassword(user);
     }
 

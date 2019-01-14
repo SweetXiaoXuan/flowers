@@ -352,6 +352,9 @@
                     alert('评论成功');
                     location.reload();
                 }
+                if (data.code === 10000) {
+                    parent.location.href ="login.html";
+                }
             }
         });
     }
@@ -482,12 +485,12 @@
                                         ' </div>');
                                 }
                             } else if(data.status === 10000) {
-                                parent.location.href ="../../login.html";
+                                parent.location.href ="login.html";
                             }
                         },
                         fail: function (error) {
                             console.error(error);
-                            parent.location.href ="../../login.html";
+                            parent.location.href ="login.html";
                         }
                     })
                 }
