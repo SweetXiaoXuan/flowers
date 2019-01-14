@@ -38,7 +38,7 @@ public class ReadHandler {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
         String fid = request.getParameter("fid");
-        flowerService.readInfo(fid);
+        flowerService.readInfo(fid, Long.parseLong(String.valueOf(request.getAttribute("uid"))));
     }
 
     @Pointcut("execution(public * com.flowers.web.flower.controller.*.*(..))")

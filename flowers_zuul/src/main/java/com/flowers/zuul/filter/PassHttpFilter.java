@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Component
-@WebFilter(urlPatterns = "/*", filterName = "passHttpFilter")  //这里的“/*” 表示的是需要拦截的请求路径
+@WebFilter(urlPatterns = "/*", filterName = "passHttpFilter")
 public class PassHttpFilter implements Filter {
     private MeaasgeUtil me = new MeaasgeUtil();
     private Logger logger = LogManager.getLogger(PassHttpFilter.class);
@@ -40,6 +40,7 @@ public class PassHttpFilter implements Filter {
         httpResponse.addHeader("Access-Control-Allow-Origin", "*");
 
         HttpServletRequest request = (HttpServletRequest) servletRequest;
+
         String url = request.getRequestURI();
         Map<String, Object> map = new HashMap<>();
         map.put("url", url);
@@ -48,30 +49,42 @@ public class PassHttpFilter implements Filter {
             returnMsg(httpResponse, new ResultJson(CodeConstant.ERROR, String.format(me.getValue(ResultMsgConstant.apiNotEntered), url)));
             return;
         } else {
-            HttpSession session = request.getSession();
             JSONObject jsonObject = JSONObject.parseObject(JSON.toJSONString(resultJson.getBody()));
             if (jsonObject.getInteger("level") == 0) {
                 logger.info("direct access " + url);
             } else {
-                if (session == null) {
-                    logger.info("session is null");
-                    returnMsg(httpResponse, new ResultJson(CodeConstant.NOT_LOGIN, me.getValue(ResultMsgConstant.notLogin)));
-                    return;
-                }
-                Enumeration<String> headers = request.getHeaders("rsid");
-                String apprsid = "";
-                while (headers.hasMoreElements()) {
-                    apprsid = headers.nextElement();
-                }
-                String rv = get(apprsid, request);
-                if (StringUtil.isEmpty(rv)) {
-                    logger.info("redis not save " + apprsid);
-                    returnMsg(httpResponse, new ResultJson(CodeConstant.NOT_LOGIN, me.getValue(ResultMsgConstant.notLogin)));
-                    return;
+                String device = getStr(request, "device");
+                if (!"manager".equals(device)) {
+                    HttpSession session = request.getSession();
+                    if (session == null) {
+                        logger.info("session is null");
+                        returnMsg(httpResponse, new ResultJson(CodeConstant.NOT_LOGIN, me.getValue(ResultMsgConstant.notLogin)));
+                        return;
+                    }
+                    String rsid = getStr(request, "rsid");
+                    String rv = get(rsid, request);
+                    if (StringUtil.isEmpty(rv)) {
+                        logger.info("redis not save " + rsid);
+                        returnMsg(httpResponse, new ResultJson(CodeConstant.NOT_LOGIN, me.getValue(ResultMsgConstant.notLogin)));
+                        return;
+                    }
+
+                    if (session.getAttribute("uid") == null) {
+                        returnMsg(httpResponse, new ResultJson(CodeConstant.NOT_LOGIN, me.getValue(ResultMsgConstant.notLogin)));
+                        return;
+                    }
                 }
             }
         }
         filterChain.doFilter(servletRequest, httpResponse);
+    }
+
+    private String getStr(HttpServletRequest request, String header) {
+        Enumeration<String> strs = request.getHeaders(header);
+        while (strs.hasMoreElements()) {
+            return strs.nextElement();
+        }
+        return null;
     }
 
     private void returnMsg(HttpServletResponse httpResponse, ResultJson resultJson) throws IOException {

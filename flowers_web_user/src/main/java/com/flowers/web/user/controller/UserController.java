@@ -57,8 +57,7 @@ public class UserController {
     public ResponseEntity<ResultJson> logs(
             @RequestParam("type") String type,
             @RequestParam("page") String page,
-            @RequestParam("limit") String size,
-            HttpServletRequest request) {
+            @RequestParam("limit") String size) {
         Map<String, Object> param = new HashMap<>();
         param.put("page", page);
         param.put("size", size);

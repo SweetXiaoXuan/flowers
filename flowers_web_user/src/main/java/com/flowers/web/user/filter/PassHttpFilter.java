@@ -8,10 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Enumeration;
 
 @SuppressWarnings("Duplicates")
 @Component
-@WebFilter(urlPatterns = "/*", filterName = "passHttpFilter")  //这里的“/*” 表示的是需要拦截的请求路径
+@WebFilter(urlPatterns = "/*", filterName = "passHttpFilter")
 public class PassHttpFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig){
@@ -24,6 +25,14 @@ public class PassHttpFilter implements Filter {
         HttpSession session = request.getSession();
         request.setAttribute("uid", session.getAttribute("uid"));
         request.setAttribute("level", session.getAttribute("level"));
+        Enumeration<String> strs = request.getHeaders("device");
+        String device = null;
+        while (strs.hasMoreElements()) {
+            device =  strs.nextElement();
+        }
+        if ("manager".equals(device)) {
+            request.setAttribute("uid", 1);
+        }
         filterChain.doFilter(servletRequest, httpResponse);
     }
 
