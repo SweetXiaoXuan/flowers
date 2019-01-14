@@ -46,6 +46,7 @@ public class PassHttpFilter implements Filter {
         map.put("url", url);
         ResultJson resultJson = HttpRequest.tempLateGet(Constant.API, map);
         if (resultJson.getCode().equals(CodeConstant.ERROR)) {
+            logger.info(url);
             returnMsg(httpResponse, new ResultJson(CodeConstant.ERROR, String.format(me.getValue(ResultMsgConstant.apiNotEntered), url)));
             return;
         } else {

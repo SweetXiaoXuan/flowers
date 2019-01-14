@@ -33,6 +33,7 @@ public class MeaasgeUtil {
             str = map.get("name");
             if (key.equals(str)) {
                 value = map.get("value");
+                break;
             }
         }
         if (str == null)

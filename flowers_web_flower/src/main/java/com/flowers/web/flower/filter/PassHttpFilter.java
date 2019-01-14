@@ -42,10 +42,6 @@ public class PassHttpFilter implements Filter {
         if ("manager".equals(device)) {
             request.setAttribute("uid", 1);
         }
-        if (request.getAttribute("uid") == null) {
-            returnMsg(httpResponse, new ResultJson(CodeConstant.ERROR, me.getValue(ResultMsgConstant.notLogin)));
-            return;
-        }
         filterChain.doFilter(servletRequest, httpResponse);
     }
     private void returnMsg(HttpServletResponse httpResponse, ResultJson resultJson) throws IOException {
